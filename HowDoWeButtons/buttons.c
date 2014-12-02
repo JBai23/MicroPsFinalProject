@@ -2,37 +2,64 @@
  * Justin Bai (jbai@hmc.edu)
  * MicroPs (E155) Final Project - Pokemon Battle
  * Date Created: 2014-11-24
- * Last Updated: 2014-11-24
+ * Last Updated: 2014-11-28
  */
 
 /* Summary:
- * Reads three input pins (IN1, IN2, IN3) which convey the button that
- * was pressed. Displays the button pressed to the LEDs.
+ * Reads four input pins (IN1, IN2, IN3, IN4) which convey a button that
+ * was pressed. Displays the value of that button to the LEDs.
  */
 
-#define IN1 PORTBbits.RB7
-#define IN2 PORTBbits.RB8
-#define IN3 PORTBbits.RB9
+// Pins representing value of input button pressed
+// Value is {IN3, IN2, IN1, IN0} (supports 1 hex digit)
+#define IN3 PORTEbits.RE4
+#define IN2 PORTEbits.RE5
+#define IN1 PORTEbits.RE6
+#define IN0 PORTEbits.RE7
 
- // set the trisb bits?
+// TRIS bits for those pins
+#define TRIS3 TRISEbits.TRISE4
+#define TRIS2 TRISEbits.TRISE5
+#define TRIS1 TRISEbits.TRISE6
+#define TRIS0 TRISEbits.TRISE7
 
-unsigned char BUTTONRESET = 0;
+// Only read more input if the buttons have been released after reading an input
+// (1 when button has been released since last input processed)
+// This means that holding a button down doesn't press it repeatedly
+// (though it also means that buttons need to be fully released before
+// pressing another one---simple though not maximally functional)
+unsigned char BUTTONS_WERE_RELEASED = 0;
+
+// Input value
 unsigned char inputVal;
 
+// Set value pins' TRIS bits to input
+TRIS3 = 1;
+TRIS2 = 1;
+TRIS1 = 1;
+TRIS0 = 1;
+
+// If using microMudd board's LEDs as output
 TRISD = 0xFF00;
 
-while (1) {
-  inputVal = IN1 + IN2 << 1 + IN3 << 2; // data type of PORTBbits.RB7 - casting necessary (?)
 
+// Do actual stuff
+while (1) {
+  inputVal = IN3 << 3 + IN2 << 2 + IN1 << 1 + IN0; //??? data type of INx? casting necessary?
+
+  // 0 cannot be used as a program input---it represents releasing all buttons
   if (inputVal == 0) {
-    BUTTONRESET = 1;
+    BUTTONS_WERE_RELEASED = 1;
   }
 
-  else if (BUTTONRESET == 1) {
-    BUTTONRESET = 0; // perhaps should do this at end, but w/e
-    processedVal = inputVal;
+  // only read more input if the buttons have been released after reading an input
+  else if (BUTTONS_WERE_RELEASED == 1) {
+    BUTTONS_WERE_RELEASED = 0; // perhaps should do this at end, but w/e
 
     // do game logic
-    PORTD = processedVal;
+    PORTD = inputVal;
   }
 }
+
+
+

@@ -1,0 +1,149 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'clk'
+Slack : -4.810
+TNS   : -9.882
+
+Type  : Slow 1200mV 85C Model Setup 'sck'
+Slack : -3.060
+TNS   : -342.946
+
+Type  : Slow 1200mV 85C Model Setup 'keypadReader:kpr|slowclock:sclock|sclk'
+Slack : -0.707
+TNS   : -3.455
+
+Type  : Slow 1200mV 85C Model Setup 'battleDisplay|vgapll|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 33.730
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clk'
+Slack : 0.092
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'keypadReader:kpr|slowclock:sclock|sclk'
+Slack : 0.454
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'sck'
+Slack : 0.485
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'battleDisplay|vgapll|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.546
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'sck'
+Slack : -3.201
+TNS   : -235.653
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'keypadReader:kpr|slowclock:sclock|sclk'
+Slack : -1.487
+TNS   : -10.409
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
+Slack : 12.177
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'battleDisplay|vgapll|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 19.574
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'clk'
+Slack : -4.590
+TNS   : -8.573
+
+Type  : Slow 1200mV 0C Model Setup 'sck'
+Slack : -2.825
+TNS   : -313.310
+
+Type  : Slow 1200mV 0C Model Setup 'keypadReader:kpr|slowclock:sclock|sclk'
+Slack : -0.603
+TNS   : -2.870
+
+Type  : Slow 1200mV 0C Model Setup 'battleDisplay|vgapll|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 34.041
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clk'
+Slack : 0.221
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'keypadReader:kpr|slowclock:sclock|sclk'
+Slack : 0.403
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'sck'
+Slack : 0.432
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'battleDisplay|vgapll|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.515
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'sck'
+Slack : -3.201
+TNS   : -235.761
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'keypadReader:kpr|slowclock:sclock|sclk'
+Slack : -1.487
+TNS   : -10.409
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : 12.164
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'battleDisplay|vgapll|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 19.571
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'clk'
+Slack : -1.066
+TNS   : -1.066
+
+Type  : Fast 1200mV 0C Model Setup 'sck'
+Slack : -0.728
+TNS   : -66.977
+
+Type  : Fast 1200mV 0C Model Setup 'keypadReader:kpr|slowclock:sclock|sclk'
+Slack : 0.255
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'battleDisplay|vgapll|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 37.196
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clk'
+Slack : -0.205
+TNS   : -0.348
+
+Type  : Fast 1200mV 0C Model Hold 'keypadReader:kpr|slowclock:sclock|sclk'
+Slack : 0.186
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'sck'
+Slack : 0.188
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'battleDisplay|vgapll|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.217
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'sck'
+Slack : -3.000
+TNS   : -179.498
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'keypadReader:kpr|slowclock:sclock|sclk'
+Slack : -1.000
+TNS   : -7.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : 11.879
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'battleDisplay|vgapll|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 19.649
+TNS   : 0.000
+
+------------------------------------------------------------

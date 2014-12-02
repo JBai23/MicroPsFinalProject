@@ -1,0 +1,1 @@
+sendspi.o: sendspi.c
