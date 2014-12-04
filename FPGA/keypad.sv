@@ -1,8 +1,8 @@
 module keypad(		output logic [3:0] row = 4'b1111,
 						input logic [3:0] col,
 						input logic clk,
-						output logic en = 0
-						//jbai output logic [7:0] led
+						output logic en = 0,
+						output logic [3:0] keypadval
 );
 	typedef enum logic [1:0] 	{
 											search = 2'b00,
@@ -20,6 +20,8 @@ module keypad(		output logic [3:0] row = 4'b1111,
 	
 	const logic [3:0] zero = 4'b0000;
 	
+	//assign leds = {next_row};
+	
 	//logic [3:0] curr_col = 4'b0000;
 	
 	//jbai integer counter = 0;
@@ -34,7 +36,16 @@ module keypad(		output logic [3:0] row = 4'b1111,
 		case(state)
 			search: row <= next_row; // too quick?
 			//jbai bounce: counter <= counter + 1;
+			default: row <= row;
 		endcase
+		
+				case(row)
+					x0: next_row <= x1;
+					x1: next_row <= x2;
+					x2: next_row <= x3;
+					x3: next_row <= x0;
+					default: next_row = x0;
+				endcase
 	end
 	
 	always_comb begin
@@ -43,24 +54,19 @@ module keypad(		output logic [3:0] row = 4'b1111,
 		// search state
 		case(state)
 			search: begin
-				case(row)
-					x0: next_row = x1;
-					x1: next_row = x2;
-					x2: next_row = x3;
-					x3: next_row = x0;
-					default: next_row = x0;
-				endcase
+
 				if (col == zero) begin
 					next_state = search; //jbai bounce;
 				end else begin
 					next_state = bounce;
 				end
 				en = 0;
+				keypadval = 4'd0;
 			end
 			
 			// bounce state
 			bounce: begin
-				next_row = x0;
+				//next_row <= x0;
 				//jbai if (counter >= 20) // reset counter
 					//jbai if (col == zero)
 						//jbai next_state = search;
@@ -69,19 +75,22 @@ module keypad(		output logic [3:0] row = 4'b1111,
 				//jbai else
 					//jbai next_state = bounce;
 				en = 0;
+				keypadval = 4'd0;
 			end
 			
 			// update state
 			update: begin
-				next_row = x0;
+				//next_row <= x0;
 				next_state = btnrel; // is this correct?
 				en = 1;
+				keypadval = 4'd1;
 			end
 			
 			// btnrel state
 			btnrel: begin
 				en = 0;
-				next_row = x0;
+				keypadval = 4'd1;
+				//next_row <= x0;
 				if (col == zero)
 					next_state = search;
 				else
@@ -90,8 +99,9 @@ module keypad(		output logic [3:0] row = 4'b1111,
 			
 			// error state
 			default: begin
-				next_row <= x0;
-				next_state <= search;
+			   keypadval = 4'd0;
+				next_row = x0;
+				next_state = search;
 				en = 0;
 			end
 		endcase

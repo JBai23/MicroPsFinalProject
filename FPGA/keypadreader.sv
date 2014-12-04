@@ -10,9 +10,17 @@
 	//logic [3:0] s_right = 0;//jbai , s_left = 0;
 	logic sclk, en = 0;
 	slowclock sclock(clk, sclk);
-	keypad kp(row, col, sclk, en); //jbai
+	keypad kp(row, col, sclk, en, keypadval); //jbai
 	
-	updater up(row, col, en, clk, val); //jbai
+	logic [3:0] keypadval;
+	logic [3:0] updateval;
+	
+	updater up(row, col, en, clk, updateval); //jbai
+	
+	always_comb begin
+	  if (keypadval == 4'b0000) val = 4'd0;
+	  else val = updateval;
+	end
 	
 	//jbai display_two dt(s_right, s_left, clk, seg, use_left, use_right);
 	

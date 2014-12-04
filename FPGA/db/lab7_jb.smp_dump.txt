@@ -7,7 +7,7 @@ state.update 0 1 0 1
 state.btnrel 1 0 0 1 
 
 State Machine - |pokemonBattle|vga:battleDisplay|videoGen:vidGen|spi_slave_and_sprite_data_lookup:ssasdl|currentState
-Name currentState.GET_CMD currentState.GET_DATA currentState.GET_HEADER 
+Name currentState.GET_HEADER currentState.GET_DATA currentState.GET_CMD 
 currentState.GET_CMD 0 0 0 
 currentState.GET_HEADER 1 0 1 
-currentState.GET_DATA 1 1 0 
+currentState.GET_DATA 0 1 1 

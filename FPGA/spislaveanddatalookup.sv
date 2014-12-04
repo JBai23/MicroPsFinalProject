@@ -3,15 +3,16 @@
 // that currently must be changed by hand whenever bitsperpixel
 // changes.
 module spi_slave_and_sprite_data_lookup #(parameter
-                  NUMPIXELS = 13'd1024,
-                  SPRITEWIDTH = 10'd32,
+                  NUMPIXELS = 13'd4096,
+                  SPRITEWIDTH = 10'd64,
                   BITSPERPIXEL = 10'd4,
-                  NUMCOLORSINHEADER = 5'd4)
+                  NUMCOLORSINHEADER = 5'd16)
        (input  logic       vgaclk,
         input  logic       sck,
         input  logic       mosi,
         input  logic [9:0] x, y,
-        output logic [7:0] r_int, g_int, b_int);
+        output logic [7:0] r_int, g_int, b_int,
+		  output logic [7:0] leds = 8'd0);
 
   /*******************************/
   /* storage containers */
@@ -65,12 +66,13 @@ module spi_slave_and_sprite_data_lookup #(parameter
 
   typedef enum logic[1:0] { GET_CMD    = 2'b00,
                             GET_HEADER = 2'b01,
-                            GET_DATA   = 2'b10} stateType;
+                            GET_DATA   = 2'b11} stateType;
 
   stateType currentState = GET_CMD;
 
   always_ff @(posedge sck) begin
     q <= {q[30:0], mosi}; // shift register
+	 leds <= {pokeSprite1Header[2][15:8]};
   end
 
   always_ff @(negedge sck) begin
@@ -92,7 +94,7 @@ module spi_slave_and_sprite_data_lookup #(parameter
 	   end
 
       // leftover
-      headerCounter <= 5'd0;
+      headerCounter <= headerCounter;
     end
 
     // entire 4-byte packet has been transferred
@@ -114,7 +116,7 @@ module spi_slave_and_sprite_data_lookup #(parameter
       else if (currentState == GET_HEADER) begin
         pokeSprite1Header[headerCounter] <= q[23:0]; // r, g, b
 
-        if (headerCounter < (NUMCOLORSINHEADER - 1)) begin
+        if (headerCounter < (NUMCOLORSINHEADER - 5'd1)) begin
           currentState <= currentState;
           headerCounter <= headerCounter + 5'd1;
 			 we1 <= 1'd0;
@@ -137,7 +139,7 @@ module spi_slave_and_sprite_data_lookup #(parameter
 		  spiSubCounter <= 2'd0;
         pixelData <= q[3:0];
 
-        if (pixelWriteIndex < NUMPIXELS - 1) begin
+        if (pixelWriteIndex < NUMPIXELS - 13'd1) begin
           currentState <= currentState;
 			 pixelWriteIndex <= pixelWriteIndex + 12'd1;
 			 we1 <= 1'd1;

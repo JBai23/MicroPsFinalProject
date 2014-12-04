@@ -14,10 +14,10 @@
 
 // Pins representing value of input button pressed
 // Value is {IN3, IN2, IN1, IN0} (supports 1 hex digit)
-#define IN3 (char) PORTEbits.RE4
-#define IN2 (char) PORTEbits.RE5
-#define IN1 (char) PORTEbits.RE6
-#define IN0 (char) PORTEbits.RE7
+//#define IN3 (char) PORTEbits.RE4
+//#define IN2 (char) PORTEbits.RE5
+//#define IN1 (char) PORTEbits.RE6
+//#define IN0 (char) PORTEbits.RE7
 
 // TRIS bits for those pins
 #define TRIS3 TRISEbits.TRISE4
@@ -46,11 +46,15 @@ unsigned char getButtonInput() {
   TRIS0 = 1;
 
   // If using microMudd board's LEDs as output
-  TRISD = 0xFF00;
+  //TRISD = 0xFF00;
 
   // Do actual stuff
   while (1) {
-    inputVal = IN3 << 3 + IN2 << 2 + IN1 << 1 + IN0; //??? data type of INx? casting necessary?
+    char IN3 = PORTEbits.RE4;
+    char IN2 = PORTEbits.RE5;
+    char IN1 = PORTEbits.RE6;
+    char IN0 = PORTEbits.RE7;
+    inputVal = IN3 * 8 + IN2 * 4 + IN1 * 2 + IN0; //??? data type of INx? casting necessary?
 
     // 0 cannot be used as a program input---it represents releasing all buttons
     if (inputVal == 0) {
@@ -62,7 +66,7 @@ unsigned char getButtonInput() {
       BUTTONS_WERE_RELEASED = 0; // perhaps should do this at end, but w/e
 
       // do game logic
-      PORTD = inputVal;
+      //PORTD = inputVal;
       return inputVal;
     }
   }
@@ -70,7 +74,9 @@ unsigned char getButtonInput() {
 
 
 unsigned char main() {
-  return getButtonInput();
+  //TRISD = 0xFF00;
+  //PORTD = 0x0000;
+  while (1) {/*PORTD =*/ getButtonInput();}
 }
 
 

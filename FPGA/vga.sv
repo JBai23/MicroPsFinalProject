@@ -15,7 +15,8 @@ module vga(input  logic       clk,
            input  logic       mosi, //jbai
            output logic       vgaclk, // 25 MHz VGA clock
            output logic       hsync, vsync, sync_b, blank_b, //jbai to monitor & DAC
-           output logic [7:0] r, g, b); // to video DAC
+           output logic [7:0] r, g, b, // to video DAC
+			  output logic [7:0] leds);
 
   logic [9:0] x, y;
   logic [7:0] r_int, g_int, b_int;
@@ -40,7 +41,7 @@ module vga(input  logic       clk,
                         r_int, g_int, b_int, r, g, b, x, y);
 
   // user-defined module to determine pixel color
-  videoGen vidGen(clk, sck, mosi, x, y, r_int, g_int, b_int);
+  videoGen vidGen(vgaclk, sck, mosi, x, y, r_int, g_int, b_int, leds);
 endmodule
 
 
@@ -48,7 +49,8 @@ module videoGen(input  logic       vgaclk,
                 input  logic       sck,
                 input  logic       mosi,
                 input  logic [9:0] x, y,
-                output logic [7:0] r_int, g_int, b_int);
+                output logic [7:0] r_int, g_int, b_int,
+					 output logic [7:0] leds);
 
   //assign {r_int, g_int, b_int} = {8'd255, 8'd0, 8'd0};
 
@@ -57,20 +59,20 @@ module videoGen(input  logic       vgaclk,
 
   logic inSprite1;
 
-  spi_slave_and_sprite_data_lookup ssasdl(vgaclk, sck, mosi, spriteX, spriteY, spriteR, spriteG, spriteB);
+  spi_slave_and_sprite_data_lookup ssasdl(vgaclk, sck, mosi, spriteX, spriteY, spriteR, spriteG, spriteB, leds);
 
-  rectGen inS1(x, y, 10'd50, 10'd150, 10'd50, 10'd150, inSprite1);
+  rectGen inS1(x, y, 10'd100, 10'd164, 10'd100, 10'd164, inSprite1);
 
   always_comb begin
     if (inSprite1) begin
-      spriteX = x - 10'd50;
-      spriteY = y - 10'd50;
+      spriteX = x - 10'd100;
+      spriteY = y - 10'd100;
       {r_int, g_int, b_int} = {spriteR, spriteG, spriteB};
     end
 	 else begin
 	   spriteX = 10'd0;
 		spriteY = 10'd0;
-		{r_int, g_int, b_int} = 24'd0;
+		{r_int, g_int, b_int} = 24'b00110011_11001100_10101010;
 	 end
   end
 endmodule

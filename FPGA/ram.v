@@ -8,7 +8,7 @@ module ram_dual(q, addr_in, addr_out, d, we, clk1, clk2);
    input [11:0] addr_out;
    input we, clk1, clk2;
  
-   reg [11:0] addr_out_reg;
+   //reg [11:0] addr_out_reg;
    reg [3:0] q;
    reg [3:0] mem [4095:0];
  
@@ -17,9 +17,9 @@ module ram_dual(q, addr_in, addr_out, d, we, clk1, clk2);
          mem[addr_in] <= d;
    end
  
-   always @(posedge clk2) begin
-      q <= mem[addr_out_reg];
-      addr_out_reg <= addr_out;
+   always @(negedge clk2) begin
+      q <= mem[addr_out]; //mem[addr_out_reg];
+      //addr_out_reg <= addr_out;
    end
         
 endmodule
