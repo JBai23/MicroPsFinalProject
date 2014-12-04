@@ -11,7 +11,7 @@ for colornum in range(16):
 	line = data[0:32]
 	data = data[32:]
 	bytes = [line[i:i + 8] for i in range(0, len(line), 8)][1:]
-	color = (int(bytes[0], 2), int(bytes[1], 2), int(bytes[2], 2))
+	color = (int(bytes[2], 2), int(bytes[1], 2), int(bytes[0], 2))
 	#color = (color[0], color[1], 255)
 	colors.append(color)
 	print color

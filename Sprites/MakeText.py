@@ -9,7 +9,7 @@ uniqc = set([])
 img = cv2.imread(sys.argv[1])
 for rows in img:
 	for ele in rows:
-		uniqc.add(tuple(ele))
+		uniqc.add(tuple(ele)[::-1])
 
 # write our file
 out = open(os.path.splitext(sys.argv[1])[0] + '.txt', 'w') # don't pass a .txt in argv
@@ -29,7 +29,7 @@ for color in palette:
 # write image data to file
 for rows in img:
 	for ele in rows:
-		binstr = bin(palette.index(tuple(ele)))[2:].zfill(4)
+		binstr = bin(palette.index(tuple(ele)[::-1]))[2:].zfill(4)
 		out.write(binstr + '\n')
 
 out.close()
