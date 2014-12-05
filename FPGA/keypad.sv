@@ -44,7 +44,7 @@ module keypad(		output logic [3:0] row = 4'b1111,
 					x1: next_row <= x2;
 					x2: next_row <= x3;
 					x3: next_row <= x0;
-					default: next_row = x0;
+					default: next_row <= x0;
 				endcase
 	end
 	

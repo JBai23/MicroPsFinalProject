@@ -9,6 +9,24 @@ void sendCompressedSprite(unsigned long int cmd,
 
 void sendCharViaBitBanging(unsigned char q);
 
+void sendText(unsigned char streamID, unsigned char * text);
+
+void sendText(unsigned char streamID, unsigned char * text) {
+  unsigned int i = 0;
+  sendCharViaBitBanging(0);
+  sendCharViaBitBanging(0);
+  sendCharViaBitBanging(1); // cmdType == 1 for text
+  sendCharViaBitBanging(streamID);
+
+  while (i < 12) {
+    sendCharViaBitBanging(text[i]);
+    sendCharViaBitBanging(text[i+1]);
+    sendCharViaBitBanging(text[i+2]);
+    sendCharViaBitBanging(text[i+3]);
+    i += 4;
+  }
+}
+
 
 void sendCompressedSprite(unsigned long int cmd,
                           unsigned int numBytes,

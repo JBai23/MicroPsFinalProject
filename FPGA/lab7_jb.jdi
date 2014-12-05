@@ -1,6 +1,6 @@
 <sld_project_info>
   <file_info>
-    <file checksum="0x0010F879" device="EP3C5E144C8" path="lab7_jb.sof" usercode="0xFFFFFFFF"/>
+    <file checksum="0x0040A37F" device="EP3C5E144C8" path="lab7_jb.sof" usercode="0xFFFFFFFF"/>
   </file_info>
   <hub_info ir_width="0" node_count="0"/>
   <node_info/>

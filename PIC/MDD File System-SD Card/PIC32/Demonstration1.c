@@ -153,16 +153,39 @@ while(1);}
    if (FSfclose (pointer)) {//PORTD = 0x00FD;
 while(1);}
 
-while (1) {
-   //initspi3();
-   SPI3CON = 0;
-   SPI3BUF = 0;
+   // NECESSARY FOR BIT BANGING SPI ON THESE PINS
    TRISBbits.TRISB14 = 0;
    TRISFbits.TRISF5 = 0;
+
+   // these need not be null-terminated, but should be at least size 12
+   char move3[] = {'W','E','z','z','z','z','z','z','z','z','z','z',0};
+   char move2[] = {'M','I','C','R','O','z','z','z','z','z','z','z',0};
+   char move1[] = {'L','O','V','E','z','z','z','z','z','z','z','z',0};
+   char move4[] = {'P','S','z','z','z','z','z','z','z','z','z','z',0};
+
+   sendText(0, &move1[0]);
+   sendText(1, &move2[0]);
+   sendText(2, &move3[0]);
+   sendText(3, &move4[0]);
+
+   
+
+//while (1) {
+   //initspi3();
+   //SPI3CON = 0;
+   //SPI3BUF = 0;
+   Nop();
    //PORTBbits.RB14 = 1;
    //PORTBbits.RB14 = 0;
+   sendCompressedSprite(0, 2112, &giantBuf[0]);
    sendCompressedSprite(1, 2112, &giantBuf[0]);
-}
+   sendCompressedSprite(2, 2112, &giantBuf[0]);
+   sendCompressedSprite(3, 2112, &giantBuf[0]);
+   sendCompressedSprite(4, 2112, &giantBuf[0]);
+   sendCompressedSprite(5, 2112, &giantBuf[0]);
+   sendCompressedSprite(6, 2112, &giantBuf[0]);
+   sendCompressedSprite(7, 2112, &giantBuf[0]);
+//}
 
    //PORTD = 0x00F0;
 while(1);

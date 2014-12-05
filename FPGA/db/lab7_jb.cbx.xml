@@ -3,6 +3,6 @@
 	<PROJECT NAME="lab7_jb">
 		<CBX_INST_ENTRY INSTANCE_NAME="|pokemonBattle|vga:battleDisplay|pll:pll_inst|altpll:altpll_component" CBX_FILE_NAME="pll_altpll.v"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|pokemonBattle|vga:battleDisplay|pll:vgapll|altpll:altpll_component" CBX_FILE_NAME="pll_altpll.v"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|pokemonBattle|vga:battleDisplay|videoGen:vidGen|spi_slave_and_sprite_data_lookup:ssasdl|ram_dual:pokeSprite1Data|altsyncram:mem_rtl_0" CBX_FILE_NAME="altsyncram_15d1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|pokemonBattle|vga:battleDisplay|videoGen:vidGen|spi_slave_and_sprite_data_lookup:ssasdl|ram_dual:pokeSpriteData|altsyncram:mem_rtl_0" CBX_FILE_NAME="altsyncram_l8d1.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

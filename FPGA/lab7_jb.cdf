@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP3C5E144) Path("C:/Users/jbai/Desktop/FinalProjectTue/MicroPsFinalProject-master/FPGA/") File("lab7_jb.sof") MfrSpec(OpMask(1));
+		Device PartName(EP3C5E144) Path("C:/Users/jbai/Desktop/aaa/aaa/MicroPsFinalProject-master/FPGA/") File("lab7_jb.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

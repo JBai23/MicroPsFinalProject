@@ -6,8 +6,9 @@ module pokemonBattle(input  logic       clk,
                      output logic [7:0] r, g, b, // to video DAC
 							output logic [3:0] row, // for keypad
 							input  logic [3:0] col, // for keypad
-							output logic [7:0] leds, // for debugging
-							output logic [3:0] buttonVal); // for keypad
+							output logic [3:0] buttonVal, // for keypad
+							output logic [7:0] leds
+							);
 
   vga battleDisplay(clk, sck, mosi, vgaclk, hsync, vsync, sync_b, blank_b, r, g, b, leds);
   
