@@ -27,6 +27,8 @@ typedef struct {
 	move_s *last_move;
 
 	int turn;
+	action_t player1_action;
+	action_t player2_action;
 } battlestate_s;
 
 

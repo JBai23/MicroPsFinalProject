@@ -25,10 +25,6 @@ typedef struct menu_s {
 	struct menu_s *submenu[6];
 } menu_s;
 
-typedef struct {
-	int temp;
-} command_s;
-
 
 // input phase declares
 menu_s turn_menu;
@@ -42,7 +38,7 @@ void init_menus();
 
 
 // input phase func
-command_s get_command(menu_s *menu);
+action_t get_action(menu_s *menu);
 
 input_t get_input();
 

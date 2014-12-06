@@ -951,7 +951,7 @@ const move_s POISONGAS = {
 
 //poison powder
 const move_s POISONPOWDER = {
-.name = "Poison Powder",
+.name = "PoisonPowder",
 .damage = 0,
 .accuracy = 0.75,
 .type = POISON_T,
@@ -1146,7 +1146,7 @@ const move_s SCREECH = {
 
 //self-destruct
 const move_s SELFDESTRUCT = {
-.name = "Self-Destruct",
+.name = "SelfDestruct",
 .damage = 200,
 .accuracy = 1.0,
 .type = NORMAL_T,
@@ -1506,7 +1506,7 @@ const move_s THUNDER = {
 
 //thunder punch
 const move_s THUNDERPUNCH = {
-.name = "Thunder Punch",
+.name = "ThunderPunch",
 .damage = 75,
 .accuracy = 1.0,
 .type = ELECTRIC_T,
@@ -1521,7 +1521,7 @@ const move_s THUNDERPUNCH = {
 
 //thunder shock
 const move_s THUNDERSHOCK = {
-.name = "Thunder Shock",
+.name = "ThunderShock",
 .damage = 40,
 .accuracy = 1.0,
 .type = ELECTRIC_T,

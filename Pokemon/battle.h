@@ -78,7 +78,7 @@ typedef enum {
 } move_t;
 
 typedef struct {
-	char name[32];
+	char name[STRSIZE];
 	int damage;
 	double accuracy;
 	type_t type;
@@ -112,7 +112,7 @@ typedef struct {
 } volitile_s;
 
 typedef struct {
-	char name[32];
+	char name[STRSIZE];
 	int id;
 	type_t type1;
 	type_t type2;
@@ -131,7 +131,7 @@ typedef struct {
 } pokemon_s;
 
 typedef struct {
-	const char name[32];
+	const char name[STRSIZE];
 	pokemon_s pokemon[6];
 	const int pokemon_count;
 } player_s;

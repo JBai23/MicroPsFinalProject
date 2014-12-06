@@ -38,6 +38,9 @@ int game() {
 	}
 }
 
+int init() {
+	
+}
 
 // main
 int main()
