@@ -1,13 +1,3 @@
-#include <stdio.h>
-#include "battle.h"
-#include "pokemon.h"
-#include "moves.h"
-#include "rentals.h"
-
-#include "battlestate.h"
-
-// include phases
-#include "inputphase.h"
 
 
 #ifndef GME_H

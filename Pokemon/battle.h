@@ -1,4 +1,6 @@
 
+#include "global.h"
+
 #ifndef BTL_H
 #define BTL_H 1
 

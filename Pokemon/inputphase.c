@@ -1,3 +1,6 @@
+
+#include "battlestate.h"
+#include <stdio.h>
 #include "inputphase.h"
 
 void init_menus() {
@@ -179,7 +182,7 @@ input_t get_input() {
 }
 
 void input_phase() {
-	get_action();
+	get_action(&turn_menu);
 
-	get_action();
+	get_action(&turn_menu);
 }

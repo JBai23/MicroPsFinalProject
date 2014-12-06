@@ -1,7 +1,5 @@
 
 #include "global.h"
-#include "battlestate.h"
-#include <stdio.h>
 
 #ifndef INP_H
 #define INP_H 1

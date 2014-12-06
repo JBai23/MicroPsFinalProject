@@ -1,4 +1,15 @@
+#include <stdio.h>
 #include "global.h"
+#include "battle.h"
+#include "pokemon.h"
+#include "moves.h"
+#include "rentals.h"
+
+#include "battlestate.h"
+
+// include phases
+#include "inputphase.h"
+
 #include "game.h"
 
 // functions
@@ -10,10 +21,6 @@ bool can_fight(player_s *player) {
 		}
 	}
 	return false;
-}
-
-int input_phase() {
-	return 1;
 }
 
 int battle_phase() {
