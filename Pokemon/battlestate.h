@@ -1,15 +1,13 @@
 
-#include "inputphase.h"
-
 #ifndef BST_H
 #define BST_H 1
 
 // battlestate typedefs
 struct battlestate_s;
+struct effective_t;
 
-
-// global battlestate
 //battlestate_s curr;
+
 
 void init_battlestate();
 

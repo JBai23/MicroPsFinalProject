@@ -49,8 +49,11 @@ int debug_init() {
 
 }
 
+//effective_t echart[18][18];
+
 int init() {
 	init_menus();
+	init_echart();
 }
 
 // main

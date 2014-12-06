@@ -4,7 +4,7 @@
 #ifndef BTL_H
 #define BTL_H 1
 
-const typedef enum {
+typedef enum {
 	BASHFUL_N, DOCILE_N, HARDY_N, QUIRKY_N, SERIOUS_N, // neutral
 	LONELY_N, ADAMANT_N, NAUGHTY_N, BRAVE_N, // +attack
 	BOLD_N, IMPISH_N, LAX_N, RELAXED_N, // +sattack
@@ -13,7 +13,7 @@ const typedef enum {
 	TIMID_N, HASTY_N, JOLLY_N, NAIVE_N // +speed
 } nature_t; // N = Nature
 
-const typedef struct {
+typedef struct {
 	int hp_base;
 	int attack_base;
 	int defense_base;
@@ -22,7 +22,7 @@ const typedef struct {
 	int speed_base;
 } basestats_s; // stats
 
-const typedef struct {
+typedef struct {
 	int level;
 
 	int hp_ev;
@@ -46,11 +46,11 @@ const typedef struct {
 	nature_t nature;
 } personalstats_s;
 
-const typedef enum {
+typedef enum {
 	NON_S, FNT_S, BRN_S, FRZ_S, PAR_S, PSN_S, TXC_S, SLP_S // S = NON-VOLITILE STATUS
 } nvstatus_t; // nonvolitile statuses
 
-const typedef enum {
+typedef enum {
 	NON_T, 
 	NORMAL_T = 0, FIGHTING_T = 1, FLYING_T = 2, POISON_T = 3,
 	GROUND_T = 4, ROCK_T = 5, BUG_T = 6, GHOST_T = 7,
@@ -59,15 +59,13 @@ const typedef enum {
 	DARK_T = 16, FAIRY_T = 17
 } type_t; // types
 
-const typedef enum {
+typedef enum {
 	SUPER_TE, NORMAL_TE, NOTVERY_TE, NOEFFECT_TE // TE = TYPE EFFECTIVENESS
 } effective_t; // typing effectiveness
 
-const typedef struct {
+effective_t echart[18][18];
 
-} condition_s; // 
-
-const typedef enum {
+typedef enum {
 	NON_E2, APPLY_BRN_E2, APPLY_FRZ_E2, APPLY_PAR_E2, APPLY_PSN_E2, APPLY_TXC_E2, APPLY_SLP_E2,
 	APPLY_FLINCH_E2, APPLY_CONFUSE_E2,
 	HIGH_CRIT_E2, SELF_KILL_E2,
@@ -78,11 +76,11 @@ const typedef enum {
 	// E2 = SECONDARY EFFECT
 } move2nd_t;
 
-const typedef enum {
+typedef enum {
 	PHYSICAL_MT, SPECIAL_MT, STATUS_MT // MT = MOVE TYPE
 } move_t;
 
-const typedef struct {
+typedef struct {
 	char name[STRSIZE];
 	int damage;
 	double accuracy;
@@ -98,13 +96,13 @@ const typedef struct {
 	int m_arg;
 } move_s;
 
-const typedef struct {
+typedef struct {
 	int hp;
 	nvstatus_t nvstatus;
 	int nv_arg;
 } nonvolitile_s;
 
-const typedef struct {
+typedef struct {
 	int attack_stage;
 	int defense_stage;
 	int sattack_stage;
@@ -116,7 +114,7 @@ const typedef struct {
 	bool is_rechage;
 } volitile_s;
 
-const typedef struct {
+typedef struct {
 	char name[STRSIZE];
 	int id;
 	type_t type1;
@@ -124,7 +122,7 @@ const typedef struct {
 	basestats_s bstats;
 } pokemonspec_s;
 
-const typedef struct {
+typedef struct {
 	const pokemonspec_s* species;
 	const personalstats_s pstats;
 
@@ -135,10 +133,12 @@ const typedef struct {
 	const int move_count;
 } pokemon_s;
 
-const typedef struct {
+typedef struct {
 	const char name[STRSIZE];
 	pokemon_s pokemon[6];
 	const int pokemon_count;
 } player_s;
+
+void init_echart();
 
 #endif

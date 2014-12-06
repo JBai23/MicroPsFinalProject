@@ -25,13 +25,15 @@ all:	$(TARGETS)
 clean:
 	rm -f $(TARGETS) *.o
 
-game: game.o inputphase.o battlestate.o
+game: game.o inputphase.o battlestate.o battle.o
 	$(CXX) $(CXXFLAGS) -o $@ $^
 
 # ------ Dependences (.cpp -> .o using default Makefile rule) -----
 # gcc -MM *.c
 
-battlestate.o: battlestate.c battlestate.h
-game.o: game.c global.h game.h battle.h pokemon.h moves.h rentals.h \
- battlestate.h inputphase.h
-inputphase.o: inputphase.c inputphase.h global.h battlestate.h
+battle.o: battle.c battle.h global.h
+battlestate.o: battlestate.c battle.h global.h inputphase.h battlestate.h
+game.o: game.c global.h battle.h pokemon.h moves.h rentals.h \
+ battlestate.h inputphase.h game.h
+inputphase.o: inputphase.c battlestate.h inputphase.h global.h
+
