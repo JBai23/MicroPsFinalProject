@@ -17,6 +17,7 @@ CXX	  =	gcc
 
 #TESTS     =     node_test heap_test map_test tokenizer_test
 TARGETS   = 	game
+#TARGETS are things with mains
 
 # ----- Make Rules -----
 all:	$(TARGETS)
@@ -24,10 +25,12 @@ all:	$(TARGETS)
 clean:
 	rm -f $(TARGETS) *.o
 
-pokemon: game.o
+game: game.o
 	$(CXX) $(CXXFLAGS) -o $@ $^
 
 # ------ Dependences (.cpp -> .o using default Makefile rule) -----
 # gcc -MM *.c
 
-game.o: game.c game.h battle.h pokemon.h moves.h rentals.h
+game.o: game.c global.h game.h battle.h pokemon.h moves.h rentals.h \
+ inputphase.h
+inputphase.o: inputphase.c inputphase.h

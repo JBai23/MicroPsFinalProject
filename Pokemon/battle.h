@@ -70,7 +70,7 @@ typedef enum {
 	OTHR_ATTACK_E2, OTHR_DEFENSE_E2, OTHR_SATTACK_E2, OTHR_SDEFENSE_E2, OTHR_SPEED_E2, OTHR_ACCURACY_E2, OTHR_EVASION_E2,
 	SELF_ATTACK_SATTACK_E2, HAZE_E2,
 	RECOIL_E2, RECHARGE_E2
-	// 2E = SECONDARY EFFECT
+	// E2 = SECONDARY EFFECT
 } move2nd_t;
 
 typedef enum {
@@ -106,9 +106,9 @@ typedef struct {
 	int sdefense_stage;
 	int speed_stage;
 
-	int is_flinch;
-	int is_confuse;
-	int is_rechage;
+	bool is_flinch;
+	bool is_confuse;
+	bool is_rechage;
 } volitile_s;
 
 typedef struct {
