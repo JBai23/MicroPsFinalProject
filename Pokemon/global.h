@@ -1,4 +1,7 @@
 
+#include "battle.h"
+#include "battlestate.h"
+
 #ifndef GLB_H
 #define GLB_H 1
 
@@ -11,8 +14,11 @@ menu_s fpkmn_menu; // forced switch
 
 effective_t echart[18][18];
 
+battlestate_s curr;
+
 // inits
 void init_menus();
 void init_echart();
+void init_battlestate();
 
 #endif

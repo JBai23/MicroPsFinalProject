@@ -1,15 +1,28 @@
 
+#include "battle.h"
+#include "inputphase.h"
+
 #ifndef BST_H
 #define BST_H 1
 
 // battlestate typedefs
-struct battlestate_s;
-struct effective_t;
+typedef struct {
+	player_s *player1;
+	player_s *player2;
 
-//battlestate_s curr;
+	player_s *curr_player;
+	player_s *othr_player;
 
+	pokemon_s *curr_pokemon;
+	pokemon_s *othr_pokemon;
 
-void init_battlestate();
+	int last_dmg;
+	move_s *last_move;
+
+	int turn;
+	action_t player1_action;
+	action_t player2_action;
+} battlestate_s;
 
 int get_currplayer(); // rtns 1 if curr is player1, 2 if player2
 

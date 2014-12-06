@@ -1,5 +1,5 @@
 
-#include "battlestate.h"
+
 #include <stdio.h>
 #include "inputphase.h"
 #include "global.h"

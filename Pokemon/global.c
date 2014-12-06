@@ -2,6 +2,7 @@
 #include "gdefines.h"
 #include "inputphase.h"
 #include "battle.h"
+#include "battlestate.h"
 #include <string.h>
 #include "global.h"
 
@@ -478,4 +479,8 @@ void init_echart() {
 	echart[17][15] = SUPER_TE;
 	echart[17][16] = SUPER_TE;
 	echart[17][17] = NORMAL_TE;
+}
+
+void init_battlestate() {
+	
 }

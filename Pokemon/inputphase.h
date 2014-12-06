@@ -6,7 +6,9 @@
 
 // input phase typedef
 typedef enum {
-	BTN1_I = 0, BTN2_I = 1, BTN3_I = 2, BTN4_I = 3, BTN5_I = 4, BTN6_I = 5, BTNA_I, BTNB_I, NON_I
+	BTN1_I = 0, BTN2_I = 1, BTN3_I = 2,
+	BTN4_I = 3, BTN5_I = 4, BTN6_I = 5,
+	BTNA_I, BTNB_I, NON_I
 } input_t;
 
 typedef enum {
@@ -28,7 +30,6 @@ typedef struct menu_s {
 
 // input phase func
 action_t get_action(menu_s *menu);
-
 input_t get_input();
 
 // phase
