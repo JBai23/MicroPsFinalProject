@@ -6,16 +6,22 @@
 
 // input phase typedef
 typedef enum {
-	BTN1_I, BTN2_I, BTN3_I, BTN4_I, BTN5_I, BTN6_I, BTNA_I, BTNB_I, NON_I
+	BTN1_I = 0, BTN2_I = 1, BTN3_I = 2, BTN4_I = 3, BTN5_I = 4, BTN6_I = 5, BTNA_I, BTNB_I, NON_I
 } input_t;
 
-typedef struct {
+typedef enum {
+	MOVE1_A, MOVE2_A, MOVE3_A, MOVE4_A,
+	PKMN1_A, PKMN2_A, PKMN3_A, PKMN4_A, PKMN5_A, PKMN6_A,
+	SURRENDER_A, NON_A
+} action_t;
+
+typedef struct menu_s {
 	struct menu_s *back;
 
 	int option_count;
 	
 	char option_names[6][STRSIZE];
-	input_t input[6];
+	action_t action[6];
 	struct menu_s *submenu[6];
 } menu_s;
 
@@ -25,11 +31,14 @@ typedef struct {
 
 
 // input phase declares
+menu_s turn_menu;
+menu_s fight_menu;
+menu_s pkmn_menu; // switch
+menu_s run_menu;
 
-menu_s fight_menu = {
-.option_count = 4,
-.input = {BTN1_I, BTN2_I, BTN3_I, BTN4_I, NON_I, NON_I}
-};
+menu_s fpkmn_menu; // forced switch
+
+void init_menus();
 
 
 // input phase func

@@ -57,6 +57,8 @@ typedef struct {
 } menu_s;
 
 menu_s fight_menu = {.option_count = 4};
+// menu_s fight_menu;
+// fight_menu.option_count = 4;
 
 int main() {
 

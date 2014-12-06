@@ -25,7 +25,7 @@ all:	$(TARGETS)
 clean:
 	rm -f $(TARGETS) *.o
 
-game: game.o
+game: game.o inputphase.o
 	$(CXX) $(CXXFLAGS) -o $@ $^
 
 # ------ Dependences (.cpp -> .o using default Makefile rule) -----
