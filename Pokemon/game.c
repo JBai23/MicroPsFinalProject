@@ -10,6 +10,8 @@
 // include phases
 #include "inputphase.h"
 
+#include "global.h" // needs everything else before it
+
 #include "game.h"
 
 // functions
