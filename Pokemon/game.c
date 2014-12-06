@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "global.h"
+#include "gdefines.h"
 #include "battle.h"
 #include "pokemon.h"
 #include "moves.h"

@@ -2,6 +2,7 @@
 #include "battlestate.h"
 #include <stdio.h>
 #include "inputphase.h"
+#include <string.h>
 
 void init_menus() {
 	// turn menu

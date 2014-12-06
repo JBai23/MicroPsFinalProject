@@ -1,5 +1,5 @@
 
-#include "global.h"
+#include "gdefines.h"
 
 #ifndef BTL_H
 #define BTL_H 1

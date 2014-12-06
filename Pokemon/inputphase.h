@@ -1,5 +1,5 @@
 
-#include "global.h"
+#include "gdefines.h"
 
 #ifndef INP_H
 #define INP_H 1

@@ -31,9 +31,9 @@ game: game.o inputphase.o battlestate.o battle.o
 # ------ Dependences (.cpp -> .o using default Makefile rule) -----
 # gcc -MM *.c
 
-battle.o: battle.c battle.h global.h
-battlestate.o: battlestate.c battle.h global.h inputphase.h battlestate.h
-game.o: game.c global.h battle.h pokemon.h moves.h rentals.h \
+battle.o: battle.c battle.h gdefines.h
+battlestate.o: battlestate.c battle.h gdefines.h inputphase.h battlestate.h
+game.o: game.c gdefines.h battle.h pokemon.h moves.h rentals.h \
  battlestate.h inputphase.h game.h
-inputphase.o: inputphase.c battlestate.h inputphase.h global.h
+inputphase.o: inputphase.c battlestate.h inputphase.h gdefines.h
 
