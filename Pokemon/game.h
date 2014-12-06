@@ -5,10 +5,10 @@
 // battle phase func
 
 // end phase func
-void apply_eoteffects();
-void apply_toxic();
-void apply_poison();
-void apply_burn();
+void do_eoteffects();
+void do_toxic();
+void do_poison();
+void do_burn();
 
 // win phase func
 bool can_fight(player_s *player); // rtns tru if player has pkmn left

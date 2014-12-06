@@ -1,8 +1,8 @@
 
 #include "gdefines.h"
-#include "inputphase.h"
-#include "battle.h"
-#include "battlestate.h"
+#include "pkmn-tdef.h"
+#include "input-p.h"
+#include "battle-p.h"
 #include <string.h>
 #include "global.h"
 

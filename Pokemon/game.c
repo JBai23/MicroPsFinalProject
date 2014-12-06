@@ -1,14 +1,15 @@
 #include <stdio.h>
 #include "gdefines.h"
-#include "battle.h"
-#include "pokemon.h"
-#include "moves.h"
-#include "rentals.h"
+#include "pkmn-tdef.h"
 
-#include "battlestate.h"
+// game data
+#include "pokemon-def.h"
+#include "moves-def.h"
+#include "rentals-def.h"
 
 // include phases
-#include "inputphase.h"
+#include "input-p.h"
+#include "battle-p.h"
 
 #include "global.h" // needs everything else before it
 
