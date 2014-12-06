@@ -5,6 +5,9 @@
 #ifndef BTLP_H
 #define BTLP_H 1
 
+#define PLAYER1 player[p1_p]
+#define PLAYER2 player[p2_p]
+
 // battlestate typedefs
 typedef enum {
 	curr_r = 0, othr_r = 1
@@ -15,20 +18,20 @@ typedef enum {
 } player_t;
 
 typedef struct {
-	player_s *player1;
-	player_s *player2;
-
 	player_s *players[2];
-	pokemon_s *apkmn[2];
+	
+	player_s *rplayer[2]; // relative player
+	pokemon_s *rapkmn[2]; // relative active pkmn
 
 	int last_dmg;
 	move_s *last_move;
 
 	int round_num;
-	action_t player1_action;
-	action_t player2_action;
+	action_t actions[2];
 } battle_s;
 
-int get_player(relid_t rid); // rtns 1 if curr is player1, 2 if player2
+player_t get_player(relid_t rid); // rtns 1 if curr is player1, 2 if player2
+
+void set_active(player_t player);
 
 #endif

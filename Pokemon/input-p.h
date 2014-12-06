@@ -32,6 +32,9 @@ typedef struct menu_s {
 action_t get_action(menu_s *menu);
 input_t get_input();
 
+// set menus
+//void set_menus(player_t player);
+
 // phase
 void input_phase();
 
