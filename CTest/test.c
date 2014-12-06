@@ -40,6 +40,17 @@ int main() {
 }
 */
 
+/*
+typedef struct a A;
+typedef struct b B;
+
+struct a {
+    B *bb;
+};
+struct b {
+    A *aa;
+};*/
+
 #define STRSIZE 12
 
 typedef enum {
