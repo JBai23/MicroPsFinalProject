@@ -69,13 +69,13 @@ void init_menus() {
 
 	// run menu
 	run_menu.back = &turn_menu;
-	pkmn_menu.option_count = 1;
-	strcpy(pkmn_menu.option_names[0], "Confirm");
-	strcpy(pkmn_menu.option_names[1], "");
-	strcpy(pkmn_menu.option_names[2], "");
-	strcpy(pkmn_menu.option_names[3], "");
-	strcpy(pkmn_menu.option_names[4], "");
-	strcpy(pkmn_menu.option_names[5], "");
+	run_menu.option_count = 1;
+	strcpy(run_menu.option_names[0], "Confirm");
+	strcpy(run_menu.option_names[1], "");
+	strcpy(run_menu.option_names[2], "");
+	strcpy(run_menu.option_names[3], "");
+	strcpy(run_menu.option_names[4], "");
+	strcpy(run_menu.option_names[5], "");
 	run_menu.action[0] = SURRENDER_A;
 	run_menu.action[1] = NON_A;
 	run_menu.action[2] = NON_A;
@@ -116,6 +116,8 @@ void init_menus() {
 
 action_t get_action(menu_s *menu) {
 	while (true) {
+		printf("1.%s\n2.%s\n3.%s\n4.%s\n5.%s\n6.%s\n", menu->option_names[0], menu->option_names[1], menu->option_names[2], menu->option_names[3], menu->option_names[4], menu->option_names[5]);
+
 		input_t in = get_input();
 
 		switch(in) {
@@ -129,14 +131,14 @@ action_t get_action(menu_s *menu) {
 					if (menu->action[in] != NON_A) {
 						return menu->action[in];
 					} else {
-						if (!menu->submenu[in]) {
+						if (menu->submenu[in]) {
 							menu = menu->submenu[in];
 						}
 					}
 				}
 				break;
 			case BTNB_I:
-				if (!menu->back) {
+				if (menu->back) {
 					menu = menu->back;
 				}
 				break;
@@ -149,11 +151,12 @@ action_t get_action(menu_s *menu) {
 
 input_t get_input() {
 	while (true) {
-		char c[1];
+		char c[32]; // don't overflow this
 
-		fgets(c, 1, stdin);
+		printf(">> ");
+		scanf("%s", c);
 
-		switch (*c) {
+		switch (c[0]) {
 			case '1':
 				return BTN1_I;
 			case '2':
@@ -167,9 +170,16 @@ input_t get_input() {
 			case '6':
 				return BTN6_I;
 			case 'B':
+			case 'b':
 				return BTNB_I;
 			default:
 				break;
 		}
 	}
+}
+
+void input_phase() {
+	get_action();
+
+	get_action();
 }

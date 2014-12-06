@@ -1,5 +1,6 @@
 
 #include "global.h"
+#include "battlestate.h"
 #include <stdio.h>
 
 #ifndef INP_H
@@ -44,6 +45,6 @@ action_t get_action(menu_s *menu);
 input_t get_input();
 
 // phase
-int input_phase();
+void input_phase();
 
 #endif

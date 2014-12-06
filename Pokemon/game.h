@@ -4,39 +4,14 @@
 #include "moves.h"
 #include "rentals.h"
 
+#include "battlestate.h"
+
 // include phases
 #include "inputphase.h"
 
 
 #ifndef GME_H
 #define GME_H 1
-
-
-// global battlestate typedefs
-typedef struct {
-	player_s *player1;
-	player_s *player2;
-
-	player_s *curr_player;
-	player_s *othr_player;
-
-	pokemon_s *curr_pokemon;
-	pokemon_s *othr_pokemon;
-
-	int last_dmg;
-	move_s *last_move;
-
-	int turn;
-	action_t player1_action;
-	action_t player2_action;
-} battlestate_s;
-
-
-// global battlestate
-battlestate_s curr;
-
-int get_currplayer(); // rtns 1 if curr is player1, 2 if player2
-
 
 // battle phase func
 

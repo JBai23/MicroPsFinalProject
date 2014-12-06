@@ -38,14 +38,22 @@ int game() {
 	}
 }
 
+int debug_init() {
+
+}
+
 int init() {
-	
+	init_menus();
 }
 
 // main
 int main()
 {
+	init();
 	player_s RED = {"Red", {RED_PIKACHU, RED_LAPRAS, RED_SNORLAX, RED_VENUSAUR, RED_CHARIZARD, RED_BLASTOISE}, 6};
 	player_s BLUE = {"Blue", {BLUE_PIDGEOT, BLUE_ALAKAZAM, BLUE_RHYDON, BLUE_ARCANINE, BLUE_EXEGGUTOR, BLUE_BLASTOISE}, 6};
     printf("Hello World\n");
+
+    action_t out = get_action(&turn_menu);
+    printf("%i", out);
 }
