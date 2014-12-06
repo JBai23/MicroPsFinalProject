@@ -63,8 +63,6 @@ typedef enum {
 	SUPER_TE, NORMAL_TE, NOTVERY_TE, NOEFFECT_TE // TE = TYPE EFFECTIVENESS
 } effective_t; // typing effectiveness
 
-effective_t echart[18][18];
-
 typedef enum {
 	NON_E2, APPLY_BRN_E2, APPLY_FRZ_E2, APPLY_PAR_E2, APPLY_PSN_E2, APPLY_TXC_E2, APPLY_SLP_E2,
 	APPLY_FLINCH_E2, APPLY_CONFUSE_E2,

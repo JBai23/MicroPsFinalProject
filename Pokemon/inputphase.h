@@ -26,17 +26,6 @@ typedef struct menu_s {
 } menu_s;
 
 
-// input phase declares
-menu_s turn_menu;
-menu_s fight_menu;
-menu_s pkmn_menu; // switch
-menu_s run_menu;
-
-menu_s fpkmn_menu; // forced switch
-
-void init_menus();
-
-
 // input phase func
 action_t get_action(menu_s *menu);
 
