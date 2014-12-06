@@ -12,7 +12,7 @@
 
 
 // red
-pokemon_s_s RED_PIKACHU = {
+pokemon_s RED_PIKACHU = {
 .species = &PIKACHU,
 .pstats = PSTATS_DEFAULT,
 .v = V_DEFAULT,
@@ -21,7 +21,7 @@ pokemon_s_s RED_PIKACHU = {
 .move_count = 4
 };
 
-pokemon_s_s RED_LAPRAS = {
+pokemon_s RED_LAPRAS = {
 .species = &LAPRAS,
 .pstats = PSTATS_DEFAULT,
 .v = V_DEFAULT,
@@ -30,7 +30,7 @@ pokemon_s_s RED_LAPRAS = {
 .move_count = 4
 };
 
-pokemon_s_s RED_SNORLAX = {
+pokemon_s RED_SNORLAX = {
 .species = &SNORLAX,
 .pstats = PSTATS_DEFAULT,
 .v = V_DEFAULT,
@@ -39,7 +39,7 @@ pokemon_s_s RED_SNORLAX = {
 .move_count = 4
 };
 
-pokemon_s_s RED_VENUSAUR = {
+pokemon_s RED_VENUSAUR = {
 .species = &VENUSAUR,
 .pstats = PSTATS_DEFAULT,
 .v = V_DEFAULT,
@@ -48,7 +48,7 @@ pokemon_s_s RED_VENUSAUR = {
 .move_count = 4
 };
 
-pokemon_s_s RED_CHARIZARD = {
+pokemon_s RED_CHARIZARD = {
 .species = &CHARIZARD,
 .pstats = PSTATS_DEFAULT,
 .v = V_DEFAULT,
@@ -57,7 +57,7 @@ pokemon_s_s RED_CHARIZARD = {
 .move_count = 4
 };
 
-pokemon_s_s RED_BLASTOISE = {
+pokemon_s RED_BLASTOISE = {
 .species = &BLASTOISE,
 .pstats = PSTATS_DEFAULT,
 .v = V_DEFAULT,
@@ -67,7 +67,7 @@ pokemon_s_s RED_BLASTOISE = {
 };
 
 // blue
-pokemon_s_s BLUE_PIDGEOT = {
+pokemon_s BLUE_PIDGEOT = {
 .species = &PIDGEOT,
 .pstats = PSTATS_DEFAULT,
 .v = V_DEFAULT,
@@ -76,7 +76,7 @@ pokemon_s_s BLUE_PIDGEOT = {
 .move_count = 4
 };
 
-pokemon_s_s BLUE_ALAKAZAM = {
+pokemon_s BLUE_ALAKAZAM = {
 .species = &ALAKAZAM,
 .pstats = PSTATS_DEFAULT,
 .v = V_DEFAULT,
@@ -85,7 +85,7 @@ pokemon_s_s BLUE_ALAKAZAM = {
 .move_count = 4
 };
 
-pokemon_s_s BLUE_RHYDON = {
+pokemon_s BLUE_RHYDON = {
 .species = &RHYDON,
 .pstats = PSTATS_DEFAULT,
 .v = V_DEFAULT,
@@ -94,7 +94,7 @@ pokemon_s_s BLUE_RHYDON = {
 .move_count = 4
 };
 
-pokemon_s_s BLUE_ARCANINE = {
+pokemon_s BLUE_ARCANINE = {
 .species = &ARCANINE,
 .pstats = PSTATS_DEFAULT,
 .v = V_DEFAULT,
@@ -103,7 +103,7 @@ pokemon_s_s BLUE_ARCANINE = {
 .move_count = 4
 };
 
-pokemon_s_s BLUE_EXEGGUTOR = {
+pokemon_s BLUE_EXEGGUTOR = {
 .species = &EXEGGUTOR,
 .pstats = PSTATS_DEFAULT,
 .v = V_DEFAULT,
@@ -112,7 +112,7 @@ pokemon_s_s BLUE_EXEGGUTOR = {
 .move_count = 4
 };
 
-pokemon_s_s BLUE_BLASTOISE = {
+pokemon_s BLUE_BLASTOISE = {
 .species = &BLASTOISE,
 .pstats = PSTATS_DEFAULT,
 .v = V_DEFAULT,

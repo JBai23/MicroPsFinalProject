@@ -30,4 +30,4 @@ pokemon: game.o
 # ------ Dependences (.cpp -> .o using default Makefile rule) -----
 # gcc -MM *.c
 
-game.o: game.c battle.h pokemon.h moves.h rentals.h
+game.o: game.c game.h battle.h pokemon.h moves.h rentals.h

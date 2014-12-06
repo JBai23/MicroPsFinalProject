@@ -1,26 +1,7 @@
-#include <stdio.h>
-#include "battle.h"
-#include "pokemon.h"
-#include "moves.h"
-#include "rentals.h"
+#include "game.h"
 
-typedef int bool;
-#define true 1
-#define false 0
-
-player_s *player1;
-player_s *player2;
-
-player_s *curr_player;
-player_s *othr_player;
-
-pokemon_s *curr_pokemon;
-pokemon_s *othr_pokemon;
-
-int last_dmg;
-move_s *last_move;
-
-bool can_fight(player_s& player) {
+// functions
+bool can_fight(player_s *player) {
 	size_t i;
 	for (i = 0; i < player->pokemon_count; ++i) {
 		if (player->pokemon[i].nv.nvstatus != FNT_S) {
@@ -57,6 +38,7 @@ int game() {
 }
 
 
+// main
 int main()
 {
 	player_s RED = {"Red", {RED_PIKACHU, RED_LAPRAS, RED_SNORLAX, RED_VENUSAUR, RED_CHARIZARD, RED_BLASTOISE}, 6};
