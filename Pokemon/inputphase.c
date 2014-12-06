@@ -112,3 +112,64 @@ void init_menus() {
 	fpkmn_menu.submenu[4] = NULL;
 	fpkmn_menu.submenu[5] = NULL;
 }
+
+
+action_t get_action(menu_s *menu) {
+	while (true) {
+		input_t in = get_input();
+
+		switch(in) {
+			case BTN1_I:
+			case BTN2_I:
+			case BTN3_I:
+			case BTN4_I:
+			case BTN5_I:
+			case BTN6_I:
+				if (in < menu->option_count) {
+					if (menu->action[in] != NON_A) {
+						return menu->action[in];
+					} else {
+						if (!menu->submenu[in]) {
+							menu = menu->submenu[in];
+						}
+					}
+				}
+				break;
+			case BTNB_I:
+				if (!menu->back) {
+					menu = menu->back;
+				}
+				break;
+
+			default:
+				break;
+		}
+	}
+}
+
+input_t get_input() {
+	while (true) {
+		char c[1];
+
+		fgets(c, 1, stdin);
+
+		switch (*c) {
+			case '1':
+				return BTN1_I;
+			case '2':
+				return BTN2_I;
+			case '3':
+				return BTN3_I;
+			case '4':
+				return BTN4_I;
+			case '5':
+				return BTN5_I;
+			case '6':
+				return BTN6_I;
+			case 'B':
+				return BTNB_I;
+			default:
+				break;
+		}
+	}
+}
