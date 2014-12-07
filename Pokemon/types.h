@@ -12,12 +12,6 @@ typedef enum {
 	BTNA_I, BTNB_I, NON_I
 } input_t;
 
-typedef enum {
-	MOVE1_A, MOVE2_A, MOVE3_A, MOVE4_A,
-	PKMN1_A, PKMN2_A, PKMN3_A, PKMN4_A, PKMN5_A, PKMN6_A,
-	SURRENDER_A, NON_A
-} action_t;
-
 typedef struct menu_s {
 	struct menu_s *back;
 
@@ -42,13 +36,11 @@ typedef struct {
 	trainer_s *players[2];
 	
 	trainer_s *rplayer[2]; // relative player
-	pokemon_s *rapkmn[2]; // relative active pkmn
 
 	int last_dmg;
-	move_s *last_move;
+	move_s *last_move;  // reset at beginning of battle phase?
 
 	int round_num;
-	action_t actions[2];
 } battle_s;
 
 // eor-p typedefs

@@ -7,6 +7,18 @@
 #define PLAYER1 battle.players[P1_P]
 #define PLAYER2 battle.players[P2_P]
 
+#define PLAYER1_ACTION PLAYER1->action
+#define PLAYER2_ACTION PLAYER2->action
+
+#define CURR_PLAYER battle.rplayer[CURR_R]
+#define OTHR_PLAYER battle.rplayer[OTHR_R]
+
+#define CURR_ACTION CURR_PLAYER->action
+#define OTHR_ACTION OTHR_PLAYER->action
+
+#define CURR_PKMN CURR_PLAYER->pokemon[CURR_PLAYER->pokemon_active]
+#define OTHR_PKMN OTHR_PLAYER->pokemon[OTHR_PLAYER->pokemon_active]
+
 // input phase globals
 menu_s turn_menu;
 menu_s fight_menu;
@@ -16,11 +28,9 @@ menu_s fpkmn_menu; // forced switch
 
 effective_t echart[18][18];
 
-//
 trainer_s RED;
 trainer_s BLUE;
-// trainer_s RED = {"Red", {RED_PIKACHU, RED_LAPRAS, RED_SNORLAX, RED_VENUSAUR, RED_CHARIZARD, RED_BLASTOISE}, 6};
-// trainer_s BLUE = {"Blue", {BLUE_PIDGEOT, BLUE_ALAKAZAM, BLUE_RHYDON, BLUE_ARCANINE, BLUE_EXEGGUTOR, BLUE_BLASTOISE}, 6};
+
 battle_s battle;
 
 // inits

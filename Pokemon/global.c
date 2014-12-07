@@ -3760,7 +3760,30 @@ void init_trainers() {
 	BLUE.pokemon_count = 6;
 }
 
+// typedef struct {
+// 	trainer_s *players[2];
+// 	action_t actions[2];
+	
+// 	trainer_s *rplayer[2]; // relative player
+// 	pokemon_s *rpkmn[2]; // relative active pkmn
+// 	action_t ractions[2];
+
+// 	int last_dmg;
+// 	move_s *last_move;  // reset at beginning of battle phase?
+
+// 	int round_num;
+// } battle_s;
+
 void init_battle() {
 	PLAYER1 = &RED;
 	PLAYER2 = &BLUE;
+
+	CURR_PLAYER = PLAYER1;
+	OTHR_PLAYER = PLAYER2;
+
+	battle.last_dmg = 0;
+	battle.last_move = &STRUGGLE; // maybe make this NULL? this only matters for things like counter and mirror coat
+
+	battle.round_num = 1;
+	
 }

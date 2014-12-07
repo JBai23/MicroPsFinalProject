@@ -133,9 +133,17 @@ typedef struct {
 	int move_count; // const
 } pokemon_s;
 
+typedef enum {
+	MOVE1_A, MOVE2_A, MOVE3_A, MOVE4_A,
+	PKMN1_A, PKMN2_A, PKMN3_A, PKMN4_A, PKMN5_A, PKMN6_A,
+	SURRENDER_A, NON_A
+} action_t;
+
 typedef struct {
 	char name[STRSIZE]; // const
 	pokemon_s *pokemon[6];
+	int pokemon_active;
+	action_t action;
 	int pokemon_count; // const
 } trainer_s;
 
