@@ -19,8 +19,8 @@
 #define CURR_ACTION CURR_PLAYER->action
 #define OTHR_ACTION OTHR_PLAYER->action
 
-#define CURR_PKMN CURR_PLAYER->pokemon[CURR_PLAYER->pokemon_active]
-#define OTHR_PKMN OTHR_PLAYER->pokemon[OTHR_PLAYER->pokemon_active]
+#define CURR_POKEMON CURR_PLAYER->pokemon[CURR_PLAYER->pokemon_active]
+#define OTHR_POKEMON OTHR_PLAYER->pokemon[OTHR_PLAYER->pokemon_active]
 
 // input phase globals
 menu_s turn_menu;
@@ -36,8 +36,10 @@ trainer_s BLUE;
 
 battle_s battle;
 
-pokemon_s* active_pokemon(trainer_s *trainer);
+pokemon_s* get_activepokemon(trainer_s *trainer);
 move_s* get_move(trainer_s *trainer, action_t action);
+void switchto(trainer_s *trainer, int index);
+void reset_v(pokemon_s *pokemon);
 
 bool roll(double chance);
 double rng();

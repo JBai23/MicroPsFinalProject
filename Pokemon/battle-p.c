@@ -26,20 +26,28 @@ bool check_priority() { // true if battle, false if surrender
 		int player1_speed = calc_speed(PLAYER1_POKEMON);
 		int player2_speed = calc_speed(PLAYER2_POKEMON);
 
-		
+		if (player1_speed == player2_speed) {
+			set_curr((roll(.5) ? PLAYER1 : PLAYER2));
+			return true;
+		} else {
+			set_curr((player1_speed > player2_speed ? PLAYER1 : PLAYER2));
+			return true;
+		}
+	} else {
+		set_curr((player1_priority > player2_priority ? PLAYER1 : PLAYER2));
+		return true;
 	}
 
 	return true;
 }
 
-int get_priority(trainer_s *trainer) {
-	action_t action = trainer->action;
+bool is_move(action_t action) {
 	switch (action) {
 		case MOVE1_A:
 		case MOVE2_A:
 		case MOVE3_A:
 		case MOVE4_A:
-			return get_move(trainer, action)->priority;
+			return true;
 
 		case PKMN1_A:
 		case PKMN2_A:
@@ -47,11 +55,60 @@ int get_priority(trainer_s *trainer) {
 		case PKMN4_A:
 		case PKMN5_A:
 		case PKMN6_A:
-			return 6;
+			return false;
+
+		case SURRENDER_A:
+		case NON_A:
+			return false;
+
+		default: // should never happen
+			return false;
+	}
+}
+
+int get_switchindex(action_t action) {
+	switch (action) {
+		case PKMN1_A:
+			return 0;
+		case PKMN2_A:
+			return 1;
+		case PKMN3_A:
+			return 2;
+		case PKMN4_A:
+			return 3;
+		case PKMN5_A:
+			return 4;
+		case PKMN6_A:
+			return 5;
 
 		default:
-			return 0; // this shouldn't happen, should always check for surrender before calling this function
+			return 0; // this shouldn't happen
 	}
+}
+
+
+
+int get_priority(trainer_s *trainer) {
+	action_t action = trainer->action;
+	return (is_move(action) ? get_move(trainer, action)->priority : 6); // if isn't move it is switch
+	// switch (action) {
+	// 	case MOVE1_A:
+	// 	case MOVE2_A:
+	// 	case MOVE3_A:
+	// 	case MOVE4_A:
+	// 		return get_move(trainer, action)->priority;
+
+	// 	case PKMN1_A:
+	// 	case PKMN2_A:
+	// 	case PKMN3_A:
+	// 	case PKMN4_A:
+	// 	case PKMN5_A:
+	// 	case PKMN6_A:
+	// 		return 6;
+
+	// 	default:
+	// 		return 0; // this shouldn't happen, should always check for surrender before calling this function
+	// }
 }
 
 int calc_hpmax(pokemon_s *pokemon) {
@@ -207,6 +264,10 @@ int calc_speed(pokemon_s *pokemon) {
 	return ((iv + (2 * base) + ev / 4) * level / 100 + 5) * nature / 10 * stage_n / stage_d;
 }
 
+double calc_accuracy(pokemon_s *attacker, pokemon_s *defender) {
+	return (double) calc_accuracy_n(attacker, defender) / (double) calc_accuracy_d(attacker, defender);
+}
+
 int calc_accuracy_n(pokemon_s *attacker, pokemon_s *defender) {
 	int acc = attacker->v.accuracy_stage;
 	int eva = defender->v.evasion_stage;
@@ -235,10 +296,26 @@ int calc_accuracy_d(pokemon_s *attacker, pokemon_s *defender) {
 	return (sum < 0 ? 3 + sum : 3);
 }
 
+void curr_exe() {
+	if (is_move(CURR_ACTION)) {
+		curr_attack();
+	} else {
+		curr_switchto();
+	}
+}
 
+void curr_switchto() {
+	get_switchindex(CURR_ACTION);
+}
+
+void curr_attack() {
+	//CURR_POKEMON
+}
 
 void battle_phase() {
 	if (check_priority()) {
-
+		curr_exe();
+		swap_curr();
+		curr_exe();
 	}
 }

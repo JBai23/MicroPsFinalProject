@@ -6,23 +6,44 @@
 #include "global.h"
 #include <stdlib.h>
 
-pokemon_s* active_pokemon(trainer_s *trainer) {
+pokemon_s* get_activepokemon(trainer_s *trainer) {
 	return trainer->pokemon[trainer->pokemon_active];
 }
 
 move_s* get_move(trainer_s *trainer, action_t action) {
 	switch (action) {
 		case MOVE1_A:
-			return active_pokemon(trainer)->moves[0];
+			return get_activepokemon(trainer)->moves[0];
 		case MOVE2_A:
-			return active_pokemon(trainer)->moves[1];
+			return get_activepokemon(trainer)->moves[1];
 		case MOVE3_A:
-			return active_pokemon(trainer)->moves[2];
+			return get_activepokemon(trainer)->moves[2];
 		case MOVE4_A:
-			return active_pokemon(trainer)->moves[3];
+			return get_activepokemon(trainer)->moves[3];
 		default:
 			return NULL;
 	}
+}
+
+void reset_v(pokemon_s *pokemon) {
+	pokemon->v.attack_stage = 0;
+	pokemon->v.defense_stage = 0;
+	pokemon->v.sattack_stage = 0;
+	pokemon->v.sdefense_stage = 0;
+	pokemon->v.speed_stage = 0;
+
+	pokemon->v.accuracy_stage = 0;
+	pokemon->v.evasion_stage = 0;
+
+	pokemon->v.is_flinch = false;
+	pokemon->v.is_confuse = false;
+	pokemon->v.is_rechage = false;
+}
+
+void switchto(trainer_s *trainer, int index) {
+	reset_v(get_activepokemon(trainer));
+	trainer->pokemon_active = index;
+	reset_v(get_activepokemon(trainer));
 }
 
 bool roll(double chance) {
