@@ -204,7 +204,33 @@ int calc_speed(pokemon_s *pokemon) {
 	return ((iv + (2 * base) + ev / 4) * level / 100 + 5) * nature / 10 * stage_n / stage_d;
 }
 
+int calc_accuracy_n(pokemon_s *attacker, pokemon_s *defender) {
+	int acc = attacker->v.accuracy_stage;
+	int eva = defender->v.evasion_stage;
 
+	int sum = acc + eva;
+	if (sum > 6) {
+		sum = 6;
+	} else if (sum < -6) {
+		sum = -6;
+	}
+
+	return (sum > 0 ? 3 + sum : 3);
+}
+
+int calc_accuracy_d(pokemon_s *attacker, pokemon_s *defender) {
+	int acc = attacker->v.accuracy_stage;
+	int eva = defender->v.evasion_stage;
+
+	int sum = acc + eva;
+	if (sum > 6) {
+		sum = 6;
+	} else if (sum < -6) {
+		sum = -6;
+	}
+
+	return (sum < 0 ? 3 + sum : 3);
+}
 
 
 

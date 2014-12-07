@@ -109,6 +109,9 @@ typedef struct {
 	int sdefense_stage;
 	int speed_stage;
 
+	int accuracy_stage;
+	int evasion_stage;
+
 	bool is_flinch;
 	bool is_confuse;
 	bool is_rechage;

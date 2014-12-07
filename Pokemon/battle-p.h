@@ -20,6 +20,9 @@ int calc_sattack(pokemon_s *pokemon);
 int calc_sdefense(pokemon_s *pokemon);
 int calc_speed(pokemon_s *pokemon);
 
+int calc_accuracy_n(pokemon_s *attacker, pokemon_s *defender);
+int calc_accuracy_d(pokemon_s *attacker, pokemon_s *defender);
+
 void battle_phase();
 
 #endif
