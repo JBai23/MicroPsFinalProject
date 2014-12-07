@@ -10,6 +10,9 @@
 #define PLAYER1_ACTION PLAYER1->action
 #define PLAYER2_ACTION PLAYER2->action
 
+#define PLAYER1_POKEMON PLAYER1->pokemon[PLAYER1->pokemon_active]
+#define PLAYER2_POKEMON PLAYER2->pokemon[PLAYER2->pokemon_active]
+
 #define CURR_PLAYER battle.rplayer[CURR_R]
 #define OTHR_PLAYER battle.rplayer[OTHR_R]
 
@@ -36,7 +39,11 @@ battle_s battle;
 pokemon_s* active_pokemon(trainer_s *trainer);
 move_s* get_move(trainer_s *trainer, action_t action);
 
+bool roll(double chance);
+double rng();
+
 // inits
+void init_rng();
 void init_menus();
 void init_echart();
 void init_pokemonspec();

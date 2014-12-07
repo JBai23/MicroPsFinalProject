@@ -23,7 +23,10 @@ bool check_priority() { // true if battle, false if surrender
 	int player2_priority = get_priority(PLAYER2);
 
 	if (player1_priority == player2_priority) {
-		//check speed
+		int player1_speed = calc_speed(PLAYER1_POKEMON);
+		int player2_speed = calc_speed(PLAYER2_POKEMON);
+
+		
 	}
 
 	return true;

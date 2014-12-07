@@ -53,6 +53,7 @@ void init() {
 // main
 int main()
 {
+	void init_rng();
 	printf("Hello World\n");
 	while (true) {
 		printf("Init New Match\n");

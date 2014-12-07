@@ -4,6 +4,7 @@
 #include "types.h"
 #include <string.h>
 #include "global.h"
+#include <stdlib.h>
 
 pokemon_s* active_pokemon(trainer_s *trainer) {
 	return trainer->pokemon[trainer->pokemon_active];
@@ -22,6 +23,18 @@ move_s* get_move(trainer_s *trainer, action_t action) {
 		default:
 			return NULL;
 	}
+}
+
+bool roll(double chance) {
+	return chance <= rng();
+}
+
+double rng() {
+	return (double)(rand() % 100 + 1) / 100.0;
+}
+
+void init_rng() {
+	srand(0); // need to change seed
 }
 
 void init_menus() {
