@@ -76,10 +76,10 @@ input_t get_input() {
 
 void set_menus(trainer_s *trainer) {
 	// fight menu
-	strcpy(fight_menu.option_names[0], trainer->pokemon[trainer->pokemon_active]->moves[0]->name);
-	strcpy(fight_menu.option_names[1], trainer->pokemon[trainer->pokemon_active]->moves[1]->name);
-	strcpy(fight_menu.option_names[2], trainer->pokemon[trainer->pokemon_active]->moves[2]->name);
-	strcpy(fight_menu.option_names[3], trainer->pokemon[trainer->pokemon_active]->moves[3]->name);
+	strcpy(fight_menu.option_names[0], active_pokemon(trainer)->moves[0]->name);
+	strcpy(fight_menu.option_names[1], active_pokemon(trainer)->moves[1]->name);
+	strcpy(fight_menu.option_names[2], active_pokemon(trainer)->moves[2]->name);
+	strcpy(fight_menu.option_names[3], active_pokemon(trainer)->moves[3]->name);
 
 	// pkmn menu
 	strcpy(pkmn_menu.option_names[0], trainer->pokemon[0]->species->name);

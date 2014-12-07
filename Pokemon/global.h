@@ -33,6 +33,9 @@ trainer_s BLUE;
 
 battle_s battle;
 
+pokemon_s* active_pokemon(trainer_s *trainer);
+move_s* get_move(trainer_s *trainer, action_t action);
+
 // inits
 void init_menus();
 void init_echart();

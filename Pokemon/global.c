@@ -5,6 +5,25 @@
 #include <string.h>
 #include "global.h"
 
+pokemon_s* active_pokemon(trainer_s *trainer) {
+	return trainer->pokemon[trainer->pokemon_active];
+}
+
+move_s* get_move(trainer_s *trainer, action_t action) {
+	switch (action) {
+		case MOVE1_A:
+			return active_pokemon(trainer)->moves[0];
+		case MOVE2_A:
+			return active_pokemon(trainer)->moves[1];
+		case MOVE3_A:
+			return active_pokemon(trainer)->moves[2];
+		case MOVE4_A:
+			return active_pokemon(trainer)->moves[3];
+		default:
+			return NULL;
+	}
+}
+
 void init_menus() {
 	// turn menu
 	turn_menu.back = NULL;

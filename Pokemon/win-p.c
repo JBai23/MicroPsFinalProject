@@ -13,8 +13,8 @@ bool can_fight(trainer_s *trainer) {
 }
 
 bool win_phase(win_t *winner) {
-	bool p1_alive = can_fight(PLAYER1);
-	bool p2_alive = can_fight(PLAYER2);
+	bool p1_alive = can_fight(PLAYER1) && PLAYER1_ACTION != SURRENDER_A;
+	bool p2_alive = can_fight(PLAYER2) && PLAYER2_ACTION != SURRENDER_A;
 
 	if (p1_alive && p2_alive) { // keep going
 		return true;
