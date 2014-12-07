@@ -1,8 +1,7 @@
 #include <stdio.h>
-#include "gdefines.h"
-#include "pkmn-tdef.h"
 
-// game data
+#include "types.h"
+
 #include "pokemon-def.h"
 #include "moves-def.h"
 #include "rentals-def.h"

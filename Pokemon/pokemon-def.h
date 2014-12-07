@@ -1,8 +1,10 @@
+#ifndef PKM_H
+#define PKM_H 1
+
+
 
 #include "pkmn-tdef.h"
 
-#ifndef PKM_H
-#define PKM_H 1
 
 //bulbasaur
 const pokemonspec_s BULBASAUR = {

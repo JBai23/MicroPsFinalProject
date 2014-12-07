@@ -34,7 +34,10 @@ depend:
 # ------ Dependences (.cpp -> .o using default Makefile rule) -----
 # gcc -MM *.c
 
-game.o: game.c gdefines.h pkmn-tdef.h pokemon-def.h moves-def.h \
+game.o: game.c gdefines.h types.h pkmn-tdef.h pokemon-def.h moves-def.h \
  rentals-def.h input-p.h battle-p.h global.h game.h
-global.o: global.c gdefines.h pkmn-tdef.h input-p.h battle-p.h global.h
-input-p.o: input-p.c input-p.h gdefines.h global.h pkmn-tdef.h battle-p.h
+global.o: global.c types.h gdefines.h pkmn-tdef.h pokemon-def.h \
+ moves-def.h global.h
+input-p.o: input-p.c types.h gdefines.h pkmn-tdef.h pokemon-def.h \
+ moves-def.h input-p.h
+

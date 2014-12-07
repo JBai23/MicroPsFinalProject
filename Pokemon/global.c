@@ -1,8 +1,5 @@
 
-#include "gdefines.h"
-#include "pkmn-tdef.h"
-#include "input-p.h"
-#include "battle-p.h"
+#include "types.h"
 #include <string.h>
 #include "global.h"
 
@@ -481,6 +478,6 @@ void init_echart() {
 	echart[17][17] = NORMAL_TE;
 }
 
-void init_battlestate() {
+void init_battle() {
 	
 }

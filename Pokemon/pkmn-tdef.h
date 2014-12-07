@@ -1,8 +1,10 @@
+#ifndef PKMTD_H
+#define PKMTD_H 1
+
 
 #include "gdefines.h"
 
-#ifndef PKMTD_H
-#define PKMTD_H 1
+
 
 typedef enum {
 	BASHFUL_N, DOCILE_N, HARDY_N, QUIRKY_N, SERIOUS_N, // neutral

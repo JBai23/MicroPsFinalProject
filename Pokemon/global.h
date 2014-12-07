@@ -1,9 +1,10 @@
 
-#include "pkmn-tdef.h"
-#include "battle-p.h"
-
 #ifndef GLB_H
 #define GLB_H 1
+
+#include "types.h"
+
+
 
 // input phase globals
 menu_s turn_menu;

@@ -1,8 +1,9 @@
 
-#include "pkmn-tdef.h"
-
 #ifndef MVS_H
 #define MVS_H 1
+
+#include "pkmn-tdef.h"
+
 
 //absorb
 const move_s ABSORB = {

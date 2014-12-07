@@ -1,8 +1,9 @@
 
 
-#include <stdio.h>
+#include "types.h"
 #include "input-p.h"
 #include "global.h"
+#include <stdio.h>
 #include <string.h>
 
 action_t get_action(menu_s *menu) {
