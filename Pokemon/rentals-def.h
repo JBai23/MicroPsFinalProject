@@ -6,7 +6,7 @@
 #include "pokemon-def.h"
 
 #define PSTATS_DEFAULT {.level = 100, .hp_ev = 0, .hp_iv = 0, .attack_ev = 0, .attack_iv = 0, .defense_ev = 0, .defense_iv = 0, .sattack_ev = 0, .sattack_iv = 0, .sdefense_ev = 0, .sdefense_iv = 0, .speed_ev = 0, .speed_iv = 0, BASHFUL_N}
-#define V_DEFAULT {.attack_stage = 0, .defense_stage = 0, .sattack_stage = 0, .sdefense_stage = 0, .speed_stage = 0, .is_flinch = 0, .is_confuse = 0, .is_rechage = 0}
+#define V_DEFAULT {.attack_stage = 0, .defense_stage = 0, .sattack_stage = 0, .sdefense_stage = 0, .speed_stage = 0, .is_flinch = 0, .is_confuse = 0, .is_recharge = 0}
 #define NV_DEFAULT {.hp = 1, NON_S, 0}
 
 

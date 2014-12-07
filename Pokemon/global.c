@@ -10,6 +10,10 @@ pokemon_s* get_activepokemon(trainer_s *trainer) {
 	return trainer->pokemon[trainer->pokemon_active];
 }
 
+bool has_type(pokemon_s *pokemon, type_t type) {
+	return (pokemon->species->type1 == type || pokemon->species->type2 == type);
+}
+
 move_s* get_move(trainer_s *trainer, action_t action) {
 	switch (action) {
 		case MOVE1_A:
@@ -128,7 +132,7 @@ void reset_v(pokemon_s *pokemon) {
 
 	pokemon->v.is_flinch = false;
 	pokemon->v.is_confuse = false;
-	pokemon->v.is_rechage = false;
+	pokemon->v.is_recharge = false;
 }
 
 void switchto(trainer_s *trainer, int index) {

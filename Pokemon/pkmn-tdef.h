@@ -113,8 +113,8 @@ typedef struct {
 	int evasion_stage;
 
 	bool is_flinch;
+	bool is_recharge;
 	bool is_confuse;
-	bool is_rechage;
 } volitile_s;
 
 typedef struct {

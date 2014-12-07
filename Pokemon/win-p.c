@@ -2,10 +2,14 @@
 #include "win-p.h"
 #include "global.h"
 
+bool is_alive(pokemon_s *pokemon) {
+	return pokemon->nv.nvstatus != FNT_S;
+}
+
 bool can_fight(trainer_s *trainer) {
 	int i;
 	for (i = 0; i < trainer->pokemon_count; ++i) {
-		if (trainer->pokemon[i]->nv.nvstatus != FNT_S) {
+		if (is_alive(trainer->pokemon[i])) {
 			return true;
 		}
 	}

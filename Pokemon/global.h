@@ -49,6 +49,7 @@ trainer_s BLUE;
 battle_s battle;
 
 pokemon_s* get_activepokemon(trainer_s *trainer);
+bool has_type(pokemon_s *pokemon, type_t type);
 move_s* get_move(trainer_s *trainer, action_t action);
 bool is_move(action_t action);
 bool is_aggressive(move_s *move);
