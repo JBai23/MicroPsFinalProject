@@ -509,7 +509,7 @@ void init_pokemonspec() {
 	BULBASAUR.bstats.attack_base = 49;
 	BULBASAUR.bstats.defense_base = 49;
 	BULBASAUR.bstats.sattack_base = 65;
-	BULBASAUR.bstats.sdefence_base = 65;
+	BULBASAUR.bstats.sdefense_base = 65;
 	BULBASAUR.bstats.speed_base = 45;
 
 	// ivysaur
@@ -521,7 +521,7 @@ void init_pokemonspec() {
 	IVYSAUR.bstats.attack_base = 62;
 	IVYSAUR.bstats.defense_base = 63;
 	IVYSAUR.bstats.sattack_base = 80;
-	IVYSAUR.bstats.sdefence_base = 80;
+	IVYSAUR.bstats.sdefense_base = 80;
 	IVYSAUR.bstats.speed_base = 60;
 
 	// venusaur
@@ -533,7 +533,7 @@ void init_pokemonspec() {
 	VENUSAUR.bstats.attack_base = 82;
 	VENUSAUR.bstats.defense_base = 83;
 	VENUSAUR.bstats.sattack_base = 100;
-	VENUSAUR.bstats.sdefence_base = 100;
+	VENUSAUR.bstats.sdefense_base = 100;
 	VENUSAUR.bstats.speed_base = 80;
 
 	// charmander
@@ -545,7 +545,7 @@ void init_pokemonspec() {
 	CHARMANDER.bstats.attack_base = 52;
 	CHARMANDER.bstats.defense_base = 43;
 	CHARMANDER.bstats.sattack_base = 60;
-	CHARMANDER.bstats.sdefence_base = 50;
+	CHARMANDER.bstats.sdefense_base = 50;
 	CHARMANDER.bstats.speed_base = 65;
 
 	// charmeleon
@@ -557,7 +557,7 @@ void init_pokemonspec() {
 	CHARMELEON.bstats.attack_base = 64;
 	CHARMELEON.bstats.defense_base = 58;
 	CHARMELEON.bstats.sattack_base = 80;
-	CHARMELEON.bstats.sdefence_base = 65;
+	CHARMELEON.bstats.sdefense_base = 65;
 	CHARMELEON.bstats.speed_base = 80;
 
 	// charizard
@@ -569,7 +569,7 @@ void init_pokemonspec() {
 	CHARIZARD.bstats.attack_base = 84;
 	CHARIZARD.bstats.defense_base = 78;
 	CHARIZARD.bstats.sattack_base = 109;
-	CHARIZARD.bstats.sdefence_base = 85;
+	CHARIZARD.bstats.sdefense_base = 85;
 	CHARIZARD.bstats.speed_base = 100;
 
 	// squirtle
@@ -581,7 +581,7 @@ void init_pokemonspec() {
 	SQUIRTLE.bstats.attack_base = 48;
 	SQUIRTLE.bstats.defense_base = 65;
 	SQUIRTLE.bstats.sattack_base = 50;
-	SQUIRTLE.bstats.sdefence_base = 64;
+	SQUIRTLE.bstats.sdefense_base = 64;
 	SQUIRTLE.bstats.speed_base = 43;
 
 	// wartortle
@@ -593,7 +593,7 @@ void init_pokemonspec() {
 	WARTORTLE.bstats.attack_base = 63;
 	WARTORTLE.bstats.defense_base = 80;
 	WARTORTLE.bstats.sattack_base = 65;
-	WARTORTLE.bstats.sdefence_base = 80;
+	WARTORTLE.bstats.sdefense_base = 80;
 	WARTORTLE.bstats.speed_base = 58;
 
 	// blastoise
@@ -605,7 +605,7 @@ void init_pokemonspec() {
 	BLASTOISE.bstats.attack_base = 83;
 	BLASTOISE.bstats.defense_base = 100;
 	BLASTOISE.bstats.sattack_base = 85;
-	BLASTOISE.bstats.sdefence_base = 105;
+	BLASTOISE.bstats.sdefense_base = 105;
 	BLASTOISE.bstats.speed_base = 78;
 
 	// caterpie
@@ -617,7 +617,7 @@ void init_pokemonspec() {
 	CATERPIE.bstats.attack_base = 30;
 	CATERPIE.bstats.defense_base = 35;
 	CATERPIE.bstats.sattack_base = 20;
-	CATERPIE.bstats.sdefence_base = 20;
+	CATERPIE.bstats.sdefense_base = 20;
 	CATERPIE.bstats.speed_base = 45;
 
 	// metapod
@@ -629,7 +629,7 @@ void init_pokemonspec() {
 	METAPOD.bstats.attack_base = 20;
 	METAPOD.bstats.defense_base = 55;
 	METAPOD.bstats.sattack_base = 25;
-	METAPOD.bstats.sdefence_base = 25;
+	METAPOD.bstats.sdefense_base = 25;
 	METAPOD.bstats.speed_base = 30;
 
 	// butterfree
@@ -641,7 +641,7 @@ void init_pokemonspec() {
 	BUTTERFREE.bstats.attack_base = 45;
 	BUTTERFREE.bstats.defense_base = 50;
 	BUTTERFREE.bstats.sattack_base = 90;
-	BUTTERFREE.bstats.sdefence_base = 80;
+	BUTTERFREE.bstats.sdefense_base = 80;
 	BUTTERFREE.bstats.speed_base = 70;
 
 	// weedle
@@ -653,7 +653,7 @@ void init_pokemonspec() {
 	WEEDLE.bstats.attack_base = 35;
 	WEEDLE.bstats.defense_base = 30;
 	WEEDLE.bstats.sattack_base = 20;
-	WEEDLE.bstats.sdefence_base = 20;
+	WEEDLE.bstats.sdefense_base = 20;
 	WEEDLE.bstats.speed_base = 50;
 
 	// kakuna
@@ -665,7 +665,7 @@ void init_pokemonspec() {
 	KAKUNA.bstats.attack_base = 25;
 	KAKUNA.bstats.defense_base = 50;
 	KAKUNA.bstats.sattack_base = 25;
-	KAKUNA.bstats.sdefence_base = 25;
+	KAKUNA.bstats.sdefense_base = 25;
 	KAKUNA.bstats.speed_base = 35;
 
 	// beedrill
@@ -677,7 +677,7 @@ void init_pokemonspec() {
 	BEEDRILL.bstats.attack_base = 90;
 	BEEDRILL.bstats.defense_base = 40;
 	BEEDRILL.bstats.sattack_base = 45;
-	BEEDRILL.bstats.sdefence_base = 80;
+	BEEDRILL.bstats.sdefense_base = 80;
 	BEEDRILL.bstats.speed_base = 75;
 
 	// pidgey
@@ -689,7 +689,7 @@ void init_pokemonspec() {
 	PIDGEY.bstats.attack_base = 45;
 	PIDGEY.bstats.defense_base = 40;
 	PIDGEY.bstats.sattack_base = 35;
-	PIDGEY.bstats.sdefence_base = 35;
+	PIDGEY.bstats.sdefense_base = 35;
 	PIDGEY.bstats.speed_base = 56;
 
 	// pidgeotto
@@ -701,7 +701,7 @@ void init_pokemonspec() {
 	PIDGEOTTO.bstats.attack_base = 60;
 	PIDGEOTTO.bstats.defense_base = 55;
 	PIDGEOTTO.bstats.sattack_base = 50;
-	PIDGEOTTO.bstats.sdefence_base = 50;
+	PIDGEOTTO.bstats.sdefense_base = 50;
 	PIDGEOTTO.bstats.speed_base = 71;
 
 	// pidgeot
@@ -713,7 +713,7 @@ void init_pokemonspec() {
 	PIDGEOT.bstats.attack_base = 80;
 	PIDGEOT.bstats.defense_base = 75;
 	PIDGEOT.bstats.sattack_base = 70;
-	PIDGEOT.bstats.sdefence_base = 70;
+	PIDGEOT.bstats.sdefense_base = 70;
 	PIDGEOT.bstats.speed_base = 101;
 
 	// rattata
@@ -725,7 +725,7 @@ void init_pokemonspec() {
 	RATTATA.bstats.attack_base = 56;
 	RATTATA.bstats.defense_base = 35;
 	RATTATA.bstats.sattack_base = 25;
-	RATTATA.bstats.sdefence_base = 35;
+	RATTATA.bstats.sdefense_base = 35;
 	RATTATA.bstats.speed_base = 72;
 
 	// raticate
@@ -737,7 +737,7 @@ void init_pokemonspec() {
 	RATICATE.bstats.attack_base = 81;
 	RATICATE.bstats.defense_base = 60;
 	RATICATE.bstats.sattack_base = 50;
-	RATICATE.bstats.sdefence_base = 70;
+	RATICATE.bstats.sdefense_base = 70;
 	RATICATE.bstats.speed_base = 97;
 
 	// spearow
@@ -749,7 +749,7 @@ void init_pokemonspec() {
 	SPEAROW.bstats.attack_base = 60;
 	SPEAROW.bstats.defense_base = 30;
 	SPEAROW.bstats.sattack_base = 31;
-	SPEAROW.bstats.sdefence_base = 31;
+	SPEAROW.bstats.sdefense_base = 31;
 	SPEAROW.bstats.speed_base = 70;
 
 	// fearow
@@ -761,7 +761,7 @@ void init_pokemonspec() {
 	FEAROW.bstats.attack_base = 90;
 	FEAROW.bstats.defense_base = 65;
 	FEAROW.bstats.sattack_base = 61;
-	FEAROW.bstats.sdefence_base = 61;
+	FEAROW.bstats.sdefense_base = 61;
 	FEAROW.bstats.speed_base = 100;
 
 	// ekans
@@ -773,7 +773,7 @@ void init_pokemonspec() {
 	EKANS.bstats.attack_base = 60;
 	EKANS.bstats.defense_base = 44;
 	EKANS.bstats.sattack_base = 40;
-	EKANS.bstats.sdefence_base = 54;
+	EKANS.bstats.sdefense_base = 54;
 	EKANS.bstats.speed_base = 55;
 
 	// arbok
@@ -785,7 +785,7 @@ void init_pokemonspec() {
 	ARBOK.bstats.attack_base = 85;
 	ARBOK.bstats.defense_base = 69;
 	ARBOK.bstats.sattack_base = 65;
-	ARBOK.bstats.sdefence_base = 79;
+	ARBOK.bstats.sdefense_base = 79;
 	ARBOK.bstats.speed_base = 80;
 
 	// pikachu
@@ -797,7 +797,7 @@ void init_pokemonspec() {
 	PIKACHU.bstats.attack_base = 55;
 	PIKACHU.bstats.defense_base = 40;
 	PIKACHU.bstats.sattack_base = 50;
-	PIKACHU.bstats.sdefence_base = 50;
+	PIKACHU.bstats.sdefense_base = 50;
 	PIKACHU.bstats.speed_base = 90;
 
 	// raichu
@@ -809,7 +809,7 @@ void init_pokemonspec() {
 	RAICHU.bstats.attack_base = 90;
 	RAICHU.bstats.defense_base = 55;
 	RAICHU.bstats.sattack_base = 90;
-	RAICHU.bstats.sdefence_base = 80;
+	RAICHU.bstats.sdefense_base = 80;
 	RAICHU.bstats.speed_base = 110;
 
 	// sandshrew
@@ -821,7 +821,7 @@ void init_pokemonspec() {
 	SANDSHREW.bstats.attack_base = 75;
 	SANDSHREW.bstats.defense_base = 85;
 	SANDSHREW.bstats.sattack_base = 20;
-	SANDSHREW.bstats.sdefence_base = 30;
+	SANDSHREW.bstats.sdefense_base = 30;
 	SANDSHREW.bstats.speed_base = 40;
 
 	// sandslash
@@ -833,7 +833,7 @@ void init_pokemonspec() {
 	SANDSLASH.bstats.attack_base = 100;
 	SANDSLASH.bstats.defense_base = 110;
 	SANDSLASH.bstats.sattack_base = 45;
-	SANDSLASH.bstats.sdefence_base = 55;
+	SANDSLASH.bstats.sdefense_base = 55;
 	SANDSLASH.bstats.speed_base = 65;
 
 	// nidoran_f
@@ -845,7 +845,7 @@ void init_pokemonspec() {
 	NIDORAN_F.bstats.attack_base = 47;
 	NIDORAN_F.bstats.defense_base = 52;
 	NIDORAN_F.bstats.sattack_base = 40;
-	NIDORAN_F.bstats.sdefence_base = 40;
+	NIDORAN_F.bstats.sdefense_base = 40;
 	NIDORAN_F.bstats.speed_base = 41;
 
 	// nidorina
@@ -857,7 +857,7 @@ void init_pokemonspec() {
 	NIDORINA.bstats.attack_base = 62;
 	NIDORINA.bstats.defense_base = 67;
 	NIDORINA.bstats.sattack_base = 55;
-	NIDORINA.bstats.sdefence_base = 55;
+	NIDORINA.bstats.sdefense_base = 55;
 	NIDORINA.bstats.speed_base = 56;
 
 	// nidoqueen
@@ -869,7 +869,7 @@ void init_pokemonspec() {
 	NIDOQUEEN.bstats.attack_base = 92;
 	NIDOQUEEN.bstats.defense_base = 87;
 	NIDOQUEEN.bstats.sattack_base = 75;
-	NIDOQUEEN.bstats.sdefence_base = 85;
+	NIDOQUEEN.bstats.sdefense_base = 85;
 	NIDOQUEEN.bstats.speed_base = 76;
 
 	// nidoran_m
@@ -881,7 +881,7 @@ void init_pokemonspec() {
 	NIDORAN_M.bstats.attack_base = 57;
 	NIDORAN_M.bstats.defense_base = 40;
 	NIDORAN_M.bstats.sattack_base = 40;
-	NIDORAN_M.bstats.sdefence_base = 40;
+	NIDORAN_M.bstats.sdefense_base = 40;
 	NIDORAN_M.bstats.speed_base = 50;
 
 	// nidorino
@@ -893,7 +893,7 @@ void init_pokemonspec() {
 	NIDORINO.bstats.attack_base = 72;
 	NIDORINO.bstats.defense_base = 57;
 	NIDORINO.bstats.sattack_base = 55;
-	NIDORINO.bstats.sdefence_base = 55;
+	NIDORINO.bstats.sdefense_base = 55;
 	NIDORINO.bstats.speed_base = 65;
 
 	// nidoking
@@ -905,7 +905,7 @@ void init_pokemonspec() {
 	NIDOKING.bstats.attack_base = 102;
 	NIDOKING.bstats.defense_base = 77;
 	NIDOKING.bstats.sattack_base = 85;
-	NIDOKING.bstats.sdefence_base = 75;
+	NIDOKING.bstats.sdefense_base = 75;
 	NIDOKING.bstats.speed_base = 85;
 
 	// clefairy
@@ -917,7 +917,7 @@ void init_pokemonspec() {
 	CLEFAIRY.bstats.attack_base = 45;
 	CLEFAIRY.bstats.defense_base = 48;
 	CLEFAIRY.bstats.sattack_base = 60;
-	CLEFAIRY.bstats.sdefence_base = 65;
+	CLEFAIRY.bstats.sdefense_base = 65;
 	CLEFAIRY.bstats.speed_base = 35;
 
 	// clefable
@@ -929,7 +929,7 @@ void init_pokemonspec() {
 	CLEFABLE.bstats.attack_base = 70;
 	CLEFABLE.bstats.defense_base = 73;
 	CLEFABLE.bstats.sattack_base = 95;
-	CLEFABLE.bstats.sdefence_base = 90;
+	CLEFABLE.bstats.sdefense_base = 90;
 	CLEFABLE.bstats.speed_base = 60;
 
 	// vulpix
@@ -941,7 +941,7 @@ void init_pokemonspec() {
 	VULPIX.bstats.attack_base = 41;
 	VULPIX.bstats.defense_base = 40;
 	VULPIX.bstats.sattack_base = 50;
-	VULPIX.bstats.sdefence_base = 65;
+	VULPIX.bstats.sdefense_base = 65;
 	VULPIX.bstats.speed_base = 65;
 
 	// ninetales
@@ -953,7 +953,7 @@ void init_pokemonspec() {
 	NINETALES.bstats.attack_base = 76;
 	NINETALES.bstats.defense_base = 75;
 	NINETALES.bstats.sattack_base = 81;
-	NINETALES.bstats.sdefence_base = 100;
+	NINETALES.bstats.sdefense_base = 100;
 	NINETALES.bstats.speed_base = 100;
 
 	// jigglypuff
@@ -965,7 +965,7 @@ void init_pokemonspec() {
 	JIGGLYPUFF.bstats.attack_base = 45;
 	JIGGLYPUFF.bstats.defense_base = 20;
 	JIGGLYPUFF.bstats.sattack_base = 45;
-	JIGGLYPUFF.bstats.sdefence_base = 25;
+	JIGGLYPUFF.bstats.sdefense_base = 25;
 	JIGGLYPUFF.bstats.speed_base = 20;
 
 	// wigglytuff
@@ -977,7 +977,7 @@ void init_pokemonspec() {
 	WIGGLYTUFF.bstats.attack_base = 70;
 	WIGGLYTUFF.bstats.defense_base = 45;
 	WIGGLYTUFF.bstats.sattack_base = 85;
-	WIGGLYTUFF.bstats.sdefence_base = 50;
+	WIGGLYTUFF.bstats.sdefense_base = 50;
 	WIGGLYTUFF.bstats.speed_base = 45;
 
 	// zubat
@@ -989,7 +989,7 @@ void init_pokemonspec() {
 	ZUBAT.bstats.attack_base = 45;
 	ZUBAT.bstats.defense_base = 35;
 	ZUBAT.bstats.sattack_base = 30;
-	ZUBAT.bstats.sdefence_base = 40;
+	ZUBAT.bstats.sdefense_base = 40;
 	ZUBAT.bstats.speed_base = 55;
 
 	// golbat
@@ -1001,7 +1001,7 @@ void init_pokemonspec() {
 	GOLBAT.bstats.attack_base = 80;
 	GOLBAT.bstats.defense_base = 70;
 	GOLBAT.bstats.sattack_base = 65;
-	GOLBAT.bstats.sdefence_base = 75;
+	GOLBAT.bstats.sdefense_base = 75;
 	GOLBAT.bstats.speed_base = 90;
 
 	// oddish
@@ -1013,7 +1013,7 @@ void init_pokemonspec() {
 	ODDISH.bstats.attack_base = 50;
 	ODDISH.bstats.defense_base = 55;
 	ODDISH.bstats.sattack_base = 75;
-	ODDISH.bstats.sdefence_base = 65;
+	ODDISH.bstats.sdefense_base = 65;
 	ODDISH.bstats.speed_base = 30;
 
 	// gloom
@@ -1025,7 +1025,7 @@ void init_pokemonspec() {
 	GLOOM.bstats.attack_base = 65;
 	GLOOM.bstats.defense_base = 70;
 	GLOOM.bstats.sattack_base = 85;
-	GLOOM.bstats.sdefence_base = 75;
+	GLOOM.bstats.sdefense_base = 75;
 	GLOOM.bstats.speed_base = 40;
 
 	// vileplume
@@ -1037,7 +1037,7 @@ void init_pokemonspec() {
 	VILEPLUME.bstats.attack_base = 80;
 	VILEPLUME.bstats.defense_base = 85;
 	VILEPLUME.bstats.sattack_base = 110;
-	VILEPLUME.bstats.sdefence_base = 90;
+	VILEPLUME.bstats.sdefense_base = 90;
 	VILEPLUME.bstats.speed_base = 50;
 
 	// paras
@@ -1049,7 +1049,7 @@ void init_pokemonspec() {
 	PARAS.bstats.attack_base = 70;
 	PARAS.bstats.defense_base = 55;
 	PARAS.bstats.sattack_base = 45;
-	PARAS.bstats.sdefence_base = 55;
+	PARAS.bstats.sdefense_base = 55;
 	PARAS.bstats.speed_base = 25;
 
 	// parasect
@@ -1061,7 +1061,7 @@ void init_pokemonspec() {
 	PARASECT.bstats.attack_base = 95;
 	PARASECT.bstats.defense_base = 80;
 	PARASECT.bstats.sattack_base = 60;
-	PARASECT.bstats.sdefence_base = 80;
+	PARASECT.bstats.sdefense_base = 80;
 	PARASECT.bstats.speed_base = 30;
 
 	// venonat
@@ -1073,7 +1073,7 @@ void init_pokemonspec() {
 	VENONAT.bstats.attack_base = 55;
 	VENONAT.bstats.defense_base = 50;
 	VENONAT.bstats.sattack_base = 40;
-	VENONAT.bstats.sdefence_base = 55;
+	VENONAT.bstats.sdefense_base = 55;
 	VENONAT.bstats.speed_base = 45;
 
 	// venomoth
@@ -1085,7 +1085,7 @@ void init_pokemonspec() {
 	VENOMOTH.bstats.attack_base = 65;
 	VENOMOTH.bstats.defense_base = 60;
 	VENOMOTH.bstats.sattack_base = 90;
-	VENOMOTH.bstats.sdefence_base = 75;
+	VENOMOTH.bstats.sdefense_base = 75;
 	VENOMOTH.bstats.speed_base = 90;
 
 	// diglett
@@ -1097,7 +1097,7 @@ void init_pokemonspec() {
 	DIGLETT.bstats.attack_base = 55;
 	DIGLETT.bstats.defense_base = 25;
 	DIGLETT.bstats.sattack_base = 35;
-	DIGLETT.bstats.sdefence_base = 45;
+	DIGLETT.bstats.sdefense_base = 45;
 	DIGLETT.bstats.speed_base = 95;
 
 	// dugtrio
@@ -1109,7 +1109,7 @@ void init_pokemonspec() {
 	DUGTRIO.bstats.attack_base = 80;
 	DUGTRIO.bstats.defense_base = 50;
 	DUGTRIO.bstats.sattack_base = 50;
-	DUGTRIO.bstats.sdefence_base = 70;
+	DUGTRIO.bstats.sdefense_base = 70;
 	DUGTRIO.bstats.speed_base = 120;
 
 	// meowth
@@ -1121,7 +1121,7 @@ void init_pokemonspec() {
 	MEOWTH.bstats.attack_base = 45;
 	MEOWTH.bstats.defense_base = 35;
 	MEOWTH.bstats.sattack_base = 40;
-	MEOWTH.bstats.sdefence_base = 40;
+	MEOWTH.bstats.sdefense_base = 40;
 	MEOWTH.bstats.speed_base = 90;
 
 	// persian
@@ -1133,7 +1133,7 @@ void init_pokemonspec() {
 	PERSIAN.bstats.attack_base = 70;
 	PERSIAN.bstats.defense_base = 60;
 	PERSIAN.bstats.sattack_base = 65;
-	PERSIAN.bstats.sdefence_base = 65;
+	PERSIAN.bstats.sdefense_base = 65;
 	PERSIAN.bstats.speed_base = 115;
 
 	// psyduck
@@ -1145,7 +1145,7 @@ void init_pokemonspec() {
 	PSYDUCK.bstats.attack_base = 52;
 	PSYDUCK.bstats.defense_base = 48;
 	PSYDUCK.bstats.sattack_base = 65;
-	PSYDUCK.bstats.sdefence_base = 50;
+	PSYDUCK.bstats.sdefense_base = 50;
 	PSYDUCK.bstats.speed_base = 55;
 
 	// golduck
@@ -1157,7 +1157,7 @@ void init_pokemonspec() {
 	GOLDUCK.bstats.attack_base = 82;
 	GOLDUCK.bstats.defense_base = 78;
 	GOLDUCK.bstats.sattack_base = 95;
-	GOLDUCK.bstats.sdefence_base = 80;
+	GOLDUCK.bstats.sdefense_base = 80;
 	GOLDUCK.bstats.speed_base = 85;
 
 	// mankey
@@ -1169,7 +1169,7 @@ void init_pokemonspec() {
 	MANKEY.bstats.attack_base = 80;
 	MANKEY.bstats.defense_base = 35;
 	MANKEY.bstats.sattack_base = 35;
-	MANKEY.bstats.sdefence_base = 45;
+	MANKEY.bstats.sdefense_base = 45;
 	MANKEY.bstats.speed_base = 70;
 
 	// primeape
@@ -1181,7 +1181,7 @@ void init_pokemonspec() {
 	PRIMEAPE.bstats.attack_base = 105;
 	PRIMEAPE.bstats.defense_base = 60;
 	PRIMEAPE.bstats.sattack_base = 60;
-	PRIMEAPE.bstats.sdefence_base = 70;
+	PRIMEAPE.bstats.sdefense_base = 70;
 	PRIMEAPE.bstats.speed_base = 95;
 
 	// growlithe
@@ -1193,7 +1193,7 @@ void init_pokemonspec() {
 	GROWLITHE.bstats.attack_base = 70;
 	GROWLITHE.bstats.defense_base = 45;
 	GROWLITHE.bstats.sattack_base = 70;
-	GROWLITHE.bstats.sdefence_base = 50;
+	GROWLITHE.bstats.sdefense_base = 50;
 	GROWLITHE.bstats.speed_base = 60;
 
 	// arcanine
@@ -1205,7 +1205,7 @@ void init_pokemonspec() {
 	ARCANINE.bstats.attack_base = 110;
 	ARCANINE.bstats.defense_base = 80;
 	ARCANINE.bstats.sattack_base = 100;
-	ARCANINE.bstats.sdefence_base = 80;
+	ARCANINE.bstats.sdefense_base = 80;
 	ARCANINE.bstats.speed_base = 95;
 
 	// poliwag
@@ -1217,7 +1217,7 @@ void init_pokemonspec() {
 	POLIWAG.bstats.attack_base = 50;
 	POLIWAG.bstats.defense_base = 40;
 	POLIWAG.bstats.sattack_base = 40;
-	POLIWAG.bstats.sdefence_base = 40;
+	POLIWAG.bstats.sdefense_base = 40;
 	POLIWAG.bstats.speed_base = 90;
 
 	// poliwhirl
@@ -1229,7 +1229,7 @@ void init_pokemonspec() {
 	POLIWHIRL.bstats.attack_base = 65;
 	POLIWHIRL.bstats.defense_base = 65;
 	POLIWHIRL.bstats.sattack_base = 50;
-	POLIWHIRL.bstats.sdefence_base = 50;
+	POLIWHIRL.bstats.sdefense_base = 50;
 	POLIWHIRL.bstats.speed_base = 90;
 
 	// poliwrath
@@ -1241,7 +1241,7 @@ void init_pokemonspec() {
 	POLIWRATH.bstats.attack_base = 95;
 	POLIWRATH.bstats.defense_base = 95;
 	POLIWRATH.bstats.sattack_base = 70;
-	POLIWRATH.bstats.sdefence_base = 90;
+	POLIWRATH.bstats.sdefense_base = 90;
 	POLIWRATH.bstats.speed_base = 70;
 
 	// abra
@@ -1253,7 +1253,7 @@ void init_pokemonspec() {
 	ABRA.bstats.attack_base = 20;
 	ABRA.bstats.defense_base = 15;
 	ABRA.bstats.sattack_base = 105;
-	ABRA.bstats.sdefence_base = 55;
+	ABRA.bstats.sdefense_base = 55;
 	ABRA.bstats.speed_base = 90;
 
 	// kadabra
@@ -1265,7 +1265,7 @@ void init_pokemonspec() {
 	KADABRA.bstats.attack_base = 35;
 	KADABRA.bstats.defense_base = 30;
 	KADABRA.bstats.sattack_base = 120;
-	KADABRA.bstats.sdefence_base = 70;
+	KADABRA.bstats.sdefense_base = 70;
 	KADABRA.bstats.speed_base = 105;
 
 	// alakazam
@@ -1277,7 +1277,7 @@ void init_pokemonspec() {
 	ALAKAZAM.bstats.attack_base = 50;
 	ALAKAZAM.bstats.defense_base = 45;
 	ALAKAZAM.bstats.sattack_base = 135;
-	ALAKAZAM.bstats.sdefence_base = 95;
+	ALAKAZAM.bstats.sdefense_base = 95;
 	ALAKAZAM.bstats.speed_base = 120;
 
 	// machop
@@ -1289,7 +1289,7 @@ void init_pokemonspec() {
 	MACHOP.bstats.attack_base = 80;
 	MACHOP.bstats.defense_base = 50;
 	MACHOP.bstats.sattack_base = 35;
-	MACHOP.bstats.sdefence_base = 35;
+	MACHOP.bstats.sdefense_base = 35;
 	MACHOP.bstats.speed_base = 35;
 
 	// machoke
@@ -1301,7 +1301,7 @@ void init_pokemonspec() {
 	MACHOKE.bstats.attack_base = 100;
 	MACHOKE.bstats.defense_base = 70;
 	MACHOKE.bstats.sattack_base = 50;
-	MACHOKE.bstats.sdefence_base = 60;
+	MACHOKE.bstats.sdefense_base = 60;
 	MACHOKE.bstats.speed_base = 45;
 
 	// machamp
@@ -1313,7 +1313,7 @@ void init_pokemonspec() {
 	MACHAMP.bstats.attack_base = 130;
 	MACHAMP.bstats.defense_base = 80;
 	MACHAMP.bstats.sattack_base = 65;
-	MACHAMP.bstats.sdefence_base = 85;
+	MACHAMP.bstats.sdefense_base = 85;
 	MACHAMP.bstats.speed_base = 55;
 
 	// bellsprout
@@ -1325,7 +1325,7 @@ void init_pokemonspec() {
 	BELLSPROUT.bstats.attack_base = 75;
 	BELLSPROUT.bstats.defense_base = 35;
 	BELLSPROUT.bstats.sattack_base = 70;
-	BELLSPROUT.bstats.sdefence_base = 30;
+	BELLSPROUT.bstats.sdefense_base = 30;
 	BELLSPROUT.bstats.speed_base = 40;
 
 	// weepinbell
@@ -1337,7 +1337,7 @@ void init_pokemonspec() {
 	WEEPINBELL.bstats.attack_base = 90;
 	WEEPINBELL.bstats.defense_base = 50;
 	WEEPINBELL.bstats.sattack_base = 85;
-	WEEPINBELL.bstats.sdefence_base = 45;
+	WEEPINBELL.bstats.sdefense_base = 45;
 	WEEPINBELL.bstats.speed_base = 55;
 
 	// victreebel
@@ -1349,7 +1349,7 @@ void init_pokemonspec() {
 	VICTREEBEL.bstats.attack_base = 105;
 	VICTREEBEL.bstats.defense_base = 65;
 	VICTREEBEL.bstats.sattack_base = 100;
-	VICTREEBEL.bstats.sdefence_base = 70;
+	VICTREEBEL.bstats.sdefense_base = 70;
 	VICTREEBEL.bstats.speed_base = 70;
 
 	// tentacool
@@ -1361,7 +1361,7 @@ void init_pokemonspec() {
 	TENTACOOL.bstats.attack_base = 40;
 	TENTACOOL.bstats.defense_base = 35;
 	TENTACOOL.bstats.sattack_base = 50;
-	TENTACOOL.bstats.sdefence_base = 100;
+	TENTACOOL.bstats.sdefense_base = 100;
 	TENTACOOL.bstats.speed_base = 70;
 
 	// tentacruel
@@ -1373,7 +1373,7 @@ void init_pokemonspec() {
 	TENTACRUEL.bstats.attack_base = 70;
 	TENTACRUEL.bstats.defense_base = 65;
 	TENTACRUEL.bstats.sattack_base = 80;
-	TENTACRUEL.bstats.sdefence_base = 120;
+	TENTACRUEL.bstats.sdefense_base = 120;
 	TENTACRUEL.bstats.speed_base = 100;
 
 	// geodude
@@ -1385,7 +1385,7 @@ void init_pokemonspec() {
 	GEODUDE.bstats.attack_base = 80;
 	GEODUDE.bstats.defense_base = 100;
 	GEODUDE.bstats.sattack_base = 30;
-	GEODUDE.bstats.sdefence_base = 30;
+	GEODUDE.bstats.sdefense_base = 30;
 	GEODUDE.bstats.speed_base = 20;
 
 	// graveler
@@ -1397,7 +1397,7 @@ void init_pokemonspec() {
 	GRAVELER.bstats.attack_base = 95;
 	GRAVELER.bstats.defense_base = 115;
 	GRAVELER.bstats.sattack_base = 45;
-	GRAVELER.bstats.sdefence_base = 45;
+	GRAVELER.bstats.sdefense_base = 45;
 	GRAVELER.bstats.speed_base = 35;
 
 	// golem
@@ -1409,7 +1409,7 @@ void init_pokemonspec() {
 	GOLEM.bstats.attack_base = 120;
 	GOLEM.bstats.defense_base = 130;
 	GOLEM.bstats.sattack_base = 55;
-	GOLEM.bstats.sdefence_base = 65;
+	GOLEM.bstats.sdefense_base = 65;
 	GOLEM.bstats.speed_base = 45;
 
 	// ponyta
@@ -1421,7 +1421,7 @@ void init_pokemonspec() {
 	PONYTA.bstats.attack_base = 85;
 	PONYTA.bstats.defense_base = 55;
 	PONYTA.bstats.sattack_base = 65;
-	PONYTA.bstats.sdefence_base = 65;
+	PONYTA.bstats.sdefense_base = 65;
 	PONYTA.bstats.speed_base = 90;
 
 	// rapidash
@@ -1433,7 +1433,7 @@ void init_pokemonspec() {
 	RAPIDASH.bstats.attack_base = 100;
 	RAPIDASH.bstats.defense_base = 70;
 	RAPIDASH.bstats.sattack_base = 80;
-	RAPIDASH.bstats.sdefence_base = 80;
+	RAPIDASH.bstats.sdefense_base = 80;
 	RAPIDASH.bstats.speed_base = 105;
 
 	// slowpoke
@@ -1445,7 +1445,7 @@ void init_pokemonspec() {
 	SLOWPOKE.bstats.attack_base = 65;
 	SLOWPOKE.bstats.defense_base = 65;
 	SLOWPOKE.bstats.sattack_base = 40;
-	SLOWPOKE.bstats.sdefence_base = 40;
+	SLOWPOKE.bstats.sdefense_base = 40;
 	SLOWPOKE.bstats.speed_base = 15;
 
 	// slowbro
@@ -1457,7 +1457,7 @@ void init_pokemonspec() {
 	SLOWBRO.bstats.attack_base = 75;
 	SLOWBRO.bstats.defense_base = 110;
 	SLOWBRO.bstats.sattack_base = 100;
-	SLOWBRO.bstats.sdefence_base = 80;
+	SLOWBRO.bstats.sdefense_base = 80;
 	SLOWBRO.bstats.speed_base = 30;
 
 	// magnemite
@@ -1469,7 +1469,7 @@ void init_pokemonspec() {
 	MAGNEMITE.bstats.attack_base = 35;
 	MAGNEMITE.bstats.defense_base = 70;
 	MAGNEMITE.bstats.sattack_base = 95;
-	MAGNEMITE.bstats.sdefence_base = 55;
+	MAGNEMITE.bstats.sdefense_base = 55;
 	MAGNEMITE.bstats.speed_base = 45;
 
 	// magneton
@@ -1481,7 +1481,7 @@ void init_pokemonspec() {
 	MAGNETON.bstats.attack_base = 60;
 	MAGNETON.bstats.defense_base = 95;
 	MAGNETON.bstats.sattack_base = 120;
-	MAGNETON.bstats.sdefence_base = 70;
+	MAGNETON.bstats.sdefense_base = 70;
 	MAGNETON.bstats.speed_base = 70;
 
 	// farfetch'd
@@ -1493,7 +1493,7 @@ void init_pokemonspec() {
 	FARFETCHD.bstats.attack_base = 65;
 	FARFETCHD.bstats.defense_base = 55;
 	FARFETCHD.bstats.sattack_base = 58;
-	FARFETCHD.bstats.sdefence_base = 62;
+	FARFETCHD.bstats.sdefense_base = 62;
 	FARFETCHD.bstats.speed_base = 60;
 
 	// doduo
@@ -1505,7 +1505,7 @@ void init_pokemonspec() {
 	DODUO.bstats.attack_base = 85;
 	DODUO.bstats.defense_base = 45;
 	DODUO.bstats.sattack_base = 35;
-	DODUO.bstats.sdefence_base = 35;
+	DODUO.bstats.sdefense_base = 35;
 	DODUO.bstats.speed_base = 75;
 
 	// dodrio
@@ -1517,7 +1517,7 @@ void init_pokemonspec() {
 	DODRIO.bstats.attack_base = 110;
 	DODRIO.bstats.defense_base = 70;
 	DODRIO.bstats.sattack_base = 60;
-	DODRIO.bstats.sdefence_base = 60;
+	DODRIO.bstats.sdefense_base = 60;
 	DODRIO.bstats.speed_base = 100;
 
 	// seel
@@ -1529,7 +1529,7 @@ void init_pokemonspec() {
 	SEEL.bstats.attack_base = 45;
 	SEEL.bstats.defense_base = 55;
 	SEEL.bstats.sattack_base = 45;
-	SEEL.bstats.sdefence_base = 70;
+	SEEL.bstats.sdefense_base = 70;
 	SEEL.bstats.speed_base = 45;
 
 	// dewgong
@@ -1541,7 +1541,7 @@ void init_pokemonspec() {
 	DEWGONG.bstats.attack_base = 70;
 	DEWGONG.bstats.defense_base = 80;
 	DEWGONG.bstats.sattack_base = 70;
-	DEWGONG.bstats.sdefence_base = 95;
+	DEWGONG.bstats.sdefense_base = 95;
 	DEWGONG.bstats.speed_base = 70;
 
 	// grimer
@@ -1553,7 +1553,7 @@ void init_pokemonspec() {
 	GRIMER.bstats.attack_base = 80;
 	GRIMER.bstats.defense_base = 50;
 	GRIMER.bstats.sattack_base = 40;
-	GRIMER.bstats.sdefence_base = 50;
+	GRIMER.bstats.sdefense_base = 50;
 	GRIMER.bstats.speed_base = 25;
 
 	// muk
@@ -1565,7 +1565,7 @@ void init_pokemonspec() {
 	MUK.bstats.attack_base = 105;
 	MUK.bstats.defense_base = 75;
 	MUK.bstats.sattack_base = 65;
-	MUK.bstats.sdefence_base = 100;
+	MUK.bstats.sdefense_base = 100;
 	MUK.bstats.speed_base = 50;
 
 	// shellder
@@ -1577,7 +1577,7 @@ void init_pokemonspec() {
 	SHELLDER.bstats.attack_base = 65;
 	SHELLDER.bstats.defense_base = 100;
 	SHELLDER.bstats.sattack_base = 45;
-	SHELLDER.bstats.sdefence_base = 25;
+	SHELLDER.bstats.sdefense_base = 25;
 	SHELLDER.bstats.speed_base = 40;
 
 	// cloyster
@@ -1589,7 +1589,7 @@ void init_pokemonspec() {
 	CLOYSTER.bstats.attack_base = 95;
 	CLOYSTER.bstats.defense_base = 180;
 	CLOYSTER.bstats.sattack_base = 85;
-	CLOYSTER.bstats.sdefence_base = 45;
+	CLOYSTER.bstats.sdefense_base = 45;
 	CLOYSTER.bstats.speed_base = 70;
 
 	// gastly
@@ -1601,7 +1601,7 @@ void init_pokemonspec() {
 	GASTLY.bstats.attack_base = 35;
 	GASTLY.bstats.defense_base = 30;
 	GASTLY.bstats.sattack_base = 100;
-	GASTLY.bstats.sdefence_base = 35;
+	GASTLY.bstats.sdefense_base = 35;
 	GASTLY.bstats.speed_base = 80;
 
 	// haunter
@@ -1613,7 +1613,7 @@ void init_pokemonspec() {
 	HAUNTER.bstats.attack_base = 50;
 	HAUNTER.bstats.defense_base = 45;
 	HAUNTER.bstats.sattack_base = 115;
-	HAUNTER.bstats.sdefence_base = 55;
+	HAUNTER.bstats.sdefense_base = 55;
 	HAUNTER.bstats.speed_base = 95;
 
 	// gengar
@@ -1625,7 +1625,7 @@ void init_pokemonspec() {
 	GENGAR.bstats.attack_base = 65;
 	GENGAR.bstats.defense_base = 60;
 	GENGAR.bstats.sattack_base = 130;
-	GENGAR.bstats.sdefence_base = 75;
+	GENGAR.bstats.sdefense_base = 75;
 	GENGAR.bstats.speed_base = 110;
 
 	// onix
@@ -1637,7 +1637,7 @@ void init_pokemonspec() {
 	ONIX.bstats.attack_base = 45;
 	ONIX.bstats.defense_base = 160;
 	ONIX.bstats.sattack_base = 30;
-	ONIX.bstats.sdefence_base = 45;
+	ONIX.bstats.sdefense_base = 45;
 	ONIX.bstats.speed_base = 70;
 
 	// drowzee
@@ -1649,7 +1649,7 @@ void init_pokemonspec() {
 	DROWZEE.bstats.attack_base = 48;
 	DROWZEE.bstats.defense_base = 45;
 	DROWZEE.bstats.sattack_base = 43;
-	DROWZEE.bstats.sdefence_base = 90;
+	DROWZEE.bstats.sdefense_base = 90;
 	DROWZEE.bstats.speed_base = 42;
 
 	// hypno
@@ -1661,7 +1661,7 @@ void init_pokemonspec() {
 	HYPNO.bstats.attack_base = 73;
 	HYPNO.bstats.defense_base = 70;
 	HYPNO.bstats.sattack_base = 73;
-	HYPNO.bstats.sdefence_base = 115;
+	HYPNO.bstats.sdefense_base = 115;
 	HYPNO.bstats.speed_base = 67;
 
 	// krabby
@@ -1673,7 +1673,7 @@ void init_pokemonspec() {
 	KRABBY.bstats.attack_base = 105;
 	KRABBY.bstats.defense_base = 90;
 	KRABBY.bstats.sattack_base = 25;
-	KRABBY.bstats.sdefence_base = 25;
+	KRABBY.bstats.sdefense_base = 25;
 	KRABBY.bstats.speed_base = 50;
 
 	// kingler
@@ -1685,7 +1685,7 @@ void init_pokemonspec() {
 	KINGLER.bstats.attack_base = 130;
 	KINGLER.bstats.defense_base = 115;
 	KINGLER.bstats.sattack_base = 50;
-	KINGLER.bstats.sdefence_base = 50;
+	KINGLER.bstats.sdefense_base = 50;
 	KINGLER.bstats.speed_base = 75;
 
 	// voltorb
@@ -1697,7 +1697,7 @@ void init_pokemonspec() {
 	VOLTORB.bstats.attack_base = 30;
 	VOLTORB.bstats.defense_base = 50;
 	VOLTORB.bstats.sattack_base = 55;
-	VOLTORB.bstats.sdefence_base = 55;
+	VOLTORB.bstats.sdefense_base = 55;
 	VOLTORB.bstats.speed_base = 100;
 
 	// electrode
@@ -1709,7 +1709,7 @@ void init_pokemonspec() {
 	ELECTRODE.bstats.attack_base = 50;
 	ELECTRODE.bstats.defense_base = 70;
 	ELECTRODE.bstats.sattack_base = 80;
-	ELECTRODE.bstats.sdefence_base = 80;
+	ELECTRODE.bstats.sdefense_base = 80;
 	ELECTRODE.bstats.speed_base = 140;
 
 	// exeggcute
@@ -1721,7 +1721,7 @@ void init_pokemonspec() {
 	EXEGGCUTE.bstats.attack_base = 40;
 	EXEGGCUTE.bstats.defense_base = 80;
 	EXEGGCUTE.bstats.sattack_base = 60;
-	EXEGGCUTE.bstats.sdefence_base = 45;
+	EXEGGCUTE.bstats.sdefense_base = 45;
 	EXEGGCUTE.bstats.speed_base = 40;
 
 	// exeggutor
@@ -1733,7 +1733,7 @@ void init_pokemonspec() {
 	EXEGGUTOR.bstats.attack_base = 95;
 	EXEGGUTOR.bstats.defense_base = 85;
 	EXEGGUTOR.bstats.sattack_base = 125;
-	EXEGGUTOR.bstats.sdefence_base = 65;
+	EXEGGUTOR.bstats.sdefense_base = 65;
 	EXEGGUTOR.bstats.speed_base = 55;
 
 	// cubone
@@ -1745,7 +1745,7 @@ void init_pokemonspec() {
 	CUBONE.bstats.attack_base = 50;
 	CUBONE.bstats.defense_base = 95;
 	CUBONE.bstats.sattack_base = 40;
-	CUBONE.bstats.sdefence_base = 50;
+	CUBONE.bstats.sdefense_base = 50;
 	CUBONE.bstats.speed_base = 35;
 
 	// marowak
@@ -1757,7 +1757,7 @@ void init_pokemonspec() {
 	MAROWAK.bstats.attack_base = 80;
 	MAROWAK.bstats.defense_base = 110;
 	MAROWAK.bstats.sattack_base = 50;
-	MAROWAK.bstats.sdefence_base = 80;
+	MAROWAK.bstats.sdefense_base = 80;
 	MAROWAK.bstats.speed_base = 45;
 
 	// hitmonlee
@@ -1769,7 +1769,7 @@ void init_pokemonspec() {
 	HITMONLEE.bstats.attack_base = 120;
 	HITMONLEE.bstats.defense_base = 53;
 	HITMONLEE.bstats.sattack_base = 35;
-	HITMONLEE.bstats.sdefence_base = 110;
+	HITMONLEE.bstats.sdefense_base = 110;
 	HITMONLEE.bstats.speed_base = 87;
 
 	// hitmonchan
@@ -1781,7 +1781,7 @@ void init_pokemonspec() {
 	HITMONCHAN.bstats.attack_base = 105;
 	HITMONCHAN.bstats.defense_base = 79;
 	HITMONCHAN.bstats.sattack_base = 35;
-	HITMONCHAN.bstats.sdefence_base = 110;
+	HITMONCHAN.bstats.sdefense_base = 110;
 	HITMONCHAN.bstats.speed_base = 76;
 
 	// lickitung
@@ -1793,7 +1793,7 @@ void init_pokemonspec() {
 	LICKITUNG.bstats.attack_base = 55;
 	LICKITUNG.bstats.defense_base = 75;
 	LICKITUNG.bstats.sattack_base = 60;
-	LICKITUNG.bstats.sdefence_base = 75;
+	LICKITUNG.bstats.sdefense_base = 75;
 	LICKITUNG.bstats.speed_base = 30;
 
 	// koffing
@@ -1805,7 +1805,7 @@ void init_pokemonspec() {
 	KOFFING.bstats.attack_base = 65;
 	KOFFING.bstats.defense_base = 95;
 	KOFFING.bstats.sattack_base = 60;
-	KOFFING.bstats.sdefence_base = 45;
+	KOFFING.bstats.sdefense_base = 45;
 	KOFFING.bstats.speed_base = 35;
 
 	// weezing
@@ -1817,7 +1817,7 @@ void init_pokemonspec() {
 	WEEZING.bstats.attack_base = 90;
 	WEEZING.bstats.defense_base = 120;
 	WEEZING.bstats.sattack_base = 85;
-	WEEZING.bstats.sdefence_base = 70;
+	WEEZING.bstats.sdefense_base = 70;
 	WEEZING.bstats.speed_base = 60;
 
 	// rhyhorn
@@ -1829,7 +1829,7 @@ void init_pokemonspec() {
 	RHYHORN.bstats.attack_base = 85;
 	RHYHORN.bstats.defense_base = 95;
 	RHYHORN.bstats.sattack_base = 30;
-	RHYHORN.bstats.sdefence_base = 30;
+	RHYHORN.bstats.sdefense_base = 30;
 	RHYHORN.bstats.speed_base = 25;
 
 	// rhydon
@@ -1841,7 +1841,7 @@ void init_pokemonspec() {
 	RHYDON.bstats.attack_base = 130;
 	RHYDON.bstats.defense_base = 120;
 	RHYDON.bstats.sattack_base = 45;
-	RHYDON.bstats.sdefence_base = 45;
+	RHYDON.bstats.sdefense_base = 45;
 	RHYDON.bstats.speed_base = 40;
 
 	// chansey
@@ -1853,7 +1853,7 @@ void init_pokemonspec() {
 	CHANSEY.bstats.attack_base = 5;
 	CHANSEY.bstats.defense_base = 5;
 	CHANSEY.bstats.sattack_base = 35;
-	CHANSEY.bstats.sdefence_base = 105;
+	CHANSEY.bstats.sdefense_base = 105;
 	CHANSEY.bstats.speed_base = 50;
 
 	// tangela
@@ -1865,7 +1865,7 @@ void init_pokemonspec() {
 	TANGELA.bstats.attack_base = 55;
 	TANGELA.bstats.defense_base = 115;
 	TANGELA.bstats.sattack_base = 100;
-	TANGELA.bstats.sdefence_base = 40;
+	TANGELA.bstats.sdefense_base = 40;
 	TANGELA.bstats.speed_base = 60;
 
 	// kangaskhan
@@ -1877,7 +1877,7 @@ void init_pokemonspec() {
 	KANGASKHAN.bstats.attack_base = 95;
 	KANGASKHAN.bstats.defense_base = 80;
 	KANGASKHAN.bstats.sattack_base = 40;
-	KANGASKHAN.bstats.sdefence_base = 80;
+	KANGASKHAN.bstats.sdefense_base = 80;
 	KANGASKHAN.bstats.speed_base = 90;
 
 	// horsea
@@ -1889,7 +1889,7 @@ void init_pokemonspec() {
 	HORSEA.bstats.attack_base = 40;
 	HORSEA.bstats.defense_base = 70;
 	HORSEA.bstats.sattack_base = 70;
-	HORSEA.bstats.sdefence_base = 25;
+	HORSEA.bstats.sdefense_base = 25;
 	HORSEA.bstats.speed_base = 60;
 
 	// seadra
@@ -1901,7 +1901,7 @@ void init_pokemonspec() {
 	SEADRA.bstats.attack_base = 65;
 	SEADRA.bstats.defense_base = 95;
 	SEADRA.bstats.sattack_base = 95;
-	SEADRA.bstats.sdefence_base = 45;
+	SEADRA.bstats.sdefense_base = 45;
 	SEADRA.bstats.speed_base = 85;
 
 	// goldeen
@@ -1913,7 +1913,7 @@ void init_pokemonspec() {
 	GOLDEEN.bstats.attack_base = 67;
 	GOLDEEN.bstats.defense_base = 60;
 	GOLDEEN.bstats.sattack_base = 35;
-	GOLDEEN.bstats.sdefence_base = 50;
+	GOLDEEN.bstats.sdefense_base = 50;
 	GOLDEEN.bstats.speed_base = 63;
 
 	// seaking
@@ -1925,7 +1925,7 @@ void init_pokemonspec() {
 	SEAKING.bstats.attack_base = 92;
 	SEAKING.bstats.defense_base = 65;
 	SEAKING.bstats.sattack_base = 65;
-	SEAKING.bstats.sdefence_base = 80;
+	SEAKING.bstats.sdefense_base = 80;
 	SEAKING.bstats.speed_base = 68;
 
 	// staryu
@@ -1937,7 +1937,7 @@ void init_pokemonspec() {
 	STARYU.bstats.attack_base = 45;
 	STARYU.bstats.defense_base = 55;
 	STARYU.bstats.sattack_base = 70;
-	STARYU.bstats.sdefence_base = 55;
+	STARYU.bstats.sdefense_base = 55;
 	STARYU.bstats.speed_base = 85;
 
 	// starmie
@@ -1949,7 +1949,7 @@ void init_pokemonspec() {
 	STARMIE.bstats.attack_base = 75;
 	STARMIE.bstats.defense_base = 85;
 	STARMIE.bstats.sattack_base = 100;
-	STARMIE.bstats.sdefence_base = 85;
+	STARMIE.bstats.sdefense_base = 85;
 	STARMIE.bstats.speed_base = 115;
 
 	// mr. mime
@@ -1961,7 +1961,7 @@ void init_pokemonspec() {
 	MRMIME.bstats.attack_base = 45;
 	MRMIME.bstats.defense_base = 65;
 	MRMIME.bstats.sattack_base = 100;
-	MRMIME.bstats.sdefence_base = 120;
+	MRMIME.bstats.sdefense_base = 120;
 	MRMIME.bstats.speed_base = 90;
 
 	// scyther
@@ -1973,7 +1973,7 @@ void init_pokemonspec() {
 	SCYTHER.bstats.attack_base = 110;
 	SCYTHER.bstats.defense_base = 80;
 	SCYTHER.bstats.sattack_base = 55;
-	SCYTHER.bstats.sdefence_base = 80;
+	SCYTHER.bstats.sdefense_base = 80;
 	SCYTHER.bstats.speed_base = 105;
 
 	// jynx
@@ -1985,7 +1985,7 @@ void init_pokemonspec() {
 	JYNX.bstats.attack_base = 50;
 	JYNX.bstats.defense_base = 35;
 	JYNX.bstats.sattack_base = 115;
-	JYNX.bstats.sdefence_base = 95;
+	JYNX.bstats.sdefense_base = 95;
 	JYNX.bstats.speed_base = 95;
 
 	// electabuzz
@@ -1997,7 +1997,7 @@ void init_pokemonspec() {
 	ELECTABUZZ.bstats.attack_base = 83;
 	ELECTABUZZ.bstats.defense_base = 57;
 	ELECTABUZZ.bstats.sattack_base = 95;
-	ELECTABUZZ.bstats.sdefence_base = 85;
+	ELECTABUZZ.bstats.sdefense_base = 85;
 	ELECTABUZZ.bstats.speed_base = 105;
 
 	// magmar
@@ -2009,7 +2009,7 @@ void init_pokemonspec() {
 	MAGMAR.bstats.attack_base = 95;
 	MAGMAR.bstats.defense_base = 57;
 	MAGMAR.bstats.sattack_base = 100;
-	MAGMAR.bstats.sdefence_base = 85;
+	MAGMAR.bstats.sdefense_base = 85;
 	MAGMAR.bstats.speed_base = 93;
 
 	// pinsir
@@ -2021,7 +2021,7 @@ void init_pokemonspec() {
 	PINSIR.bstats.attack_base = 125;
 	PINSIR.bstats.defense_base = 100;
 	PINSIR.bstats.sattack_base = 55;
-	PINSIR.bstats.sdefence_base = 70;
+	PINSIR.bstats.sdefense_base = 70;
 	PINSIR.bstats.speed_base = 85;
 
 	// tauros
@@ -2033,7 +2033,7 @@ void init_pokemonspec() {
 	TAUROS.bstats.attack_base = 100;
 	TAUROS.bstats.defense_base = 95;
 	TAUROS.bstats.sattack_base = 40;
-	TAUROS.bstats.sdefence_base = 70;
+	TAUROS.bstats.sdefense_base = 70;
 	TAUROS.bstats.speed_base = 110;
 
 	// magikarp
@@ -2045,7 +2045,7 @@ void init_pokemonspec() {
 	MAGIKARP.bstats.attack_base = 10;
 	MAGIKARP.bstats.defense_base = 55;
 	MAGIKARP.bstats.sattack_base = 15;
-	MAGIKARP.bstats.sdefence_base = 20;
+	MAGIKARP.bstats.sdefense_base = 20;
 	MAGIKARP.bstats.speed_base = 80;
 
 	// gyarados
@@ -2057,7 +2057,7 @@ void init_pokemonspec() {
 	GYARADOS.bstats.attack_base = 125;
 	GYARADOS.bstats.defense_base = 79;
 	GYARADOS.bstats.sattack_base = 60;
-	GYARADOS.bstats.sdefence_base = 100;
+	GYARADOS.bstats.sdefense_base = 100;
 	GYARADOS.bstats.speed_base = 81;
 
 	// lapras
@@ -2069,7 +2069,7 @@ void init_pokemonspec() {
 	LAPRAS.bstats.attack_base = 85;
 	LAPRAS.bstats.defense_base = 80;
 	LAPRAS.bstats.sattack_base = 85;
-	LAPRAS.bstats.sdefence_base = 95;
+	LAPRAS.bstats.sdefense_base = 95;
 	LAPRAS.bstats.speed_base = 60;
 
 	// ditto
@@ -2081,7 +2081,7 @@ void init_pokemonspec() {
 	DITTO.bstats.attack_base = 48;
 	DITTO.bstats.defense_base = 48;
 	DITTO.bstats.sattack_base = 48;
-	DITTO.bstats.sdefence_base = 48;
+	DITTO.bstats.sdefense_base = 48;
 	DITTO.bstats.speed_base = 48;
 
 	// eevee
@@ -2093,7 +2093,7 @@ void init_pokemonspec() {
 	EEVEE.bstats.attack_base = 55;
 	EEVEE.bstats.defense_base = 50;
 	EEVEE.bstats.sattack_base = 45;
-	EEVEE.bstats.sdefence_base = 65;
+	EEVEE.bstats.sdefense_base = 65;
 	EEVEE.bstats.speed_base = 55;
 
 	// vaporeon
@@ -2105,7 +2105,7 @@ void init_pokemonspec() {
 	VAPOREON.bstats.attack_base = 65;
 	VAPOREON.bstats.defense_base = 60;
 	VAPOREON.bstats.sattack_base = 110;
-	VAPOREON.bstats.sdefence_base = 95;
+	VAPOREON.bstats.sdefense_base = 95;
 	VAPOREON.bstats.speed_base = 65;
 
 	// jolteon
@@ -2117,7 +2117,7 @@ void init_pokemonspec() {
 	JOLTEON.bstats.attack_base = 65;
 	JOLTEON.bstats.defense_base = 60;
 	JOLTEON.bstats.sattack_base = 110;
-	JOLTEON.bstats.sdefence_base = 95;
+	JOLTEON.bstats.sdefense_base = 95;
 	JOLTEON.bstats.speed_base = 130;
 
 	// flareon
@@ -2129,7 +2129,7 @@ void init_pokemonspec() {
 	FLAREON.bstats.attack_base = 130;
 	FLAREON.bstats.defense_base = 60;
 	FLAREON.bstats.sattack_base = 95;
-	FLAREON.bstats.sdefence_base = 110;
+	FLAREON.bstats.sdefense_base = 110;
 	FLAREON.bstats.speed_base = 65;
 
 	// porygon
@@ -2141,7 +2141,7 @@ void init_pokemonspec() {
 	PORYGON.bstats.attack_base = 60;
 	PORYGON.bstats.defense_base = 70;
 	PORYGON.bstats.sattack_base = 85;
-	PORYGON.bstats.sdefence_base = 75;
+	PORYGON.bstats.sdefense_base = 75;
 	PORYGON.bstats.speed_base = 40;
 
 	// omanyte
@@ -2153,7 +2153,7 @@ void init_pokemonspec() {
 	OMANYTE.bstats.attack_base = 40;
 	OMANYTE.bstats.defense_base = 100;
 	OMANYTE.bstats.sattack_base = 90;
-	OMANYTE.bstats.sdefence_base = 55;
+	OMANYTE.bstats.sdefense_base = 55;
 	OMANYTE.bstats.speed_base = 35;
 
 	// omastar
@@ -2165,7 +2165,7 @@ void init_pokemonspec() {
 	OMASTAR.bstats.attack_base = 60;
 	OMASTAR.bstats.defense_base = 125;
 	OMASTAR.bstats.sattack_base = 115;
-	OMASTAR.bstats.sdefence_base = 70;
+	OMASTAR.bstats.sdefense_base = 70;
 	OMASTAR.bstats.speed_base = 55;
 
 	// kabuto
@@ -2177,7 +2177,7 @@ void init_pokemonspec() {
 	KABUTO.bstats.attack_base = 80;
 	KABUTO.bstats.defense_base = 90;
 	KABUTO.bstats.sattack_base = 55;
-	KABUTO.bstats.sdefence_base = 45;
+	KABUTO.bstats.sdefense_base = 45;
 	KABUTO.bstats.speed_base = 55;
 
 	// kabutops
@@ -2189,7 +2189,7 @@ void init_pokemonspec() {
 	KABUTOPS.bstats.attack_base = 115;
 	KABUTOPS.bstats.defense_base = 105;
 	KABUTOPS.bstats.sattack_base = 65;
-	KABUTOPS.bstats.sdefence_base = 70;
+	KABUTOPS.bstats.sdefense_base = 70;
 	KABUTOPS.bstats.speed_base = 80;
 
 	// aerodactyl
@@ -2201,7 +2201,7 @@ void init_pokemonspec() {
 	AERODACTYL.bstats.attack_base = 105;
 	AERODACTYL.bstats.defense_base = 65;
 	AERODACTYL.bstats.sattack_base = 60;
-	AERODACTYL.bstats.sdefence_base = 75;
+	AERODACTYL.bstats.sdefense_base = 75;
 	AERODACTYL.bstats.speed_base = 130;
 
 	// snorlax
@@ -2213,7 +2213,7 @@ void init_pokemonspec() {
 	SNORLAX.bstats.attack_base = 110;
 	SNORLAX.bstats.defense_base = 65;
 	SNORLAX.bstats.sattack_base = 65;
-	SNORLAX.bstats.sdefence_base = 110;
+	SNORLAX.bstats.sdefense_base = 110;
 	SNORLAX.bstats.speed_base = 30;
 
 	// articuno
@@ -2225,7 +2225,7 @@ void init_pokemonspec() {
 	ARTICUNO.bstats.attack_base = 85;
 	ARTICUNO.bstats.defense_base = 100;
 	ARTICUNO.bstats.sattack_base = 95;
-	ARTICUNO.bstats.sdefence_base = 125;
+	ARTICUNO.bstats.sdefense_base = 125;
 	ARTICUNO.bstats.speed_base = 85;
 
 	// zapdos
@@ -2237,7 +2237,7 @@ void init_pokemonspec() {
 	ZAPDOS.bstats.attack_base = 90;
 	ZAPDOS.bstats.defense_base = 85;
 	ZAPDOS.bstats.sattack_base = 125;
-	ZAPDOS.bstats.sdefence_base = 90;
+	ZAPDOS.bstats.sdefense_base = 90;
 	ZAPDOS.bstats.speed_base = 100;
 
 	// moltres
@@ -2249,7 +2249,7 @@ void init_pokemonspec() {
 	MOLTRES.bstats.attack_base = 100;
 	MOLTRES.bstats.defense_base = 90;
 	MOLTRES.bstats.sattack_base = 125;
-	MOLTRES.bstats.sdefence_base = 85;
+	MOLTRES.bstats.sdefense_base = 85;
 	MOLTRES.bstats.speed_base = 90;
 
 	// dratini
@@ -2261,7 +2261,7 @@ void init_pokemonspec() {
 	DRATINI.bstats.attack_base = 64;
 	DRATINI.bstats.defense_base = 45;
 	DRATINI.bstats.sattack_base = 50;
-	DRATINI.bstats.sdefence_base = 50;
+	DRATINI.bstats.sdefense_base = 50;
 	DRATINI.bstats.speed_base = 50;
 
 	// dragonair
@@ -2273,7 +2273,7 @@ void init_pokemonspec() {
 	DRAGONAIR.bstats.attack_base = 84;
 	DRAGONAIR.bstats.defense_base = 65;
 	DRAGONAIR.bstats.sattack_base = 70;
-	DRAGONAIR.bstats.sdefence_base = 70;
+	DRAGONAIR.bstats.sdefense_base = 70;
 	DRAGONAIR.bstats.speed_base = 70;
 
 	// dragonite
@@ -2285,7 +2285,7 @@ void init_pokemonspec() {
 	DRAGONITE.bstats.attack_base = 134;
 	DRAGONITE.bstats.defense_base = 95;
 	DRAGONITE.bstats.sattack_base = 100;
-	DRAGONITE.bstats.sdefence_base = 100;
+	DRAGONITE.bstats.sdefense_base = 100;
 	DRAGONITE.bstats.speed_base = 80;
 
 	// mewtwo
@@ -2297,7 +2297,7 @@ void init_pokemonspec() {
 	MEWTWO.bstats.attack_base = 110;
 	MEWTWO.bstats.defense_base = 90;
 	MEWTWO.bstats.sattack_base = 154;
-	MEWTWO.bstats.sdefence_base = 90;
+	MEWTWO.bstats.sdefense_base = 90;
 	MEWTWO.bstats.speed_base = 130;
 
 	// mewtwo
@@ -2309,7 +2309,7 @@ void init_pokemonspec() {
 	MEW.bstats.attack_base = 100;
 	MEW.bstats.defense_base = 100;
 	MEW.bstats.sattack_base = 100;
-	MEW.bstats.sdefence_base = 100;
+	MEW.bstats.sdefense_base = 100;
 	MEW.bstats.speed_base = 100;
 }
 

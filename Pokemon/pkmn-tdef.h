@@ -20,7 +20,7 @@ typedef struct {
 	int attack_base;
 	int defense_base;
 	int sattack_base;
-	int sdefence_base;
+	int sdefense_base;
 	int speed_base;
 } basestats_s; // stats
 
