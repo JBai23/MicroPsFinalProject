@@ -25,7 +25,7 @@ void game() {
 	while (win_phase(&winner)) {
 		printf("\n");
 		printf("%s  HP: %i / %i\n", PLAYER1_POKEMON->species->name, PLAYER1_POKEMON->nv.hp, calc_hpmax(PLAYER1_POKEMON));
-		printf("%s  HP: %i / %i\n", PLAYER2_POKEMON->species->name, PLAYER2_POKEMON->nv.hp, calc_hpmax(PLAYER1_POKEMON));
+		printf("%s  HP: %i / %i\n", PLAYER2_POKEMON->species->name, PLAYER2_POKEMON->nv.hp, calc_hpmax(PLAYER2_POKEMON));
 		printf("\n");
 		input_phase();
 		printf("\n");

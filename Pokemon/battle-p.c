@@ -201,7 +201,8 @@ int calc_speed(pokemon_s *pokemon) {
 }
 
 double calc_accuracy(pokemon_s *attacker, pokemon_s *defender) {
-	return (double) calc_accuracy_n(attacker, defender) / (double) calc_accuracy_d(attacker, defender);
+	double c = (double) calc_accuracy_n(attacker, defender) / (double) calc_accuracy_d(attacker, defender);
+	return c;
 }
 
 int calc_accuracy_n(pokemon_s *attacker, pokemon_s *defender) {
@@ -247,7 +248,9 @@ move_s* curr_move() {
 }
 
 void curr_switchto() {
+	printf("%s, that's enough!\n", CURR_PNAME);
 	switchto(CURR_PLAYER, get_switchindex(CURR_ACTION));
+	printf("Go, %s!\n", CURR_PNAME);
 }
 
 void curr_attack() {
@@ -337,11 +340,12 @@ void curr_attack() {
 			double effective_bonus = calc_effective(move->type, OTHR_POKEMON); // type bonus
 
 			double crit_chance = (move->effect == HIGH_CRIT_E2 ? .125 : .0625);
-			double crit_bonus = (roll(crit_chance) ? 1.5 : 1); // this is not quite how it works in Pokemon
+			double crit_bonus = (roll(crit_chance) ? 1.5 : 1.0); // this is not quite how it works in Pokemon
 
-			double random = (rand() % 16 + 85) / 100.0;
+			double rndm = (rand() % 16 + 85) / 100.0;
 
-			int total_damage = (int)(damage * stab_bonus * effective_bonus * crit_bonus * random);
+			printf("%i, %lf, %lf, %lf, %lf\n", damage, stab_bonus, effective_bonus, crit_bonus, rndm);
+			int total_damage = (int)(damage * stab_bonus * effective_bonus * crit_bonus * rndm);
 
 			if (CURR_POKEMON->nv.nvstatus == BRN_S && move->movetype == PHYSICAL_MT) {
 				total_damage /= 2;
@@ -349,6 +353,8 @@ void curr_attack() {
 
 			if (effective_bonus > 1) {
 				printf("It's super effective!\n");
+			} else if (effective_bonus == 0) {
+				printf("It has no effect!");
 			} else if (effective_bonus < 1) {
 				printf("It's not very effective!\n");
 			}
@@ -357,6 +363,7 @@ void curr_attack() {
 				printf("Critical hit!\n");
 			}
 
+			printf("APPLYING %i DAMAGE\n", total_damage);
 			apply_damage(OTHR_POKEMON, total_damage);
 		}
 	}
@@ -460,7 +467,7 @@ int calc_damage(pokemon_s *attacker, pokemon_s *defender, int base, move_t type)
 	int level = attacker->pstats.level;
 	int attack = (type == PHYSICAL_MT ? calc_attack(attacker) : calc_sattack(attacker));
 	int defense = (type == PHYSICAL_MT ? calc_defense(defender) : calc_sdefense(defender));
-	return (2 * level + 10) / 250 * attack / defense * base + 2;
+	return (2 * level + 10) / 250.0 * attack / defense * base + 2;
 }
 
 double calc_effective(type_t type, pokemon_s *defender) {
@@ -472,13 +479,13 @@ double calc_effective(type_t type, pokemon_s *defender) {
 
 double get_effective(type_t atype, type_t dtype) {
 	switch (echart[atype][dtype]) {
-		SUPER_TE:
+		case SUPER_TE:
 			return 2;
-		NORMAL_TE:
+		case NORMAL_TE:
 			return 1;
-		NOTVERY_TE:
+		case NOTVERY_TE:
 			return 0.5;
-		NOEFFECT_TE: 
+		case NOEFFECT_TE: 
 			return 0;
 	}
 }

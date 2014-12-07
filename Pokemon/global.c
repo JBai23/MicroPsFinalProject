@@ -143,7 +143,7 @@ void switchto(trainer_s *trainer, int index) {
 }
 
 bool roll(double chance) {
-	return chance <= rng();
+	return rng() <= chance;
 }
 
 double rng() {
@@ -3913,7 +3913,7 @@ void init_rentals() {
 	RED_PIKACHU.v.is_flinch = false;
 	RED_PIKACHU.v.is_recharge = false;
 	RED_PIKACHU.v.is_confuse = false;
-	RED_PIKACHU.nv.hp = calc_hpmax(RED_PIKACHU);
+	RED_PIKACHU.nv.hp = calc_hpmax(&RED_PIKACHU);
 	RED_PIKACHU.nv.nvstatus = NON_S;
 	RED_PIKACHU.nv.nv_arg = 0;
 	RED_PIKACHU.moves[0] = &THUNDER;
@@ -3946,7 +3946,7 @@ void init_rentals() {
 	RED_LAPRAS.v.is_flinch = false;
 	RED_LAPRAS.v.is_recharge = false;
 	RED_LAPRAS.v.is_confuse = false;
-	RED_LAPRAS.nv.hp = calc_hpmax(RED_LAPRAS);
+	RED_LAPRAS.nv.hp = calc_hpmax(&RED_LAPRAS);
 	RED_LAPRAS.nv.nvstatus = NON_S;
 	RED_LAPRAS.nv.nv_arg = 0;
 	RED_LAPRAS.moves[0] = &SURF;
@@ -3979,7 +3979,7 @@ void init_rentals() {
 	RED_SNORLAX.v.is_flinch = false;
 	RED_SNORLAX.v.is_recharge = false;
 	RED_SNORLAX.v.is_confuse = false;
-	RED_SNORLAX.nv.hp = calc_hpmax(RED_SNORLAX);
+	RED_SNORLAX.nv.hp = calc_hpmax(&RED_SNORLAX);
 	RED_SNORLAX.nv.nvstatus = NON_S;
 	RED_SNORLAX.nv.nv_arg = 0;
 	RED_SNORLAX.moves[0] = &BODYSLAM;
@@ -4012,7 +4012,7 @@ void init_rentals() {
 	RED_VENUSAUR.v.is_flinch = false;
 	RED_VENUSAUR.v.is_recharge = false;
 	RED_VENUSAUR.v.is_confuse = false;
-	RED_VENUSAUR.nv.hp = calc_hpmax(RED_VENUSAUR);
+	RED_VENUSAUR.nv.hp = calc_hpmax(&RED_VENUSAUR);
 	RED_VENUSAUR.nv.nvstatus = NON_S;
 	RED_VENUSAUR.nv.nv_arg = 0;
 	RED_VENUSAUR.moves[0] = &RAZORLEAF;
@@ -4045,7 +4045,7 @@ void init_rentals() {
 	RED_CHARIZARD.v.is_flinch = false;
 	RED_CHARIZARD.v.is_recharge = false;
 	RED_CHARIZARD.v.is_confuse = false;
-	RED_CHARIZARD.nv.hp = calc_hpmax(RED_CHARIZARD);
+	RED_CHARIZARD.nv.hp = calc_hpmax(&RED_CHARIZARD);
 	RED_CHARIZARD.nv.nvstatus = NON_S;
 	RED_CHARIZARD.nv.nv_arg = 0;
 	RED_CHARIZARD.moves[0] = &FLAMETHROWER;
@@ -4078,7 +4078,7 @@ RED_BLASTOISE.v.evasion_stage = 0;
 RED_BLASTOISE.v.is_flinch = false;
 RED_BLASTOISE.v.is_recharge = false;
 RED_BLASTOISE.v.is_confuse = false;
-RED_BLASTOISE.nv.hp = calc_hpmax(RED_BLASTOISE);
+RED_BLASTOISE.nv.hp = calc_hpmax(&RED_BLASTOISE);
 RED_BLASTOISE.nv.nvstatus = NON_S;
 RED_BLASTOISE.nv.nv_arg = 0;
 RED_BLASTOISE.moves[0] = &SURF;
@@ -4111,7 +4111,7 @@ BLUE_PIDGEOT.v.evasion_stage = 0;
 BLUE_PIDGEOT.v.is_flinch = false;
 BLUE_PIDGEOT.v.is_recharge = false;
 BLUE_PIDGEOT.v.is_confuse = false;
-BLUE_PIDGEOT.nv.hp = calc_hpmax(BLUE_PIDGEOT);
+BLUE_PIDGEOT.nv.hp = calc_hpmax(&BLUE_PIDGEOT);
 BLUE_PIDGEOT.nv.nvstatus = NON_S;
 BLUE_PIDGEOT.nv.nv_arg = 0;
 BLUE_PIDGEOT.moves[0] = &GUST;
@@ -4144,7 +4144,7 @@ BLUE_ALAKAZAM.v.evasion_stage = 0;
 BLUE_ALAKAZAM.v.is_flinch = false;
 BLUE_ALAKAZAM.v.is_recharge = false;
 BLUE_ALAKAZAM.v.is_confuse = false;
-BLUE_ALAKAZAM.nv.hp = calc_hpmax(BLUE_ALAKAZAM);
+BLUE_ALAKAZAM.nv.hp = calc_hpmax(&BLUE_ALAKAZAM);
 BLUE_ALAKAZAM.nv.nvstatus = NON_S;
 BLUE_ALAKAZAM.nv.nv_arg = 0;
 BLUE_ALAKAZAM.moves[0] = &PSYCHIC;
@@ -4177,7 +4177,7 @@ BLUE_RHYDON.v.evasion_stage = 0;
 BLUE_RHYDON.v.is_flinch = false;
 BLUE_RHYDON.v.is_recharge = false;
 BLUE_RHYDON.v.is_confuse = false;
-BLUE_RHYDON.nv.hp = calc_hpmax(BLUE_RHYDON);
+BLUE_RHYDON.nv.hp = calc_hpmax(&BLUE_RHYDON);
 BLUE_RHYDON.nv.nvstatus = NON_S;
 BLUE_RHYDON.nv.nv_arg = 0;
 BLUE_RHYDON.moves[0] = &EARTHQUAKE;
@@ -4210,7 +4210,7 @@ BLUE_ARCANINE.v.evasion_stage = 0;
 BLUE_ARCANINE.v.is_flinch = false;
 BLUE_ARCANINE.v.is_recharge = false;
 BLUE_ARCANINE.v.is_confuse = false;
-BLUE_ARCANINE.nv.hp = calc_hpmax(BLUE_ARCANINE);
+BLUE_ARCANINE.nv.hp = calc_hpmax(&BLUE_ARCANINE);
 BLUE_ARCANINE.nv.nvstatus = NON_S;
 BLUE_ARCANINE.nv.nv_arg = 0;
 BLUE_ARCANINE.moves[0] = &FLAMETHROWER;
@@ -4243,7 +4243,7 @@ BLUE_EXEGGUTOR.v.evasion_stage = 0;
 BLUE_EXEGGUTOR.v.is_flinch = false;
 BLUE_EXEGGUTOR.v.is_recharge = false;
 BLUE_EXEGGUTOR.v.is_confuse = false;
-BLUE_EXEGGUTOR.nv.hp = calc_hpmax(BLUE_EXEGGUTOR);
+BLUE_EXEGGUTOR.nv.hp = calc_hpmax(&BLUE_EXEGGUTOR);
 BLUE_EXEGGUTOR.nv.nvstatus = NON_S;
 BLUE_EXEGGUTOR.nv.nv_arg = 0;
 BLUE_EXEGGUTOR.moves[0] = &EGGBOMB;
@@ -4276,7 +4276,7 @@ BLUE_BLASTOISE.v.evasion_stage = 0;
 BLUE_BLASTOISE.v.is_flinch = false;
 BLUE_BLASTOISE.v.is_recharge = false;
 BLUE_BLASTOISE.v.is_confuse = false;
-BLUE_BLASTOISE.nv.hp = calc_hpmax(BLUE_BLASTOISE);
+BLUE_BLASTOISE.nv.hp = calc_hpmax(&BLUE_BLASTOISE);
 BLUE_BLASTOISE.nv.nvstatus = NON_S;
 BLUE_BLASTOISE.nv.nv_arg = 0;
 BLUE_BLASTOISE.moves[0] = &SURF;
