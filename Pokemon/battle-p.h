@@ -27,6 +27,7 @@ int calc_accuracy_n(pokemon_s *attacker, pokemon_s *defender);
 int calc_accuracy_d(pokemon_s *attacker, pokemon_s *defender);
 
 void curr_exe();
+move_s* curr_move();
 void curr_switchto();
 void curr_attack();
 

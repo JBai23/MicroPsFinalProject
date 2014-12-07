@@ -25,6 +25,97 @@ move_s* get_move(trainer_s *trainer, action_t action) {
 	}
 }
 
+bool is_move(action_t action) {
+	switch (action) {
+		case MOVE1_A:
+		case MOVE2_A:
+		case MOVE3_A:
+		case MOVE4_A:
+			return true;
+
+		case PKMN1_A:
+		case PKMN2_A:
+		case PKMN3_A:
+		case PKMN4_A:
+		case PKMN5_A:
+		case PKMN6_A:
+			return false;
+
+		case SURRENDER_A:
+		case NON_A:
+			return false;
+
+		default: // should never happen
+			return false;
+	}
+}
+
+	
+
+bool is_aggressive(move_s *move) {
+	switch (move->movetype) {
+		case PHYSICAL_MT:
+			return true;
+		case SPECIAL_MT:
+			return true;
+		case STATUS_MT:
+			switch (move->effect) {
+				case NON_E2:
+				case APPLY_BRN_E2:
+				case APPLY_FRZ_E2:
+				case APPLY_PAR_E2:
+				case APPLY_PSN_E2:
+				case APPLY_TXC_E2:
+				case APPLY_SLP_E2:
+				case APPLY_FLINCH_E2:
+				case APPLY_CONFUSE_E2:
+				case HIGH_CRIT_E2:
+				case SELF_KILL_E2:
+				case OTHR_ATTACK_E2:
+				case OTHR_DEFENSE_E2:
+				case OTHR_SATTACK_E2:
+				case OTHR_SDEFENSE_E2:
+				case OTHR_SPEED_E2:
+				case OTHR_ACCURACY_E2:
+				case OTHR_EVASION_E2:
+				case RECOIL_E2:
+				case RECHARGE_E2:
+					return true;
+
+				case SELF_ATTACK_E2:
+				case SELF_DEFENSE_E2:
+				case SELF_SATTACK_E2:
+				case SELF_SDEFENSE_E2:
+				case SELF_SPEED_E2:
+				case SELF_ACCURACY_E2:
+				case SELF_EVASION_E2:
+				case SELF_ATTACK_SATTACK_E2:
+				case HAZE_E2:
+					return false;
+			}
+	}
+}
+
+int get_switchindex(action_t action) {
+	switch (action) {
+		case PKMN1_A:
+			return 0;
+		case PKMN2_A:
+			return 1;
+		case PKMN3_A:
+			return 2;
+		case PKMN4_A:
+			return 3;
+		case PKMN5_A:
+			return 4;
+		case PKMN6_A:
+			return 5;
+
+		default:
+			return 0; // this shouldn't happen
+	}
+}
+
 void reset_v(pokemon_s *pokemon) {
 	pokemon->v.attack_stage = 0;
 	pokemon->v.defense_stage = 0;

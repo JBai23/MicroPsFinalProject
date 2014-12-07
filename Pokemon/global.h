@@ -7,20 +7,32 @@
 #define PLAYER1 battle.players[P1_P]
 #define PLAYER2 battle.players[P2_P]
 
+#define PLAYER1_NAME PLAYER1->name
+#define PLAYER2_NAME PLAYER1->name
+
 #define PLAYER1_ACTION PLAYER1->action
 #define PLAYER2_ACTION PLAYER2->action
 
 #define PLAYER1_POKEMON PLAYER1->pokemon[PLAYER1->pokemon_active]
 #define PLAYER2_POKEMON PLAYER2->pokemon[PLAYER2->pokemon_active]
 
+#define PLAYER1_PNAME PLAYER1_POKEMON->species->name
+#define PLAYER2_PNAME PLAYER2_POKEMON->species->name
+
 #define CURR_PLAYER battle.rplayer[CURR_R]
 #define OTHR_PLAYER battle.rplayer[OTHR_R]
+
+#define CURR_NAME CURR_PLAYER->name
+#define OTHR_NAME OTHR_PLAYER->name
 
 #define CURR_ACTION CURR_PLAYER->action
 #define OTHR_ACTION OTHR_PLAYER->action
 
 #define CURR_POKEMON CURR_PLAYER->pokemon[CURR_PLAYER->pokemon_active]
 #define OTHR_POKEMON OTHR_PLAYER->pokemon[OTHR_PLAYER->pokemon_active]
+
+#define CURR_PNAME CURR_POKEMON->species->name
+#define OTHR_PNAME OTHR_POKEMON->species->name
 
 // input phase globals
 menu_s turn_menu;
@@ -38,6 +50,10 @@ battle_s battle;
 
 pokemon_s* get_activepokemon(trainer_s *trainer);
 move_s* get_move(trainer_s *trainer, action_t action);
+bool is_move(action_t action);
+bool is_aggressive(move_s *move);
+int get_switchindex(action_t action);
+
 void switchto(trainer_s *trainer, int index);
 void reset_v(pokemon_s *pokemon);
 

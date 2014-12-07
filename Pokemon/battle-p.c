@@ -2,6 +2,7 @@
 #include "battle-p.h"
 #include "global.h"
 #include "math.h"
+#include <stdio.h>
 
 void set_curr(trainer_s *trainer) {
 	CURR_PLAYER = trainer;
@@ -41,74 +42,9 @@ bool check_priority() { // true if battle, false if surrender
 	return true;
 }
 
-bool is_move(action_t action) {
-	switch (action) {
-		case MOVE1_A:
-		case MOVE2_A:
-		case MOVE3_A:
-		case MOVE4_A:
-			return true;
-
-		case PKMN1_A:
-		case PKMN2_A:
-		case PKMN3_A:
-		case PKMN4_A:
-		case PKMN5_A:
-		case PKMN6_A:
-			return false;
-
-		case SURRENDER_A:
-		case NON_A:
-			return false;
-
-		default: // should never happen
-			return false;
-	}
-}
-
-int get_switchindex(action_t action) {
-	switch (action) {
-		case PKMN1_A:
-			return 0;
-		case PKMN2_A:
-			return 1;
-		case PKMN3_A:
-			return 2;
-		case PKMN4_A:
-			return 3;
-		case PKMN5_A:
-			return 4;
-		case PKMN6_A:
-			return 5;
-
-		default:
-			return 0; // this shouldn't happen
-	}
-}
-
-
-
 int get_priority(trainer_s *trainer) {
 	action_t action = trainer->action;
 	return (is_move(action) ? get_move(trainer, action)->priority : 6); // if isn't move it is switch
-	// switch (action) {
-	// 	case MOVE1_A:
-	// 	case MOVE2_A:
-	// 	case MOVE3_A:
-	// 	case MOVE4_A:
-	// 		return get_move(trainer, action)->priority;
-
-	// 	case PKMN1_A:
-	// 	case PKMN2_A:
-	// 	case PKMN3_A:
-	// 	case PKMN4_A:
-	// 	case PKMN5_A:
-	// 	case PKMN6_A:
-	// 		return 6;
-
-	// 	default:
-	// 		return 0; // this shouldn't happen, should always check for surrender before calling this function
-	// }
 }
 
 int calc_hpmax(pokemon_s *pokemon) {
@@ -261,7 +197,8 @@ int calc_speed(pokemon_s *pokemon) {
 	int stage = pokemon->v.speed_stage;
 	int stage_n = (stage > 0 ? 2 + stage : 2);
 	int stage_d = (stage < 0 ? 2 - stage : 2);
-	return ((iv + (2 * base) + ev / 4) * level / 100 + 5) * nature / 10 * stage_n / stage_d;
+	int status = (pokemon->nv.nvstatus == PAR_S ? 3 : 4);
+	return ((iv + (2 * base) + ev / 4) * level / 100 + 5) * nature / 10 * stage_n / stage_d * status / 4;
 }
 
 double calc_accuracy(pokemon_s *attacker, pokemon_s *defender) {
@@ -297,19 +234,72 @@ int calc_accuracy_d(pokemon_s *attacker, pokemon_s *defender) {
 }
 
 void curr_exe() {
-	if (is_move(CURR_ACTION)) {
-		curr_attack();
-	} else {
-		curr_switchto();
+	if (CURR_POKEMON->nv.nvstatus != FNT_S) {
+		if (is_move(CURR_ACTION)) {
+			curr_attack();
+		} else {
+			curr_switchto();
+		}
 	}
 }
 
+move_s* curr_move() {
+	return get_move(CURR_PLAYER, CURR_ACTION);
+}
+
 void curr_switchto() {
-	get_switchindex(CURR_ACTION);
+	switchto(CURR_PLAYER, get_switchindex(CURR_ACTION));
 }
 
 void curr_attack() {
-	//CURR_POKEMON
+	switch (CURR_POKEMON->nv.nvstatus) {
+		case NON_S:
+		case BRN_S:
+		case PSN_S:
+		case TXC_S:
+			break;
+		
+		case FRZ_S:
+			if (roll(.2)) {
+				printf("%s thawed out!", CURR_PNAME);
+				CURR_POKEMON->nv.nvstatus = NON_S;
+				break;
+			} else {
+				printf("%s is frozen solid!", CURR_PNAME);
+				return;
+			}
+		case PAR_S:
+			if (roll(.25)) {
+				printf("%s is fully paralyzed!", CURR_PNAME);
+				return;
+			} else {
+				break;
+			}
+		case SLP_S:
+			if (CURR_POKEMON->nv.nv_arg > 0) {
+				printf("%s is fast asleep!", CURR_PNAME);
+				CURR_POKEMON->nv.nv_arg--;
+			} else {
+				printf("%s woke up!", CURR_PNAME);
+				CURR_POKEMON->nv.nvstatus = NON_S;
+			}
+		case FNT_S: // should never happen
+			return;
+	}
+
+	move_s *move = curr_move();
+	printf("%s used %s!", CURR_PNAME, move->name);
+
+	if (move->unique) {
+		switch (move->unique) {
+			default: // no unique moves at the moment
+				return;
+		}
+	}
+
+	if (is_aggressive(move)) {
+
+	}
 }
 
 void battle_phase() {
