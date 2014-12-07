@@ -123,20 +123,20 @@ typedef struct {
 } pokemonspec_s;
 
 typedef struct {
-	const pokemonspec_s* species;
-	const personalstats_s pstats;
+	pokemonspec_s* species; // const
+	personalstats_s pstats; // const
 
 	volitile_s v;
 	nonvolitile_s nv;
 
-	const move_s* moves[4];
-	const int move_count;
+	move_s* moves[4]; // const
+	int move_count; // const
 } pokemon_s;
 
 typedef struct {
-	const char name[STRSIZE];
-	pokemon_s pokemon[6];
-	const int pokemon_count;
-} player_s;
+	char name[STRSIZE]; // const
+	pokemon_s *pokemon[6];
+	int pokemon_count; // const
+} trainer_s;
 
 #endif

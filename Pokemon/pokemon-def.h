@@ -1,8 +1,6 @@
 #ifndef PKM_H
 #define PKM_H 1
 
-
-
 #include "pkmn-tdef.h"
 
 

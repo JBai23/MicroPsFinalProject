@@ -5,7 +5,7 @@
 #include "types.h"
 
 // win phase func
-bool can_fight(player_s *player); // rtns tru if player has pkmn left
+bool can_fight(trainer_s *trainer); // rtns tru if player has pkmn left
 void player1_win();
 void player2_win();
 void draw_win();

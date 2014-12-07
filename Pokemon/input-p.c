@@ -72,7 +72,7 @@ input_t get_input() {
 
 void input_phase() {
 	
-	battle.actions[p1_p] = get_action(&turn_menu);
+	battle.actions[P1_P] = get_action(&turn_menu);
 
-	battle.actions[p2_p] = get_action(&turn_menu);
+	battle.actions[P2_P] = get_action(&turn_menu);
 }

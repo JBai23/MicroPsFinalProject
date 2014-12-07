@@ -4,7 +4,7 @@
 
 #include "pokemon-def.h"
 #include "moves-def.h"
-#include "rentals-def.h"
+// #include "rentals-def.h"
 
 // include phases
 #include "input-p.h"
@@ -39,14 +39,13 @@ int debug_init() {
 int init() {
 	init_menus();
 	init_echart();
+	init_battle();
 }
 
 // main
 int main()
 {
 	init();
-	player_s RED = {"Red", {RED_PIKACHU, RED_LAPRAS, RED_SNORLAX, RED_VENUSAUR, RED_CHARIZARD, RED_BLASTOISE}, 6};
-	player_s BLUE = {"Blue", {BLUE_PIDGEOT, BLUE_ALAKAZAM, BLUE_RHYDON, BLUE_ARCANINE, BLUE_EXEGGUTOR, BLUE_BLASTOISE}, 6};
     printf("Hello World\n");
 
     action_t out = get_action(&turn_menu);

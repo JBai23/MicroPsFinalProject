@@ -31,17 +31,17 @@ typedef struct menu_s {
 
 // battle-p typedefs
 typedef enum {
-	curr_r = 0, othr_r = 1
+	CURR_R = 0, OTHR_R = 1
 } relid_t; // relative identification
 
 typedef enum {
-	p1_p = 0, p2_p = 1
+	P1_P = 0, P2_P = 1
 } player_t;
 
 typedef struct {
-	player_s *players[2];
+	trainer_s *players[2];
 	
-	player_s *rplayer[2]; // relative player
+	trainer_s *rplayer[2]; // relative player
 	pokemon_s *rapkmn[2]; // relative active pkmn
 
 	int last_dmg;

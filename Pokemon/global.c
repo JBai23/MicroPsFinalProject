@@ -478,6 +478,32 @@ void init_echart() {
 	echart[17][17] = NORMAL_TE;
 }
 
-void init_battle() {
+void init_pokemonspec() {
 	
+}
+
+#include "rentals-def.h"
+void init_trainers() {
+	strcpy(trainer_red.name, "Red");
+	trainer_red.pokemon[0] = &RED_PIKACHU;
+	trainer_red.pokemon[1] = &RED_LAPRAS;
+	trainer_red.pokemon[2] = &RED_SNORLAX;
+	trainer_red.pokemon[3] = &RED_VENUSAUR;
+	trainer_red.pokemon[4] = &RED_CHARIZARD;
+	trainer_red.pokemon[5] = &RED_BLASTOISE;
+	trainer_red.pokemon_count = 6;
+
+	strcpy(trainer_blue.name, "Blue");
+	trainer_blue.pokemon[0] = &BLUE_PIDGEOT;
+	trainer_blue.pokemon[1] = &BLUE_ALAKAZAM;
+	trainer_blue.pokemon[2] = &BLUE_RHYDON;
+	trainer_blue.pokemon[3] = &BLUE_ARCANINE;
+	trainer_blue.pokemon[4] = &BLUE_EXEGGUTOR;
+	trainer_blue.pokemon[5] = &BLUE_BLASTOISE;
+	trainer_blue.pokemon_count = 6;
+}
+
+void init_battle() {
+	PLAYER1 = &trainer_red;
+	PLAYER2 = &trainer_blue;
 }
