@@ -8,5 +8,6 @@ void do_toxic();
 void do_poison();
 void do_burn();
 
+void eor_phase(); // end of round
 
 #endif

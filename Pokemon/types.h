@@ -51,4 +51,11 @@ typedef struct {
 	action_t actions[2];
 } battle_s;
 
+// eor-p typedefs
+
+// win-p typedefs
+typedef enum {
+	NON_W, P1WIN_W, P2WIN_W, DRAW_W
+} win_t;
+
 #endif

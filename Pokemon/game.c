@@ -9,41 +9,24 @@
 // include phases
 #include "input-p.h"
 #include "battle-p.h"
+#include "eor-p.h"
+#include "win-p.h"
 
 #include "global.h" // needs everything else before it
 
 #include "game.h"
 
 // functions
-bool can_fight(player_s *player) {
-	size_t i;
-	for (i = 0; i < player->pokemon_count; ++i) {
-		if (player->pokemon[i].nv.nvstatus != FNT_S) {
-			return true;
-		}
-	}
-	return false;
-}
-
-int battle_phase() {
-	return 1;
-}
-
-int end_phase() {
-	return 1;
-}
-
-int win_phase() {
-	return 1;
-}
 
 
 int game() {
-	while (1) {
+
+	win_t winner = NON_W;
+
+	while (win_phase(&winner)) {
 		input_phase();
 		battle_phase();
-		end_phase();
-		win_phase();
+		eor_phase();
 	}
 }
 
