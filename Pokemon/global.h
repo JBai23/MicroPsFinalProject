@@ -17,8 +17,8 @@ menu_s fpkmn_menu; // forced switch
 effective_t echart[18][18];
 
 //
-trainer_s trainer_red;
-trainer_s trainer_blue;
+trainer_s RED;
+trainer_s BLUE;
 // trainer_s RED = {"Red", {RED_PIKACHU, RED_LAPRAS, RED_SNORLAX, RED_VENUSAUR, RED_CHARIZARD, RED_BLASTOISE}, 6};
 // trainer_s BLUE = {"Blue", {BLUE_PIDGEOT, BLUE_ALAKAZAM, BLUE_RHYDON, BLUE_ARCANINE, BLUE_EXEGGUTOR, BLUE_BLASTOISE}, 6};
 battle_s battle;
@@ -27,6 +27,7 @@ battle_s battle;
 void init_menus();
 void init_echart();
 void init_pokemonspec();
+void init_moves();
 void init_trainers();
 void init_battle();
 
