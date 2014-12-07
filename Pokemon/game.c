@@ -23,7 +23,12 @@ void game() {
 	win_t winner = NON_W;
 
 	while (win_phase(&winner)) {
+		printf("\n");
+		printf("%s  HP: %i / %i\n", PLAYER1_POKEMON->species->name, PLAYER1_POKEMON->nv.hp, calc_hpmax(PLAYER1_POKEMON));
+		printf("%s  HP: %i / %i\n", PLAYER2_POKEMON->species->name, PLAYER2_POKEMON->nv.hp, calc_hpmax(PLAYER1_POKEMON));
+		printf("\n");
 		input_phase();
+		printf("\n");
 		battle_phase();
 		eor_phase();
 	}
@@ -31,10 +36,13 @@ void game() {
 	switch (winner) {
 		case P1WIN_W:
 			printf("P1:%s wins!\n", PLAYER1->name);
+			break;
 		case P2WIN_W:
 			printf("P2:%s wins!\n", PLAYER2->name);
+			break;
 		case DRAW_W:
 			printf("Game is a draw!\n");
+			break;
 		case NON_W:
 		default:
 			break;

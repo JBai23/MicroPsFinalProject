@@ -3896,6 +3896,8 @@ void init_trainers() {
 	RED.pokemon[3] = &RED_VENUSAUR;
 	RED.pokemon[4] = &RED_CHARIZARD;
 	RED.pokemon[5] = &RED_BLASTOISE;
+	RED.pokemon_active = 0;
+	RED.action = NON_A;
 	RED.pokemon_count = 6;
 
 	strcpy(BLUE.name, "Blue");
@@ -3905,6 +3907,8 @@ void init_trainers() {
 	BLUE.pokemon[3] = &BLUE_ARCANINE;
 	BLUE.pokemon[4] = &BLUE_EXEGGUTOR;
 	BLUE.pokemon[5] = &BLUE_BLASTOISE;
+	BLUE.pokemon_active = 0;
+	BLUE.action = NON_A;
 	BLUE.pokemon_count = 6;
 }
 

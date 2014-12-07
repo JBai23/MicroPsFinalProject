@@ -262,26 +262,26 @@ void curr_attack() {
 		
 		case FRZ_S:
 			if (roll(.2)) {
-				printf("%s thawed out!", CURR_PNAME);
+				printf("%s thawed out!\n", CURR_PNAME);
 				CURR_POKEMON->nv.nvstatus = NON_S;
 				break;
 			} else {
-				printf("%s is frozen solid!", CURR_PNAME);
+				printf("%s is frozen solid!\n", CURR_PNAME);
 				return;
 			}
 		case PAR_S:
 			if (roll(.25)) {
-				printf("%s is fully paralyzed!", CURR_PNAME);
+				printf("%s is fully paralyzed!\n", CURR_PNAME);
 				return;
 			} else {
 				break;
 			}
 		case SLP_S:
 			if (CURR_POKEMON->nv.nv_arg > 0) {
-				printf("%s is fast asleep!", CURR_PNAME);
+				printf("%s is fast asleep!\n", CURR_PNAME);
 				CURR_POKEMON->nv.nv_arg--;
 			} else {
-				printf("%s woke up!", CURR_PNAME);
+				printf("%s woke up!\n", CURR_PNAME);
 				CURR_POKEMON->nv.nvstatus = NON_S;
 			}
 		case FNT_S: // should never happen
@@ -291,22 +291,22 @@ void curr_attack() {
 
 	// see if v status allows for attack
 	if (CURR_POKEMON->v.is_flinch) {
-		printf("%s flinched!", CURR_PNAME);
+		printf("%s flinched!\n", CURR_PNAME);
 		return;
 	}
 	if (CURR_POKEMON->v.is_recharge) {
-		printf("%s is recharging!", CURR_PNAME);
+		printf("%s is recharging!\n", CURR_PNAME);
 		CURR_POKEMON->v.is_recharge = false;
 		return;
 	}
 	if (CURR_POKEMON->v.is_confuse) {
-		printf("%s is confused!", CURR_PNAME);
+		printf("%s is confused!\n", CURR_PNAME);
 		if (roll(.25)) { // this is not quite how it works in Pokemon
-			printf("%s snapped out of confusion!", CURR_PNAME);
+			printf("%s snapped out of confusion!\n", CURR_PNAME);
 			CURR_POKEMON->v.is_confuse = false;
 		} else {
 			if (roll(.5)) {
-				printf("%s hurt itself in confusion!", CURR_PNAME);
+				printf("%s hurt itself in confusion!\n", CURR_PNAME);
 				// TODO INFLICT SELF 40 PHYSICAL DAMAGE
 				return;
 			}
@@ -314,7 +314,7 @@ void curr_attack() {
 	}
 
 	move_s *move = curr_move();
-	printf("%s used %s!", CURR_PNAME, move->name);
+	printf("%s used %s!\n", CURR_PNAME, move->name);
 
 	// check if unique
 	if (move->unique) {
@@ -327,7 +327,7 @@ void curr_attack() {
 	// check accuracy
 	if (is_aggressive(move)) {
 		if (!roll(move->accuracy * calc_accuracy(CURR_POKEMON, OTHR_POKEMON))) { // swift support?
-			printf("It missed!");
+			printf("It missed!\n");
 			return;
 		}
 
@@ -349,13 +349,13 @@ void curr_attack() {
 			}
 
 			if (effective_bonus > 1) {
-				printf("It's super effective!");
+				printf("It's super effective!\n");
 			} else if (effective_bonus < 1) {
-				printf("It's not very effective!");
+				printf("It's not very effective!\n");
 			}
 
 			if (crit_bonus > 1) {
-				printf("Critical hit!");
+				printf("Critical hit!\n");
 			}
 
 			apply_damage(OTHR_POKEMON, total_damage);
@@ -495,11 +495,11 @@ void apply_damage(pokemon_s *pokemon, int damage) {
 // todo: change stats to array so I can combine these to an enum called func
 void apply_attackstage(pokemon_s *pokemon, int stages) {
 	if (stages > 0 && pokemon->v.attack_stage == 6) {
-		printf("%s's attack cannot go any higher!", pokemon->species->name);
+		printf("%s's attack cannot go any higher!\n", pokemon->species->name);
 		return;
 	}
 	if (stages < 0 && pokemon->v.attack_stage == -6) {
-		printf("%s's attack cannot go any lower!", pokemon->species->name);
+		printf("%s's attack cannot go any lower!\n", pokemon->species->name);
 		return;
 	}
 
@@ -511,27 +511,27 @@ void apply_attackstage(pokemon_s *pokemon, int stages) {
 	}
 
 	if (stages == 1) {
-		printf("%s's attack rose!", pokemon->species->name);
+		printf("%s's attack rose!\n", pokemon->species->name);
 	} else if (stages == 2) {
-		printf("%s's attack rose sharply!", pokemon->species->name);
+		printf("%s's attack rose sharply!\n", pokemon->species->name);
 	} else if (stages >= 3) {
-		printf("%s's attack rose drastically!", pokemon->species->name);
+		printf("%s's attack rose drastically!\n", pokemon->species->name);
 	} else if (stages == -1) {
-		printf("%s's attack fell!", pokemon->species->name);
+		printf("%s's attack fell!\n", pokemon->species->name);
 	} else if (stages == -2) {
-		printf("%s's attack fell sharply!", pokemon->species->name);
+		printf("%s's attack fell sharply!\n", pokemon->species->name);
 	} else if (stages <= -3) {
-		printf("%s's attack fell drastically!", pokemon->species->name);
+		printf("%s's attack fell drastically!\n", pokemon->species->name);
 	} 
 }
 
 void apply_defensestage(pokemon_s *pokemon, int stages) {
 	if (stages > 0 && pokemon->v.defense_stage == 6) {
-		printf("%s's defense cannot go any higher!", pokemon->species->name);
+		printf("%s's defense cannot go any higher!\n", pokemon->species->name);
 		return;
 	}
 	if (stages < 0 && pokemon->v.defense_stage == -6) {
-		printf("%s's defense cannot go any lower!", pokemon->species->name);
+		printf("%s's defense cannot go any lower!\n", pokemon->species->name);
 		return;
 	}
 
@@ -543,27 +543,27 @@ void apply_defensestage(pokemon_s *pokemon, int stages) {
 	}
 
 	if (stages == 1) {
-		printf("%s's defense rose!", pokemon->species->name);
+		printf("%s's defense rose!\n", pokemon->species->name);
 	} else if (stages == 2) {
-		printf("%s's defense rose sharply!", pokemon->species->name);
+		printf("%s's defense rose sharply!\n", pokemon->species->name);
 	} else if (stages >= 3) {
-		printf("%s's defense rose drastically!", pokemon->species->name);
+		printf("%s's defense rose drastically!\n", pokemon->species->name);
 	} else if (stages == -1) {
-		printf("%s's defense fell!", pokemon->species->name);
+		printf("%s's defense fell!\n", pokemon->species->name);
 	} else if (stages == -2) {
-		printf("%s's defense fell sharply!", pokemon->species->name);
+		printf("%s's defense fell sharply!\n", pokemon->species->name);
 	} else if (stages <= -3) {
-		printf("%s's defense fell drastically!", pokemon->species->name);
+		printf("%s's defense fell drastically!\n", pokemon->species->name);
 	} 
 }
 
 void apply_sattackstage(pokemon_s *pokemon, int stages) {
 	if (stages > 0 && pokemon->v.sattack_stage == 6) {
-		printf("%s's special attack cannot go any higher!", pokemon->species->name);
+		printf("%s's special attack cannot go any higher!\n", pokemon->species->name);
 		return;
 	}
 	if (stages < 0 && pokemon->v.sattack_stage == -6) {
-		printf("%s's special attack cannot go any lower!", pokemon->species->name);
+		printf("%s's special attack cannot go any lower!\n", pokemon->species->name);
 		return;
 	}
 
@@ -575,27 +575,27 @@ void apply_sattackstage(pokemon_s *pokemon, int stages) {
 	}
 
 	if (stages == 1) {
-		printf("%s's special attack rose!", pokemon->species->name);
+		printf("%s's special attack rose!\n", pokemon->species->name);
 	} else if (stages == 2) {
-		printf("%s's special attack rose sharply!", pokemon->species->name);
+		printf("%s's special attack rose sharply!\n", pokemon->species->name);
 	} else if (stages >= 3) {
-		printf("%s's special attack rose drastically!", pokemon->species->name);
+		printf("%s's special attack rose drastically!\n", pokemon->species->name);
 	} else if (stages == -1) {
-		printf("%s's special attack fell!", pokemon->species->name);
+		printf("%s's special attack fell!\n", pokemon->species->name);
 	} else if (stages == -2) {
-		printf("%s's special attack fell sharply!", pokemon->species->name);
+		printf("%s's special attack fell sharply!\n", pokemon->species->name);
 	} else if (stages <= -3) {
-		printf("%s's special attack fell drastically!", pokemon->species->name);
+		printf("%s's special attack fell drastically!\n", pokemon->species->name);
 	} 
 }
 
 void apply_sdefensestage(pokemon_s *pokemon, int stages) {
 	if (stages > 0 && pokemon->v.sdefense_stage == 6) {
-		printf("%s's special defense cannot go any higher!", pokemon->species->name);
+		printf("%s's special defense cannot go any higher!\n", pokemon->species->name);
 		return;
 	}
 	if (stages < 0 && pokemon->v.sdefense_stage == -6) {
-		printf("%s's special defense cannot go any lower!", pokemon->species->name);
+		printf("%s's special defense cannot go any lower!\n", pokemon->species->name);
 		return;
 	}
 
@@ -607,27 +607,27 @@ void apply_sdefensestage(pokemon_s *pokemon, int stages) {
 	}
 
 	if (stages == 1) {
-		printf("%s's special defense rose!", pokemon->species->name);
+		printf("%s's special defense rose!\n", pokemon->species->name);
 	} else if (stages == 2) {
-		printf("%s's special defense rose sharply!", pokemon->species->name);
+		printf("%s's special defense rose sharply!\n", pokemon->species->name);
 	} else if (stages >= 3) {
-		printf("%s's special defense rose drastically!", pokemon->species->name);
+		printf("%s's special defense rose drastically!\n", pokemon->species->name);
 	} else if (stages == -1) {
-		printf("%s's special defense fell!", pokemon->species->name);
+		printf("%s's special defense fell!\n", pokemon->species->name);
 	} else if (stages == -2) {
-		printf("%s's special defense fell sharply!", pokemon->species->name);
+		printf("%s's special defense fell sharply!\n", pokemon->species->name);
 	} else if (stages <= -3) {
-		printf("%s's special defense fell drastically!", pokemon->species->name);
+		printf("%s's special defense fell drastically!\n", pokemon->species->name);
 	} 
 }
 
 void apply_speedstage(pokemon_s *pokemon, int stages) {
 	if (stages > 0 && pokemon->v.speed_stage == 6) {
-		printf("%s's speed cannot go any higher!", pokemon->species->name);
+		printf("%s's speed cannot go any higher!\n", pokemon->species->name);
 		return;
 	}
 	if (stages < 0 && pokemon->v.speed_stage == -6) {
-		printf("%s's speed cannot go any lower!", pokemon->species->name);
+		printf("%s's speed cannot go any lower!\n", pokemon->species->name);
 		return;
 	}
 
@@ -639,27 +639,27 @@ void apply_speedstage(pokemon_s *pokemon, int stages) {
 	}
 
 	if (stages == 1) {
-		printf("%s's speed rose!", pokemon->species->name);
+		printf("%s's speed rose!\n", pokemon->species->name);
 	} else if (stages == 2) {
-		printf("%s's speed rose sharply!", pokemon->species->name);
+		printf("%s's speed rose sharply!\n", pokemon->species->name);
 	} else if (stages >= 3) {
-		printf("%s's speed rose drastically!", pokemon->species->name);
+		printf("%s's speed rose drastically!\n", pokemon->species->name);
 	} else if (stages == -1) {
-		printf("%s's speed fell!", pokemon->species->name);
+		printf("%s's speed fell!\n", pokemon->species->name);
 	} else if (stages == -2) {
-		printf("%s's speed fell sharply!", pokemon->species->name);
+		printf("%s's speed fell sharply!\n", pokemon->species->name);
 	} else if (stages <= -3) {
-		printf("%s's speed fell drastically!", pokemon->species->name);
+		printf("%s's speed fell drastically!\n", pokemon->species->name);
 	} 
 }
 
 void apply_accuracystage(pokemon_s *pokemon, int stages) {
 	if (stages > 0 && pokemon->v.accuracy_stage == 6) {
-		printf("%s's accuracy cannot go any higher!", pokemon->species->name);
+		printf("%s's accuracy cannot go any higher!\n", pokemon->species->name);
 		return;
 	}
 	if (stages < 0 && pokemon->v.accuracy_stage == -6) {
-		printf("%s's accuracy cannot go any lower!", pokemon->species->name);
+		printf("%s's accuracy cannot go any lower!\n", pokemon->species->name);
 		return;
 	}
 
@@ -671,27 +671,27 @@ void apply_accuracystage(pokemon_s *pokemon, int stages) {
 	}
 
 	if (stages == 1) {
-		printf("%s's accuracy rose!", pokemon->species->name);
+		printf("%s's accuracy rose!\n", pokemon->species->name);
 	} else if (stages == 2) {
-		printf("%s's accuracy rose sharply!", pokemon->species->name);
+		printf("%s's accuracy rose sharply!\n", pokemon->species->name);
 	} else if (stages >= 3) {
-		printf("%s's accuracy rose drastically!", pokemon->species->name);
+		printf("%s's accuracy rose drastically!\n", pokemon->species->name);
 	} else if (stages == -1) {
-		printf("%s's accuracy fell!", pokemon->species->name);
+		printf("%s's accuracy fell!\n", pokemon->species->name);
 	} else if (stages == -2) {
-		printf("%s's accuracy fell sharply!", pokemon->species->name);
+		printf("%s's accuracy fell sharply!\n", pokemon->species->name);
 	} else if (stages <= -3) {
-		printf("%s's accuracy fell drastically!", pokemon->species->name);
+		printf("%s's accuracy fell drastically!\n", pokemon->species->name);
 	} 
 }
 
 void apply_evasionstage(pokemon_s *pokemon, int stages) {
 	if (stages > 0 && pokemon->v.evasion_stage == 6) {
-		printf("%s's evasion cannot go any higher!", pokemon->species->name);
+		printf("%s's evasion cannot go any higher!\n", pokemon->species->name);
 		return;
 	}
 	if (stages < 0 && pokemon->v.evasion_stage == -6) {
-		printf("%s's evasion cannot go any lower!", pokemon->species->name);
+		printf("%s's evasion cannot go any lower!\n", pokemon->species->name);
 		return;
 	}
 
@@ -703,22 +703,22 @@ void apply_evasionstage(pokemon_s *pokemon, int stages) {
 	}
 
 	if (stages == 1) {
-		printf("%s's evasion rose!", pokemon->species->name);
+		printf("%s's evasion rose!\n", pokemon->species->name);
 	} else if (stages == 2) {
-		printf("%s's evasion rose sharply!", pokemon->species->name);
+		printf("%s's evasion rose sharply!\n", pokemon->species->name);
 	} else if (stages >= 3) {
-		printf("%s's evasion rose drastically!", pokemon->species->name);
+		printf("%s's evasion rose drastically!\n", pokemon->species->name);
 	} else if (stages == -1) {
-		printf("%s's evasion fell!", pokemon->species->name);
+		printf("%s's evasion fell!\n", pokemon->species->name);
 	} else if (stages == -2) {
-		printf("%s's evasion fell sharply!", pokemon->species->name);
+		printf("%s's evasion fell sharply!\n", pokemon->species->name);
 	} else if (stages <= -3) {
-		printf("%s's evasion fell drastically!", pokemon->species->name);
+		printf("%s's evasion fell drastically!\n", pokemon->species->name);
 	} 
 }
 
 void reset_stages(pokemon_s *pokemon) {
-	printf("%s's stat modifiers reset!", pokemon->species->name);
+	printf("%s's stat modifiers reset!\n", pokemon->species->name);
 	pokemon->v.attack_stage = 0;
 	pokemon->v.defense_stage = 0;
 	pokemon->v.sattack_stage = 0;
@@ -733,51 +733,51 @@ void apply_nvstatus(pokemon_s *pokemon, nvstatus_t status) {
 		switch (status) {
 			case BRN_S: // cant burn fire
 				if (!has_type(pokemon, FIRE_T)) {
-					printf("%s was burnt!", pokemon->species->name);	
+					printf("%s was burnt!\n", pokemon->species->name);	
 					pokemon->nv.nvstatus = BRN_S;
 				} else {
-					printf("%s is immune to burns!", pokemon->species->name);	
+					printf("%s is immune to burns!\n", pokemon->species->name);	
 				}
 				break;
 			case PSN_S: // cant poison poison
 				if (!has_type(pokemon, POISON_T)) {
-					printf("%s was poisoned!", pokemon->species->name);	
+					printf("%s was poisoned!\n", pokemon->species->name);	
 					pokemon->nv.nvstatus = PSN_S;
 				} else {
-					printf("%s is immune to poison!", pokemon->species->name);	
+					printf("%s is immune to poison!\n", pokemon->species->name);	
 				}
 				break;
 			case TXC_S: // cant toxic poison
 				if (!has_type(pokemon, POISON_T)) {
-					printf("%s was badly poisoned!", pokemon->species->name);	
+					printf("%s was badly poisoned!\n", pokemon->species->name);	
 					pokemon->nv.nvstatus = TXC_S;
 					pokemon->nv.nv_arg = 1;
 				} else {
-					printf("%s is immune to toxic!", pokemon->species->name);	
+					printf("%s is immune to toxic!\n", pokemon->species->name);	
 				}
 				break;
 			case FRZ_S: // cant freeze ice
 				if (!has_type(pokemon, ICE_T)) {
-					printf("%s was frozen solid!", pokemon->species->name);	
+					printf("%s was frozen solid!\n", pokemon->species->name);	
 					pokemon->nv.nvstatus = FRZ_S;
 				} else {
-					printf("%s is immune to freezing!", pokemon->species->name);	
+					printf("%s is immune to freezing!\n", pokemon->species->name);	
 				}
 				break;
 			case PAR_S: // cant paralyze electric
 				if (!has_type(pokemon, ELECTRIC_T)) {
-					printf("%s was paralyzed!", pokemon->species->name);	
+					printf("%s was paralyzed!\n", pokemon->species->name);	
 					pokemon->nv.nvstatus = PAR_S;
 				} else {
-					printf("%s is immune to paralysis!", pokemon->species->name);	
+					printf("%s is immune to paralysis!\n", pokemon->species->name);	
 				}
 				break;
 			case SLP_S:
-				printf("%s fell asleep!", pokemon->species->name);	
+				printf("%s fell asleep!\n", pokemon->species->name);	
 				pokemon->nv.nvstatus = SLP_S;
 				pokemon->nv.nv_arg = rand() % 3 + 1;
 			case FNT_S:
-				printf("%s fainted!", pokemon->species->name);
+				printf("%s fainted!\n", pokemon->species->name);
 				pokemon->nv.nvstatus = FNT_S;
 				pokemon->nv.hp = 0;
 			case NON_S: // shouldn't happen
