@@ -2,6 +2,9 @@
 #ifndef GME_H
 #define GME_H 1
 
-int game();
+void init();
+void game();
+
+int main();
 
 #endif

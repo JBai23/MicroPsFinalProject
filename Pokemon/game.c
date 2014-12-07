@@ -19,7 +19,7 @@
 // functions
 
 
-int game() {
+void game() {
 
 	win_t winner = NON_W;
 
@@ -30,15 +30,12 @@ int game() {
 	}
 }
 
-int debug_init() {
-
-}
-
-//effective_t echart[18][18];
-
-int init() {
+void init() {
 	init_menus();
 	init_echart();
+	init_pokemonspec();
+	init_moves();
+	init_trainers();
 	init_battle();
 }
 
