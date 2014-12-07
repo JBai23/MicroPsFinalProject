@@ -129,7 +129,7 @@ typedef struct {
 	volitile_s v;
 	nonvolitile_s nv;
 
-	move_s* moves[4]; // const
+	move_s *moves[4]; // const
 	int move_count; // const
 } pokemon_s;
 

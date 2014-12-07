@@ -8,6 +8,6 @@ typedef int bool;
 #define false 0
 
 // stringlen
-#define STRSIZE 12
+#define STRSIZE 13
 
 #endif

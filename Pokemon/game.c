@@ -20,7 +20,6 @@
 
 
 void game() {
-
 	win_t winner = NON_W;
 
 	while (win_phase(&winner)) {
