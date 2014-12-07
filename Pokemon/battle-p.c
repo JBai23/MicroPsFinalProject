@@ -1,7 +1,6 @@
 
 #include "battle-p.h"
 #include "global.h"
-#include "math.h"
 #include <stdio.h>
 
 void set_curr(trainer_s *trainer) {

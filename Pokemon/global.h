@@ -67,6 +67,7 @@ void init_menus();
 void init_echart();
 void init_pokemonspec();
 void init_moves();
+void init_rentals();
 void init_trainers();
 void init_battle();
 

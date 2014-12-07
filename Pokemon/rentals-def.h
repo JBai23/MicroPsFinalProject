@@ -11,114 +11,20 @@
 
 
 // red
-pokemon_s RED_PIKACHU = {
-.species = &PIKACHU,
-.pstats = PSTATS_DEFAULT,
-.v = V_DEFAULT,
-.nv = NV_DEFAULT,
-.moves = {&THUNDER, &THUNDERBOLT, &THUNDERWAVE, &QUICKATTACK},
-.move_count = 4
-};
-
-pokemon_s RED_LAPRAS = {
-.species = &LAPRAS,
-.pstats = PSTATS_DEFAULT,
-.v = V_DEFAULT,
-.nv = NV_DEFAULT,
-.moves = {&SURF, &ICEBEAM, &CONFUSERAY, &BODYSLAM},
-.move_count = 4
-};
-
-pokemon_s RED_SNORLAX = {
-.species = &SNORLAX,
-.pstats = PSTATS_DEFAULT,
-.v = V_DEFAULT,
-.nv = NV_DEFAULT,
-.moves = {&BODYSLAM, &STRENGTH, &HYPERBEAM, &AMNESIA},
-.move_count = 4
-};
-
-pokemon_s RED_VENUSAUR = {
-.species = &VENUSAUR,
-.pstats = PSTATS_DEFAULT,
-.v = V_DEFAULT,
-.nv = NV_DEFAULT,
-.moves = {&RAZORLEAF, &GROWTH, &SLEEPPOWDER, &TOXIC},
-.move_count = 4
-};
-
-pokemon_s RED_CHARIZARD = {
-.species = &CHARIZARD,
-.pstats = PSTATS_DEFAULT,
-.v = V_DEFAULT,
-.nv = NV_DEFAULT,
-.moves = {&FLAMETHROWER, &WINGATTACK, &SLASH, &FIREBLAST},
-.move_count = 4
-};
-
-pokemon_s RED_BLASTOISE = {
-.species = &BLASTOISE,
-.pstats = PSTATS_DEFAULT,
-.v = V_DEFAULT,
-.nv = NV_DEFAULT,
-.moves = {&SURF, &HYDROPUMP, &WITHDRAW, &MEGAPUNCH},
-.move_count = 4
-};
+pokemon_s RED_PIKACHU;
+pokemon_s RED_LAPRAS;
+pokemon_s RED_SNORLAX;
+pokemon_s RED_VENUSAUR;
+pokemon_s RED_CHARIZARD;
+pokemon_s RED_BLASTOISE;
 
 // blue
-pokemon_s BLUE_PIDGEOT = {
-.species = &PIDGEOT,
-.pstats = PSTATS_DEFAULT,
-.v = V_DEFAULT,
-.nv = NV_DEFAULT,
-.moves = {&GUST, &WINGATTACK, &AGILITY, &SANDATTACK},
-.move_count = 4
-};
-
-pokemon_s BLUE_ALAKAZAM = {
-.species = &ALAKAZAM,
-.pstats = PSTATS_DEFAULT,
-.v = V_DEFAULT,
-.nv = NV_DEFAULT,
-.moves = {&PSYCHIC, &PSYBEAM, &CONFUSION, &TOXIC},
-.move_count = 4
-};
-
-pokemon_s BLUE_RHYDON = {
-.species = &RHYDON,
-.pstats = PSTATS_DEFAULT,
-.v = V_DEFAULT,
-.nv = NV_DEFAULT,
-.moves = {&EARTHQUAKE, &HORNDRILL, &ROCKSLIDE, &TAKEDOWN},
-.move_count = 4
-};
-
-pokemon_s BLUE_ARCANINE = {
-.species = &ARCANINE,
-.pstats = PSTATS_DEFAULT,
-.v = V_DEFAULT,
-.nv = NV_DEFAULT,
-.moves = {&FLAMETHROWER, &TAKEDOWN, &BITE, &FIREBLAST},
-.move_count = 4
-};
-
-pokemon_s BLUE_EXEGGUTOR = {
-.species = &EXEGGUTOR,
-.pstats = PSTATS_DEFAULT,
-.v = V_DEFAULT,
-.nv = NV_DEFAULT,
-.moves = {&EGGBOMB, &RAZORLEAF, &SLEEPPOWDER, &PSYCHIC},
-.move_count = 4
-};
-
-pokemon_s BLUE_BLASTOISE = {
-.species = &BLASTOISE,
-.pstats = PSTATS_DEFAULT,
-.v = V_DEFAULT,
-.nv = NV_DEFAULT,
-.moves = {&SURF, &EARTHQUAKE, &HYDROPUMP, &BLIZZARD},
-.move_count = 4
-};
+pokemon_s BLUE_PIDGEOT;
+pokemon_s BLUE_ALAKAZAM;
+pokemon_s BLUE_RHYDON;
+pokemon_s BLUE_ARCANINE;
+pokemon_s BLUE_EXEGGUTOR;
+pokemon_s BLUE_BLASTOISE;
 
 
 // (pstats.hp_iv + (2 * species.bstats.hp_base) + pstats.hp_ev / 4 + 100) * pstats.level / 100 + 10

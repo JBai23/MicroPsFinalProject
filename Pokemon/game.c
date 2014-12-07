@@ -54,6 +54,7 @@ void init() {
 	init_echart();
 	init_pokemonspec();
 	init_moves();
+	init_rentals();
 	init_trainers();
 	init_battle();
 }
