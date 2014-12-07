@@ -71,8 +71,9 @@ input_t get_input() {
 }
 
 void input_phase() {
-	
+	printf("P1:%s's turn to input a move!\n", PLAYER1->name);
 	PLAYER1_ACTION = get_action(&turn_menu);
 
+	printf("P2:%s's turn to input a move!\n", PLAYER2->name);
 	PLAYER2_ACTION = get_action(&turn_menu);
 }

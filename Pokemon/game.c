@@ -28,6 +28,18 @@ void game() {
 		battle_phase();
 		eor_phase();
 	}
+
+	switch (winner) {
+		case P1WIN_W:
+			printf("P1:%s wins!\n", PLAYER1->name);
+		case P2WIN_W:
+			printf("P2:%s wins!\n", PLAYER2->name);
+		case DRAW_W:
+			printf("Game is a draw!\n");
+		case NON_W:
+		default:
+			break;
+	}
 }
 
 void init() {
@@ -42,9 +54,11 @@ void init() {
 // main
 int main()
 {
-	init();
-    printf("Hello World\n");
-
-    action_t out = get_action(&turn_menu);
-    printf("%i", out);
+	printf("Hello World\n");
+	while (true) {
+		printf("Init New Match\n");
+		init();
+		printf("P1:%s and P2:%s want to battle!\n", PLAYER1->name, PLAYER2->name);
+		game();
+	}
 }
