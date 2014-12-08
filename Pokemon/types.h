@@ -38,7 +38,7 @@ typedef struct {
 	trainer_s *rplayer[2]; // relative player
 
 	int last_dmg;
-	move_s *last_move;  // reset at beginning of battle phase?
+	//move_s *last_move;  // reset at beginning of battle phase? use for mirror move/counter
 
 	int round_num;
 } battle_s;

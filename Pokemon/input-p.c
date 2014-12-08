@@ -75,35 +75,39 @@ input_t get_input() {
 // menu_s fpkmn_menu; // forced switch
 
 void set_menus(trainer_s *trainer) {
+	pokemon_s *pokemon = get_activepokemon(trainer);
+
+	int pokemon_count = trainer->pokemon_count;
+	int move_count = pokemon->move_count;
+	int i;
+
 	// fight menu
-	strcpy(fight_menu.option_names[0], get_activepokemon(trainer)->moves[0]->name);
-	strcpy(fight_menu.option_names[1], get_activepokemon(trainer)->moves[1]->name);
-	strcpy(fight_menu.option_names[2], get_activepokemon(trainer)->moves[2]->name);
-	strcpy(fight_menu.option_names[3], get_activepokemon(trainer)->moves[3]->name);
+	for (i = 0; i < 4; ++i) {
+		strcpy(fight_menu.option_names[i], (i < move_count ? pokemon->moves[i]->name : ""));
+	}
+	fight_menu.option_count = move_count;
 
-	// pkmn menu
-	strcpy(pkmn_menu.option_names[0], trainer->pokemon[0]->species->name);
-	strcpy(pkmn_menu.option_names[1], trainer->pokemon[1]->species->name);
-	strcpy(pkmn_menu.option_names[2], trainer->pokemon[2]->species->name);
-	strcpy(pkmn_menu.option_names[3], trainer->pokemon[3]->species->name);
-	strcpy(pkmn_menu.option_names[4], trainer->pokemon[4]->species->name);
-	strcpy(pkmn_menu.option_names[5], trainer->pokemon[5]->species->name);
-
-	// fpkmn menu
-	strcpy(fpkmn_menu.option_names[0], trainer->pokemon[0]->species->name);
-	strcpy(fpkmn_menu.option_names[1], trainer->pokemon[1]->species->name);
-	strcpy(fpkmn_menu.option_names[2], trainer->pokemon[2]->species->name);
-	strcpy(fpkmn_menu.option_names[3], trainer->pokemon[3]->species->name);
-	strcpy(fpkmn_menu.option_names[4], trainer->pokemon[4]->species->name);
-	strcpy(fpkmn_menu.option_names[5], trainer->pokemon[5]->species->name);
+	// pkmn & fpkmn menu
+	for (i = 0; i < 6; ++i) {
+		strcpy(pkmn_menu.option_names[i], (i < pokemon_count ? trainer->pokemon[i]->species->name : ""));
+		strcpy(fpkmn_menu.option_names[i], (i < pokemon_count ? trainer->pokemon[i]->species->name : ""));
+	}
+	pkmn_menu.option_count = pokemon_count;
+	fpkmn_menu.option_count = pokemon_count;
 }
 
 void input_phase() {
-	printf("P1:%s's turn to input a move!\n", PLAYER1->name);
-	set_menus(PLAYER1);
-	PLAYER1_ACTION = get_action(&turn_menu);
+	do {
+		printf("%s's turn to input a move!\n", PLAYER1_NAME);
+		set_menus(PLAYER1);
+		PLAYER1_ACTION = get_action(&turn_menu);
+	} while (!valid_action(PLAYER1));
+	
+	printf("\n");
 
-	printf("P2:%s's turn to input a move!\n", PLAYER2->name);
-	set_menus(PLAYER2);
-	PLAYER2_ACTION = get_action(&turn_menu);
+	do {
+		printf("%s's turn to input a move!\n", PLAYER2_NAME);
+		set_menus(PLAYER2);
+		PLAYER2_ACTION = get_action(&turn_menu);
+	} while (!valid_action(PLAYER2));
 }

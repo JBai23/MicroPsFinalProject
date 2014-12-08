@@ -13,7 +13,7 @@ void swap_curr();
 bool check_priority();
 int get_priority(trainer_s *trainer);
 
-int get_switchindex();
+int get_index();
 
 int calc_hpmax(pokemon_s *pokemon);
 int calc_attack(pokemon_s *pokemon);

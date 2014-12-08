@@ -234,7 +234,7 @@ int calc_accuracy_d(pokemon_s *attacker, pokemon_s *defender) {
 }
 
 void curr_exe() {
-	if (CURR_POKEMON->nv.nvstatus != FNT_S) {
+	if (is_alive(CURR_POKEMON) && is_alive(OTHR_POKEMON)) {
 		if (is_move(CURR_ACTION)) {
 			curr_attack();
 		} else {
@@ -248,9 +248,9 @@ move_s* curr_move() {
 }
 
 void curr_switchto() {
-	printf("%s, that's enough!\n", CURR_PNAME);
-	switchto(CURR_PLAYER, get_switchindex(CURR_ACTION));
-	printf("Go, %s!\n", CURR_PNAME);
+	printf("%s: %s, that's enough!\n", CURR_NAME, CURR_PNAME);
+	switchto(CURR_PLAYER, get_index(CURR_ACTION));
+	printf("%s: Go, %s!\n", CURR_NAME, CURR_PNAME);
 }
 
 void curr_attack() {
@@ -282,9 +282,11 @@ void curr_attack() {
 			if (CURR_POKEMON->nv.nv_arg > 0) {
 				printf("%s is fast asleep!\n", CURR_PNAME);
 				CURR_POKEMON->nv.nv_arg--;
+				return;
 			} else {
 				printf("%s woke up!\n", CURR_PNAME);
 				CURR_POKEMON->nv.nvstatus = NON_S;
+				break;
 			}
 		case FNT_S: // should never happen
 		default:
@@ -294,6 +296,7 @@ void curr_attack() {
 	// see if v status allows for attack
 	if (CURR_POKEMON->v.is_flinch) {
 		printf("%s flinched!\n", CURR_PNAME);
+		CURR_POKEMON->v.is_flinch = false;
 		return;
 	}
 	if (CURR_POKEMON->v.is_recharge) {
@@ -309,7 +312,9 @@ void curr_attack() {
 		} else {
 			if (roll(.5)) {
 				printf("%s hurt itself in confusion!\n", CURR_PNAME);
-				// TODO INFLICT SELF 40 PHYSICAL DAMAGE
+				int damage = calc_damage(CURR_POKEMON, CURR_POKEMON, 40, PHYSICAL_MT);
+				printf("[%s applied %i damage to himself]\n", CURR_PNAME, damage);
+				apply_damage(CURR_POKEMON, damage);
 				return;
 			}
 		}
@@ -344,9 +349,10 @@ void curr_attack() {
 
 			double rndm = (rand() % 16 + 85) / 100.0;
 
-			printf("%i, %lf, %lf, %lf, %lf\n", damage, stab_bonus, effective_bonus, crit_bonus, rndm);
+			// printf("%i, %lf, %lf, %lf, %lf\n", damage, stab_bonus, effective_bonus, crit_bonus, rndm);
 			int total_damage = (int)(damage * stab_bonus * effective_bonus * crit_bonus * rndm);
 
+			// if burnt, physical damage output is halfed
 			if (CURR_POKEMON->nv.nvstatus == BRN_S && move->movetype == PHYSICAL_MT) {
 				total_damage /= 2;
 			}
@@ -354,7 +360,7 @@ void curr_attack() {
 			if (effective_bonus > 1) {
 				printf("It's super effective!\n");
 			} else if (effective_bonus == 0) {
-				printf("It has no effect!");
+				printf("It has no effect!\n");
 			} else if (effective_bonus < 1) {
 				printf("It's not very effective!\n");
 			}
@@ -363,10 +369,17 @@ void curr_attack() {
 				printf("Critical hit!\n");
 			}
 
-			printf("APPLYING %i DAMAGE\n", total_damage);
+			printf("[%s applies %i damage to %s]\n", CURR_PNAME, total_damage, OTHR_PNAME);
 			apply_damage(OTHR_POKEMON, total_damage);
+		} else {
+			if (calc_effective(move->type, OTHR_POKEMON) == 0) { // thunder wave can't work on ground
+				printf("It has no effect!\n");
+				return;
+			}
 		}
 	}
+
+	int calculation; // can be used for some of the switch cases
 
 	// check secondary effect
 	if (move->effect != NON_E2) {
@@ -394,6 +407,7 @@ void curr_attack() {
 					OTHR_POKEMON->v.is_flinch = true;
 					break;
 				case APPLY_CONFUSE_E2:
+					printf("%s became confused!\n", OTHR_PNAME);
 					OTHR_POKEMON->v.is_confuse = true;
 					break;
 				case HIGH_CRIT_E2:
@@ -452,6 +466,15 @@ void curr_attack() {
 					reset_stages(OTHR_POKEMON);
 					break;
 				case RECOIL_E2:
+					calculation = battle.last_dmg / move->m_arg; // pos is recoil, neg is heal
+					if (calculation > 0) {
+						printf("%s was hit with recoil!\n", CURR_PNAME);
+						printf("[%s took %i damage in recoil]\n", CURR_PNAME, calculation);
+					} else if (calculation < 0) {
+						printf("%s regained health!", CURR_PNAME);
+						printf("[%s restored %i damage]\n", CURR_PNAME, calculation);
+					}
+					apply_damage(CURR_POKEMON, calculation);
 					break; // this doesn't happen here
 				case RECHARGE_E2:
 					CURR_POKEMON->v.is_recharge = true;
@@ -472,8 +495,14 @@ int calc_damage(pokemon_s *attacker, pokemon_s *defender, int base, move_t type)
 
 double calc_effective(type_t type, pokemon_s *defender) {
 	double multiplier = 1;
-	multiplier *= get_effective(type, defender->species->type1);
-	multiplier *= get_effective(type, defender->species->type2);
+	type_t type1 = defender->species->type1;
+	type_t type2 = defender->species->type2;
+	if (type1 != NON_T) {
+		multiplier *= get_effective(type, type1);
+	}
+	if (type2 != NON_T) {
+		multiplier *= get_effective(type, type2);
+	}
 	return multiplier;
 }
 
@@ -491,10 +520,24 @@ double get_effective(type_t atype, type_t dtype) {
 }
 
 void apply_damage(pokemon_s *pokemon, int damage) {
-	if (damage < pokemon->nv.hp) {
+	if (damage == 0) {
+		damage = 1; // must always deal some damage
+	}
+
+	if (damage > 0) { // inflict damage
+		if (damage < pokemon->nv.hp) {
+			pokemon->nv.hp -= damage;
+			battle.last_dmg = damage;
+		} else {
+			battle.last_dmg = pokemon->nv.hp;
+			apply_nvstatus(pokemon, FNT_S);
+		}
+	} else { // heal
 		pokemon->nv.hp -= damage;
-	} else {
-		apply_nvstatus(OTHR_POKEMON, FNT_S);
+		int hpmax = calc_hpmax(pokemon);
+		if (pokemon->nv.hp > hpmax) {
+			pokemon->nv.hp = hpmax;
+		}
 	}
 }
 
@@ -735,6 +778,12 @@ void reset_stages(pokemon_s *pokemon) {
 }
 
 void apply_nvstatus(pokemon_s *pokemon, nvstatus_t status) {
+	if (status == FNT_S) {
+		printf("%s fainted!\n", pokemon->species->name);
+		pokemon->nv.nvstatus = FNT_S;
+		pokemon->nv.hp = 0;
+		return;
+	}
 	if (pokemon->nv.nvstatus == NON_S) {
 		switch (status) {
 			case BRN_S: // cant burn fire
@@ -782,21 +831,22 @@ void apply_nvstatus(pokemon_s *pokemon, nvstatus_t status) {
 				printf("%s fell asleep!\n", pokemon->species->name);	
 				pokemon->nv.nvstatus = SLP_S;
 				pokemon->nv.nv_arg = rand() % 3 + 1;
-			case FNT_S:
-				printf("%s fainted!\n", pokemon->species->name);
-				pokemon->nv.nvstatus = FNT_S;
-				pokemon->nv.hp = 0;
-			case NON_S: // shouldn't happen
+			case FNT_S: // shouldn't happen
+			case NON_S:
 			default:
 				return;
 		}
+	} else {
+		printf("%s is already %s!\n", pokemon->species->name, get_statusname(pokemon->nv.nvstatus));
 	}
 }
 
 void battle_phase() {
 	if (check_priority()) {
 		curr_exe();
+		printf("\n");
 		swap_curr();
 		curr_exe();
+		printf("\n");
 	}
 }

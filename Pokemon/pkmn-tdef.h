@@ -133,6 +133,7 @@ typedef struct {
 	nonvolitile_s nv;
 
 	move_s *moves[4]; // const
+	int pp[4];
 	int move_count; // const
 } pokemon_s;
 

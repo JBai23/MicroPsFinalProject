@@ -5,6 +5,7 @@
 #include <string.h>
 #include "global.h"
 #include <stdlib.h>
+#include <stdio.h>
 #include "rentals-def.h"
 
 pokemon_s* get_activepokemon(trainer_s *trainer) {
@@ -13,6 +14,18 @@ pokemon_s* get_activepokemon(trainer_s *trainer) {
 
 bool has_type(pokemon_s *pokemon, type_t type) {
 	return (pokemon->species->type1 == type || pokemon->species->type2 == type);
+}
+
+bool has_pp(pokemon_s *pokemon) {
+	bool has = false;
+	int i;
+	for (i = 0; i < 4; ++i) {
+		if (pokemon->pp[i] > 0) {
+			has = true;
+			break;
+		}
+	}
+	return has;
 }
 
 move_s* get_move(trainer_s *trainer, action_t action) {
@@ -52,6 +65,74 @@ bool is_move(action_t action) {
 
 		default: // should never happen
 			return false;
+	}
+}
+
+bool valid_action(trainer_s *trainer) {
+	action_t action = trainer->action;
+	pokemon_s *pokemon;
+	int index = get_index(action);
+	// printf("ACTION: %i\n", action);
+
+	switch(action) {
+		case MOVE1_A:
+		case MOVE2_A:
+		case MOVE3_A:
+		case MOVE4_A:
+			pokemon = get_activepokemon(trainer);
+			if (has_pp(pokemon)) {
+				if (pokemon->pp[index] <= 0) {
+					printf("%s has no PP left for that move!\n", pokemon->species->name);
+					return false;
+				}
+				return true;
+			} else {
+				return true;
+			}
+		case PKMN1_A:
+		case PKMN2_A:
+		case PKMN3_A:
+		case PKMN4_A:
+		case PKMN5_A:
+		case PKMN6_A:
+			pokemon = trainer->pokemon[index];
+			if (!is_alive(pokemon)) {
+				printf("%s has no will to fight!\n", pokemon->species->name);
+				return false;
+			}
+			if (trainer->pokemon_active == index) {
+				printf("%s is already out!\n", pokemon->species->name);
+				return false;
+			}
+			return true;
+		case SURRENDER_A:
+			return true;
+		case NON_A: // this shouldn't happen
+		default:
+			return false;
+	}
+}
+
+char* get_statusname(nvstatus_t status) {
+	switch(status) {
+		case NON_S:
+			return "   ";
+		case FNT_S:
+			return "FNT";
+		case BRN_S:
+			return "BRN";
+		case FRZ_S:
+			return "FRZ";
+		case PAR_S:
+			return "PAR";
+		case PSN_S:
+			return "PSN";
+		case TXC_S:
+			return "TXC";
+		case SLP_S:
+			return "SLP";
+		default: // shouldn't happen
+			return "   ";
 	}
 }
 
@@ -101,8 +182,17 @@ bool is_aggressive(move_s *move) {
 	}
 }
 
-int get_switchindex(action_t action) {
+int get_index(action_t action) {
 	switch (action) {
+		case MOVE1_A:
+			return 0;
+		case MOVE2_A:
+			return 1;
+		case MOVE3_A:
+			return 2;
+		case MOVE4_A:
+			return 3;
+
 		case PKMN1_A:
 			return 0;
 		case PKMN2_A:
@@ -117,7 +207,7 @@ int get_switchindex(action_t action) {
 			return 5;
 
 		default:
-			return 0; // this shouldn't happen
+			return 0; // this shouldn't happen; maybe if called in valid_action
 	}
 }
 
@@ -201,7 +291,7 @@ void init_menus() {
 
 	// pkmn menu
 	pkmn_menu.back = &turn_menu;
-	pkmn_menu.option_count = 4;
+	pkmn_menu.option_count = 6;
 	strcpy(pkmn_menu.option_names[0], "PKMN1");
 	strcpy(pkmn_menu.option_names[1], "PKMN2");
 	strcpy(pkmn_menu.option_names[2], "PKMN3");
@@ -246,7 +336,7 @@ void init_menus() {
 	// fpkmn menu
 	//fpkmn_menu = pkmn_menu;
 	fpkmn_menu.back = NULL;
-	fpkmn_menu.option_count = 4;
+	fpkmn_menu.option_count = 6;
 	strcpy(fpkmn_menu.option_names[0], "PKMN1");
 	strcpy(fpkmn_menu.option_names[1], "PKMN2");
 	strcpy(fpkmn_menu.option_names[2], "PKMN3");
@@ -2980,7 +3070,7 @@ void init_moves() {
 	// horn drill
 	strcpy(HORNDRILL.name, "Horn Drill");
 	HORNDRILL.damage = 10000;
-	HORNDRILL.accuracy = 1.0;
+	HORNDRILL.accuracy = 0.3;
 	HORNDRILL.type = NORMAL_T;
 	HORNDRILL.movetype = PHYSICAL_MT;
 	HORNDRILL.priority = 0;
@@ -3920,6 +4010,10 @@ void init_rentals() {
 	RED_PIKACHU.moves[1] = &THUNDERBOLT;
 	RED_PIKACHU.moves[2] = &THUNDERWAVE;
 	RED_PIKACHU.moves[3] = &QUICKATTACK;
+	RED_PIKACHU.pp[0] = RED_PIKACHU.moves[0]->pp_max;
+	RED_PIKACHU.pp[1] = RED_PIKACHU.moves[1]->pp_max;
+	RED_PIKACHU.pp[2] = RED_PIKACHU.moves[2]->pp_max;
+	RED_PIKACHU.pp[3] = RED_PIKACHU.moves[3]->pp_max;
 	RED_PIKACHU.move_count = 4;
 
 	RED_LAPRAS.species = &LAPRAS;
@@ -3953,6 +4047,10 @@ void init_rentals() {
 	RED_LAPRAS.moves[1] = &ICEBEAM;
 	RED_LAPRAS.moves[2] = &CONFUSERAY;
 	RED_LAPRAS.moves[3] = &BODYSLAM;
+	RED_LAPRAS.pp[0] = RED_LAPRAS.moves[0]->pp_max;
+	RED_LAPRAS.pp[1] = RED_LAPRAS.moves[1]->pp_max;
+	RED_LAPRAS.pp[2] = RED_LAPRAS.moves[2]->pp_max;
+	RED_LAPRAS.pp[3] = RED_LAPRAS.moves[3]->pp_max;
 	RED_LAPRAS.move_count = 4;
 
 	RED_SNORLAX.species = &SNORLAX;
@@ -3986,6 +4084,10 @@ void init_rentals() {
 	RED_SNORLAX.moves[1] = &STRENGTH;
 	RED_SNORLAX.moves[2] = &HYPERBEAM;
 	RED_SNORLAX.moves[3] = &AMNESIA;
+	RED_SNORLAX.pp[0] = RED_SNORLAX.moves[0]->pp_max;
+	RED_SNORLAX.pp[1] = RED_SNORLAX.moves[1]->pp_max;
+	RED_SNORLAX.pp[2] = RED_SNORLAX.moves[2]->pp_max;
+	RED_SNORLAX.pp[3] = RED_SNORLAX.moves[3]->pp_max;
 	RED_SNORLAX.move_count = 4;
 
 	RED_VENUSAUR.species = &VENUSAUR;
@@ -4019,6 +4121,10 @@ void init_rentals() {
 	RED_VENUSAUR.moves[1] = &GROWTH;
 	RED_VENUSAUR.moves[2] = &SLEEPPOWDER;
 	RED_VENUSAUR.moves[3] = &TOXIC;
+	RED_VENUSAUR.pp[0] = RED_VENUSAUR.moves[0]->pp_max;
+	RED_VENUSAUR.pp[1] = RED_VENUSAUR.moves[1]->pp_max;
+	RED_VENUSAUR.pp[2] = RED_VENUSAUR.moves[2]->pp_max;
+	RED_VENUSAUR.pp[3] = RED_VENUSAUR.moves[3]->pp_max;
 	RED_VENUSAUR.move_count = 4;
 
 	RED_CHARIZARD.species = &CHARIZARD;
@@ -4052,238 +4158,270 @@ void init_rentals() {
 	RED_CHARIZARD.moves[1] = &WINGATTACK;
 	RED_CHARIZARD.moves[2] = &SLASH;
 	RED_CHARIZARD.moves[3] = &FIREBLAST;
+	RED_CHARIZARD.pp[0] = RED_CHARIZARD.moves[0]->pp_max;
+	RED_CHARIZARD.pp[1] = RED_CHARIZARD.moves[1]->pp_max;
+	RED_CHARIZARD.pp[2] = RED_CHARIZARD.moves[2]->pp_max;
+	RED_CHARIZARD.pp[3] = RED_CHARIZARD.moves[3]->pp_max;
 	RED_CHARIZARD.move_count = 4;
 
 	RED_BLASTOISE.species = &BLASTOISE;
 	RED_BLASTOISE.pstats.level = 100;
-RED_BLASTOISE.pstats.hp_ev = 0;
-RED_BLASTOISE.pstats.hp_iv = 0;
-RED_BLASTOISE.pstats.attack_ev = 0;
-RED_BLASTOISE.pstats.attack_iv = 0;
-RED_BLASTOISE.pstats.defense_ev = 0;
-RED_BLASTOISE.pstats.defense_iv = 0;
-RED_BLASTOISE.pstats.sattack_ev = 0;
-RED_BLASTOISE.pstats.sattack_iv = 0;
-RED_BLASTOISE.pstats.sdefense_ev = 0;
-RED_BLASTOISE.pstats.speed_ev = 0;
-RED_BLASTOISE.pstats.speed_iv = 0;
-RED_BLASTOISE.pstats.nature = BASHFUL_N;
-RED_BLASTOISE.v.attack_stage = 0;
-RED_BLASTOISE.v.defense_stage = 0;
-RED_BLASTOISE.v.sattack_stage = 0;
-RED_BLASTOISE.v.sdefense_stage = 0;
-RED_BLASTOISE.v.speed_stage = 0;
-RED_BLASTOISE.v.accuracy_stage = 0;
-RED_BLASTOISE.v.evasion_stage = 0;
-RED_BLASTOISE.v.is_flinch = false;
-RED_BLASTOISE.v.is_recharge = false;
-RED_BLASTOISE.v.is_confuse = false;
-RED_BLASTOISE.nv.hp = calc_hpmax(&RED_BLASTOISE);
-RED_BLASTOISE.nv.nvstatus = NON_S;
-RED_BLASTOISE.nv.nv_arg = 0;
-RED_BLASTOISE.moves[0] = &SURF;
-RED_BLASTOISE.moves[1] = &HYDROPUMP;
-RED_BLASTOISE.moves[2] = &WITHDRAW;
-RED_BLASTOISE.moves[3] = &MEGAPUNCH;
-RED_BLASTOISE.move_count = 4;
+	RED_BLASTOISE.pstats.hp_ev = 0;
+	RED_BLASTOISE.pstats.hp_iv = 0;
+	RED_BLASTOISE.pstats.attack_ev = 0;
+	RED_BLASTOISE.pstats.attack_iv = 0;
+	RED_BLASTOISE.pstats.defense_ev = 0;
+	RED_BLASTOISE.pstats.defense_iv = 0;
+	RED_BLASTOISE.pstats.sattack_ev = 0;
+	RED_BLASTOISE.pstats.sattack_iv = 0;
+	RED_BLASTOISE.pstats.sdefense_ev = 0;
+	RED_BLASTOISE.pstats.speed_ev = 0;
+	RED_BLASTOISE.pstats.speed_iv = 0;
+	RED_BLASTOISE.pstats.nature = BASHFUL_N;
+	RED_BLASTOISE.v.attack_stage = 0;
+	RED_BLASTOISE.v.defense_stage = 0;
+	RED_BLASTOISE.v.sattack_stage = 0;
+	RED_BLASTOISE.v.sdefense_stage = 0;
+	RED_BLASTOISE.v.speed_stage = 0;
+	RED_BLASTOISE.v.accuracy_stage = 0;
+	RED_BLASTOISE.v.evasion_stage = 0;
+	RED_BLASTOISE.v.is_flinch = false;
+	RED_BLASTOISE.v.is_recharge = false;
+	RED_BLASTOISE.v.is_confuse = false;
+	RED_BLASTOISE.nv.hp = calc_hpmax(&RED_BLASTOISE);
+	RED_BLASTOISE.nv.nvstatus = NON_S;
+	RED_BLASTOISE.nv.nv_arg = 0;
+	RED_BLASTOISE.moves[0] = &SURF;
+	RED_BLASTOISE.moves[1] = &HYDROPUMP;
+	RED_BLASTOISE.moves[2] = &WITHDRAW;
+	RED_BLASTOISE.moves[3] = &MEGAPUNCH;
+	RED_BLASTOISE.pp[0] = RED_BLASTOISE.moves[0]->pp_max;
+	RED_BLASTOISE.pp[1] = RED_BLASTOISE.moves[1]->pp_max;
+	RED_BLASTOISE.pp[2] = RED_BLASTOISE.moves[2]->pp_max;
+	RED_BLASTOISE.pp[3] = RED_BLASTOISE.moves[3]->pp_max;
+	RED_BLASTOISE.move_count = 4;
 
-BLUE_PIDGEOT.species = &PIDGEOT;
-BLUE_PIDGEOT.pstats.level = 100;
-BLUE_PIDGEOT.pstats.hp_ev = 0;
-BLUE_PIDGEOT.pstats.hp_iv = 0;
-BLUE_PIDGEOT.pstats.attack_ev = 0;
-BLUE_PIDGEOT.pstats.attack_iv = 0;
-BLUE_PIDGEOT.pstats.defense_ev = 0;
-BLUE_PIDGEOT.pstats.defense_iv = 0;
-BLUE_PIDGEOT.pstats.sattack_ev = 0;
-BLUE_PIDGEOT.pstats.sattack_iv = 0;
-BLUE_PIDGEOT.pstats.sdefense_ev = 0;
-BLUE_PIDGEOT.pstats.speed_ev = 0;
-BLUE_PIDGEOT.pstats.speed_iv = 0;
-BLUE_PIDGEOT.pstats.nature = BASHFUL_N;
-BLUE_PIDGEOT.v.attack_stage = 0;
-BLUE_PIDGEOT.v.defense_stage = 0;
-BLUE_PIDGEOT.v.sattack_stage = 0;
-BLUE_PIDGEOT.v.sdefense_stage = 0;
-BLUE_PIDGEOT.v.speed_stage = 0;
-BLUE_PIDGEOT.v.accuracy_stage = 0;
-BLUE_PIDGEOT.v.evasion_stage = 0;
-BLUE_PIDGEOT.v.is_flinch = false;
-BLUE_PIDGEOT.v.is_recharge = false;
-BLUE_PIDGEOT.v.is_confuse = false;
-BLUE_PIDGEOT.nv.hp = calc_hpmax(&BLUE_PIDGEOT);
-BLUE_PIDGEOT.nv.nvstatus = NON_S;
-BLUE_PIDGEOT.nv.nv_arg = 0;
-BLUE_PIDGEOT.moves[0] = &GUST;
-BLUE_PIDGEOT.moves[1] = &WINGATTACK;
-BLUE_PIDGEOT.moves[2] = &AGILITY;
-BLUE_PIDGEOT.moves[3] = &SANDATTACK;
-BLUE_PIDGEOT.move_count = 4;
+	BLUE_PIDGEOT.species = &PIDGEOT;
+	BLUE_PIDGEOT.pstats.level = 100;
+	BLUE_PIDGEOT.pstats.hp_ev = 0;
+	BLUE_PIDGEOT.pstats.hp_iv = 0;
+	BLUE_PIDGEOT.pstats.attack_ev = 0;
+	BLUE_PIDGEOT.pstats.attack_iv = 0;
+	BLUE_PIDGEOT.pstats.defense_ev = 0;
+	BLUE_PIDGEOT.pstats.defense_iv = 0;
+	BLUE_PIDGEOT.pstats.sattack_ev = 0;
+	BLUE_PIDGEOT.pstats.sattack_iv = 0;
+	BLUE_PIDGEOT.pstats.sdefense_ev = 0;
+	BLUE_PIDGEOT.pstats.speed_ev = 0;
+	BLUE_PIDGEOT.pstats.speed_iv = 0;
+	BLUE_PIDGEOT.pstats.nature = BASHFUL_N;
+	BLUE_PIDGEOT.v.attack_stage = 0;
+	BLUE_PIDGEOT.v.defense_stage = 0;
+	BLUE_PIDGEOT.v.sattack_stage = 0;
+	BLUE_PIDGEOT.v.sdefense_stage = 0;
+	BLUE_PIDGEOT.v.speed_stage = 0;
+	BLUE_PIDGEOT.v.accuracy_stage = 0;
+	BLUE_PIDGEOT.v.evasion_stage = 0;
+	BLUE_PIDGEOT.v.is_flinch = false;
+	BLUE_PIDGEOT.v.is_recharge = false;
+	BLUE_PIDGEOT.v.is_confuse = false;
+	BLUE_PIDGEOT.nv.hp = calc_hpmax(&BLUE_PIDGEOT);
+	BLUE_PIDGEOT.nv.nvstatus = NON_S;
+	BLUE_PIDGEOT.nv.nv_arg = 0;
+	BLUE_PIDGEOT.moves[0] = &GUST;
+	BLUE_PIDGEOT.moves[1] = &WINGATTACK;
+	BLUE_PIDGEOT.moves[2] = &AGILITY;
+	BLUE_PIDGEOT.moves[3] = &SANDATTACK;
+	BLUE_PIDGEOT.pp[0] = BLUE_PIDGEOT.moves[0]->pp_max;
+	BLUE_PIDGEOT.pp[1] = BLUE_PIDGEOT.moves[1]->pp_max;
+	BLUE_PIDGEOT.pp[2] = BLUE_PIDGEOT.moves[2]->pp_max;
+	BLUE_PIDGEOT.pp[3] = BLUE_PIDGEOT.moves[3]->pp_max;
+	BLUE_PIDGEOT.move_count = 4;
 
-BLUE_ALAKAZAM.species = &ALAKAZAM;
-BLUE_ALAKAZAM.pstats.level = 100;
-BLUE_ALAKAZAM.pstats.hp_ev = 0;
-BLUE_ALAKAZAM.pstats.hp_iv = 0;
-BLUE_ALAKAZAM.pstats.attack_ev = 0;
-BLUE_ALAKAZAM.pstats.attack_iv = 0;
-BLUE_ALAKAZAM.pstats.defense_ev = 0;
-BLUE_ALAKAZAM.pstats.defense_iv = 0;
-BLUE_ALAKAZAM.pstats.sattack_ev = 0;
-BLUE_ALAKAZAM.pstats.sattack_iv = 0;
-BLUE_ALAKAZAM.pstats.sdefense_ev = 0;
-BLUE_ALAKAZAM.pstats.speed_ev = 0;
-BLUE_ALAKAZAM.pstats.speed_iv = 0;
-BLUE_ALAKAZAM.pstats.nature = BASHFUL_N;
-BLUE_ALAKAZAM.v.attack_stage = 0;
-BLUE_ALAKAZAM.v.defense_stage = 0;
-BLUE_ALAKAZAM.v.sattack_stage = 0;
-BLUE_ALAKAZAM.v.sdefense_stage = 0;
-BLUE_ALAKAZAM.v.speed_stage = 0;
-BLUE_ALAKAZAM.v.accuracy_stage = 0;
-BLUE_ALAKAZAM.v.evasion_stage = 0;
-BLUE_ALAKAZAM.v.is_flinch = false;
-BLUE_ALAKAZAM.v.is_recharge = false;
-BLUE_ALAKAZAM.v.is_confuse = false;
-BLUE_ALAKAZAM.nv.hp = calc_hpmax(&BLUE_ALAKAZAM);
-BLUE_ALAKAZAM.nv.nvstatus = NON_S;
-BLUE_ALAKAZAM.nv.nv_arg = 0;
-BLUE_ALAKAZAM.moves[0] = &PSYCHIC;
-BLUE_ALAKAZAM.moves[1] = &PSYBEAM;
-BLUE_ALAKAZAM.moves[2] = &CONFUSION;
-BLUE_ALAKAZAM.moves[3] = &TOXIC;
-BLUE_ALAKAZAM.move_count = 4;
+	BLUE_ALAKAZAM.species = &ALAKAZAM;
+	BLUE_ALAKAZAM.pstats.level = 100;
+	BLUE_ALAKAZAM.pstats.hp_ev = 0;
+	BLUE_ALAKAZAM.pstats.hp_iv = 0;
+	BLUE_ALAKAZAM.pstats.attack_ev = 0;
+	BLUE_ALAKAZAM.pstats.attack_iv = 0;
+	BLUE_ALAKAZAM.pstats.defense_ev = 0;
+	BLUE_ALAKAZAM.pstats.defense_iv = 0;
+	BLUE_ALAKAZAM.pstats.sattack_ev = 0;
+	BLUE_ALAKAZAM.pstats.sattack_iv = 0;
+	BLUE_ALAKAZAM.pstats.sdefense_ev = 0;
+	BLUE_ALAKAZAM.pstats.speed_ev = 0;
+	BLUE_ALAKAZAM.pstats.speed_iv = 0;
+	BLUE_ALAKAZAM.pstats.nature = BASHFUL_N;
+	BLUE_ALAKAZAM.v.attack_stage = 0;
+	BLUE_ALAKAZAM.v.defense_stage = 0;
+	BLUE_ALAKAZAM.v.sattack_stage = 0;
+	BLUE_ALAKAZAM.v.sdefense_stage = 0;
+	BLUE_ALAKAZAM.v.speed_stage = 0;
+	BLUE_ALAKAZAM.v.accuracy_stage = 0;
+	BLUE_ALAKAZAM.v.evasion_stage = 0;
+	BLUE_ALAKAZAM.v.is_flinch = false;
+	BLUE_ALAKAZAM.v.is_recharge = false;
+	BLUE_ALAKAZAM.v.is_confuse = false;
+	BLUE_ALAKAZAM.nv.hp = calc_hpmax(&BLUE_ALAKAZAM);
+	BLUE_ALAKAZAM.nv.nvstatus = NON_S;
+	BLUE_ALAKAZAM.nv.nv_arg = 0;
+	BLUE_ALAKAZAM.moves[0] = &PSYCHIC;
+	BLUE_ALAKAZAM.moves[1] = &PSYBEAM;
+	BLUE_ALAKAZAM.moves[2] = &CONFUSION;
+	BLUE_ALAKAZAM.moves[3] = &TOXIC;
+	BLUE_ALAKAZAM.pp[0] = BLUE_ALAKAZAM.moves[0]->pp_max;
+	BLUE_ALAKAZAM.pp[1] = BLUE_ALAKAZAM.moves[1]->pp_max;
+	BLUE_ALAKAZAM.pp[2] = BLUE_ALAKAZAM.moves[2]->pp_max;
+	BLUE_ALAKAZAM.pp[3] = BLUE_ALAKAZAM.moves[3]->pp_max;
+	BLUE_ALAKAZAM.move_count = 4;
 
-BLUE_RHYDON.species = &RHYDON;
-BLUE_RHYDON.pstats.level = 100;
-BLUE_RHYDON.pstats.hp_ev = 0;
-BLUE_RHYDON.pstats.hp_iv = 0;
-BLUE_RHYDON.pstats.attack_ev = 0;
-BLUE_RHYDON.pstats.attack_iv = 0;
-BLUE_RHYDON.pstats.defense_ev = 0;
-BLUE_RHYDON.pstats.defense_iv = 0;
-BLUE_RHYDON.pstats.sattack_ev = 0;
-BLUE_RHYDON.pstats.sattack_iv = 0;
-BLUE_RHYDON.pstats.sdefense_ev = 0;
-BLUE_RHYDON.pstats.speed_ev = 0;
-BLUE_RHYDON.pstats.speed_iv = 0;
-BLUE_RHYDON.pstats.nature = BASHFUL_N;
-BLUE_RHYDON.v.attack_stage = 0;
-BLUE_RHYDON.v.defense_stage = 0;
-BLUE_RHYDON.v.sattack_stage = 0;
-BLUE_RHYDON.v.sdefense_stage = 0;
-BLUE_RHYDON.v.speed_stage = 0;
-BLUE_RHYDON.v.accuracy_stage = 0;
-BLUE_RHYDON.v.evasion_stage = 0;
-BLUE_RHYDON.v.is_flinch = false;
-BLUE_RHYDON.v.is_recharge = false;
-BLUE_RHYDON.v.is_confuse = false;
-BLUE_RHYDON.nv.hp = calc_hpmax(&BLUE_RHYDON);
-BLUE_RHYDON.nv.nvstatus = NON_S;
-BLUE_RHYDON.nv.nv_arg = 0;
-BLUE_RHYDON.moves[0] = &EARTHQUAKE;
-BLUE_RHYDON.moves[1] = &HORNDRILL;
-BLUE_RHYDON.moves[2] = &ROCKSLIDE;
-BLUE_RHYDON.moves[3] = &TAKEDOWN;
-BLUE_RHYDON.move_count = 4;
+	BLUE_RHYDON.species = &RHYDON;
+	BLUE_RHYDON.pstats.level = 100;
+	BLUE_RHYDON.pstats.hp_ev = 0;
+	BLUE_RHYDON.pstats.hp_iv = 0;
+	BLUE_RHYDON.pstats.attack_ev = 0;
+	BLUE_RHYDON.pstats.attack_iv = 0;
+	BLUE_RHYDON.pstats.defense_ev = 0;
+	BLUE_RHYDON.pstats.defense_iv = 0;
+	BLUE_RHYDON.pstats.sattack_ev = 0;
+	BLUE_RHYDON.pstats.sattack_iv = 0;
+	BLUE_RHYDON.pstats.sdefense_ev = 0;
+	BLUE_RHYDON.pstats.speed_ev = 0;
+	BLUE_RHYDON.pstats.speed_iv = 0;
+	BLUE_RHYDON.pstats.nature = BASHFUL_N;
+	BLUE_RHYDON.v.attack_stage = 0;
+	BLUE_RHYDON.v.defense_stage = 0;
+	BLUE_RHYDON.v.sattack_stage = 0;
+	BLUE_RHYDON.v.sdefense_stage = 0;
+	BLUE_RHYDON.v.speed_stage = 0;
+	BLUE_RHYDON.v.accuracy_stage = 0;
+	BLUE_RHYDON.v.evasion_stage = 0;
+	BLUE_RHYDON.v.is_flinch = false;
+	BLUE_RHYDON.v.is_recharge = false;
+	BLUE_RHYDON.v.is_confuse = false;
+	BLUE_RHYDON.nv.hp = calc_hpmax(&BLUE_RHYDON);
+	BLUE_RHYDON.nv.nvstatus = NON_S;
+	BLUE_RHYDON.nv.nv_arg = 0;
+	BLUE_RHYDON.moves[0] = &EARTHQUAKE;
+	BLUE_RHYDON.moves[1] = &HORNDRILL;
+	BLUE_RHYDON.moves[2] = &ROCKSLIDE;
+	BLUE_RHYDON.moves[3] = &TAKEDOWN;
+	BLUE_RHYDON.pp[0] = BLUE_RHYDON.moves[0]->pp_max;
+	BLUE_RHYDON.pp[1] = BLUE_RHYDON.moves[1]->pp_max;
+	BLUE_RHYDON.pp[2] = BLUE_RHYDON.moves[2]->pp_max;
+	BLUE_RHYDON.pp[3] = BLUE_RHYDON.moves[3]->pp_max;
+	BLUE_RHYDON.move_count = 4;
 
-BLUE_ARCANINE.species = &ARCANINE;
-BLUE_ARCANINE.pstats.level = 100;
-BLUE_ARCANINE.pstats.hp_ev = 0;
-BLUE_ARCANINE.pstats.hp_iv = 0;
-BLUE_ARCANINE.pstats.attack_ev = 0;
-BLUE_ARCANINE.pstats.attack_iv = 0;
-BLUE_ARCANINE.pstats.defense_ev = 0;
-BLUE_ARCANINE.pstats.defense_iv = 0;
-BLUE_ARCANINE.pstats.sattack_ev = 0;
-BLUE_ARCANINE.pstats.sattack_iv = 0;
-BLUE_ARCANINE.pstats.sdefense_ev = 0;
-BLUE_ARCANINE.pstats.speed_ev = 0;
-BLUE_ARCANINE.pstats.speed_iv = 0;
-BLUE_ARCANINE.pstats.nature = BASHFUL_N;
-BLUE_ARCANINE.v.attack_stage = 0;
-BLUE_ARCANINE.v.defense_stage = 0;
-BLUE_ARCANINE.v.sattack_stage = 0;
-BLUE_ARCANINE.v.sdefense_stage = 0;
-BLUE_ARCANINE.v.speed_stage = 0;
-BLUE_ARCANINE.v.accuracy_stage = 0;
-BLUE_ARCANINE.v.evasion_stage = 0;
-BLUE_ARCANINE.v.is_flinch = false;
-BLUE_ARCANINE.v.is_recharge = false;
-BLUE_ARCANINE.v.is_confuse = false;
-BLUE_ARCANINE.nv.hp = calc_hpmax(&BLUE_ARCANINE);
-BLUE_ARCANINE.nv.nvstatus = NON_S;
-BLUE_ARCANINE.nv.nv_arg = 0;
-BLUE_ARCANINE.moves[0] = &FLAMETHROWER;
-BLUE_ARCANINE.moves[1] = &TAKEDOWN;
-BLUE_ARCANINE.moves[2] = &BITE;
-BLUE_ARCANINE.moves[3] = &FIREBLAST;
-BLUE_ARCANINE.move_count = 4;
+	BLUE_ARCANINE.species = &ARCANINE;
+	BLUE_ARCANINE.pstats.level = 100;
+	BLUE_ARCANINE.pstats.hp_ev = 0;
+	BLUE_ARCANINE.pstats.hp_iv = 0;
+	BLUE_ARCANINE.pstats.attack_ev = 0;
+	BLUE_ARCANINE.pstats.attack_iv = 0;
+	BLUE_ARCANINE.pstats.defense_ev = 0;
+	BLUE_ARCANINE.pstats.defense_iv = 0;
+	BLUE_ARCANINE.pstats.sattack_ev = 0;
+	BLUE_ARCANINE.pstats.sattack_iv = 0;
+	BLUE_ARCANINE.pstats.sdefense_ev = 0;
+	BLUE_ARCANINE.pstats.speed_ev = 0;
+	BLUE_ARCANINE.pstats.speed_iv = 0;
+	BLUE_ARCANINE.pstats.nature = BASHFUL_N;
+	BLUE_ARCANINE.v.attack_stage = 0;
+	BLUE_ARCANINE.v.defense_stage = 0;
+	BLUE_ARCANINE.v.sattack_stage = 0;
+	BLUE_ARCANINE.v.sdefense_stage = 0;
+	BLUE_ARCANINE.v.speed_stage = 0;
+	BLUE_ARCANINE.v.accuracy_stage = 0;
+	BLUE_ARCANINE.v.evasion_stage = 0;
+	BLUE_ARCANINE.v.is_flinch = false;
+	BLUE_ARCANINE.v.is_recharge = false;
+	BLUE_ARCANINE.v.is_confuse = false;
+	BLUE_ARCANINE.nv.hp = calc_hpmax(&BLUE_ARCANINE);
+	BLUE_ARCANINE.nv.nvstatus = NON_S;
+	BLUE_ARCANINE.nv.nv_arg = 0;
+	BLUE_ARCANINE.moves[0] = &FLAMETHROWER;
+	BLUE_ARCANINE.moves[1] = &TAKEDOWN;
+	BLUE_ARCANINE.moves[2] = &BITE;
+	BLUE_ARCANINE.moves[3] = &FIREBLAST;
+	BLUE_ARCANINE.pp[0] = BLUE_ARCANINE.moves[0]->pp_max;
+	BLUE_ARCANINE.pp[1] = BLUE_ARCANINE.moves[1]->pp_max;
+	BLUE_ARCANINE.pp[2] = BLUE_ARCANINE.moves[2]->pp_max;
+	BLUE_ARCANINE.pp[3] = BLUE_ARCANINE.moves[3]->pp_max;
+	BLUE_ARCANINE.move_count = 4;
 
-BLUE_EXEGGUTOR.species = &EXEGGUTOR;
-BLUE_EXEGGUTOR.pstats.level = 100;
-BLUE_EXEGGUTOR.pstats.hp_ev = 0;
-BLUE_EXEGGUTOR.pstats.hp_iv = 0;
-BLUE_EXEGGUTOR.pstats.attack_ev = 0;
-BLUE_EXEGGUTOR.pstats.attack_iv = 0;
-BLUE_EXEGGUTOR.pstats.defense_ev = 0;
-BLUE_EXEGGUTOR.pstats.defense_iv = 0;
-BLUE_EXEGGUTOR.pstats.sattack_ev = 0;
-BLUE_EXEGGUTOR.pstats.sattack_iv = 0;
-BLUE_EXEGGUTOR.pstats.sdefense_ev = 0;
-BLUE_EXEGGUTOR.pstats.speed_ev = 0;
-BLUE_EXEGGUTOR.pstats.speed_iv = 0;
-BLUE_EXEGGUTOR.pstats.nature = BASHFUL_N;
-BLUE_EXEGGUTOR.v.attack_stage = 0;
-BLUE_EXEGGUTOR.v.defense_stage = 0;
-BLUE_EXEGGUTOR.v.sattack_stage = 0;
-BLUE_EXEGGUTOR.v.sdefense_stage = 0;
-BLUE_EXEGGUTOR.v.speed_stage = 0;
-BLUE_EXEGGUTOR.v.accuracy_stage = 0;
-BLUE_EXEGGUTOR.v.evasion_stage = 0;
-BLUE_EXEGGUTOR.v.is_flinch = false;
-BLUE_EXEGGUTOR.v.is_recharge = false;
-BLUE_EXEGGUTOR.v.is_confuse = false;
-BLUE_EXEGGUTOR.nv.hp = calc_hpmax(&BLUE_EXEGGUTOR);
-BLUE_EXEGGUTOR.nv.nvstatus = NON_S;
-BLUE_EXEGGUTOR.nv.nv_arg = 0;
-BLUE_EXEGGUTOR.moves[0] = &EGGBOMB;
-BLUE_EXEGGUTOR.moves[1] = &RAZORLEAF;
-BLUE_EXEGGUTOR.moves[2] = &SLEEPPOWDER;
-BLUE_EXEGGUTOR.moves[3] = &PSYCHIC;
-BLUE_EXEGGUTOR.move_count = 4;
+	BLUE_EXEGGUTOR.species = &EXEGGUTOR;
+	BLUE_EXEGGUTOR.pstats.level = 100;
+	BLUE_EXEGGUTOR.pstats.hp_ev = 0;
+	BLUE_EXEGGUTOR.pstats.hp_iv = 0;
+	BLUE_EXEGGUTOR.pstats.attack_ev = 0;
+	BLUE_EXEGGUTOR.pstats.attack_iv = 0;
+	BLUE_EXEGGUTOR.pstats.defense_ev = 0;
+	BLUE_EXEGGUTOR.pstats.defense_iv = 0;
+	BLUE_EXEGGUTOR.pstats.sattack_ev = 0;
+	BLUE_EXEGGUTOR.pstats.sattack_iv = 0;
+	BLUE_EXEGGUTOR.pstats.sdefense_ev = 0;
+	BLUE_EXEGGUTOR.pstats.speed_ev = 0;
+	BLUE_EXEGGUTOR.pstats.speed_iv = 0;
+	BLUE_EXEGGUTOR.pstats.nature = BASHFUL_N;
+	BLUE_EXEGGUTOR.v.attack_stage = 0;
+	BLUE_EXEGGUTOR.v.defense_stage = 0;
+	BLUE_EXEGGUTOR.v.sattack_stage = 0;
+	BLUE_EXEGGUTOR.v.sdefense_stage = 0;
+	BLUE_EXEGGUTOR.v.speed_stage = 0;
+	BLUE_EXEGGUTOR.v.accuracy_stage = 0;
+	BLUE_EXEGGUTOR.v.evasion_stage = 0;
+	BLUE_EXEGGUTOR.v.is_flinch = false;
+	BLUE_EXEGGUTOR.v.is_recharge = false;
+	BLUE_EXEGGUTOR.v.is_confuse = false;
+	BLUE_EXEGGUTOR.nv.hp = calc_hpmax(&BLUE_EXEGGUTOR);
+	BLUE_EXEGGUTOR.nv.nvstatus = NON_S;
+	BLUE_EXEGGUTOR.nv.nv_arg = 0;
+	BLUE_EXEGGUTOR.moves[0] = &EGGBOMB;
+	BLUE_EXEGGUTOR.moves[1] = &RAZORLEAF;
+	BLUE_EXEGGUTOR.moves[2] = &SLEEPPOWDER;
+	BLUE_EXEGGUTOR.moves[3] = &PSYCHIC;
+	BLUE_EXEGGUTOR.pp[0] = BLUE_EXEGGUTOR.moves[0]->pp_max;
+	BLUE_EXEGGUTOR.pp[1] = BLUE_EXEGGUTOR.moves[1]->pp_max;
+	BLUE_EXEGGUTOR.pp[2] = BLUE_EXEGGUTOR.moves[2]->pp_max;
+	BLUE_EXEGGUTOR.pp[3] = BLUE_EXEGGUTOR.moves[3]->pp_max;
+	BLUE_EXEGGUTOR.move_count = 4;
 
-BLUE_BLASTOISE.species = &BLASTOISE;
-BLUE_BLASTOISE.pstats.level = 100;
-BLUE_BLASTOISE.pstats.hp_ev = 0;
-BLUE_BLASTOISE.pstats.hp_iv = 0;
-BLUE_BLASTOISE.pstats.attack_ev = 0;
-BLUE_BLASTOISE.pstats.attack_iv = 0;
-BLUE_BLASTOISE.pstats.defense_ev = 0;
-BLUE_BLASTOISE.pstats.defense_iv = 0;
-BLUE_BLASTOISE.pstats.sattack_ev = 0;
-BLUE_BLASTOISE.pstats.sattack_iv = 0;
-BLUE_BLASTOISE.pstats.sdefense_ev = 0;
-BLUE_BLASTOISE.pstats.speed_ev = 0;
-BLUE_BLASTOISE.pstats.speed_iv = 0;
-BLUE_BLASTOISE.pstats.nature = BASHFUL_N;
-BLUE_BLASTOISE.v.attack_stage = 0;
-BLUE_BLASTOISE.v.defense_stage = 0;
-BLUE_BLASTOISE.v.sattack_stage = 0;
-BLUE_BLASTOISE.v.sdefense_stage = 0;
-BLUE_BLASTOISE.v.speed_stage = 0;
-BLUE_BLASTOISE.v.accuracy_stage = 0;
-BLUE_BLASTOISE.v.evasion_stage = 0;
-BLUE_BLASTOISE.v.is_flinch = false;
-BLUE_BLASTOISE.v.is_recharge = false;
-BLUE_BLASTOISE.v.is_confuse = false;
-BLUE_BLASTOISE.nv.hp = calc_hpmax(&BLUE_BLASTOISE);
-BLUE_BLASTOISE.nv.nvstatus = NON_S;
-BLUE_BLASTOISE.nv.nv_arg = 0;
-BLUE_BLASTOISE.moves[0] = &SURF;
-BLUE_BLASTOISE.moves[1] = &EARTHQUAKE;
-BLUE_BLASTOISE.moves[2] = &HYDROPUMP;
-BLUE_BLASTOISE.moves[3] = &BLIZZARD;
-BLUE_BLASTOISE.move_count = 4;
+	BLUE_BLASTOISE.species = &BLASTOISE;
+	BLUE_BLASTOISE.pstats.level = 100;
+	BLUE_BLASTOISE.pstats.hp_ev = 0;
+	BLUE_BLASTOISE.pstats.hp_iv = 0;
+	BLUE_BLASTOISE.pstats.attack_ev = 0;
+	BLUE_BLASTOISE.pstats.attack_iv = 0;
+	BLUE_BLASTOISE.pstats.defense_ev = 0;
+	BLUE_BLASTOISE.pstats.defense_iv = 0;
+	BLUE_BLASTOISE.pstats.sattack_ev = 0;
+	BLUE_BLASTOISE.pstats.sattack_iv = 0;
+	BLUE_BLASTOISE.pstats.sdefense_ev = 0;
+	BLUE_BLASTOISE.pstats.speed_ev = 0;
+	BLUE_BLASTOISE.pstats.speed_iv = 0;
+	BLUE_BLASTOISE.pstats.nature = BASHFUL_N;
+	BLUE_BLASTOISE.v.attack_stage = 0;
+	BLUE_BLASTOISE.v.defense_stage = 0;
+	BLUE_BLASTOISE.v.sattack_stage = 0;
+	BLUE_BLASTOISE.v.sdefense_stage = 0;
+	BLUE_BLASTOISE.v.speed_stage = 0;
+	BLUE_BLASTOISE.v.accuracy_stage = 0;
+	BLUE_BLASTOISE.v.evasion_stage = 0;
+	BLUE_BLASTOISE.v.is_flinch = false;
+	BLUE_BLASTOISE.v.is_recharge = false;
+	BLUE_BLASTOISE.v.is_confuse = false;
+	BLUE_BLASTOISE.nv.hp = calc_hpmax(&BLUE_BLASTOISE);
+	BLUE_BLASTOISE.nv.nvstatus = NON_S;
+	BLUE_BLASTOISE.nv.nv_arg = 0;
+	BLUE_BLASTOISE.moves[0] = &SURF;
+	BLUE_BLASTOISE.moves[1] = &EARTHQUAKE;
+	BLUE_BLASTOISE.moves[2] = &HYDROPUMP;
+	BLUE_BLASTOISE.moves[3] = &BLIZZARD;
+	BLUE_BLASTOISE.pp[0] = BLUE_BLASTOISE.moves[0]->pp_max;
+	BLUE_BLASTOISE.pp[1] = BLUE_BLASTOISE.moves[1]->pp_max;
+	BLUE_BLASTOISE.pp[2] = BLUE_BLASTOISE.moves[2]->pp_max;
+	BLUE_BLASTOISE.pp[3] = BLUE_BLASTOISE.moves[3]->pp_max;
+	BLUE_BLASTOISE.move_count = 4;
 }
 
 void init_trainers() {
@@ -4310,20 +4448,6 @@ void init_trainers() {
 	BLUE.pokemon_count = 6;
 }
 
-// typedef struct {
-// 	trainer_s *players[2];
-// 	action_t actions[2];
-	
-// 	trainer_s *rplayer[2]; // relative player
-// 	pokemon_s *rpkmn[2]; // relative active pkmn
-// 	action_t ractions[2];
-
-// 	int last_dmg;
-// 	move_s *last_move;  // reset at beginning of battle phase?
-
-// 	int round_num;
-// } battle_s;
-
 void init_battle() {
 	PLAYER1 = &RED;
 	PLAYER2 = &BLUE;
@@ -4332,7 +4456,7 @@ void init_battle() {
 	OTHR_PLAYER = PLAYER2;
 
 	battle.last_dmg = 0;
-	battle.last_move = &STRUGGLE; // maybe make this NULL? this only matters for things like counter and mirror coat
+	//battle.last_move = &STRUGGLE; // maybe make this NULL? this only matters for things like counter and mirror coat
 
 	battle.round_num = 1;
 	

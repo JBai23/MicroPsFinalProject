@@ -8,7 +8,7 @@
 #define PLAYER2 battle.players[P2_P]
 
 #define PLAYER1_NAME PLAYER1->name
-#define PLAYER2_NAME PLAYER1->name
+#define PLAYER2_NAME PLAYER2->name
 
 #define PLAYER1_ACTION PLAYER1->action
 #define PLAYER2_ACTION PLAYER2->action
@@ -50,13 +50,16 @@ battle_s battle;
 
 pokemon_s* get_activepokemon(trainer_s *trainer);
 bool has_type(pokemon_s *pokemon, type_t type);
+bool has_pp(pokemon_s *pokemon);
 move_s* get_move(trainer_s *trainer, action_t action);
+bool valid_action(trainer_s *trainer);
 bool is_move(action_t action);
 bool is_aggressive(move_s *move);
-int get_switchindex(action_t action);
+int get_index(action_t action);
 
 void switchto(trainer_s *trainer, int index);
 void reset_v(pokemon_s *pokemon);
+char* get_statusname(nvstatus_t status);
 
 bool roll(double chance);
 double rng();
