@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 /*
 int main() {
@@ -51,6 +52,7 @@ struct b {
     A *aa;
 };*/
 
+/*
 #define STRSIZE 12
 
 typedef enum {
@@ -73,4 +75,92 @@ menu_s fight_menu = {.option_count = 4};
 
 int main() {
 
+}
+*/
+
+// char text_buffers[241]; // interfacing with Full Screen Message
+// char text_buffers_padded[241];
+// int text_count;
+
+
+// void strpad(char* str, char* strpad, int len) {
+// 	int curr_len = strlen(str);
+// 	strcpy(strpad, str);
+// 	for (; curr_len < len; ++curr_len) {
+// 		strcat(strpad, "*");
+// 	}
+// }
+
+// void text_update() {
+// 	strpad(text_buffers, text_buffers_padded, 240);
+
+// 	char c;
+
+// 	c = text_buffers_padded[80];
+// 	text_buffers_padded[80] = '\0';
+// 	printf("%s\n", text_buffers_padded);
+// 	text_buffers_padded[80] = c;
+
+// 	c = text_buffers_padded[160];
+// 	text_buffers_padded[160] = '\0';
+// 	printf("%s\n", text_buffers_padded + 80);
+// 	text_buffers_padded[160] = c;
+
+// 	printf("%s\n", text_buffers_padded + 160);
+
+// 	// sendFullScreenMessage(0, text_buffers_padded);
+// 	// sendFullScreenMessage(0, text_buffers_padded + 80);
+// 	// sendFullScreenMessage(0, text_buffers_padded + 160);
+// }
+
+// void text_out(char* str) {
+// 	if (text_count >= 240) {
+// 		return;
+// 	}
+
+// 	int str_length = strlen(str);
+
+// 	if (text_count + str_length <= 240) {
+// 		strcat(text_buffers, str);
+// 		text_count += str_length;
+// 	} else {
+// 		int remain_length = 240 - text_count;	
+// 		memcpy(text_buffers + text_count, str, remain_length);
+// 		text_buffers[241] = '\0';
+// 		text_count = 240;
+// 	}
+// 	text_update();
+// }
+
+// void text_clear() {
+// 	text_count = 0;
+// 	strcpy(text_buffers, "");
+// 	text_update();
+// }
+
+// int main() {
+// 	printf("HELLO WORLD\n");
+// 	text_count = 0;
+// 	printf("%i\n", text_count);
+// 	printf("BLEEP\n");
+// 	text_out("helloworld ");
+// 	text_out("pikachua ");
+// 	text_out("bulbasaur ");
+// 	text_out("scyther ");
+// 	text_out("its super effective ");
+// 	text_out("its not very effective ");
+// 	text_out("more snake, hurt me more dawg ");
+// 	text_out("im so fluckin' cray cray fo rizzle ");
+// 	text_out("seriously, i'm getting pretty f'in pissed off ");
+// 	text_out("OKAY. TIME TO SMOKE THE CIGS I KEPT IN MY ");
+// 	text_out("STOMACH... AWWWWWESOME! ");
+// 	text_clear();
+// 	text_out("FUCK YEAH BATMAN! ");
+// 	text_out("FUCK YEAH BATMAN! ");
+// 	text_out("FUCK YEAH BATMAN! ");
+// 	// text_out("HELLO");
+// }
+
+int main() {
+	char str[32];
 }
