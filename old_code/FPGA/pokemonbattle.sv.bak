@@ -1,0 +1,6 @@
+module PokemonBattle(input  logic       clk,
+           input  logic       sck, //jbai
+           input  logic       mosi, //jbai
+           output logic       vgaclk, // 25 MHz VGA clock
+           output logic       hsync, vsync, sync_b, blank_b, //jbai to monitor & DAC
+           output logic [7:0] r, g, b); // to video DAC

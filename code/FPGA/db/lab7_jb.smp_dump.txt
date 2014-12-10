@@ -1,0 +1,12 @@
+
+State Machine - |pokemonBattle|keypadReader:kpr|keypad:kp|state
+Name state.btnrel state.update state.bounce state.search 
+state.search 0 0 0 0 
+state.bounce 0 0 1 1 
+state.update 0 1 0 1 
+state.btnrel 1 0 0 1 
+
+State Machine - |pokemonBattle|vga:battleDisplay|videoGen:vidGen|animationState
+Name animationState.ANIMATION 
+animationState.NOANIMATION 0 
+animationState.ANIMATION 1 

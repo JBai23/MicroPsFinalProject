@@ -1,0 +1,140 @@
+module spi_slave_and_sprite_data_lookup #(parameter
+                  NUMCOLORSINHEADER = 5'd4,
+                  BITSPERPIXEL = 10'd4,
+                  PIXELSPERPACKET = 10'd8,
+                  POKESPRITE1DATAWIDTH = 10'd64 * BITSPERPIXEL,
+                  POKESPRITE1DATAHEIGHT = 10'd64,
+                  POKESPRITE2DATAWIDTH = 10'd64 * BITSPERPIXEL,
+                  POKESPRITE2DATAHEIGHT = 10'd64)
+      ( input  logic       sck,
+        input  logic       mosi,
+        input  logic [9:0] x, y,
+        output logic [7:0] r_int, g_int, b_int);
+
+
+  logic [NUMCOLORSINHEADER-1:0] pokeSprite1Header [23:0];
+  logic [NUMCOLORSINHEADER-1:0] pokeSprite2Header [23:0];
+  logic [POKESPRITE1DATAHEIGHT-1:0] pokeSprite1Data [POKESPRITE1DATAWIDTH-1:0];
+  logic [POKESPRITE2DATAHEIGHT-1:0] pokeSprite2Data [POKESPRITE2DATAWIDTH-1:0];
+
+
+  /*******************************/
+  /* sprite data lookup code */
+  /*******************************/
+  logic [9:0] pixelData; // is a header index
+
+  logic [9:0] multipliedX; // multiply by BITSPERPIXEL to get exact index
+                           // in pokeSpritexData (x is 1 or 2)
+
+  assign multipliedX = x * BITSPERPIXEL;
+
+  assign pixelData = pokeSprite1Data[y][multipliedX+BITSPERPIXEL-10'd1:multipliedX];
+
+  assign {r_int, g_int, b_int} = pokeSprite1Header[pixelData][23:0];
+
+
+  /*******************************/
+  /* SPI slave code */
+  /*******************************/
+  logic [31:0] q;
+
+  logic [4:0] spiCounter = 5'b0;
+  logic [4:0] headerCounter = 5'b0;
+  logic [9:0] xstart = 10'b0;
+  logic [9:0] ystart = 10'b0;
+
+  typedef enum logic[1:0] { GET_CMD    = 2'b00,
+                            GET_HEADER = 2'b01,
+                            GET_DATA   = 2'b10} stateType;
+
+  stateType currentState = GET_CMD;
+
+  always_ff @(posedge sck) begin
+    q <= {q[30:0], mosi}; // shift register
+  end
+
+  always_ff @(negedge clk) begin
+    // still data left to receive for these 4 bytes
+    if (spiCounter < 5'd31) begin
+      currentState <= currentState;
+      spiCounter <= spiCounter + 5'b1;
+
+      // leftover
+      headerCounter <= 5'b0;
+      xstart <= 10'b0;
+      ystart <= 10'b0;
+    end
+
+    // entire 4-byte packet has been transferred
+    else begin // spiCounter == 5'b31
+      if (currentState == GET_CMD) begin
+        currentState <= GET_HEADER;
+        spiCounter <= 5'b0;
+        // TODO: set where we're putting our data (just doing pokeSprite1 for now)
+        // TODO: modify other parts of code to reflect this choice
+
+        // leftover
+        headerCounter <= 5'b0;
+        xstart <= 10'b0;
+        ystart <= 10'b0;
+      end
+
+      else if (currentState == GET_HEADER) begin
+        pokeSprite1Header[headerCounter] <= q[23:0]; // r, g, b
+
+        if (headerCounter < (NUMCOLORSINHEADER - 1)) begin
+          currentState <= currentState;
+          headerCounter <= headerCounter + 5'b1;
+        end
+
+        else begin // headerCounter == NUMCOLORSINHEADER - 1
+          currentState <= GET_DATA;
+          headerCounter <= 5'b0;
+        end
+
+        // leftover
+        spiCounter <= 5'b0;
+        xstart <= 10'b0;
+        ystart <= 10'b0;
+      end
+
+      else begin // currentState == GET_DATA
+        // !NOTE: THIS CODE MUST BE CHANGED WHENEVER
+        // BITSPERPIXEL CHANGES
+        pokeSprite1Data[ystart][xstart+10'b31:xstart] <=
+            { q[3:0],
+              q[7:4],
+              q[11:8],
+              q[15:12],
+              q[19:16],
+              q[23:20],
+              q[27:24],
+              q[31:28]};
+
+        if (ystart < (POKESPRITE1DATAHEIGHT-1)) begin
+          currentState <= currentState;
+
+          if (xstart >= POKESPRITE1DATAWIDTH-PIXELSPERPACKET) begin // (no -1 in this calculation)
+            xstart <= 10'b0;
+            ystart <= ystart + 10'b1;
+          end
+
+          else begin
+            xstart <= xstart + PIXELSPERPACKET;
+            ystart <= ystart;
+          end
+        end
+
+        else begin // ystart == POKESPRITE1DATAHEIGHT - 1
+          currentState <= GET_CMD;
+          xstart <= 10'b0;
+          ystart <= 10'b0;
+        end
+
+        // leftover
+        spiCounter <= 5'b0;
+        headerCounter <= 5'b0;
+      end
+    end
+  end
+endmodule
