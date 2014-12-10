@@ -1,12 +1,13 @@
 
-#include "pokemon-def.h"
-#include "moves-def.h"
+//#include "pokemon-def.h"
+//#include "moves-def.h"
 #include "types.h"
 #include <string.h>
 #include "global.h"
+//#include "dataload.h"
 #include <stdlib.h>
 #include <stdio.h>
-#include "rentals-def.h"
+//#include "rentals-def.h"
 
 pokemon_s* get_activepokemon(trainer_s *trainer) {
 	return trainer->pokemon[trainer->pokemon_active];
@@ -240,4 +241,4 @@ double rng() {
 	return (double)(rand() % 100 + 1) / 100.0;
 }
 
-#include "global-init.c"
+#include "global-init.h"

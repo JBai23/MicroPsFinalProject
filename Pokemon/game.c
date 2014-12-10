@@ -2,8 +2,8 @@
 
 #include "types.h"
 
-#include "pokemon-def.h"
-#include "moves-def.h"
+//#include "pokemon-def.h"
+//#include "moves-def.h"
 // #include "rentals-def.h"
 
 // include phases
@@ -59,7 +59,7 @@ void init() {
 	init_echart();
 	init_pokemonspec();
 	init_moves();
-	init_rentals();
+	//init_rentals();
 	init_trainers();
 	init_battle();
 }

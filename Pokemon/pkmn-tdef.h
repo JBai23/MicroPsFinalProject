@@ -7,12 +7,12 @@
 
 
 typedef enum {
-	BASHFUL_N, DOCILE_N, HARDY_N, QUIRKY_N, SERIOUS_N, // neutral
-	LONELY_N, ADAMANT_N, NAUGHTY_N, BRAVE_N, // +attack
-	BOLD_N, IMPISH_N, LAX_N, RELAXED_N, // +sattack
-	MODEST_N, MILD_N, RASH_N, QUIET_N, // +defense
-	CALM_N, GENTLE_N, CAREFUL_N, SASSY_N, // +sdefense
-	TIMID_N, HASTY_N, JOLLY_N, NAIVE_N // +speed
+	BASHFUL_N = 0, DOCILE_N = 1, HARDY_N = 2, QUIRKY_N = 3, SERIOUS_N = 4, // neutral
+	LONELY_N = 5, ADAMANT_N = 6, NAUGHTY_N = 7, BRAVE_N = 8, // +attack
+	BOLD_N = 9, IMPISH_N = 10, LAX_N = 11, RELAXED_N = 12, // +sattack
+	MODEST_N = 13, MILD_N = 14, RASH_N = 15, QUIET_N = 16, // +defense
+	CALM_N = 17, GENTLE_N = 18, CAREFUL_N = 19, SASSY_N = 20, // +sdefense
+	TIMID_N = 21, HASTY_N = 22, JOLLY_N = 23, NAIVE_N = 24 // +speed
 } nature_t; // N = Nature
 
 typedef struct {
