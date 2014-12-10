@@ -1,0 +1,1442 @@
+// absorb
+strcpy(ABSORB.name, "Absorb");
+ABSORB.damage = 20;
+ABSORB.accuracy = 1.0;
+ABSORB.type = GRASS_T;
+ABSORB.movetype = SPECIAL_MT;
+ABSORB.priority = 0;
+ABSORB.unique = 0;
+ABSORB.pp_max = 25;
+ABSORB.effect = RECOIL_E2;
+ABSORB.chance = 1.0;
+ABSORB.m_arg = -2;
+
+// acid
+strcpy(ACID.name, "Acid");
+ACID.damage = 40;
+ACID.accuracy = 1.0;
+ACID.type = POISON_T;
+ACID.movetype = SPECIAL_MT;
+ACID.priority = 0;
+ACID.unique = 0;
+ACID.pp_max = 30;
+ACID.effect = OTHR_SDEFENSE_E2;
+ACID.chance = 0.1;
+ACID.m_arg = -1;
+
+// acid armor
+strcpy(ACIDARMOR.name, "Acid Armor");
+ACIDARMOR.damage = 0;
+ACIDARMOR.accuracy = 1.0;
+ACIDARMOR.type = POISON_T;
+ACIDARMOR.movetype = STATUS_MT;
+ACIDARMOR.priority = 0;
+ACIDARMOR.unique = 0;
+ACIDARMOR.pp_max = 20;
+ACIDARMOR.effect = SELF_DEFENSE_E2;
+ACIDARMOR.chance = 1.0;
+ACIDARMOR.m_arg = 2;
+
+// agility
+strcpy(AGILITY.name, "Agility");
+AGILITY.damage = 0;
+AGILITY.accuracy = 1.0;
+AGILITY.type = PSYCHIC_T;
+AGILITY.movetype = STATUS_MT;
+AGILITY.priority = 0;
+AGILITY.unique = 0;
+AGILITY.pp_max = 30;
+AGILITY.effect = SELF_SPEED_E2;
+AGILITY.chance = 1.0;
+AGILITY.m_arg = 2;
+
+// amnesia
+strcpy(AMNESIA.name, "Amnesia");
+AMNESIA.damage = 0;
+AMNESIA.accuracy = 1.0;
+AMNESIA.type = PSYCHIC_T;
+AMNESIA.movetype = STATUS_MT;
+AMNESIA.priority = 0;
+AMNESIA.unique = 0;
+AMNESIA.pp_max = 20;
+AMNESIA.effect = SELF_SDEFENSE_E2;
+AMNESIA.chance = 1.0;
+AMNESIA.m_arg = 2;
+
+// aurora beam
+strcpy(AURORABEAM.name, "Aurora Beam");
+AURORABEAM.damage = 65;
+AURORABEAM.accuracy = 1.0;
+AURORABEAM.type = ICE_T;
+AURORABEAM.movetype = SPECIAL_MT;
+AURORABEAM.priority = 0;
+AURORABEAM.unique = 0;
+AURORABEAM.pp_max = 20;
+AURORABEAM.effect = OTHR_ATTACK_E2;
+AURORABEAM.chance = 0.1;
+AURORABEAM.m_arg = -1;
+
+// barrier
+strcpy(BARRIER.name, "Barrier");
+BARRIER.damage = 0;
+BARRIER.accuracy = 1.0;
+BARRIER.type = PSYCHIC_T;
+BARRIER.movetype = STATUS_MT;
+BARRIER.priority = 0;
+BARRIER.unique = 0;
+BARRIER.pp_max = 20;
+BARRIER.effect = SELF_DEFENSE_E2;
+BARRIER.chance = 1.0;
+BARRIER.m_arg = 2;
+
+// bite
+strcpy(BITE.name, "Bite");
+BITE.damage = 60;
+BITE.accuracy = 1.0;
+BITE.type = DARK_T;
+BITE.movetype = PHYSICAL_MT;
+BITE.priority = 0;
+BITE.unique = 0;
+BITE.pp_max = 25;
+BITE.effect = APPLY_FLINCH_E2;
+BITE.chance = 0.3;
+BITE.m_arg = 0;
+
+// blizzard
+strcpy(BLIZZARD.name, "Blizzard");
+BLIZZARD.damage = 110;
+BLIZZARD.accuracy = 0.7;
+BLIZZARD.type = ICE_T;
+BLIZZARD.movetype = SPECIAL_MT;
+BLIZZARD.priority = 0;
+BLIZZARD.unique = 0;
+BLIZZARD.pp_max = 5;
+BLIZZARD.effect = APPLY_FRZ_E2;
+BLIZZARD.chance = 0.1;
+BLIZZARD.m_arg = 0;
+
+// body slam
+strcpy(BODYSLAM.name, "Body Slam");
+BODYSLAM.damage = 85;
+BODYSLAM.accuracy = 1.0;
+BODYSLAM.type = NORMAL_T;
+BODYSLAM.movetype = PHYSICAL_MT;
+BODYSLAM.priority = 0;
+BODYSLAM.unique = 0;
+BODYSLAM.pp_max = 15;
+BODYSLAM.effect = APPLY_PAR_E2;
+BODYSLAM.chance = 0.3;
+BODYSLAM.m_arg = 0;
+
+// bone club
+strcpy(BONECLUB.name, "Bone Club");
+BONECLUB.damage = 65;
+BONECLUB.accuracy = 0.85;
+BONECLUB.type = GROUND_T;
+BONECLUB.movetype = PHYSICAL_MT;
+BONECLUB.priority = 0;
+BONECLUB.unique = 0;
+BONECLUB.pp_max = 20;
+BONECLUB.effect = APPLY_FLINCH_E2;
+BONECLUB.chance = 0.1;
+BONECLUB.m_arg = 0;
+
+// bubble
+strcpy(BUBBLE.name, "Bubble");
+BUBBLE.damage = 40;
+BUBBLE.accuracy = 1.0;
+BUBBLE.type = WATER_T;
+BUBBLE.movetype = SPECIAL_MT;
+BUBBLE.priority = 0;
+BUBBLE.unique = 0;
+BUBBLE.pp_max = 30;
+BUBBLE.effect = OTHR_SPEED_E2;
+BUBBLE.chance = 0.1;
+BUBBLE.m_arg = -1;
+
+// bubble beam
+strcpy(BUBBLEBEAM.name, "Bubble Beam");
+BUBBLEBEAM.damage = 65;
+BUBBLEBEAM.accuracy = 1.0;
+BUBBLEBEAM.type = WATER_T;
+BUBBLEBEAM.movetype = SPECIAL_MT;
+BUBBLEBEAM.priority = 0;
+BUBBLEBEAM.unique = 0;
+BUBBLEBEAM.pp_max = 20;
+BUBBLEBEAM.effect = OTHR_SPEED_E2;
+BUBBLEBEAM.chance = 0.1;
+BUBBLEBEAM.m_arg = -1;
+
+// confuse ray
+strcpy(CONFUSERAY.name, "Confuse Ray");
+CONFUSERAY.damage = 0;
+CONFUSERAY.accuracy = 1.0;
+CONFUSERAY.type = GHOST_T;
+CONFUSERAY.movetype = STATUS_MT;
+CONFUSERAY.priority = 0;
+CONFUSERAY.unique = 0;
+CONFUSERAY.pp_max = 10;
+CONFUSERAY.effect = APPLY_CONFUSE_E2;
+CONFUSERAY.chance = 1.0;
+CONFUSERAY.m_arg = 0;
+
+// confusion
+strcpy(CONFUSION.name, "Confusion");
+CONFUSION.damage = 50;
+CONFUSION.accuracy = 1.0;
+CONFUSION.type = PSYCHIC_T;
+CONFUSION.movetype = SPECIAL_MT;
+CONFUSION.priority = 0;
+CONFUSION.unique = 0;
+CONFUSION.pp_max = 25;
+CONFUSION.effect = APPLY_CONFUSE_E2;
+CONFUSION.chance = 0.1;
+CONFUSION.m_arg = 0;
+
+// constrict
+strcpy(CONSTRICT.name, "Constrict");
+CONSTRICT.damage = 10;
+CONSTRICT.accuracy = 1.0;
+CONSTRICT.type = NORMAL_T;
+CONSTRICT.movetype = PHYSICAL_MT;
+CONSTRICT.priority = 0;
+CONSTRICT.unique = 0;
+CONSTRICT.pp_max = 35;
+CONSTRICT.effect = OTHR_SPEED_E2;
+CONSTRICT.chance = 0.1;
+CONSTRICT.m_arg = -1;
+
+// crabhammer
+strcpy(CRABHAMMER.name, "Crabhammer");
+CRABHAMMER.damage = 100;
+CRABHAMMER.accuracy = 0.9;
+CRABHAMMER.type = WATER_T;
+CRABHAMMER.movetype = PHYSICAL_MT;
+CRABHAMMER.priority = 0;
+CRABHAMMER.unique = 0;
+CRABHAMMER.pp_max = 10;
+CRABHAMMER.effect = HIGH_CRIT_E2;
+CRABHAMMER.chance = 1.0;
+CRABHAMMER.m_arg = 0;
+
+// cut
+strcpy(CUT.name, "Cut");
+CUT.damage = 50;
+CUT.accuracy = 0.95;
+CUT.type = NORMAL_T;
+CUT.movetype = PHYSICAL_MT;
+CUT.priority = 0;
+CUT.unique = 0;
+CUT.pp_max = 30;
+CUT.effect = NON_E2;
+CUT.chance = 1.0;
+CUT.m_arg = 0;
+
+// defense curl
+strcpy(DEFENSECURL.name, "Defense Curl");
+DEFENSECURL.damage = 0;
+DEFENSECURL.accuracy = 1.0;
+DEFENSECURL.type = NORMAL_T;
+DEFENSECURL.movetype = STATUS_MT;
+DEFENSECURL.priority = 0;
+DEFENSECURL.unique = 0;
+DEFENSECURL.pp_max = 40;
+DEFENSECURL.effect = SELF_DEFENSE_E2;
+DEFENSECURL.chance = 1.0;
+DEFENSECURL.m_arg = 1;
+
+// dizzy punch
+strcpy(DIZZYPUNCH.name, "Dizzy Punch");
+DIZZYPUNCH.damage = 70;
+DIZZYPUNCH.accuracy = 1.0;
+DIZZYPUNCH.type = NORMAL_T;
+DIZZYPUNCH.movetype = PHYSICAL_MT;
+DIZZYPUNCH.priority = 0;
+DIZZYPUNCH.unique = 0;
+DIZZYPUNCH.pp_max = 10;
+DIZZYPUNCH.effect = APPLY_CONFUSE_E2;
+DIZZYPUNCH.chance = 0.2;
+DIZZYPUNCH.m_arg = 0;
+
+// double team
+strcpy(DOUBLETEAM.name, "Double Team");
+DOUBLETEAM.damage = 0;
+DOUBLETEAM.accuracy = 1.0;
+DOUBLETEAM.type = NORMAL_T;
+DOUBLETEAM.movetype = STATUS_MT;
+DOUBLETEAM.priority = 0;
+DOUBLETEAM.unique = 0;
+DOUBLETEAM.pp_max = 15;
+DOUBLETEAM.effect = SELF_EVASION_E2;
+DOUBLETEAM.chance = 1.0;
+DOUBLETEAM.m_arg = 1;
+
+// double-edge
+strcpy(DOUBLEEDGE.name, "Double-Edge");
+DOUBLEEDGE.damage = 120;
+DOUBLEEDGE.accuracy = 1.0;
+DOUBLEEDGE.type = NORMAL_T;
+DOUBLEEDGE.movetype = PHYSICAL_MT;
+DOUBLEEDGE.priority = 0;
+DOUBLEEDGE.unique = 0;
+DOUBLEEDGE.pp_max = 15;
+DOUBLEEDGE.effect = RECOIL_E2;
+DOUBLEEDGE.chance = 1.0;
+DOUBLEEDGE.m_arg = 3;
+
+// drill peck
+strcpy(DRILLPECK.name, "Drill Peck");
+DRILLPECK.damage = 80;
+DRILLPECK.accuracy = 1.0;
+DRILLPECK.type = FLYING_T;
+DRILLPECK.movetype = PHYSICAL_MT;
+DRILLPECK.priority = 0;
+DRILLPECK.unique = 0;
+DRILLPECK.pp_max = 20;
+DRILLPECK.effect = NON_E2;
+DRILLPECK.chance = 1.0;
+DRILLPECK.m_arg = 0;
+
+// earthquake
+strcpy(EARTHQUAKE.name, "Earthquake");
+EARTHQUAKE.damage = 100;
+EARTHQUAKE.accuracy = 1.0;
+EARTHQUAKE.type = GROUND_T;
+EARTHQUAKE.movetype = PHYSICAL_MT;
+EARTHQUAKE.priority = 0;
+EARTHQUAKE.unique = 0;
+EARTHQUAKE.pp_max = 10;
+EARTHQUAKE.effect = NON_E2;
+EARTHQUAKE.chance = 1.0;
+EARTHQUAKE.m_arg = 0;
+
+// egg bomb
+strcpy(EGGBOMB.name, "Egg Bomb");
+EGGBOMB.damage = 100;
+EGGBOMB.accuracy = 0.75;
+EGGBOMB.type = NORMAL_T;
+EGGBOMB.movetype = PHYSICAL_MT;
+EGGBOMB.priority = 0;
+EGGBOMB.unique = 0;
+EGGBOMB.pp_max = 10;
+EGGBOMB.effect = NON_E2;
+EGGBOMB.chance = 1.0;
+EGGBOMB.m_arg = 0;
+
+// ember
+strcpy(EMBER.name, "Ember");
+EMBER.damage = 40;
+EMBER.accuracy = 1.0;
+EMBER.type = FIRE_T;
+EMBER.movetype = SPECIAL_MT;
+EMBER.priority = 0;
+EMBER.unique = 0;
+EMBER.pp_max = 25;
+EMBER.effect = APPLY_BRN_E2;
+EMBER.chance = 0.1;
+EMBER.m_arg = 0;
+
+// explosion
+strcpy(EXPLOSION.name, "Explosion");
+EXPLOSION.damage = 250;
+EXPLOSION.accuracy = 1.0;
+EXPLOSION.type = NORMAL_T;
+EXPLOSION.movetype = PHYSICAL_MT;
+EXPLOSION.priority = 0;
+EXPLOSION.unique = 0;
+EXPLOSION.pp_max = 5;
+EXPLOSION.effect = SELF_KILL_E2;
+EXPLOSION.chance = 1.0;
+EXPLOSION.m_arg = 0;
+
+// fire blast
+strcpy(FIREBLAST.name, "Fire Blast");
+FIREBLAST.damage = 110;
+FIREBLAST.accuracy = 0.85;
+FIREBLAST.type = FIRE_T;
+FIREBLAST.movetype = SPECIAL_MT;
+FIREBLAST.priority = 0;
+FIREBLAST.unique = 0;
+FIREBLAST.pp_max = 5;
+FIREBLAST.effect = APPLY_BRN_E2;
+FIREBLAST.chance = 0.1;
+FIREBLAST.m_arg = 0;
+
+// fire punch
+strcpy(FIREPUNCH.name, "Fire Punch");
+FIREPUNCH.damage = 75;
+FIREPUNCH.accuracy = 1.0;
+FIREPUNCH.type = FIRE_T;
+FIREPUNCH.movetype = PHYSICAL_MT;
+FIREPUNCH.priority = 0;
+FIREPUNCH.unique = 0;
+FIREPUNCH.pp_max = 15;
+FIREPUNCH.effect = APPLY_BRN_E2;
+FIREPUNCH.chance = 0.1;
+FIREPUNCH.m_arg = 0;
+
+// fissure
+strcpy(FISSURE.name, "Fissure");
+FISSURE.damage = 100000;
+FISSURE.accuracy = 1.0;
+FISSURE.type = GROUND_T;
+FISSURE.movetype = PHYSICAL_MT;
+FISSURE.priority = 0;
+FISSURE.unique = 0;
+FISSURE.pp_max = 5;
+FISSURE.effect = NON_E2;
+FISSURE.chance = 1.0;
+FISSURE.m_arg = 0;
+
+// flamethrower
+strcpy(FLAMETHROWER.name, "Flamethrower");
+FLAMETHROWER.damage = 90;
+FLAMETHROWER.accuracy = 1.0;
+FLAMETHROWER.type = FIRE_T;
+FLAMETHROWER.movetype = SPECIAL_MT;
+FLAMETHROWER.priority = 0;
+FLAMETHROWER.unique = 0;
+FLAMETHROWER.pp_max = 15;
+FLAMETHROWER.effect = APPLY_BRN_E2;
+FLAMETHROWER.chance = 0.1;
+FLAMETHROWER.m_arg = 0;
+
+// flash
+strcpy(FLASH.name, "Flash");
+FLASH.damage = 0;
+FLASH.accuracy = 1.0;
+FLASH.type = NORMAL_T;
+FLASH.movetype = STATUS_MT;
+FLASH.priority = 0;
+FLASH.unique = 0;
+FLASH.pp_max = 20;
+FLASH.effect = OTHR_ACCURACY_E2;
+FLASH.chance = 1.0;
+FLASH.m_arg = -1;
+
+// glare
+strcpy(GLARE.name, "Glare");
+GLARE.damage = 0;
+GLARE.accuracy = 1.0;
+GLARE.type = NORMAL_T;
+GLARE.movetype = STATUS_MT;
+GLARE.priority = 0;
+GLARE.unique = 0;
+GLARE.pp_max = 30;
+GLARE.effect = APPLY_PAR_E2;
+GLARE.chance = 1.0;
+GLARE.m_arg = 0;
+
+// growl
+strcpy(GROWL.name, "Growl");
+GROWL.damage = 0;
+GROWL.accuracy = 1.0;
+GROWL.type = NORMAL_T;
+GROWL.movetype = STATUS_MT;
+GROWL.priority = 0;
+GROWL.unique = 0;
+GROWL.pp_max = 40;
+GROWL.effect = OTHR_ATTACK_E2;
+GROWL.chance = 1.0;
+GROWL.m_arg = -1;
+
+// growth
+strcpy(GROWTH.name, "Growth");
+GROWTH.damage = 0;
+GROWTH.accuracy = 1.0;
+GROWTH.type = NORMAL_T;
+GROWTH.movetype = STATUS_MT;
+GROWTH.priority = 0;
+GROWTH.unique = 0;
+GROWTH.pp_max = 40;
+GROWTH.effect = SELF_ATTACK_SATTACK_E2;
+GROWTH.chance = 1.0;
+GROWTH.m_arg = 1;
+
+// guillotine
+strcpy(GUILLOTINE.name, "Guillotine");
+GUILLOTINE.damage = 10000;
+GUILLOTINE.accuracy = 1.0;
+GUILLOTINE.type = NORMAL_T;
+GUILLOTINE.movetype = PHYSICAL_MT;
+GUILLOTINE.priority = 0;
+GUILLOTINE.unique = 0;
+GUILLOTINE.pp_max = 5;
+GUILLOTINE.effect = NON_E2;
+GUILLOTINE.chance = 1.0;
+GUILLOTINE.m_arg = 0;
+
+// gust
+strcpy(GUST.name, "Gust");
+GUST.damage = 40;
+GUST.accuracy = 1.0;
+GUST.type = FLYING_T;
+GUST.movetype = SPECIAL_MT;
+GUST.priority = 0;
+GUST.unique = 0;
+GUST.pp_max = 35;
+GUST.effect = NON_E2;
+GUST.chance = 1.0;
+GUST.m_arg = 0;
+
+// harden
+strcpy(HARDEN.name, "Harden");
+HARDEN.damage = 0;
+HARDEN.accuracy = 1.0;
+HARDEN.type = NORMAL_T;
+HARDEN.movetype = STATUS_MT;
+HARDEN.priority = 0;
+HARDEN.unique = 0;
+HARDEN.pp_max = 30;
+HARDEN.effect = SELF_DEFENSE_E2;
+HARDEN.chance = 1.0;
+HARDEN.m_arg = 1;
+
+// haze
+strcpy(HAZE.name, "Haze");
+HAZE.damage = 0;
+HAZE.accuracy = 1.0;
+HAZE.type = ICE_T;
+HAZE.movetype = STATUS_MT;
+HAZE.priority = 0;
+HAZE.unique = 0;
+HAZE.pp_max = 30;
+HAZE.effect = HAZE_E2;
+HAZE.chance = 1.0;
+HAZE.m_arg = 0;
+
+// headbutt
+strcpy(HEADBUTT.name, "Headbutt");
+HEADBUTT.damage = 70;
+HEADBUTT.accuracy = 1.0;
+HEADBUTT.type = NORMAL_T;
+HEADBUTT.movetype = PHYSICAL_MT;
+HEADBUTT.priority = 0;
+HEADBUTT.unique = 0;
+HEADBUTT.pp_max = 15;
+HEADBUTT.effect = APPLY_FLINCH_E2;
+HEADBUTT.chance = 0.3;
+HEADBUTT.m_arg = 0;
+
+// horn attack
+strcpy(HORNATTACK.name, "Horn Attack");
+HORNATTACK.damage = 65;
+HORNATTACK.accuracy = 1.0;
+HORNATTACK.type = NORMAL_T;
+HORNATTACK.movetype = PHYSICAL_MT;
+HORNATTACK.priority = 0;
+HORNATTACK.unique = 0;
+HORNATTACK.pp_max = 25;
+HORNATTACK.effect = NON_E2;
+HORNATTACK.chance = 1.0;
+HORNATTACK.m_arg = 0;
+
+// horn drill
+strcpy(HORNDRILL.name, "Horn Drill");
+HORNDRILL.damage = 10000;
+HORNDRILL.accuracy = 0.3;
+HORNDRILL.type = NORMAL_T;
+HORNDRILL.movetype = PHYSICAL_MT;
+HORNDRILL.priority = 0;
+HORNDRILL.unique = 0;
+HORNDRILL.pp_max = 5;
+HORNDRILL.effect = NON_E2;
+HORNDRILL.chance = 1.0;
+HORNDRILL.m_arg = 0;
+
+// hydro pump
+strcpy(HYDROPUMP.name, "Hydro Pump");
+HYDROPUMP.damage = 110;
+HYDROPUMP.accuracy = 0.8;
+HYDROPUMP.type = WATER_T;
+HYDROPUMP.movetype = SPECIAL_MT;
+HYDROPUMP.priority = 0;
+HYDROPUMP.unique = 0;
+HYDROPUMP.pp_max = 5;
+HYDROPUMP.effect = NON_E2;
+HYDROPUMP.chance = 1.0;
+HYDROPUMP.m_arg = 0;
+
+// hyper beam
+strcpy(HYPERBEAM.name, "Hyper Beam");
+HYPERBEAM.damage = 150;
+HYPERBEAM.accuracy = 0.9;
+HYPERBEAM.type = NORMAL_T;
+HYPERBEAM.movetype = SPECIAL_MT;
+HYPERBEAM.priority = 0;
+HYPERBEAM.unique = 0;
+HYPERBEAM.pp_max = 5;
+HYPERBEAM.effect = RECHARGE_E2;
+HYPERBEAM.chance = 1.0;
+HYPERBEAM.m_arg = 0;
+
+// hyper fang
+strcpy(HYPERFANG.name, "Hyper Fang");
+HYPERFANG.damage = 80;
+HYPERFANG.accuracy = 0.9;
+HYPERFANG.type = NORMAL_T;
+HYPERFANG.movetype = PHYSICAL_MT;
+HYPERFANG.priority = 0;
+HYPERFANG.unique = 0;
+HYPERFANG.pp_max = 15;
+HYPERFANG.effect = APPLY_FLINCH_E2;
+HYPERFANG.chance = 0.1;
+HYPERFANG.m_arg = 0;
+
+// hypnosis
+strcpy(HYPNOSIS.name, "Hypnosis");
+HYPNOSIS.damage = 0;
+HYPNOSIS.accuracy = 0.6;
+HYPNOSIS.type = PSYCHIC_T;
+HYPNOSIS.movetype = STATUS_MT;
+HYPNOSIS.priority = 0;
+HYPNOSIS.unique = 0;
+HYPNOSIS.pp_max = 20;
+HYPNOSIS.effect = APPLY_SLP_E2;
+HYPNOSIS.chance = 1.0;
+HYPNOSIS.m_arg = 0;
+
+// ice beam
+strcpy(ICEBEAM.name, "Ice Beam");
+ICEBEAM.damage = 90;
+ICEBEAM.accuracy = 1.0;
+ICEBEAM.type = ICE_T;
+ICEBEAM.movetype = SPECIAL_MT;
+ICEBEAM.priority = 0;
+ICEBEAM.unique = 0;
+ICEBEAM.pp_max = 10;
+ICEBEAM.effect = APPLY_FRZ_E2;
+ICEBEAM.chance = 0.1;
+ICEBEAM.m_arg = 0;
+
+// ice punch
+strcpy(ICEPUNCH.name, "Ice Punch");
+ICEPUNCH.damage = 75;
+ICEPUNCH.accuracy = 1.0;
+ICEPUNCH.type = ICE_T;
+ICEPUNCH.movetype = PHYSICAL_MT;
+ICEPUNCH.priority = 0;
+ICEPUNCH.unique = 0;
+ICEPUNCH.pp_max = 15;
+ICEPUNCH.effect = APPLY_FRZ_E2;
+ICEPUNCH.chance = 0.1;
+ICEPUNCH.m_arg = 0;
+
+// karate chop
+strcpy(KARATECHOP.name, "Karate Chop");
+KARATECHOP.damage = 50;
+KARATECHOP.accuracy = 1.0;
+KARATECHOP.type = FIGHTING_T;
+KARATECHOP.movetype = PHYSICAL_MT;
+KARATECHOP.priority = 0;
+KARATECHOP.unique = 0;
+KARATECHOP.pp_max = 25;
+KARATECHOP.effect = HIGH_CRIT_E2;
+KARATECHOP.chance = 1.0;
+KARATECHOP.m_arg = 0;
+
+// kinesis
+strcpy(KINESIS.name, "Kinesis");
+KINESIS.damage = 0;
+KINESIS.accuracy = 0.8;
+KINESIS.type = PSYCHIC_T;
+KINESIS.movetype = STATUS_MT;
+KINESIS.priority = 0;
+KINESIS.unique = 0;
+KINESIS.pp_max = 15;
+KINESIS.effect = OTHR_ACCURACY_E2;
+KINESIS.chance = 1.0;
+KINESIS.m_arg = -1;
+
+// leech life
+strcpy(LEECHLIFE.name, "Leech Life");
+LEECHLIFE.damage = 20;
+LEECHLIFE.accuracy = 1.0;
+LEECHLIFE.type = BUG_T;
+LEECHLIFE.movetype = PHYSICAL_MT;
+LEECHLIFE.priority = 0;
+LEECHLIFE.unique = 0;
+LEECHLIFE.pp_max = 15;
+LEECHLIFE.effect = RECOIL_E2;
+LEECHLIFE.chance = 1.0;
+LEECHLIFE.m_arg = -2;
+
+// leer
+strcpy(LEER.name, "Leer");
+LEER.damage = 0;
+LEER.accuracy = 1.0;
+LEER.type = NORMAL_T;
+LEER.movetype = STATUS_MT;
+LEER.priority = 0;
+LEER.unique = 0;
+LEER.pp_max = 30;
+LEER.effect = OTHR_DEFENSE_E2;
+LEER.chance = 1.0;
+LEER.m_arg = -1;
+
+// lick
+strcpy(LICK.name, "Lick");
+LICK.damage = 30;
+LICK.accuracy = 1.0;
+LICK.type = GHOST_T;
+LICK.movetype = PHYSICAL_MT;
+LICK.priority = 0;
+LICK.unique = 0;
+LICK.pp_max = 30;
+LICK.effect = APPLY_PAR_E2;
+LICK.chance = 0.3;
+LICK.m_arg = 0;
+
+// lovely kiss
+strcpy(LOVELYKISS.name, "Lovely Kiss");
+LOVELYKISS.damage = 0;
+LOVELYKISS.accuracy = 0.75;
+LOVELYKISS.type = NORMAL_T;
+LOVELYKISS.movetype = STATUS_MT;
+LOVELYKISS.priority = 0;
+LOVELYKISS.unique = 0;
+LOVELYKISS.pp_max = 10;
+LOVELYKISS.effect = APPLY_SLP_E2;
+LOVELYKISS.chance = 1.0;
+LOVELYKISS.m_arg = 0;
+
+// meditate
+strcpy(MEDITATE.name, "Meditate");
+MEDITATE.damage = 0;
+MEDITATE.accuracy = 1.0;
+MEDITATE.type = PSYCHIC_T;
+MEDITATE.movetype = STATUS_MT;
+MEDITATE.priority = 0;
+MEDITATE.unique = 0;
+MEDITATE.pp_max = 40;
+MEDITATE.effect = SELF_ATTACK_E2;
+MEDITATE.chance = 1.0;
+MEDITATE.m_arg = 1;
+
+// mega drain
+strcpy(MEGADRAIN.name, "Mega Drain");
+MEGADRAIN.damage = 40;
+MEGADRAIN.accuracy = 1.0;
+MEGADRAIN.type = GRASS_T;
+MEGADRAIN.movetype = SPECIAL_MT;
+MEGADRAIN.priority = 0;
+MEGADRAIN.unique = 0;
+MEGADRAIN.pp_max = 15;
+MEGADRAIN.effect = RECOIL_E2;
+MEGADRAIN.chance = 1.0;
+MEGADRAIN.m_arg = -2;
+
+// mega kick
+strcpy(MEGAKICK.name, "Mega Kick");
+MEGAKICK.damage = 120;
+MEGAKICK.accuracy = 0.75;
+MEGAKICK.type = NORMAL_T;
+MEGAKICK.movetype = PHYSICAL_MT;
+MEGAKICK.priority = 0;
+MEGAKICK.unique = 0;
+MEGAKICK.pp_max = 5;
+MEGAKICK.effect = NON_E2;
+MEGAKICK.chance = 1.0;
+MEGAKICK.m_arg = 0;
+
+// mega punch
+strcpy(MEGAPUNCH.name, "Mega Punch");
+MEGAPUNCH.damage = 80;
+MEGAPUNCH.accuracy = 0.85;
+MEGAPUNCH.type = NORMAL_T;
+MEGAPUNCH.movetype = PHYSICAL_MT;
+MEGAPUNCH.priority = 0;
+MEGAPUNCH.unique = 0;
+MEGAPUNCH.pp_max = 20;
+MEGAPUNCH.effect = NON_E2;
+MEGAPUNCH.chance = 1.0;
+MEGAPUNCH.m_arg = 0;
+
+// minimize
+strcpy(MINIMIZE.name, "Minimize");
+MINIMIZE.damage = 0;
+MINIMIZE.accuracy = 1.0;
+MINIMIZE.type = NORMAL_T;
+MINIMIZE.movetype = STATUS_MT;
+MINIMIZE.priority = 0;
+MINIMIZE.unique = 0;
+MINIMIZE.pp_max = 10;
+MINIMIZE.effect = SELF_EVASION_E2;
+MINIMIZE.chance = 1.0;
+MINIMIZE.m_arg = 2;
+
+// pay day
+strcpy(PAYDAY.name, "Pay Day");
+PAYDAY.damage = 40;
+PAYDAY.accuracy = 1.0;
+PAYDAY.type = NORMAL_T;
+PAYDAY.movetype = PHYSICAL_MT;
+PAYDAY.priority = 0;
+PAYDAY.unique = 0;
+PAYDAY.pp_max = 20;
+PAYDAY.effect = NON_E2;
+PAYDAY.chance = 1.0;
+PAYDAY.m_arg = 0;
+
+// peck
+strcpy(PECK.name, "Peck");
+PECK.damage = 35;
+PECK.accuracy = 1.0;
+PECK.type = FLYING_T;
+PECK.movetype = PHYSICAL_MT;
+PECK.priority = 0;
+PECK.unique = 0;
+PECK.pp_max = 35;
+PECK.effect = NON_E2;
+PECK.chance = 1.0;
+PECK.m_arg = 0;
+
+// pin missile
+strcpy(PINMISSILE.name, "Pin Missile");
+PINMISSILE.damage = 25;
+PINMISSILE.accuracy = 0.85;
+PINMISSILE.type = BUG_T;
+PINMISSILE.movetype = PHYSICAL_MT;
+PINMISSILE.priority = 0;
+PINMISSILE.unique = 0;
+PINMISSILE.pp_max = 20;
+PINMISSILE.effect = NON_E2;
+PINMISSILE.chance = 1.0;
+PINMISSILE.m_arg = 0;
+
+// poison gas
+strcpy(POISONGAS.name, "Poison Gas");
+POISONGAS.damage = 0;
+POISONGAS.accuracy = 0.9;
+POISONGAS.type = POISON_T;
+POISONGAS.movetype = STATUS_MT;
+POISONGAS.priority = 0;
+POISONGAS.unique = 0;
+POISONGAS.pp_max = 40;
+POISONGAS.effect = APPLY_PSN_E2;
+POISONGAS.chance = 1.0;
+POISONGAS.m_arg = 0;
+
+// poison powder
+strcpy(POISONPOWDER.name, "PoisonPowder");
+POISONPOWDER.damage = 0;
+POISONPOWDER.accuracy = 0.75;
+POISONPOWDER.type = POISON_T;
+POISONPOWDER.movetype = STATUS_MT;
+POISONPOWDER.priority = 0;
+POISONPOWDER.unique = 0;
+POISONPOWDER.pp_max = 35;
+POISONPOWDER.effect = APPLY_PSN_E2;
+POISONPOWDER.chance = 1.0;
+POISONPOWDER.m_arg = 0;
+
+// poison sting
+strcpy(POISONSTING.name, "Poison Sting");
+POISONSTING.damage = 15;
+POISONSTING.accuracy = 1.0;
+POISONSTING.type = POISON_T;
+POISONSTING.movetype = PHYSICAL_MT;
+POISONSTING.priority = 0;
+POISONSTING.unique = 0;
+POISONSTING.pp_max = 35;
+POISONSTING.effect = APPLY_PSN_E2;
+POISONSTING.chance = 0.3;
+POISONSTING.m_arg = 0;
+
+// pound
+strcpy(POUND.name, "Pound");
+POUND.damage = 40;
+POUND.accuracy = 1.0;
+POUND.type = NORMAL_T;
+POUND.movetype = PHYSICAL_MT;
+POUND.priority = 0;
+POUND.unique = 0;
+POUND.pp_max = 35;
+POUND.effect = NON_E2;
+POUND.chance = 1.0;
+POUND.m_arg = 0;
+
+// psybeam
+strcpy(PSYBEAM.name, "Psybeam");
+PSYBEAM.damage = 65;
+PSYBEAM.accuracy = 1.0;
+PSYBEAM.type = PSYCHIC_T;
+PSYBEAM.movetype = SPECIAL_MT;
+PSYBEAM.priority = 0;
+PSYBEAM.unique = 0;
+PSYBEAM.pp_max = 20;
+PSYBEAM.effect = APPLY_CONFUSE_E2;
+PSYBEAM.chance = 0.1;
+PSYBEAM.m_arg = 0;
+
+// psychic
+strcpy(PSYCHIC.name, "Psychic");
+PSYCHIC.damage = 90;
+PSYCHIC.accuracy = 1.0;
+PSYCHIC.type = PSYCHIC_T;
+PSYCHIC.movetype = SPECIAL_MT;
+PSYCHIC.priority = 0;
+PSYCHIC.unique = 0;
+PSYCHIC.pp_max = 10;
+PSYCHIC.effect = OTHR_SDEFENSE_E2;
+PSYCHIC.chance = 0.1;
+PSYCHIC.m_arg = -1;
+
+// quick attack
+strcpy(QUICKATTACK.name, "Quick Attack");
+QUICKATTACK.damage = 40;
+QUICKATTACK.accuracy = 1.0;
+QUICKATTACK.type = NORMAL_T;
+QUICKATTACK.movetype = PHYSICAL_MT;
+QUICKATTACK.priority = 1;
+QUICKATTACK.unique = 0;
+QUICKATTACK.pp_max = 30;
+QUICKATTACK.effect = NON_E2;
+QUICKATTACK.chance = 1.0;
+QUICKATTACK.m_arg = 0;
+
+// razor leaf
+strcpy(RAZORLEAF.name, "Razor Leaf");
+RAZORLEAF.damage = 55;
+RAZORLEAF.accuracy = 0.95;
+RAZORLEAF.type = GRASS_T;
+RAZORLEAF.movetype = PHYSICAL_MT;
+RAZORLEAF.priority = 0;
+RAZORLEAF.unique = 0;
+RAZORLEAF.pp_max = 25;
+RAZORLEAF.effect = HIGH_CRIT_E2;
+RAZORLEAF.chance = 1.0;
+RAZORLEAF.m_arg = 0;
+
+// rock slide
+strcpy(ROCKSLIDE.name, "Rock Slide");
+ROCKSLIDE.damage = 75;
+ROCKSLIDE.accuracy = 0.9;
+ROCKSLIDE.type = ROCK_T;
+ROCKSLIDE.movetype = PHYSICAL_MT;
+ROCKSLIDE.priority = 0;
+ROCKSLIDE.unique = 0;
+ROCKSLIDE.pp_max = 10;
+ROCKSLIDE.effect = APPLY_FLINCH_E2;
+ROCKSLIDE.chance = 0.3;
+ROCKSLIDE.m_arg = 0;
+
+// rock throw
+strcpy(ROCKTHROW.name, "Rock Throw");
+ROCKTHROW.damage = 50;
+ROCKTHROW.accuracy = 0.9;
+ROCKTHROW.type = ROCK_T;
+ROCKTHROW.movetype = PHYSICAL_MT;
+ROCKTHROW.priority = 0;
+ROCKTHROW.unique = 0;
+ROCKTHROW.pp_max = 15;
+ROCKTHROW.effect = NON_E2;
+ROCKTHROW.chance = 1.0;
+ROCKTHROW.m_arg = 0;
+
+// rolling kick
+strcpy(ROLLINGKICK.name, "Rolling Kick");
+ROLLINGKICK.damage = 60;
+ROLLINGKICK.accuracy = 0.85;
+ROLLINGKICK.type = FIGHTING_T;
+ROLLINGKICK.movetype = PHYSICAL_MT;
+ROLLINGKICK.priority = 0;
+ROLLINGKICK.unique = 0;
+ROLLINGKICK.pp_max = 15;
+ROLLINGKICK.effect = APPLY_FLINCH_E2;
+ROLLINGKICK.chance = 0.3;
+ROLLINGKICK.m_arg = 0;
+
+// sand attack
+strcpy(SANDATTACK.name, "Sand Attack");
+SANDATTACK.damage = 0;
+SANDATTACK.accuracy = 1.0;
+SANDATTACK.type = GROUND_T;
+SANDATTACK.movetype = STATUS_MT;
+SANDATTACK.priority = 0;
+SANDATTACK.unique = 0;
+SANDATTACK.pp_max = 15;
+SANDATTACK.effect = OTHR_ACCURACY_E2;
+SANDATTACK.chance = 1.0;
+SANDATTACK.m_arg = -1;
+
+// scratch
+strcpy(SCRATCH.name, "Scratch");
+SCRATCH.damage = 40;
+SCRATCH.accuracy = 1.0;
+SCRATCH.type = NORMAL_T;
+SCRATCH.movetype = PHYSICAL_MT;
+SCRATCH.priority = 0;
+SCRATCH.unique = 0;
+SCRATCH.pp_max = 35;
+SCRATCH.effect = NON_E2;
+SCRATCH.chance = 1.0;
+SCRATCH.m_arg = 0;
+
+// screech
+strcpy(SCREECH.name, "Screech");
+SCREECH.damage = 0;
+SCREECH.accuracy = 0.85;
+SCREECH.type = NORMAL_T;
+SCREECH.movetype = STATUS_MT;
+SCREECH.priority = 0;
+SCREECH.unique = 0;
+SCREECH.pp_max = 40;
+SCREECH.effect = OTHR_DEFENSE_E2;
+SCREECH.chance = 1.0;
+SCREECH.m_arg = -2;
+
+// self-destruct
+strcpy(SELFDESTRUCT.name, "SelfDestruct");
+SELFDESTRUCT.damage = 200;
+SELFDESTRUCT.accuracy = 1.0;
+SELFDESTRUCT.type = NORMAL_T;
+SELFDESTRUCT.movetype = PHYSICAL_MT;
+SELFDESTRUCT.priority = 0;
+SELFDESTRUCT.unique = 0;
+SELFDESTRUCT.pp_max = 5;
+SELFDESTRUCT.effect = SELF_KILL_E2;
+SELFDESTRUCT.chance = 1.0;
+SELFDESTRUCT.m_arg = 0;
+
+// sharpen
+strcpy(SHARPEN.name, "Sharpen");
+SHARPEN.damage = 0;
+SHARPEN.accuracy = 1.0;
+SHARPEN.type = NORMAL_T;
+SHARPEN.movetype = STATUS_MT;
+SHARPEN.priority = 0;
+SHARPEN.unique = 0;
+SHARPEN.pp_max = 30;
+SHARPEN.effect = SELF_ATTACK_E2;
+SHARPEN.chance = 1.0;
+SHARPEN.m_arg = 1;
+
+// sing
+strcpy(SING.name, "Sing");
+SING.damage = 0;
+SING.accuracy = 0.55;
+SING.type = NORMAL_T;
+SING.movetype = STATUS_MT;
+SING.priority = 0;
+SING.unique = 0;
+SING.pp_max = 15;
+SING.effect = APPLY_SLP_E2;
+SING.chance = 1.0;
+SING.m_arg = 0;
+
+// slam
+strcpy(SLAM.name, "Slam");
+SLAM.damage = 80;
+SLAM.accuracy = 0.75;
+SLAM.type = NORMAL_T;
+SLAM.movetype = PHYSICAL_MT;
+SLAM.priority = 0;
+SLAM.unique = 0;
+SLAM.pp_max = 20;
+SLAM.effect = NON_E2;
+SLAM.chance = 1.0;
+SLAM.m_arg = 0;
+
+// slash
+strcpy(SLASH.name, "Slash");
+SLASH.damage = 70;
+SLASH.accuracy = 1.0;
+SLASH.type = NORMAL_T;
+SLASH.movetype = PHYSICAL_MT;
+SLASH.priority = 0;
+SLASH.unique = 0;
+SLASH.pp_max = 20;
+SLASH.effect = HIGH_CRIT_E2;
+SLASH.chance = 1.0;
+SLASH.m_arg = 0;
+
+// sleep powder
+strcpy(SLEEPPOWDER.name, "Sleep Powder");
+SLEEPPOWDER.damage = 0;
+SLEEPPOWDER.accuracy = 0.75;
+SLEEPPOWDER.type = GRASS_T;
+SLEEPPOWDER.movetype = STATUS_MT;
+SLEEPPOWDER.priority = 0;
+SLEEPPOWDER.unique = 0;
+SLEEPPOWDER.pp_max = 15;
+SLEEPPOWDER.effect = APPLY_SLP_E2;
+SLEEPPOWDER.chance = 1.0;
+SLEEPPOWDER.m_arg = 0;
+
+// sludge
+strcpy(SLUDGE.name, "Sludge");
+SLUDGE.damage = 65;
+SLUDGE.accuracy = 1.0;
+SLUDGE.type = POISON_T;
+SLUDGE.movetype = SPECIAL_MT;
+SLUDGE.priority = 0;
+SLUDGE.unique = 0;
+SLUDGE.pp_max = 20;
+SLUDGE.effect = APPLY_PSN_E2;
+SLUDGE.chance = 0.3;
+SLUDGE.m_arg = 0;
+
+// smog
+strcpy(SMOG.name, "Smog");
+SMOG.damage = 30;
+SMOG.accuracy = 0.7;
+SMOG.type = POISON_T;
+SMOG.movetype = SPECIAL_MT;
+SMOG.priority = 0;
+SMOG.unique = 0;
+SMOG.pp_max = 20;
+SMOG.effect = APPLY_PSN_E2;
+SMOG.chance = 0.4;
+SMOG.m_arg = 0;
+
+// smokescreen
+strcpy(SMOKESCREEN.name, "Smokescreen");
+SMOKESCREEN.damage = 0;
+SMOKESCREEN.accuracy = 1.0;
+SMOKESCREEN.type = NORMAL_T;
+SMOKESCREEN.movetype = STATUS_MT;
+SMOKESCREEN.priority = 0;
+SMOKESCREEN.unique = 0;
+SMOKESCREEN.pp_max = 20;
+SMOKESCREEN.effect = OTHR_ACCURACY_E2;
+SMOKESCREEN.chance = 1.0;
+SMOKESCREEN.m_arg = -1;
+
+// splash
+strcpy(SPLASH.name, "Splash");
+SPLASH.damage = 0;
+SPLASH.accuracy = 1.0;
+SPLASH.type = NORMAL_T;
+SPLASH.movetype = STATUS_MT;
+SPLASH.priority = 0;
+SPLASH.unique = 0;
+SPLASH.pp_max = 40;
+SPLASH.effect = NON_E2;
+SPLASH.chance = 1.0;
+SPLASH.m_arg = 0;
+
+// spore
+strcpy(SPORE.name, "Spore");
+SPORE.damage = 0;
+SPORE.accuracy = 1.0;
+SPORE.type = GRASS_T;
+SPORE.movetype = STATUS_MT;
+SPORE.priority = 0;
+SPORE.unique = 0;
+SPORE.pp_max = 15;
+SPORE.effect = APPLY_SLP_E2;
+SPORE.chance = 1.0;
+SPORE.m_arg = 0;
+
+// stomp
+strcpy(STOMP.name, "Stomp");
+STOMP.damage = 65;
+STOMP.accuracy = 1.0;
+STOMP.type = NORMAL_T;
+STOMP.movetype = PHYSICAL_MT;
+STOMP.priority = 0;
+STOMP.unique = 0;
+STOMP.pp_max = 20;
+STOMP.effect = APPLY_FLINCH_E2;
+STOMP.chance = 0.3;
+STOMP.m_arg = 0;
+
+// strength
+strcpy(STRENGTH.name, "Strength");
+STRENGTH.damage = 80;
+STRENGTH.accuracy = 1.0;
+STRENGTH.type = NORMAL_T;
+STRENGTH.movetype = PHYSICAL_MT;
+STRENGTH.priority = 0;
+STRENGTH.unique = 0;
+STRENGTH.pp_max = 15;
+STRENGTH.effect = NON_E2;
+STRENGTH.chance = 1.0;
+STRENGTH.m_arg = 0;
+
+// string shot
+strcpy(STRINGSHOT.name, "String Shot");
+STRINGSHOT.damage = 0;
+STRINGSHOT.accuracy = 0.95;
+STRINGSHOT.type = BUG_T;
+STRINGSHOT.movetype = STATUS_MT;
+STRINGSHOT.priority = 0;
+STRINGSHOT.unique = 0;
+STRINGSHOT.pp_max = 40;
+STRINGSHOT.effect = OTHR_SPEED_E2;
+STRINGSHOT.chance = 1.0;
+STRINGSHOT.m_arg = -2;
+
+// struggle
+strcpy(STRUGGLE.name, "Struggle");
+STRUGGLE.damage = 50;
+STRUGGLE.accuracy = 1.0;
+STRUGGLE.type = NORMAL_T;
+STRUGGLE.movetype = PHYSICAL_MT;
+STRUGGLE.priority = 0;
+STRUGGLE.unique = 0;
+STRUGGLE.pp_max = 0;
+STRUGGLE.effect = RECOIL_E2;
+STRUGGLE.chance = 1.0;
+STRUGGLE.m_arg = 2;
+
+// stun spore
+strcpy(STUNSPORE.name, "Stun Spore");
+STUNSPORE.damage = 0;
+STUNSPORE.accuracy = 0.75;
+STUNSPORE.type = GRASS_T;
+STUNSPORE.movetype = STATUS_MT;
+STUNSPORE.priority = 0;
+STUNSPORE.unique = 0;
+STUNSPORE.pp_max = 30;
+STUNSPORE.effect = APPLY_PAR_E2;
+STUNSPORE.chance = 1.0;
+STUNSPORE.m_arg = 0;
+
+// submission
+strcpy(SUBMISSION.name, "Submission");
+SUBMISSION.damage = 80;
+SUBMISSION.accuracy = 0.8;
+SUBMISSION.type = FIGHTING_T;
+SUBMISSION.movetype = PHYSICAL_MT;
+SUBMISSION.priority = 0;
+SUBMISSION.unique = 0;
+SUBMISSION.pp_max = 25;
+SUBMISSION.effect = RECOIL_E2;
+SUBMISSION.chance = 1.0;
+SUBMISSION.m_arg = 4;
+
+// supersonic
+strcpy(SUPERSONIC.name, "Supersonic");
+SUPERSONIC.damage = 0;
+SUPERSONIC.accuracy = 0.55;
+SUPERSONIC.type = NORMAL_T;
+SUPERSONIC.movetype = STATUS_MT;
+SUPERSONIC.priority = 0;
+SUPERSONIC.unique = 0;
+SUPERSONIC.pp_max = 20;
+SUPERSONIC.effect = APPLY_CONFUSE_E2;
+SUPERSONIC.chance = 1.0;
+SUPERSONIC.m_arg = 0;
+
+// surf
+strcpy(SURF.name, "Surf");
+SURF.damage = 90;
+SURF.accuracy = 1.0;
+SURF.type = WATER_T;
+SURF.movetype = SPECIAL_MT;
+SURF.priority = 0;
+SURF.unique = 0;
+SURF.pp_max = 15;
+SURF.effect = NON_E2;
+SURF.chance = 1.0;
+SURF.m_arg = 0;
+
+// swords dance
+strcpy(SWORDSDANCE.name, "Swords Dance");
+SWORDSDANCE.damage = 0;
+SWORDSDANCE.accuracy = 1.0;
+SWORDSDANCE.type = NORMAL_T;
+SWORDSDANCE.movetype = STATUS_MT;
+SWORDSDANCE.priority = 0;
+SWORDSDANCE.unique = 0;
+SWORDSDANCE.pp_max = 20;
+SWORDSDANCE.effect = SELF_ATTACK_E2;
+SWORDSDANCE.chance = 1.0;
+SWORDSDANCE.m_arg = 2;
+
+// tackle
+strcpy(TACKLE.name, "Tackle");
+TACKLE.damage = 50;
+TACKLE.accuracy = 1.0;
+TACKLE.type = NORMAL_T;
+TACKLE.movetype = PHYSICAL_MT;
+TACKLE.priority = 0;
+TACKLE.unique = 0;
+TACKLE.pp_max = 35;
+TACKLE.effect = NON_E2;
+TACKLE.chance = 1.0;
+TACKLE.m_arg = 0;
+
+// tail whip
+strcpy(TAILWHIP.name, "Tail Whip");
+TAILWHIP.damage = 0;
+TAILWHIP.accuracy = 1.0;
+TAILWHIP.type = NORMAL_T;
+TAILWHIP.movetype = STATUS_MT;
+TAILWHIP.priority = 0;
+TAILWHIP.unique = 0;
+TAILWHIP.pp_max = 30;
+TAILWHIP.effect = OTHR_DEFENSE_E2;
+TAILWHIP.chance = 1.0;
+TAILWHIP.m_arg = -1;
+
+// take down
+strcpy(TAKEDOWN.name, "Take Down");
+TAKEDOWN.damage = 90;
+TAKEDOWN.accuracy = 0.85;
+TAKEDOWN.type = NORMAL_T;
+TAKEDOWN.movetype = PHYSICAL_MT;
+TAKEDOWN.priority = 0;
+TAKEDOWN.unique = 0;
+TAKEDOWN.pp_max = 20;
+TAKEDOWN.effect = RECOIL_E2;
+TAKEDOWN.chance = 1.0;
+TAKEDOWN.m_arg = 4;
+
+// thunder
+strcpy(THUNDER.name, "Thunder");
+THUNDER.damage = 110;
+THUNDER.accuracy = 0.7;
+THUNDER.type = ELECTRIC_T;
+THUNDER.movetype = SPECIAL_MT;
+THUNDER.priority = 0;
+THUNDER.unique = 0;
+THUNDER.pp_max = 10;
+THUNDER.effect = APPLY_PAR_E2;
+THUNDER.chance = 0.3;
+THUNDER.m_arg = 0;
+
+// thunder punch
+strcpy(THUNDERPUNCH.name, "ThunderPunch");
+THUNDERPUNCH.damage = 75;
+THUNDERPUNCH.accuracy = 1.0;
+THUNDERPUNCH.type = ELECTRIC_T;
+THUNDERPUNCH.movetype = PHYSICAL_MT;
+THUNDERPUNCH.priority = 0;
+THUNDERPUNCH.unique = 0;
+THUNDERPUNCH.pp_max = 15;
+THUNDERPUNCH.effect = APPLY_PAR_E2;
+THUNDERPUNCH.chance = 0.1;
+THUNDERPUNCH.m_arg = 0;
+
+// thunder shock
+strcpy(THUNDERSHOCK.name, "ThunderShock");
+THUNDERSHOCK.damage = 40;
+THUNDERSHOCK.accuracy = 1.0;
+THUNDERSHOCK.type = ELECTRIC_T;
+THUNDERSHOCK.movetype = SPECIAL_MT;
+THUNDERSHOCK.priority = 0;
+THUNDERSHOCK.unique = 0;
+THUNDERSHOCK.pp_max = 30;
+THUNDERSHOCK.effect = APPLY_PAR_E2;
+THUNDERSHOCK.chance = 0.1;
+THUNDERSHOCK.m_arg = 0;
+
+// thunder wave
+strcpy(THUNDERWAVE.name, "Thunder Wave");
+THUNDERWAVE.damage = 0;
+THUNDERWAVE.accuracy = 1.0;
+THUNDERWAVE.type = ELECTRIC_T;
+THUNDERWAVE.movetype = STATUS_MT;
+THUNDERWAVE.priority = 0;
+THUNDERWAVE.unique = 0;
+THUNDERWAVE.pp_max = 20;
+THUNDERWAVE.effect = APPLY_PAR_E2;
+THUNDERWAVE.chance = 1.0;
+THUNDERWAVE.m_arg = 0;
+
+// thunderbolt
+strcpy(THUNDERBOLT.name, "Thunderbolt");
+THUNDERBOLT.damage = 90;
+THUNDERBOLT.accuracy = 1.0;
+THUNDERBOLT.type = ELECTRIC_T;
+THUNDERBOLT.movetype = SPECIAL_MT;
+THUNDERBOLT.priority = 0;
+THUNDERBOLT.unique = 0;
+THUNDERBOLT.pp_max = 15;
+THUNDERBOLT.effect = APPLY_PAR_E2;
+THUNDERBOLT.chance = 0.1;
+THUNDERBOLT.m_arg = 0;
+
+// toxic
+strcpy(TOXIC.name, "Toxic");
+TOXIC.damage = 0;
+TOXIC.accuracy = 0.9;
+TOXIC.type = POISON_T;
+TOXIC.movetype = STATUS_MT;
+TOXIC.priority = 0;
+TOXIC.unique = 0;
+TOXIC.pp_max = 10;
+TOXIC.effect = APPLY_TXC_E2;
+TOXIC.chance = 1.0;
+TOXIC.m_arg = 0;
+
+// vice grip
+strcpy(VICEGRIP.name, "Vice Grip");
+VICEGRIP.damage = 55;
+VICEGRIP.accuracy = 1.0;
+VICEGRIP.type = NORMAL_T;
+VICEGRIP.movetype = PHYSICAL_MT;
+VICEGRIP.priority = 0;
+VICEGRIP.unique = 0;
+VICEGRIP.pp_max = 30;
+VICEGRIP.effect = NON_E2;
+VICEGRIP.chance = 1.0;
+VICEGRIP.m_arg = 0;
+
+// vine whip
+strcpy(VINEWHIP.name, "Vine Whip");
+VINEWHIP.damage = 45;
+VINEWHIP.accuracy = 1.0;
+VINEWHIP.type = GRASS_T;
+VINEWHIP.movetype = PHYSICAL_MT;
+VINEWHIP.priority = 0;
+VINEWHIP.unique = 0;
+VINEWHIP.pp_max = 25;
+VINEWHIP.effect = NON_E2;
+VINEWHIP.chance = 1.0;
+VINEWHIP.m_arg = 0;
+
+// water gun
+strcpy(WATERGUN.name, "Water Gun");
+WATERGUN.damage = 40;
+WATERGUN.accuracy = 1.0;
+WATERGUN.type = WATER_T;
+WATERGUN.movetype = SPECIAL_MT;
+WATERGUN.priority = 0;
+WATERGUN.unique = 0;
+WATERGUN.pp_max = 25;
+WATERGUN.effect = NON_E2;
+WATERGUN.chance = 1.0;
+WATERGUN.m_arg = 0;
+
+// waterfall
+strcpy(WATERFALL.name, "Waterfall");
+WATERFALL.damage = 80;
+WATERFALL.accuracy = 1.0;
+WATERFALL.type = WATER_T;
+WATERFALL.movetype = PHYSICAL_MT;
+WATERFALL.priority = 0;
+WATERFALL.unique = 0;
+WATERFALL.pp_max = 15;
+WATERFALL.effect = APPLY_FLINCH_E2;
+WATERFALL.chance = 0.2;
+WATERFALL.m_arg = 0;
+
+// wing attack
+strcpy(WINGATTACK.name, "Wing Attack");
+WINGATTACK.damage = 60;
+WINGATTACK.accuracy = 1.0;
+WINGATTACK.type = FLYING_T;
+WINGATTACK.movetype = PHYSICAL_MT;
+WINGATTACK.priority = 0;
+WINGATTACK.unique = 0;
+WINGATTACK.pp_max = 35;
+WINGATTACK.effect = NON_E2;
+WINGATTACK.chance = 1.0;
+WINGATTACK.m_arg = 0;
+
+// withdraw
+strcpy(WITHDRAW.name, "Withdraw");
+WITHDRAW.damage = 0;
+WITHDRAW.accuracy = 1.0;
+WITHDRAW.type = WATER_T;
+WITHDRAW.movetype = STATUS_MT;
+WITHDRAW.priority = 0;
+WITHDRAW.unique = 0;
+WITHDRAW.pp_max = 40;
+WITHDRAW.effect = SELF_DEFENSE_E2;
+WITHDRAW.chance = 1.0;
+WITHDRAW.m_arg = 1;

@@ -44,7 +44,7 @@ menu_s fpkmn_menu; // forced switch
 effective_t echart[18][18];
 
 pokemonspec_s specs_all[151];
-move_s moves_all[110];
+move_s moves_all[111];
 pokemon_s rentals_all[12];
 
 trainer_s RED;
