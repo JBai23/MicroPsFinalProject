@@ -1,0 +1,13 @@
+
+
+C:/Users/jbai/Desktop/EndOfTheWorld/aaa/MicroPsFinalProject-master/FPGA/sfl.v
+
+Dec 08 03AM:10:57>: The following design file, which has identical name but a different extension 
+from the specified variation file, already exists in the working directory:
+
+sfl.vhd
+
+This may create a conflict of design files and/or lead to undesirable side
+effects.
+
+Is it OK to continue file generation?

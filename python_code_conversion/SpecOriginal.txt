@@ -1,0 +1,1811 @@
+// bulbasaur
+strcpy(BULBASAUR.name, "Bulbasaur");
+BULBASAUR.id = 1;
+BULBASAUR.type1 = GRASS_T;
+BULBASAUR.type2 = POISON_T;
+BULBASAUR.bstats.hp_base = 45;
+BULBASAUR.bstats.attack_base = 49;
+BULBASAUR.bstats.defense_base = 49;
+BULBASAUR.bstats.sattack_base = 65;
+BULBASAUR.bstats.sdefense_base = 65;
+BULBASAUR.bstats.speed_base = 45;
+
+// ivysaur
+strcpy(IVYSAUR.name, "Ivysaur");
+IVYSAUR.id = 2;
+IVYSAUR.type1 = GRASS_T;
+IVYSAUR.type2 = POISON_T;
+IVYSAUR.bstats.hp_base = 60;
+IVYSAUR.bstats.attack_base = 62;
+IVYSAUR.bstats.defense_base = 63;
+IVYSAUR.bstats.sattack_base = 80;
+IVYSAUR.bstats.sdefense_base = 80;
+IVYSAUR.bstats.speed_base = 60;
+
+// venusaur
+strcpy(VENUSAUR.name, "Venusaur");
+VENUSAUR.id = 3;
+VENUSAUR.type1 = GRASS_T;
+VENUSAUR.type2 = POISON_T;
+VENUSAUR.bstats.hp_base = 80;
+VENUSAUR.bstats.attack_base = 82;
+VENUSAUR.bstats.defense_base = 83;
+VENUSAUR.bstats.sattack_base = 100;
+VENUSAUR.bstats.sdefense_base = 100;
+VENUSAUR.bstats.speed_base = 80;
+
+// charmander
+strcpy(CHARMANDER.name, "Charmander");
+CHARMANDER.id = 4;
+CHARMANDER.type1 = FIRE_T;
+CHARMANDER.type2 = NON_T;
+CHARMANDER.bstats.hp_base = 39;
+CHARMANDER.bstats.attack_base = 52;
+CHARMANDER.bstats.defense_base = 43;
+CHARMANDER.bstats.sattack_base = 60;
+CHARMANDER.bstats.sdefense_base = 50;
+CHARMANDER.bstats.speed_base = 65;
+
+// charmeleon
+strcpy(CHARMELEON.name, "Charmeleon");
+CHARMELEON.id = 5;
+CHARMELEON.type1 = FIRE_T;
+CHARMELEON.type2 = NON_T;
+CHARMELEON.bstats.hp_base = 58;
+CHARMELEON.bstats.attack_base = 64;
+CHARMELEON.bstats.defense_base = 58;
+CHARMELEON.bstats.sattack_base = 80;
+CHARMELEON.bstats.sdefense_base = 65;
+CHARMELEON.bstats.speed_base = 80;
+
+// charizard
+strcpy(CHARIZARD.name, "Charizard");
+CHARIZARD.id = 6;
+CHARIZARD.type1 = FIRE_T;
+CHARIZARD.type2 = FLYING_T;
+CHARIZARD.bstats.hp_base = 78;
+CHARIZARD.bstats.attack_base = 84;
+CHARIZARD.bstats.defense_base = 78;
+CHARIZARD.bstats.sattack_base = 109;
+CHARIZARD.bstats.sdefense_base = 85;
+CHARIZARD.bstats.speed_base = 100;
+
+// squirtle
+strcpy(SQUIRTLE.name, "Squirtle");
+SQUIRTLE.id = 7;
+SQUIRTLE.type1 = WATER_T;
+SQUIRTLE.type2 = NON_T;
+SQUIRTLE.bstats.hp_base = 44;
+SQUIRTLE.bstats.attack_base = 48;
+SQUIRTLE.bstats.defense_base = 65;
+SQUIRTLE.bstats.sattack_base = 50;
+SQUIRTLE.bstats.sdefense_base = 64;
+SQUIRTLE.bstats.speed_base = 43;
+
+// wartortle
+strcpy(WARTORTLE.name, "Wartortle");
+WARTORTLE.id = 8;
+WARTORTLE.type1 = WATER_T;
+WARTORTLE.type2 = NON_T;
+WARTORTLE.bstats.hp_base = 59;
+WARTORTLE.bstats.attack_base = 63;
+WARTORTLE.bstats.defense_base = 80;
+WARTORTLE.bstats.sattack_base = 65;
+WARTORTLE.bstats.sdefense_base = 80;
+WARTORTLE.bstats.speed_base = 58;
+
+// blastoise
+strcpy(BLASTOISE.name, "Blastoise");
+BLASTOISE.id = 9;
+BLASTOISE.type1 = WATER_T;
+BLASTOISE.type2 = NON_T;
+BLASTOISE.bstats.hp_base = 79;
+BLASTOISE.bstats.attack_base = 83;
+BLASTOISE.bstats.defense_base = 100;
+BLASTOISE.bstats.sattack_base = 85;
+BLASTOISE.bstats.sdefense_base = 105;
+BLASTOISE.bstats.speed_base = 78;
+
+// caterpie
+strcpy(CATERPIE.name, "Caterpie");
+CATERPIE.id = 10;
+CATERPIE.type1 = BUG_T;
+CATERPIE.type2 = NON_T;
+CATERPIE.bstats.hp_base = 45;
+CATERPIE.bstats.attack_base = 30;
+CATERPIE.bstats.defense_base = 35;
+CATERPIE.bstats.sattack_base = 20;
+CATERPIE.bstats.sdefense_base = 20;
+CATERPIE.bstats.speed_base = 45;
+
+// metapod
+strcpy(METAPOD.name, "Metapod");
+METAPOD.id = 11;
+METAPOD.type1 = BUG_T;
+METAPOD.type2 = NON_T;
+METAPOD.bstats.hp_base = 50;
+METAPOD.bstats.attack_base = 20;
+METAPOD.bstats.defense_base = 55;
+METAPOD.bstats.sattack_base = 25;
+METAPOD.bstats.sdefense_base = 25;
+METAPOD.bstats.speed_base = 30;
+
+// butterfree
+strcpy(BUTTERFREE.name, "Butterfree");
+BUTTERFREE.id = 12;
+BUTTERFREE.type1 = BUG_T;
+BUTTERFREE.type2 = FLYING_T;
+BUTTERFREE.bstats.hp_base = 60;
+BUTTERFREE.bstats.attack_base = 45;
+BUTTERFREE.bstats.defense_base = 50;
+BUTTERFREE.bstats.sattack_base = 90;
+BUTTERFREE.bstats.sdefense_base = 80;
+BUTTERFREE.bstats.speed_base = 70;
+
+// weedle
+strcpy(WEEDLE.name, "Weedle");
+WEEDLE.id = 13;
+WEEDLE.type1 = BUG_T;
+WEEDLE.type2 = POISON_T;
+WEEDLE.bstats.hp_base = 40;
+WEEDLE.bstats.attack_base = 35;
+WEEDLE.bstats.defense_base = 30;
+WEEDLE.bstats.sattack_base = 20;
+WEEDLE.bstats.sdefense_base = 20;
+WEEDLE.bstats.speed_base = 50;
+
+// kakuna
+strcpy(KAKUNA.name, "Kakuna");
+KAKUNA.id = 14;
+KAKUNA.type1 = BUG_T;
+KAKUNA.type2 = POISON_T;
+KAKUNA.bstats.hp_base = 45;
+KAKUNA.bstats.attack_base = 25;
+KAKUNA.bstats.defense_base = 50;
+KAKUNA.bstats.sattack_base = 25;
+KAKUNA.bstats.sdefense_base = 25;
+KAKUNA.bstats.speed_base = 35;
+
+// beedrill
+strcpy(BEEDRILL.name, "Beedrill");
+BEEDRILL.id = 15;
+BEEDRILL.type1 = BUG_T;
+BEEDRILL.type2 = POISON_T;
+BEEDRILL.bstats.hp_base = 65;
+BEEDRILL.bstats.attack_base = 90;
+BEEDRILL.bstats.defense_base = 40;
+BEEDRILL.bstats.sattack_base = 45;
+BEEDRILL.bstats.sdefense_base = 80;
+BEEDRILL.bstats.speed_base = 75;
+
+// pidgey
+strcpy(PIDGEY.name, "Pidgey");
+PIDGEY.id = 16;
+PIDGEY.type1 = NORMAL_T;
+PIDGEY.type2 = FLYING_T;
+PIDGEY.bstats.hp_base = 40;
+PIDGEY.bstats.attack_base = 45;
+PIDGEY.bstats.defense_base = 40;
+PIDGEY.bstats.sattack_base = 35;
+PIDGEY.bstats.sdefense_base = 35;
+PIDGEY.bstats.speed_base = 56;
+
+// pidgeotto
+strcpy(PIDGEOTTO.name, "Pidgeotto");
+PIDGEOTTO.id = 17;
+PIDGEOTTO.type1 = NORMAL_T;
+PIDGEOTTO.type2 = FLYING_T;
+PIDGEOTTO.bstats.hp_base = 63;
+PIDGEOTTO.bstats.attack_base = 60;
+PIDGEOTTO.bstats.defense_base = 55;
+PIDGEOTTO.bstats.sattack_base = 50;
+PIDGEOTTO.bstats.sdefense_base = 50;
+PIDGEOTTO.bstats.speed_base = 71;
+
+// pidgeot
+strcpy(PIDGEOT.name, "Pidgeot");
+PIDGEOT.id = 18;
+PIDGEOT.type1 = NORMAL_T;
+PIDGEOT.type2 = FLYING_T;
+PIDGEOT.bstats.hp_base = 83;
+PIDGEOT.bstats.attack_base = 80;
+PIDGEOT.bstats.defense_base = 75;
+PIDGEOT.bstats.sattack_base = 70;
+PIDGEOT.bstats.sdefense_base = 70;
+PIDGEOT.bstats.speed_base = 101;
+
+// rattata
+strcpy(RATTATA.name, "Rattata");
+RATTATA.id = 19;
+RATTATA.type1 = NORMAL_T;
+RATTATA.type2 = NON_T;
+RATTATA.bstats.hp_base = 30;
+RATTATA.bstats.attack_base = 56;
+RATTATA.bstats.defense_base = 35;
+RATTATA.bstats.sattack_base = 25;
+RATTATA.bstats.sdefense_base = 35;
+RATTATA.bstats.speed_base = 72;
+
+// raticate
+strcpy(RATICATE.name, "Raticate");
+RATICATE.id = 20;
+RATICATE.type1 = NORMAL_T;
+RATICATE.type2 = NON_T;
+RATICATE.bstats.hp_base = 55;
+RATICATE.bstats.attack_base = 81;
+RATICATE.bstats.defense_base = 60;
+RATICATE.bstats.sattack_base = 50;
+RATICATE.bstats.sdefense_base = 70;
+RATICATE.bstats.speed_base = 97;
+
+// spearow
+strcpy(SPEAROW.name, "Spearow");
+SPEAROW.id = 21;
+SPEAROW.type1 = NORMAL_T;
+SPEAROW.type2 = FLYING_T;
+SPEAROW.bstats.hp_base = 40;
+SPEAROW.bstats.attack_base = 60;
+SPEAROW.bstats.defense_base = 30;
+SPEAROW.bstats.sattack_base = 31;
+SPEAROW.bstats.sdefense_base = 31;
+SPEAROW.bstats.speed_base = 70;
+
+// fearow
+strcpy(FEAROW.name, "Fearow");
+FEAROW.id = 22;
+FEAROW.type1 = NORMAL_T;
+FEAROW.type2 = FLYING_T;
+FEAROW.bstats.hp_base = 65;
+FEAROW.bstats.attack_base = 90;
+FEAROW.bstats.defense_base = 65;
+FEAROW.bstats.sattack_base = 61;
+FEAROW.bstats.sdefense_base = 61;
+FEAROW.bstats.speed_base = 100;
+
+// ekans
+strcpy(EKANS.name, "Ekans");
+EKANS.id = 23;
+EKANS.type1 = POISON_T;
+EKANS.type2 = NON_T;
+EKANS.bstats.hp_base = 35;
+EKANS.bstats.attack_base = 60;
+EKANS.bstats.defense_base = 44;
+EKANS.bstats.sattack_base = 40;
+EKANS.bstats.sdefense_base = 54;
+EKANS.bstats.speed_base = 55;
+
+// arbok
+strcpy(ARBOK.name, "Arbok");
+ARBOK.id = 24;
+ARBOK.type1 = POISON_T;
+ARBOK.type2 = NON_T;
+ARBOK.bstats.hp_base = 60;
+ARBOK.bstats.attack_base = 85;
+ARBOK.bstats.defense_base = 69;
+ARBOK.bstats.sattack_base = 65;
+ARBOK.bstats.sdefense_base = 79;
+ARBOK.bstats.speed_base = 80;
+
+// pikachu
+strcpy(PIKACHU.name, "Pikachu");
+PIKACHU.id = 25;
+PIKACHU.type1 = ELECTRIC_T;
+PIKACHU.type2 = NON_T;
+PIKACHU.bstats.hp_base = 35;
+PIKACHU.bstats.attack_base = 55;
+PIKACHU.bstats.defense_base = 40;
+PIKACHU.bstats.sattack_base = 50;
+PIKACHU.bstats.sdefense_base = 50;
+PIKACHU.bstats.speed_base = 90;
+
+// raichu
+strcpy(RAICHU.name, "Raichu");
+RAICHU.id = 26;
+RAICHU.type1 = ELECTRIC_T;
+RAICHU.type2 = NON_T;
+RAICHU.bstats.hp_base = 60;
+RAICHU.bstats.attack_base = 90;
+RAICHU.bstats.defense_base = 55;
+RAICHU.bstats.sattack_base = 90;
+RAICHU.bstats.sdefense_base = 80;
+RAICHU.bstats.speed_base = 110;
+
+// sandshrew
+strcpy(SANDSHREW.name, "Sandshrew");
+SANDSHREW.id = 27;
+SANDSHREW.type1 = GROUND_T;
+SANDSHREW.type2 = NON_T;
+SANDSHREW.bstats.hp_base = 50;
+SANDSHREW.bstats.attack_base = 75;
+SANDSHREW.bstats.defense_base = 85;
+SANDSHREW.bstats.sattack_base = 20;
+SANDSHREW.bstats.sdefense_base = 30;
+SANDSHREW.bstats.speed_base = 40;
+
+// sandslash
+strcpy(SANDSLASH.name, "Sandslash");
+SANDSLASH.id = 28;
+SANDSLASH.type1 = GROUND_T;
+SANDSLASH.type2 = NON_T;
+SANDSLASH.bstats.hp_base = 75;
+SANDSLASH.bstats.attack_base = 100;
+SANDSLASH.bstats.defense_base = 110;
+SANDSLASH.bstats.sattack_base = 45;
+SANDSLASH.bstats.sdefense_base = 55;
+SANDSLASH.bstats.speed_base = 65;
+
+// nidoran_f
+strcpy(NIDORAN_F.name, "Nidoran (F)");
+NIDORAN_F.id = 29;
+NIDORAN_F.type1 = POISON_T;
+NIDORAN_F.type2 = NON_T;
+NIDORAN_F.bstats.hp_base = 55;
+NIDORAN_F.bstats.attack_base = 47;
+NIDORAN_F.bstats.defense_base = 52;
+NIDORAN_F.bstats.sattack_base = 40;
+NIDORAN_F.bstats.sdefense_base = 40;
+NIDORAN_F.bstats.speed_base = 41;
+
+// nidorina
+strcpy(NIDORINA.name, "Nidorina");
+NIDORINA.id = 30;
+NIDORINA.type1 = POISON_T;
+NIDORINA.type2 = NON_T;
+NIDORINA.bstats.hp_base = 70;
+NIDORINA.bstats.attack_base = 62;
+NIDORINA.bstats.defense_base = 67;
+NIDORINA.bstats.sattack_base = 55;
+NIDORINA.bstats.sdefense_base = 55;
+NIDORINA.bstats.speed_base = 56;
+
+// nidoqueen
+strcpy(NIDOQUEEN.name, "Nidoqueen");
+NIDOQUEEN.id = 31;
+NIDOQUEEN.type1 = POISON_T;
+NIDOQUEEN.type2 = GROUND_T;
+NIDOQUEEN.bstats.hp_base = 90;
+NIDOQUEEN.bstats.attack_base = 92;
+NIDOQUEEN.bstats.defense_base = 87;
+NIDOQUEEN.bstats.sattack_base = 75;
+NIDOQUEEN.bstats.sdefense_base = 85;
+NIDOQUEEN.bstats.speed_base = 76;
+
+// nidoran_m
+strcpy(NIDORAN_M.name, "Nidoran (M)");
+NIDORAN_M.id = 32;
+NIDORAN_M.type1 = POISON_T;
+NIDORAN_M.type2 = NON_T;
+NIDORAN_M.bstats.hp_base = 46;
+NIDORAN_M.bstats.attack_base = 57;
+NIDORAN_M.bstats.defense_base = 40;
+NIDORAN_M.bstats.sattack_base = 40;
+NIDORAN_M.bstats.sdefense_base = 40;
+NIDORAN_M.bstats.speed_base = 50;
+
+// nidorino
+strcpy(NIDORINO.name, "Nidorino");
+NIDORINO.id = 33;
+NIDORINO.type1 = POISON_T;
+NIDORINO.type2 = NON_T;
+NIDORINO.bstats.hp_base = 61;
+NIDORINO.bstats.attack_base = 72;
+NIDORINO.bstats.defense_base = 57;
+NIDORINO.bstats.sattack_base = 55;
+NIDORINO.bstats.sdefense_base = 55;
+NIDORINO.bstats.speed_base = 65;
+
+// nidoking
+strcpy(NIDOKING.name, "Nidoking");
+NIDOKING.id = 34;
+NIDOKING.type1 = POISON_T;
+NIDOKING.type2 = GROUND_T;
+NIDOKING.bstats.hp_base = 81;
+NIDOKING.bstats.attack_base = 102;
+NIDOKING.bstats.defense_base = 77;
+NIDOKING.bstats.sattack_base = 85;
+NIDOKING.bstats.sdefense_base = 75;
+NIDOKING.bstats.speed_base = 85;
+
+// clefairy
+strcpy(CLEFAIRY.name, "Clefairy");
+CLEFAIRY.id = 35;
+CLEFAIRY.type1 = FAIRY_T;
+CLEFAIRY.type2 = NON_T;
+CLEFAIRY.bstats.hp_base = 70;
+CLEFAIRY.bstats.attack_base = 45;
+CLEFAIRY.bstats.defense_base = 48;
+CLEFAIRY.bstats.sattack_base = 60;
+CLEFAIRY.bstats.sdefense_base = 65;
+CLEFAIRY.bstats.speed_base = 35;
+
+// clefable
+strcpy(CLEFABLE.name, "Clefable");
+CLEFABLE.id = 36;
+CLEFABLE.type1 = FAIRY_T;
+CLEFABLE.type2 = NON_T;
+CLEFABLE.bstats.hp_base = 95;
+CLEFABLE.bstats.attack_base = 70;
+CLEFABLE.bstats.defense_base = 73;
+CLEFABLE.bstats.sattack_base = 95;
+CLEFABLE.bstats.sdefense_base = 90;
+CLEFABLE.bstats.speed_base = 60;
+
+// vulpix
+strcpy(VULPIX.name, "Vulpix");
+VULPIX.id = 37;
+VULPIX.type1 = FIRE_T;
+VULPIX.type2 = NON_T;
+VULPIX.bstats.hp_base = 38;
+VULPIX.bstats.attack_base = 41;
+VULPIX.bstats.defense_base = 40;
+VULPIX.bstats.sattack_base = 50;
+VULPIX.bstats.sdefense_base = 65;
+VULPIX.bstats.speed_base = 65;
+
+// ninetales
+strcpy(NINETALES.name, "Ninetales");
+NINETALES.id = 38;
+NINETALES.type1 = FIRE_T;
+NINETALES.type2 = NON_T;
+NINETALES.bstats.hp_base = 73;
+NINETALES.bstats.attack_base = 76;
+NINETALES.bstats.defense_base = 75;
+NINETALES.bstats.sattack_base = 81;
+NINETALES.bstats.sdefense_base = 100;
+NINETALES.bstats.speed_base = 100;
+
+// jigglypuff
+strcpy(JIGGLYPUFF.name, "Jigglypuff");
+JIGGLYPUFF.id = 39;
+JIGGLYPUFF.type1 = NORMAL_T;
+JIGGLYPUFF.type2 = FAIRY_T;
+JIGGLYPUFF.bstats.hp_base = 115;
+JIGGLYPUFF.bstats.attack_base = 45;
+JIGGLYPUFF.bstats.defense_base = 20;
+JIGGLYPUFF.bstats.sattack_base = 45;
+JIGGLYPUFF.bstats.sdefense_base = 25;
+JIGGLYPUFF.bstats.speed_base = 20;
+
+// wigglytuff
+strcpy(WIGGLYTUFF.name, "Wigglytuff");
+WIGGLYTUFF.id = 40;
+WIGGLYTUFF.type1 = NORMAL_T;
+WIGGLYTUFF.type2 = FAIRY_T;
+WIGGLYTUFF.bstats.hp_base = 140;
+WIGGLYTUFF.bstats.attack_base = 70;
+WIGGLYTUFF.bstats.defense_base = 45;
+WIGGLYTUFF.bstats.sattack_base = 85;
+WIGGLYTUFF.bstats.sdefense_base = 50;
+WIGGLYTUFF.bstats.speed_base = 45;
+
+// zubat
+strcpy(ZUBAT.name, "Zubat");
+ZUBAT.id = 41;
+ZUBAT.type1 = POISON_T;
+ZUBAT.type2 = FLYING_T;
+ZUBAT.bstats.hp_base = 40;
+ZUBAT.bstats.attack_base = 45;
+ZUBAT.bstats.defense_base = 35;
+ZUBAT.bstats.sattack_base = 30;
+ZUBAT.bstats.sdefense_base = 40;
+ZUBAT.bstats.speed_base = 55;
+
+// golbat
+strcpy(GOLBAT.name, "Golbat");
+GOLBAT.id = 42;
+GOLBAT.type1 = POISON_T;
+GOLBAT.type2 = FLYING_T;
+GOLBAT.bstats.hp_base = 75;
+GOLBAT.bstats.attack_base = 80;
+GOLBAT.bstats.defense_base = 70;
+GOLBAT.bstats.sattack_base = 65;
+GOLBAT.bstats.sdefense_base = 75;
+GOLBAT.bstats.speed_base = 90;
+
+// oddish
+strcpy(ODDISH.name, "Oddish");
+ODDISH.id = 43;
+ODDISH.type1 = GRASS_T;
+ODDISH.type2 = POISON_T;
+ODDISH.bstats.hp_base = 45;
+ODDISH.bstats.attack_base = 50;
+ODDISH.bstats.defense_base = 55;
+ODDISH.bstats.sattack_base = 75;
+ODDISH.bstats.sdefense_base = 65;
+ODDISH.bstats.speed_base = 30;
+
+// gloom
+strcpy(GLOOM.name, "Gloom");
+GLOOM.id = 44;
+GLOOM.type1 = GRASS_T;
+GLOOM.type2 = POISON_T;
+GLOOM.bstats.hp_base = 60;
+GLOOM.bstats.attack_base = 65;
+GLOOM.bstats.defense_base = 70;
+GLOOM.bstats.sattack_base = 85;
+GLOOM.bstats.sdefense_base = 75;
+GLOOM.bstats.speed_base = 40;
+
+// vileplume
+strcpy(VILEPLUME.name, "Vileplume");
+VILEPLUME.id = 45;
+VILEPLUME.type1 = GRASS_T;
+VILEPLUME.type2 = POISON_T;
+VILEPLUME.bstats.hp_base = 75;
+VILEPLUME.bstats.attack_base = 80;
+VILEPLUME.bstats.defense_base = 85;
+VILEPLUME.bstats.sattack_base = 110;
+VILEPLUME.bstats.sdefense_base = 90;
+VILEPLUME.bstats.speed_base = 50;
+
+// paras
+strcpy(PARAS.name, "Paras");
+PARAS.id = 46;
+PARAS.type1 = BUG_T;
+PARAS.type2 = GRASS_T;
+PARAS.bstats.hp_base = 35;
+PARAS.bstats.attack_base = 70;
+PARAS.bstats.defense_base = 55;
+PARAS.bstats.sattack_base = 45;
+PARAS.bstats.sdefense_base = 55;
+PARAS.bstats.speed_base = 25;
+
+// parasect
+strcpy(PARASECT.name, "Parasect");
+PARASECT.id = 47;
+PARASECT.type1 = BUG_T;
+PARASECT.type2 = GRASS_T;
+PARASECT.bstats.hp_base = 60;
+PARASECT.bstats.attack_base = 95;
+PARASECT.bstats.defense_base = 80;
+PARASECT.bstats.sattack_base = 60;
+PARASECT.bstats.sdefense_base = 80;
+PARASECT.bstats.speed_base = 30;
+
+// venonat
+strcpy(VENONAT.name, "Venonat");
+VENONAT.id = 48;
+VENONAT.type1 = BUG_T;
+VENONAT.type2 = POISON_T;
+VENONAT.bstats.hp_base = 60;
+VENONAT.bstats.attack_base = 55;
+VENONAT.bstats.defense_base = 50;
+VENONAT.bstats.sattack_base = 40;
+VENONAT.bstats.sdefense_base = 55;
+VENONAT.bstats.speed_base = 45;
+
+// venomoth
+strcpy(VENOMOTH.name, "Venomoth");
+VENOMOTH.id = 49;
+VENOMOTH.type1 = BUG_T;
+VENOMOTH.type2 = POISON_T;
+VENOMOTH.bstats.hp_base = 70;
+VENOMOTH.bstats.attack_base = 65;
+VENOMOTH.bstats.defense_base = 60;
+VENOMOTH.bstats.sattack_base = 90;
+VENOMOTH.bstats.sdefense_base = 75;
+VENOMOTH.bstats.speed_base = 90;
+
+// diglett
+strcpy(DIGLETT.name, "Diglett");
+DIGLETT.id = 50;
+DIGLETT.type1 = GROUND_T;
+DIGLETT.type2 = NON_T;
+DIGLETT.bstats.hp_base = 10;
+DIGLETT.bstats.attack_base = 55;
+DIGLETT.bstats.defense_base = 25;
+DIGLETT.bstats.sattack_base = 35;
+DIGLETT.bstats.sdefense_base = 45;
+DIGLETT.bstats.speed_base = 95;
+
+// dugtrio
+strcpy(DUGTRIO.name, "Dugtrio");
+DUGTRIO.id = 51;
+DUGTRIO.type1 = GROUND_T;
+DUGTRIO.type2 = NON_T;
+DUGTRIO.bstats.hp_base = 35;
+DUGTRIO.bstats.attack_base = 80;
+DUGTRIO.bstats.defense_base = 50;
+DUGTRIO.bstats.sattack_base = 50;
+DUGTRIO.bstats.sdefense_base = 70;
+DUGTRIO.bstats.speed_base = 120;
+
+// meowth
+strcpy(MEOWTH.name, "Meowth");
+MEOWTH.id = 52;
+MEOWTH.type1 = NORMAL_T;
+MEOWTH.type2 = NON_T;
+MEOWTH.bstats.hp_base = 40;
+MEOWTH.bstats.attack_base = 45;
+MEOWTH.bstats.defense_base = 35;
+MEOWTH.bstats.sattack_base = 40;
+MEOWTH.bstats.sdefense_base = 40;
+MEOWTH.bstats.speed_base = 90;
+
+// persian
+strcpy(PERSIAN.name, "Persian");
+PERSIAN.id = 53;
+PERSIAN.type1 = NORMAL_T;
+PERSIAN.type2 = NON_T;
+PERSIAN.bstats.hp_base = 65;
+PERSIAN.bstats.attack_base = 70;
+PERSIAN.bstats.defense_base = 60;
+PERSIAN.bstats.sattack_base = 65;
+PERSIAN.bstats.sdefense_base = 65;
+PERSIAN.bstats.speed_base = 115;
+
+// psyduck
+strcpy(PSYDUCK.name, "Psyduck");
+PSYDUCK.id = 54;
+PSYDUCK.type1 = WATER_T;
+PSYDUCK.type2 = NON_T;
+PSYDUCK.bstats.hp_base = 50;
+PSYDUCK.bstats.attack_base = 52;
+PSYDUCK.bstats.defense_base = 48;
+PSYDUCK.bstats.sattack_base = 65;
+PSYDUCK.bstats.sdefense_base = 50;
+PSYDUCK.bstats.speed_base = 55;
+
+// golduck
+strcpy(GOLDUCK.name, "Golduck");
+GOLDUCK.id = 55;
+GOLDUCK.type1 = WATER_T;
+GOLDUCK.type2 = NON_T;
+GOLDUCK.bstats.hp_base = 80;
+GOLDUCK.bstats.attack_base = 82;
+GOLDUCK.bstats.defense_base = 78;
+GOLDUCK.bstats.sattack_base = 95;
+GOLDUCK.bstats.sdefense_base = 80;
+GOLDUCK.bstats.speed_base = 85;
+
+// mankey
+strcpy(MANKEY.name, "Mankey");
+MANKEY.id = 56;
+MANKEY.type1 = FIGHTING_T;
+MANKEY.type2 = NON_T;
+MANKEY.bstats.hp_base = 40;
+MANKEY.bstats.attack_base = 80;
+MANKEY.bstats.defense_base = 35;
+MANKEY.bstats.sattack_base = 35;
+MANKEY.bstats.sdefense_base = 45;
+MANKEY.bstats.speed_base = 70;
+
+// primeape
+strcpy(PRIMEAPE.name, "Primeape");
+PRIMEAPE.id = 57;
+PRIMEAPE.type1 = FIGHTING_T;
+PRIMEAPE.type2 = NON_T;
+PRIMEAPE.bstats.hp_base = 65;
+PRIMEAPE.bstats.attack_base = 105;
+PRIMEAPE.bstats.defense_base = 60;
+PRIMEAPE.bstats.sattack_base = 60;
+PRIMEAPE.bstats.sdefense_base = 70;
+PRIMEAPE.bstats.speed_base = 95;
+
+// growlithe
+strcpy(GROWLITHE.name, "Growlithe");
+GROWLITHE.id = 58;
+GROWLITHE.type1 = FIRE_T;
+GROWLITHE.type2 = NON_T;
+GROWLITHE.bstats.hp_base = 55;
+GROWLITHE.bstats.attack_base = 70;
+GROWLITHE.bstats.defense_base = 45;
+GROWLITHE.bstats.sattack_base = 70;
+GROWLITHE.bstats.sdefense_base = 50;
+GROWLITHE.bstats.speed_base = 60;
+
+// arcanine
+strcpy(ARCANINE.name, "Arcanine");
+ARCANINE.id = 59;
+ARCANINE.type1 = FIRE_T;
+ARCANINE.type2 = NON_T;
+ARCANINE.bstats.hp_base = 90;
+ARCANINE.bstats.attack_base = 110;
+ARCANINE.bstats.defense_base = 80;
+ARCANINE.bstats.sattack_base = 100;
+ARCANINE.bstats.sdefense_base = 80;
+ARCANINE.bstats.speed_base = 95;
+
+// poliwag
+strcpy(POLIWAG.name, "Poliwag");
+POLIWAG.id = 60;
+POLIWAG.type1 = WATER_T;
+POLIWAG.type2 = NON_T;
+POLIWAG.bstats.hp_base = 40;
+POLIWAG.bstats.attack_base = 50;
+POLIWAG.bstats.defense_base = 40;
+POLIWAG.bstats.sattack_base = 40;
+POLIWAG.bstats.sdefense_base = 40;
+POLIWAG.bstats.speed_base = 90;
+
+// poliwhirl
+strcpy(POLIWHIRL.name, "Poliwhirl");
+POLIWHIRL.id = 61;
+POLIWHIRL.type1 = WATER_T;
+POLIWHIRL.type2 = NON_T;
+POLIWHIRL.bstats.hp_base = 65;
+POLIWHIRL.bstats.attack_base = 65;
+POLIWHIRL.bstats.defense_base = 65;
+POLIWHIRL.bstats.sattack_base = 50;
+POLIWHIRL.bstats.sdefense_base = 50;
+POLIWHIRL.bstats.speed_base = 90;
+
+// poliwrath
+strcpy(POLIWRATH.name, "Poliwrath");
+POLIWRATH.id = 62;
+POLIWRATH.type1 = WATER_T;
+POLIWRATH.type2 = FIGHTING_T;
+POLIWRATH.bstats.hp_base = 90;
+POLIWRATH.bstats.attack_base = 95;
+POLIWRATH.bstats.defense_base = 95;
+POLIWRATH.bstats.sattack_base = 70;
+POLIWRATH.bstats.sdefense_base = 90;
+POLIWRATH.bstats.speed_base = 70;
+
+// abra
+strcpy(ABRA.name, "Abra");
+ABRA.id = 63;
+ABRA.type1 = PSYCHIC_T;
+ABRA.type2 = NON_T;
+ABRA.bstats.hp_base = 25;
+ABRA.bstats.attack_base = 20;
+ABRA.bstats.defense_base = 15;
+ABRA.bstats.sattack_base = 105;
+ABRA.bstats.sdefense_base = 55;
+ABRA.bstats.speed_base = 90;
+
+// kadabra
+strcpy(KADABRA.name, "Kadabra");
+KADABRA.id = 64;
+KADABRA.type1 = PSYCHIC_T;
+KADABRA.type2 = NON_T;
+KADABRA.bstats.hp_base = 40;
+KADABRA.bstats.attack_base = 35;
+KADABRA.bstats.defense_base = 30;
+KADABRA.bstats.sattack_base = 120;
+KADABRA.bstats.sdefense_base = 70;
+KADABRA.bstats.speed_base = 105;
+
+// alakazam
+strcpy(ALAKAZAM.name, "Alakazam");
+ALAKAZAM.id = 65;
+ALAKAZAM.type1 = PSYCHIC_T;
+ALAKAZAM.type2 = NON_T;
+ALAKAZAM.bstats.hp_base = 55;
+ALAKAZAM.bstats.attack_base = 50;
+ALAKAZAM.bstats.defense_base = 45;
+ALAKAZAM.bstats.sattack_base = 135;
+ALAKAZAM.bstats.sdefense_base = 95;
+ALAKAZAM.bstats.speed_base = 120;
+
+// machop
+strcpy(MACHOP.name, "Machop");
+MACHOP.id = 66;
+MACHOP.type1 = FIGHTING_T;
+MACHOP.type2 = NON_T;
+MACHOP.bstats.hp_base = 70;
+MACHOP.bstats.attack_base = 80;
+MACHOP.bstats.defense_base = 50;
+MACHOP.bstats.sattack_base = 35;
+MACHOP.bstats.sdefense_base = 35;
+MACHOP.bstats.speed_base = 35;
+
+// machoke
+strcpy(MACHOKE.name, "Machoke");
+MACHOKE.id = 67;
+MACHOKE.type1 = FIGHTING_T;
+MACHOKE.type2 = NON_T;
+MACHOKE.bstats.hp_base = 80;
+MACHOKE.bstats.attack_base = 100;
+MACHOKE.bstats.defense_base = 70;
+MACHOKE.bstats.sattack_base = 50;
+MACHOKE.bstats.sdefense_base = 60;
+MACHOKE.bstats.speed_base = 45;
+
+// machamp
+strcpy(MACHAMP.name, "Machamp");
+MACHAMP.id = 68;
+MACHAMP.type1 = FIGHTING_T;
+MACHAMP.type2 = NON_T;
+MACHAMP.bstats.hp_base = 90;
+MACHAMP.bstats.attack_base = 130;
+MACHAMP.bstats.defense_base = 80;
+MACHAMP.bstats.sattack_base = 65;
+MACHAMP.bstats.sdefense_base = 85;
+MACHAMP.bstats.speed_base = 55;
+
+// bellsprout
+strcpy(BELLSPROUT.name, "Bellsprout");
+BELLSPROUT.id = 69;
+BELLSPROUT.type1 = GRASS_T;
+BELLSPROUT.type2 = POISON_T;
+BELLSPROUT.bstats.hp_base = 50;
+BELLSPROUT.bstats.attack_base = 75;
+BELLSPROUT.bstats.defense_base = 35;
+BELLSPROUT.bstats.sattack_base = 70;
+BELLSPROUT.bstats.sdefense_base = 30;
+BELLSPROUT.bstats.speed_base = 40;
+
+// weepinbell
+strcpy(WEEPINBELL.name, "Weepinbell");
+WEEPINBELL.id = 70;
+WEEPINBELL.type1 = GRASS_T;
+WEEPINBELL.type2 = POISON_T;
+WEEPINBELL.bstats.hp_base = 65;
+WEEPINBELL.bstats.attack_base = 90;
+WEEPINBELL.bstats.defense_base = 50;
+WEEPINBELL.bstats.sattack_base = 85;
+WEEPINBELL.bstats.sdefense_base = 45;
+WEEPINBELL.bstats.speed_base = 55;
+
+// victreebel
+strcpy(VICTREEBEL.name, "Victreebel");
+VICTREEBEL.id = 71;
+VICTREEBEL.type1 = GRASS_T;
+VICTREEBEL.type2 = POISON_T;
+VICTREEBEL.bstats.hp_base = 80;
+VICTREEBEL.bstats.attack_base = 105;
+VICTREEBEL.bstats.defense_base = 65;
+VICTREEBEL.bstats.sattack_base = 100;
+VICTREEBEL.bstats.sdefense_base = 70;
+VICTREEBEL.bstats.speed_base = 70;
+
+// tentacool
+strcpy(TENTACOOL.name, "Tentacool");
+TENTACOOL.id = 72;
+TENTACOOL.type1 = WATER_T;
+TENTACOOL.type2 = POISON_T;
+TENTACOOL.bstats.hp_base = 40;
+TENTACOOL.bstats.attack_base = 40;
+TENTACOOL.bstats.defense_base = 35;
+TENTACOOL.bstats.sattack_base = 50;
+TENTACOOL.bstats.sdefense_base = 100;
+TENTACOOL.bstats.speed_base = 70;
+
+// tentacruel
+strcpy(TENTACRUEL.name, "Tentacruel");
+TENTACRUEL.id = 73;
+TENTACRUEL.type1 = WATER_T;
+TENTACRUEL.type2 = POISON_T;
+TENTACRUEL.bstats.hp_base = 80;
+TENTACRUEL.bstats.attack_base = 70;
+TENTACRUEL.bstats.defense_base = 65;
+TENTACRUEL.bstats.sattack_base = 80;
+TENTACRUEL.bstats.sdefense_base = 120;
+TENTACRUEL.bstats.speed_base = 100;
+
+// geodude
+strcpy(GEODUDE.name, "Geodude");
+GEODUDE.id = 74;
+GEODUDE.type1 = ROCK_T;
+GEODUDE.type2 = GROUND_T;
+GEODUDE.bstats.hp_base = 40;
+GEODUDE.bstats.attack_base = 80;
+GEODUDE.bstats.defense_base = 100;
+GEODUDE.bstats.sattack_base = 30;
+GEODUDE.bstats.sdefense_base = 30;
+GEODUDE.bstats.speed_base = 20;
+
+// graveler
+strcpy(GRAVELER.name, "Graveler");
+GRAVELER.id = 75;
+GRAVELER.type1 = ROCK_T;
+GRAVELER.type2 = GROUND_T;
+GRAVELER.bstats.hp_base = 55;
+GRAVELER.bstats.attack_base = 95;
+GRAVELER.bstats.defense_base = 115;
+GRAVELER.bstats.sattack_base = 45;
+GRAVELER.bstats.sdefense_base = 45;
+GRAVELER.bstats.speed_base = 35;
+
+// golem
+strcpy(GOLEM.name, "Golem");
+GOLEM.id = 76;
+GOLEM.type1 = ROCK_T;
+GOLEM.type2 = GROUND_T;
+GOLEM.bstats.hp_base = 80;
+GOLEM.bstats.attack_base = 120;
+GOLEM.bstats.defense_base = 130;
+GOLEM.bstats.sattack_base = 55;
+GOLEM.bstats.sdefense_base = 65;
+GOLEM.bstats.speed_base = 45;
+
+// ponyta
+strcpy(PONYTA.name, "Ponyta");
+PONYTA.id = 77;
+PONYTA.type1 = FIRE_T;
+PONYTA.type2 = NON_T;
+PONYTA.bstats.hp_base = 50;
+PONYTA.bstats.attack_base = 85;
+PONYTA.bstats.defense_base = 55;
+PONYTA.bstats.sattack_base = 65;
+PONYTA.bstats.sdefense_base = 65;
+PONYTA.bstats.speed_base = 90;
+
+// rapidash
+strcpy(RAPIDASH.name, "Rapidash");
+RAPIDASH.id = 78;
+RAPIDASH.type1 = FIRE_T;
+RAPIDASH.type2 = NON_T;
+RAPIDASH.bstats.hp_base = 65;
+RAPIDASH.bstats.attack_base = 100;
+RAPIDASH.bstats.defense_base = 70;
+RAPIDASH.bstats.sattack_base = 80;
+RAPIDASH.bstats.sdefense_base = 80;
+RAPIDASH.bstats.speed_base = 105;
+
+// slowpoke
+strcpy(SLOWPOKE.name, "Slowpoke");
+SLOWPOKE.id = 79;
+SLOWPOKE.type1 = WATER_T;
+SLOWPOKE.type2 = PSYCHIC_T;
+SLOWPOKE.bstats.hp_base = 90;
+SLOWPOKE.bstats.attack_base = 65;
+SLOWPOKE.bstats.defense_base = 65;
+SLOWPOKE.bstats.sattack_base = 40;
+SLOWPOKE.bstats.sdefense_base = 40;
+SLOWPOKE.bstats.speed_base = 15;
+
+// slowbro
+strcpy(SLOWBRO.name, "Slowbro");
+SLOWBRO.id = 80;
+SLOWBRO.type1 = WATER_T;
+SLOWBRO.type2 = PSYCHIC_T;
+SLOWBRO.bstats.hp_base = 95;
+SLOWBRO.bstats.attack_base = 75;
+SLOWBRO.bstats.defense_base = 110;
+SLOWBRO.bstats.sattack_base = 100;
+SLOWBRO.bstats.sdefense_base = 80;
+SLOWBRO.bstats.speed_base = 30;
+
+// magnemite
+strcpy(MAGNEMITE.name, "Magnemite");
+MAGNEMITE.id = 81;
+MAGNEMITE.type1 = ELECTRIC_T;
+MAGNEMITE.type2 = STEEL_T;
+MAGNEMITE.bstats.hp_base = 25;
+MAGNEMITE.bstats.attack_base = 35;
+MAGNEMITE.bstats.defense_base = 70;
+MAGNEMITE.bstats.sattack_base = 95;
+MAGNEMITE.bstats.sdefense_base = 55;
+MAGNEMITE.bstats.speed_base = 45;
+
+// magneton
+strcpy(MAGNETON.name, "Magneton");
+MAGNETON.id = 82;
+MAGNETON.type1 = ELECTRIC_T;
+MAGNETON.type2 = STEEL_T;
+MAGNETON.bstats.hp_base = 50;
+MAGNETON.bstats.attack_base = 60;
+MAGNETON.bstats.defense_base = 95;
+MAGNETON.bstats.sattack_base = 120;
+MAGNETON.bstats.sdefense_base = 70;
+MAGNETON.bstats.speed_base = 70;
+
+// farfetch'd
+strcpy(FARFETCHD.name, "Farfetch'd");
+FARFETCHD.id = 83;
+FARFETCHD.type1 = NORMAL_T;
+FARFETCHD.type2 = FLYING_T;
+FARFETCHD.bstats.hp_base = 52;
+FARFETCHD.bstats.attack_base = 65;
+FARFETCHD.bstats.defense_base = 55;
+FARFETCHD.bstats.sattack_base = 58;
+FARFETCHD.bstats.sdefense_base = 62;
+FARFETCHD.bstats.speed_base = 60;
+
+// doduo
+strcpy(DODUO.name, "Doduo");
+DODUO.id = 84;
+DODUO.type1 = NORMAL_T;
+DODUO.type2 = FLYING_T;
+DODUO.bstats.hp_base = 35;
+DODUO.bstats.attack_base = 85;
+DODUO.bstats.defense_base = 45;
+DODUO.bstats.sattack_base = 35;
+DODUO.bstats.sdefense_base = 35;
+DODUO.bstats.speed_base = 75;
+
+// dodrio
+strcpy(DODRIO.name, "Dodrio");
+DODRIO.id = 85;
+DODRIO.type1 = NORMAL_T;
+DODRIO.type2 = FLYING_T;
+DODRIO.bstats.hp_base = 60;
+DODRIO.bstats.attack_base = 110;
+DODRIO.bstats.defense_base = 70;
+DODRIO.bstats.sattack_base = 60;
+DODRIO.bstats.sdefense_base = 60;
+DODRIO.bstats.speed_base = 100;
+
+// seel
+strcpy(SEEL.name, "Seel");
+SEEL.id = 86;
+SEEL.type1 = WATER_T;
+SEEL.type2 = NON_T;
+SEEL.bstats.hp_base = 65;
+SEEL.bstats.attack_base = 45;
+SEEL.bstats.defense_base = 55;
+SEEL.bstats.sattack_base = 45;
+SEEL.bstats.sdefense_base = 70;
+SEEL.bstats.speed_base = 45;
+
+// dewgong
+strcpy(DEWGONG.name, "Dewgong");
+DEWGONG.id = 87;
+DEWGONG.type1 = WATER_T;
+DEWGONG.type2 = ICE_T;
+DEWGONG.bstats.hp_base = 90;
+DEWGONG.bstats.attack_base = 70;
+DEWGONG.bstats.defense_base = 80;
+DEWGONG.bstats.sattack_base = 70;
+DEWGONG.bstats.sdefense_base = 95;
+DEWGONG.bstats.speed_base = 70;
+
+// grimer
+strcpy(GRIMER.name, "Grimer");
+GRIMER.id = 88;
+GRIMER.type1 = POISON_T;
+GRIMER.type2 = NON_T;
+GRIMER.bstats.hp_base = 80;
+GRIMER.bstats.attack_base = 80;
+GRIMER.bstats.defense_base = 50;
+GRIMER.bstats.sattack_base = 40;
+GRIMER.bstats.sdefense_base = 50;
+GRIMER.bstats.speed_base = 25;
+
+// muk
+strcpy(MUK.name, "Muk");
+MUK.id = 89;
+MUK.type1 = POISON_T;
+MUK.type2 = NON_T;
+MUK.bstats.hp_base = 105;
+MUK.bstats.attack_base = 105;
+MUK.bstats.defense_base = 75;
+MUK.bstats.sattack_base = 65;
+MUK.bstats.sdefense_base = 100;
+MUK.bstats.speed_base = 50;
+
+// shellder
+strcpy(SHELLDER.name, "Shellder");
+SHELLDER.id = 90;
+SHELLDER.type1 = WATER_T;
+SHELLDER.type2 = NON_T;
+SHELLDER.bstats.hp_base = 30;
+SHELLDER.bstats.attack_base = 65;
+SHELLDER.bstats.defense_base = 100;
+SHELLDER.bstats.sattack_base = 45;
+SHELLDER.bstats.sdefense_base = 25;
+SHELLDER.bstats.speed_base = 40;
+
+// cloyster
+strcpy(CLOYSTER.name, "Cloyster");
+CLOYSTER.id = 91;
+CLOYSTER.type1 = WATER_T;
+CLOYSTER.type2 = ICE_T;
+CLOYSTER.bstats.hp_base = 50;
+CLOYSTER.bstats.attack_base = 95;
+CLOYSTER.bstats.defense_base = 180;
+CLOYSTER.bstats.sattack_base = 85;
+CLOYSTER.bstats.sdefense_base = 45;
+CLOYSTER.bstats.speed_base = 70;
+
+// gastly
+strcpy(GASTLY.name, "Gastly");
+GASTLY.id = 92;
+GASTLY.type1 = GHOST_T;
+GASTLY.type2 = POISON_T;
+GASTLY.bstats.hp_base = 30;
+GASTLY.bstats.attack_base = 35;
+GASTLY.bstats.defense_base = 30;
+GASTLY.bstats.sattack_base = 100;
+GASTLY.bstats.sdefense_base = 35;
+GASTLY.bstats.speed_base = 80;
+
+// haunter
+strcpy(HAUNTER.name, "Haunter");
+HAUNTER.id = 93;
+HAUNTER.type1 = GHOST_T;
+HAUNTER.type2 = POISON_T;
+HAUNTER.bstats.hp_base = 45;
+HAUNTER.bstats.attack_base = 50;
+HAUNTER.bstats.defense_base = 45;
+HAUNTER.bstats.sattack_base = 115;
+HAUNTER.bstats.sdefense_base = 55;
+HAUNTER.bstats.speed_base = 95;
+
+// gengar
+strcpy(GENGAR.name, "Gengar");
+GENGAR.id = 94;
+GENGAR.type1 = GHOST_T;
+GENGAR.type2 = POISON_T;
+GENGAR.bstats.hp_base = 60;
+GENGAR.bstats.attack_base = 65;
+GENGAR.bstats.defense_base = 60;
+GENGAR.bstats.sattack_base = 130;
+GENGAR.bstats.sdefense_base = 75;
+GENGAR.bstats.speed_base = 110;
+
+// onix
+strcpy(ONIX.name, "Onix");
+ONIX.id = 95;
+ONIX.type1 = ROCK_T;
+ONIX.type2 = GROUND_T;
+ONIX.bstats.hp_base = 35;
+ONIX.bstats.attack_base = 45;
+ONIX.bstats.defense_base = 160;
+ONIX.bstats.sattack_base = 30;
+ONIX.bstats.sdefense_base = 45;
+ONIX.bstats.speed_base = 70;
+
+// drowzee
+strcpy(DROWZEE.name, "Drowzee");
+DROWZEE.id = 96;
+DROWZEE.type1 = PSYCHIC_T;
+DROWZEE.type2 = NON_T;
+DROWZEE.bstats.hp_base = 60;
+DROWZEE.bstats.attack_base = 48;
+DROWZEE.bstats.defense_base = 45;
+DROWZEE.bstats.sattack_base = 43;
+DROWZEE.bstats.sdefense_base = 90;
+DROWZEE.bstats.speed_base = 42;
+
+// hypno
+strcpy(HYPNO.name, "Hypno");
+HYPNO.id = 97;
+HYPNO.type1 = PSYCHIC_T;
+HYPNO.type2 = NON_T;
+HYPNO.bstats.hp_base = 85;
+HYPNO.bstats.attack_base = 73;
+HYPNO.bstats.defense_base = 70;
+HYPNO.bstats.sattack_base = 73;
+HYPNO.bstats.sdefense_base = 115;
+HYPNO.bstats.speed_base = 67;
+
+// krabby
+strcpy(KRABBY.name, "Krabby");
+KRABBY.id = 98;
+KRABBY.type1 = WATER_T;
+KRABBY.type2 = NON_T;
+KRABBY.bstats.hp_base = 30;
+KRABBY.bstats.attack_base = 105;
+KRABBY.bstats.defense_base = 90;
+KRABBY.bstats.sattack_base = 25;
+KRABBY.bstats.sdefense_base = 25;
+KRABBY.bstats.speed_base = 50;
+
+// kingler
+strcpy(KINGLER.name, "Kingler");
+KINGLER.id = 99;
+KINGLER.type1 = WATER_T;
+KINGLER.type2 = NON_T;
+KINGLER.bstats.hp_base = 55;
+KINGLER.bstats.attack_base = 130;
+KINGLER.bstats.defense_base = 115;
+KINGLER.bstats.sattack_base = 50;
+KINGLER.bstats.sdefense_base = 50;
+KINGLER.bstats.speed_base = 75;
+
+// voltorb
+strcpy(VOLTORB.name, "Voltorb");
+VOLTORB.id = 100;
+VOLTORB.type1 = ELECTRIC_T;
+VOLTORB.type2 = NON_T;
+VOLTORB.bstats.hp_base = 40;
+VOLTORB.bstats.attack_base = 30;
+VOLTORB.bstats.defense_base = 50;
+VOLTORB.bstats.sattack_base = 55;
+VOLTORB.bstats.sdefense_base = 55;
+VOLTORB.bstats.speed_base = 100;
+
+// electrode
+strcpy(ELECTRODE.name, "Electrode");
+ELECTRODE.id = 101;
+ELECTRODE.type1 = ELECTRIC_T;
+ELECTRODE.type2 = NON_T;
+ELECTRODE.bstats.hp_base = 60;
+ELECTRODE.bstats.attack_base = 50;
+ELECTRODE.bstats.defense_base = 70;
+ELECTRODE.bstats.sattack_base = 80;
+ELECTRODE.bstats.sdefense_base = 80;
+ELECTRODE.bstats.speed_base = 140;
+
+// exeggcute
+strcpy(EXEGGCUTE.name, "Exeggcute");
+EXEGGCUTE.id = 102;
+EXEGGCUTE.type1 = GRASS_T;
+EXEGGCUTE.type2 = PSYCHIC_T;
+EXEGGCUTE.bstats.hp_base = 60;
+EXEGGCUTE.bstats.attack_base = 40;
+EXEGGCUTE.bstats.defense_base = 80;
+EXEGGCUTE.bstats.sattack_base = 60;
+EXEGGCUTE.bstats.sdefense_base = 45;
+EXEGGCUTE.bstats.speed_base = 40;
+
+// exeggutor
+strcpy(EXEGGUTOR.name, "Exeggutor");
+EXEGGUTOR.id = 103;
+EXEGGUTOR.type1 = GRASS_T;
+EXEGGUTOR.type2 = PSYCHIC_T;
+EXEGGUTOR.bstats.hp_base = 95;
+EXEGGUTOR.bstats.attack_base = 95;
+EXEGGUTOR.bstats.defense_base = 85;
+EXEGGUTOR.bstats.sattack_base = 125;
+EXEGGUTOR.bstats.sdefense_base = 65;
+EXEGGUTOR.bstats.speed_base = 55;
+
+// cubone
+strcpy(CUBONE.name, "Cubone");
+CUBONE.id = 104;
+CUBONE.type1 = GROUND_T;
+CUBONE.type2 = NON_T;
+CUBONE.bstats.hp_base = 50;
+CUBONE.bstats.attack_base = 50;
+CUBONE.bstats.defense_base = 95;
+CUBONE.bstats.sattack_base = 40;
+CUBONE.bstats.sdefense_base = 50;
+CUBONE.bstats.speed_base = 35;
+
+// marowak
+strcpy(MAROWAK.name, "Marowak");
+MAROWAK.id = 105;
+MAROWAK.type1 = GROUND_T;
+MAROWAK.type2 = NON_T;
+MAROWAK.bstats.hp_base = 60;
+MAROWAK.bstats.attack_base = 80;
+MAROWAK.bstats.defense_base = 110;
+MAROWAK.bstats.sattack_base = 50;
+MAROWAK.bstats.sdefense_base = 80;
+MAROWAK.bstats.speed_base = 45;
+
+// hitmonlee
+strcpy(HITMONLEE.name, "Hitmonlee");
+HITMONLEE.id = 106;
+HITMONLEE.type1 = FIGHTING_T;
+HITMONLEE.type2 = NON_T;
+HITMONLEE.bstats.hp_base = 50;
+HITMONLEE.bstats.attack_base = 120;
+HITMONLEE.bstats.defense_base = 53;
+HITMONLEE.bstats.sattack_base = 35;
+HITMONLEE.bstats.sdefense_base = 110;
+HITMONLEE.bstats.speed_base = 87;
+
+// hitmonchan
+strcpy(HITMONCHAN.name, "Hitmonchan");
+HITMONCHAN.id = 107;
+HITMONCHAN.type1 = FIGHTING_T;
+HITMONCHAN.type2 = NON_T;
+HITMONCHAN.bstats.hp_base = 50;
+HITMONCHAN.bstats.attack_base = 105;
+HITMONCHAN.bstats.defense_base = 79;
+HITMONCHAN.bstats.sattack_base = 35;
+HITMONCHAN.bstats.sdefense_base = 110;
+HITMONCHAN.bstats.speed_base = 76;
+
+// lickitung
+strcpy(LICKITUNG.name, "Lickitung");
+LICKITUNG.id = 108;
+LICKITUNG.type1 = NORMAL_T;
+LICKITUNG.type2 = NON_T;
+LICKITUNG.bstats.hp_base = 90;
+LICKITUNG.bstats.attack_base = 55;
+LICKITUNG.bstats.defense_base = 75;
+LICKITUNG.bstats.sattack_base = 60;
+LICKITUNG.bstats.sdefense_base = 75;
+LICKITUNG.bstats.speed_base = 30;
+
+// koffing
+strcpy(KOFFING.name, "Koffing");
+KOFFING.id = 109;
+KOFFING.type1 = POISON_T;
+KOFFING.type2 = NON_T;
+KOFFING.bstats.hp_base = 40;
+KOFFING.bstats.attack_base = 65;
+KOFFING.bstats.defense_base = 95;
+KOFFING.bstats.sattack_base = 60;
+KOFFING.bstats.sdefense_base = 45;
+KOFFING.bstats.speed_base = 35;
+
+// weezing
+strcpy(WEEZING.name, "Weezing");
+WEEZING.id = 110;
+WEEZING.type1 = POISON_T;
+WEEZING.type2 = NON_T;
+WEEZING.bstats.hp_base = 65;
+WEEZING.bstats.attack_base = 90;
+WEEZING.bstats.defense_base = 120;
+WEEZING.bstats.sattack_base = 85;
+WEEZING.bstats.sdefense_base = 70;
+WEEZING.bstats.speed_base = 60;
+
+// rhyhorn
+strcpy(RHYHORN.name, "Rhyhorn");
+RHYHORN.id = 111;
+RHYHORN.type1 = GROUND_T;
+RHYHORN.type2 = ROCK_T;
+RHYHORN.bstats.hp_base = 80;
+RHYHORN.bstats.attack_base = 85;
+RHYHORN.bstats.defense_base = 95;
+RHYHORN.bstats.sattack_base = 30;
+RHYHORN.bstats.sdefense_base = 30;
+RHYHORN.bstats.speed_base = 25;
+
+// rhydon
+strcpy(RHYDON.name, "Rhydon");
+RHYDON.id = 112;
+RHYDON.type1 = GROUND_T;
+RHYDON.type2 = ROCK_T;
+RHYDON.bstats.hp_base = 105;
+RHYDON.bstats.attack_base = 130;
+RHYDON.bstats.defense_base = 120;
+RHYDON.bstats.sattack_base = 45;
+RHYDON.bstats.sdefense_base = 45;
+RHYDON.bstats.speed_base = 40;
+
+// chansey
+strcpy(CHANSEY.name, "Chansey");
+CHANSEY.id = 113;
+CHANSEY.type1 = NORMAL_T;
+CHANSEY.type2 = NON_T;
+CHANSEY.bstats.hp_base = 250;
+CHANSEY.bstats.attack_base = 5;
+CHANSEY.bstats.defense_base = 5;
+CHANSEY.bstats.sattack_base = 35;
+CHANSEY.bstats.sdefense_base = 105;
+CHANSEY.bstats.speed_base = 50;
+
+// tangela
+strcpy(TANGELA.name, "Tangela");
+TANGELA.id = 114;
+TANGELA.type1 = GRASS_T;
+TANGELA.type2 = NON_T;
+TANGELA.bstats.hp_base = 65;
+TANGELA.bstats.attack_base = 55;
+TANGELA.bstats.defense_base = 115;
+TANGELA.bstats.sattack_base = 100;
+TANGELA.bstats.sdefense_base = 40;
+TANGELA.bstats.speed_base = 60;
+
+// kangaskhan
+strcpy(KANGASKHAN.name, "Kangaskhan");
+KANGASKHAN.id = 115;
+KANGASKHAN.type1 = NORMAL_T;
+KANGASKHAN.type2 = NON_T;
+KANGASKHAN.bstats.hp_base = 105;
+KANGASKHAN.bstats.attack_base = 95;
+KANGASKHAN.bstats.defense_base = 80;
+KANGASKHAN.bstats.sattack_base = 40;
+KANGASKHAN.bstats.sdefense_base = 80;
+KANGASKHAN.bstats.speed_base = 90;
+
+// horsea
+strcpy(HORSEA.name, "Horsea");
+HORSEA.id = 116;
+HORSEA.type1 = WATER_T;
+HORSEA.type2 = NON_T;
+HORSEA.bstats.hp_base = 30;
+HORSEA.bstats.attack_base = 40;
+HORSEA.bstats.defense_base = 70;
+HORSEA.bstats.sattack_base = 70;
+HORSEA.bstats.sdefense_base = 25;
+HORSEA.bstats.speed_base = 60;
+
+// seadra
+strcpy(SEADRA.name, "Seadra");
+SEADRA.id = 117;
+SEADRA.type1 = WATER_T;
+SEADRA.type2 = NON_T;
+SEADRA.bstats.hp_base = 55;
+SEADRA.bstats.attack_base = 65;
+SEADRA.bstats.defense_base = 95;
+SEADRA.bstats.sattack_base = 95;
+SEADRA.bstats.sdefense_base = 45;
+SEADRA.bstats.speed_base = 85;
+
+// goldeen
+strcpy(GOLDEEN.name, "Goldeen");
+GOLDEEN.id = 118;
+GOLDEEN.type1 = WATER_T;
+GOLDEEN.type2 = NON_T;
+GOLDEEN.bstats.hp_base = 45;
+GOLDEEN.bstats.attack_base = 67;
+GOLDEEN.bstats.defense_base = 60;
+GOLDEEN.bstats.sattack_base = 35;
+GOLDEEN.bstats.sdefense_base = 50;
+GOLDEEN.bstats.speed_base = 63;
+
+// seaking
+strcpy(SEAKING.name, "Seaking");
+SEAKING.id = 119;
+SEAKING.type1 = WATER_T;
+SEAKING.type2 = NON_T;
+SEAKING.bstats.hp_base = 80;
+SEAKING.bstats.attack_base = 92;
+SEAKING.bstats.defense_base = 65;
+SEAKING.bstats.sattack_base = 65;
+SEAKING.bstats.sdefense_base = 80;
+SEAKING.bstats.speed_base = 68;
+
+// staryu
+strcpy(STARYU.name, "Staryu");
+STARYU.id = 120;
+STARYU.type1 = WATER_T;
+STARYU.type2 = NON_T;
+STARYU.bstats.hp_base = 30;
+STARYU.bstats.attack_base = 45;
+STARYU.bstats.defense_base = 55;
+STARYU.bstats.sattack_base = 70;
+STARYU.bstats.sdefense_base = 55;
+STARYU.bstats.speed_base = 85;
+
+// starmie
+strcpy(STARMIE.name, "Starmie");
+STARMIE.id = 121;
+STARMIE.type1 = WATER_T;
+STARMIE.type2 = PSYCHIC_T;
+STARMIE.bstats.hp_base = 60;
+STARMIE.bstats.attack_base = 75;
+STARMIE.bstats.defense_base = 85;
+STARMIE.bstats.sattack_base = 100;
+STARMIE.bstats.sdefense_base = 85;
+STARMIE.bstats.speed_base = 115;
+
+// mr. mime
+strcpy(MRMIME.name, "Mr. Mime");
+MRMIME.id = 122;
+MRMIME.type1 = PSYCHIC_T;
+MRMIME.type2 = NON_T;
+MRMIME.bstats.hp_base = 40;
+MRMIME.bstats.attack_base = 45;
+MRMIME.bstats.defense_base = 65;
+MRMIME.bstats.sattack_base = 100;
+MRMIME.bstats.sdefense_base = 120;
+MRMIME.bstats.speed_base = 90;
+
+// scyther
+strcpy(SCYTHER.name, "Scyther");
+SCYTHER.id = 123;
+SCYTHER.type1 = BUG_T;
+SCYTHER.type2 = FLYING_T;
+SCYTHER.bstats.hp_base = 70;
+SCYTHER.bstats.attack_base = 110;
+SCYTHER.bstats.defense_base = 80;
+SCYTHER.bstats.sattack_base = 55;
+SCYTHER.bstats.sdefense_base = 80;
+SCYTHER.bstats.speed_base = 105;
+
+// jynx
+strcpy(JYNX.name, "Jynx");
+JYNX.id = 124;
+JYNX.type1 = ICE_T;
+JYNX.type2 = PSYCHIC_T;
+JYNX.bstats.hp_base = 65;
+JYNX.bstats.attack_base = 50;
+JYNX.bstats.defense_base = 35;
+JYNX.bstats.sattack_base = 115;
+JYNX.bstats.sdefense_base = 95;
+JYNX.bstats.speed_base = 95;
+
+// electabuzz
+strcpy(ELECTABUZZ.name, "Electabuzz");
+ELECTABUZZ.id = 125;
+ELECTABUZZ.type1 = ELECTRIC_T;
+ELECTABUZZ.type2 = NON_T;
+ELECTABUZZ.bstats.hp_base = 65;
+ELECTABUZZ.bstats.attack_base = 83;
+ELECTABUZZ.bstats.defense_base = 57;
+ELECTABUZZ.bstats.sattack_base = 95;
+ELECTABUZZ.bstats.sdefense_base = 85;
+ELECTABUZZ.bstats.speed_base = 105;
+
+// magmar
+strcpy(MAGMAR.name, "Magmar");
+MAGMAR.id = 126;
+MAGMAR.type1 = FIRE_T;
+MAGMAR.type2 = NON_T;
+MAGMAR.bstats.hp_base = 65;
+MAGMAR.bstats.attack_base = 95;
+MAGMAR.bstats.defense_base = 57;
+MAGMAR.bstats.sattack_base = 100;
+MAGMAR.bstats.sdefense_base = 85;
+MAGMAR.bstats.speed_base = 93;
+
+// pinsir
+strcpy(PINSIR.name, "Pinsir");
+PINSIR.id = 127;
+PINSIR.type1 = BUG_T;
+PINSIR.type2 = NON_T;
+PINSIR.bstats.hp_base = 65;
+PINSIR.bstats.attack_base = 125;
+PINSIR.bstats.defense_base = 100;
+PINSIR.bstats.sattack_base = 55;
+PINSIR.bstats.sdefense_base = 70;
+PINSIR.bstats.speed_base = 85;
+
+// tauros
+strcpy(TAUROS.name, "Tauros");
+TAUROS.id = 128;
+TAUROS.type1 = NORMAL_T;
+TAUROS.type2 = NON_T;
+TAUROS.bstats.hp_base = 75;
+TAUROS.bstats.attack_base = 100;
+TAUROS.bstats.defense_base = 95;
+TAUROS.bstats.sattack_base = 40;
+TAUROS.bstats.sdefense_base = 70;
+TAUROS.bstats.speed_base = 110;
+
+// magikarp
+strcpy(MAGIKARP.name, "Magikarp");
+MAGIKARP.id = 129;
+MAGIKARP.type1 = WATER_T;
+MAGIKARP.type2 = NON_T;
+MAGIKARP.bstats.hp_base = 20;
+MAGIKARP.bstats.attack_base = 10;
+MAGIKARP.bstats.defense_base = 55;
+MAGIKARP.bstats.sattack_base = 15;
+MAGIKARP.bstats.sdefense_base = 20;
+MAGIKARP.bstats.speed_base = 80;
+
+// gyarados
+strcpy(GYARADOS.name, "Gyarados");
+GYARADOS.id = 130;
+GYARADOS.type1 = WATER_T;
+GYARADOS.type2 = FLYING_T;
+GYARADOS.bstats.hp_base = 95;
+GYARADOS.bstats.attack_base = 125;
+GYARADOS.bstats.defense_base = 79;
+GYARADOS.bstats.sattack_base = 60;
+GYARADOS.bstats.sdefense_base = 100;
+GYARADOS.bstats.speed_base = 81;
+
+// lapras
+strcpy(LAPRAS.name, "Lapras");
+LAPRAS.id = 131;
+LAPRAS.type1 = WATER_T;
+LAPRAS.type2 = ICE_T;
+LAPRAS.bstats.hp_base = 130;
+LAPRAS.bstats.attack_base = 85;
+LAPRAS.bstats.defense_base = 80;
+LAPRAS.bstats.sattack_base = 85;
+LAPRAS.bstats.sdefense_base = 95;
+LAPRAS.bstats.speed_base = 60;
+
+// ditto
+strcpy(DITTO.name, "Ditto");
+DITTO.id = 132;
+DITTO.type1 = NORMAL_T;
+DITTO.type2 = NON_T;
+DITTO.bstats.hp_base = 48;
+DITTO.bstats.attack_base = 48;
+DITTO.bstats.defense_base = 48;
+DITTO.bstats.sattack_base = 48;
+DITTO.bstats.sdefense_base = 48;
+DITTO.bstats.speed_base = 48;
+
+// eevee
+strcpy(EEVEE.name, "Eevee");
+EEVEE.id = 133;
+EEVEE.type1 = NORMAL_T;
+EEVEE.type2 = NON_T;
+EEVEE.bstats.hp_base = 55;
+EEVEE.bstats.attack_base = 55;
+EEVEE.bstats.defense_base = 50;
+EEVEE.bstats.sattack_base = 45;
+EEVEE.bstats.sdefense_base = 65;
+EEVEE.bstats.speed_base = 55;
+
+// vaporeon
+strcpy(VAPOREON.name, "Vaporeon");
+VAPOREON.id = 134;
+VAPOREON.type1 = WATER_T;
+VAPOREON.type2 = NON_T;
+VAPOREON.bstats.hp_base = 130;
+VAPOREON.bstats.attack_base = 65;
+VAPOREON.bstats.defense_base = 60;
+VAPOREON.bstats.sattack_base = 110;
+VAPOREON.bstats.sdefense_base = 95;
+VAPOREON.bstats.speed_base = 65;
+
+// jolteon
+strcpy(JOLTEON.name, "Jolteon");
+JOLTEON.id = 135;
+JOLTEON.type1 = ELECTRIC_T;
+JOLTEON.type2 = NON_T;
+JOLTEON.bstats.hp_base = 65;
+JOLTEON.bstats.attack_base = 65;
+JOLTEON.bstats.defense_base = 60;
+JOLTEON.bstats.sattack_base = 110;
+JOLTEON.bstats.sdefense_base = 95;
+JOLTEON.bstats.speed_base = 130;
+
+// flareon
+strcpy(FLAREON.name, "Flareon");
+FLAREON.id = 136;
+FLAREON.type1 = FIRE_T;
+FLAREON.type2 = NON_T;
+FLAREON.bstats.hp_base = 65;
+FLAREON.bstats.attack_base = 130;
+FLAREON.bstats.defense_base = 60;
+FLAREON.bstats.sattack_base = 95;
+FLAREON.bstats.sdefense_base = 110;
+FLAREON.bstats.speed_base = 65;
+
+// porygon
+strcpy(PORYGON.name, "Porygon");
+PORYGON.id = 137;
+PORYGON.type1 = NORMAL_T;
+PORYGON.type2 = NON_T;
+PORYGON.bstats.hp_base = 65;
+PORYGON.bstats.attack_base = 60;
+PORYGON.bstats.defense_base = 70;
+PORYGON.bstats.sattack_base = 85;
+PORYGON.bstats.sdefense_base = 75;
+PORYGON.bstats.speed_base = 40;
+
+// omanyte
+strcpy(OMANYTE.name, "Omanyte");
+OMANYTE.id = 138;
+OMANYTE.type1 = ROCK_T;
+OMANYTE.type2 = WATER_T;
+OMANYTE.bstats.hp_base = 35;
+OMANYTE.bstats.attack_base = 40;
+OMANYTE.bstats.defense_base = 100;
+OMANYTE.bstats.sattack_base = 90;
+OMANYTE.bstats.sdefense_base = 55;
+OMANYTE.bstats.speed_base = 35;
+
+// omastar
+strcpy(OMASTAR.name, "Omastar");
+OMASTAR.id = 139;
+OMASTAR.type1 = ROCK_T;
+OMASTAR.type2 = WATER_T;
+OMASTAR.bstats.hp_base = 70;
+OMASTAR.bstats.attack_base = 60;
+OMASTAR.bstats.defense_base = 125;
+OMASTAR.bstats.sattack_base = 115;
+OMASTAR.bstats.sdefense_base = 70;
+OMASTAR.bstats.speed_base = 55;
+
+// kabuto
+strcpy(KABUTO.name, "Kabuto");
+KABUTO.id = 140;
+KABUTO.type1 = ROCK_T;
+KABUTO.type2 = WATER_T;
+KABUTO.bstats.hp_base = 30;
+KABUTO.bstats.attack_base = 80;
+KABUTO.bstats.defense_base = 90;
+KABUTO.bstats.sattack_base = 55;
+KABUTO.bstats.sdefense_base = 45;
+KABUTO.bstats.speed_base = 55;
+
+// kabutops
+strcpy(KABUTOPS.name, "Kabutops");
+KABUTOPS.id = 141;
+KABUTOPS.type1 = ROCK_T;
+KABUTOPS.type2 = WATER_T;
+KABUTOPS.bstats.hp_base = 60;
+KABUTOPS.bstats.attack_base = 115;
+KABUTOPS.bstats.defense_base = 105;
+KABUTOPS.bstats.sattack_base = 65;
+KABUTOPS.bstats.sdefense_base = 70;
+KABUTOPS.bstats.speed_base = 80;
+
+// aerodactyl
+strcpy(AERODACTYL.name, "Aerodactyl");
+AERODACTYL.id = 142;
+AERODACTYL.type1 = ROCK_T;
+AERODACTYL.type2 = FLYING_T;
+AERODACTYL.bstats.hp_base = 80;
+AERODACTYL.bstats.attack_base = 105;
+AERODACTYL.bstats.defense_base = 65;
+AERODACTYL.bstats.sattack_base = 60;
+AERODACTYL.bstats.sdefense_base = 75;
+AERODACTYL.bstats.speed_base = 130;
+
+// snorlax
+strcpy(SNORLAX.name, "Snorlax");
+SNORLAX.id = 143;
+SNORLAX.type1 = NORMAL_T;
+SNORLAX.type2 = NON_T;
+SNORLAX.bstats.hp_base = 160;
+SNORLAX.bstats.attack_base = 110;
+SNORLAX.bstats.defense_base = 65;
+SNORLAX.bstats.sattack_base = 65;
+SNORLAX.bstats.sdefense_base = 110;
+SNORLAX.bstats.speed_base = 30;
+
+// articuno
+strcpy(ARTICUNO.name, "Articuno");
+ARTICUNO.id = 144;
+ARTICUNO.type1 = ICE_T;
+ARTICUNO.type2 = FLYING_T;
+ARTICUNO.bstats.hp_base = 90;
+ARTICUNO.bstats.attack_base = 85;
+ARTICUNO.bstats.defense_base = 100;
+ARTICUNO.bstats.sattack_base = 95;
+ARTICUNO.bstats.sdefense_base = 125;
+ARTICUNO.bstats.speed_base = 85;
+
+// zapdos
+strcpy(ZAPDOS.name, "Zapdos");
+ZAPDOS.id = 145;
+ZAPDOS.type1 = ELECTRIC_T;
+ZAPDOS.type2 = FLYING_T;
+ZAPDOS.bstats.hp_base = 90;
+ZAPDOS.bstats.attack_base = 90;
+ZAPDOS.bstats.defense_base = 85;
+ZAPDOS.bstats.sattack_base = 125;
+ZAPDOS.bstats.sdefense_base = 90;
+ZAPDOS.bstats.speed_base = 100;
+
+// moltres
+strcpy(MOLTRES.name, "Moltres");
+MOLTRES.id = 146;
+MOLTRES.type1 = FIRE_T;
+MOLTRES.type2 = FLYING_T;
+MOLTRES.bstats.hp_base = 90;
+MOLTRES.bstats.attack_base = 100;
+MOLTRES.bstats.defense_base = 90;
+MOLTRES.bstats.sattack_base = 125;
+MOLTRES.bstats.sdefense_base = 85;
+MOLTRES.bstats.speed_base = 90;
+
+// dratini
+strcpy(DRATINI.name, "Dratini");
+DRATINI.id = 147;
+DRATINI.type1 = DRAGON_T;
+DRATINI.type2 = NON_T;
+DRATINI.bstats.hp_base = 41;
+DRATINI.bstats.attack_base = 64;
+DRATINI.bstats.defense_base = 45;
+DRATINI.bstats.sattack_base = 50;
+DRATINI.bstats.sdefense_base = 50;
+DRATINI.bstats.speed_base = 50;
+
+// dragonair
+strcpy(DRAGONAIR.name, "Dragonair");
+DRAGONAIR.id = 148;
+DRAGONAIR.type1 = DRAGON_T;
+DRAGONAIR.type2 = NON_T;
+DRAGONAIR.bstats.hp_base = 61;
+DRAGONAIR.bstats.attack_base = 84;
+DRAGONAIR.bstats.defense_base = 65;
+DRAGONAIR.bstats.sattack_base = 70;
+DRAGONAIR.bstats.sdefense_base = 70;
+DRAGONAIR.bstats.speed_base = 70;
+
+// dragonite
+strcpy(DRAGONITE.name, "Dragonite");
+DRAGONITE.id = 149;
+DRAGONITE.type1 = DRAGON_T;
+DRAGONITE.type2 = FLYING_T;
+DRAGONITE.bstats.hp_base = 91;
+DRAGONITE.bstats.attack_base = 134;
+DRAGONITE.bstats.defense_base = 95;
+DRAGONITE.bstats.sattack_base = 100;
+DRAGONITE.bstats.sdefense_base = 100;
+DRAGONITE.bstats.speed_base = 80;
+
+// mewtwo
+strcpy(MEWTWO.name, "Mewtwo");
+MEWTWO.id = 150;
+MEWTWO.type1 = PSYCHIC_T;
+MEWTWO.type2 = NON_T;
+MEWTWO.bstats.hp_base = 106;
+MEWTWO.bstats.attack_base = 110;
+MEWTWO.bstats.defense_base = 90;
+MEWTWO.bstats.sattack_base = 154;
+MEWTWO.bstats.sdefense_base = 90;
+MEWTWO.bstats.speed_base = 130;
+
+// mewtwo
+strcpy(MEW.name, "Mew");
+MEW.id = 151;
+MEW.type1 = PSYCHIC_T;
+MEW.type2 = NON_T;
+MEW.bstats.hp_base = 100;
+MEW.bstats.attack_base = 100;
+MEW.bstats.defense_base = 100;
+MEW.bstats.sattack_base = 100;
+MEW.bstats.sdefense_base = 100;
+MEW.bstats.speed_base = 100;

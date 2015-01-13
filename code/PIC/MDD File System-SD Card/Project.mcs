@@ -1,0 +1,188 @@
+[Header]
+MagicCookie={0b13fe8c-dfe0-40eb-8900-6712719559a7}
+Version=1.0
+[File000]
+Location=C:\Users\jbai\Desktop\code_git\aaa\MicroPsFinalProject-master\PIC\MDD File System-SD Card\Object - MDD File System-SD Card\SD-SPI.o
+Folder=Intermediary
+DeviceName=PIC32MX675F512H
+LanguageToolSuiteID={14495C23-81F8-43F3-8A44-859C583D7760}
+LanguageToolID={430F471F-7ECB-4852-A80D-DEF9A5C8E751}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\mplabc32\v2.01\bin\pic32-gcc.exe
+PPAD=$(BINDIR)||$(TMPDIR)|..\..\MDD File System-SD Card\Object - MDD File System-SD Card||$(AINDIR)||$(INCDIR)|.\PIC24F;..\Include;..\Include\MDD File System;..\..\Microchip\Include;..\..\Microchip\Include\MDD File System;..\..\Microchip\Include\MDD File System;..\..\MDD File System-SD Card;..\..\MDD File System-SD Card\PIC24F||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|..\Microchip\MDD File System\SD-SPI.c|..\Microchip\MDD File System\FSIO.c|PIC32\Demonstration1.c|PIC32\buttons.c|PIC32\sendspi.c|PIC32\bitbang.c|PIC32\battle-p.c|PIC32\eor-p.c|PIC32\game.c|PIC32\global.c|PIC32\input-p.c|PIC32\win-p.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=-g
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1
+[File001]
+Location=C:\Users\jbai\Desktop\code_git\aaa\MicroPsFinalProject-master\PIC\MDD File System-SD Card\Object - MDD File System-SD Card\FSIO.o
+Folder=Intermediary
+DeviceName=PIC32MX675F512H
+LanguageToolSuiteID={14495C23-81F8-43F3-8A44-859C583D7760}
+LanguageToolID={430F471F-7ECB-4852-A80D-DEF9A5C8E751}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\mplabc32\v2.01\bin\pic32-gcc.exe
+PPAD=$(BINDIR)||$(TMPDIR)|..\..\MDD File System-SD Card\Object - MDD File System-SD Card||$(AINDIR)||$(INCDIR)|.\PIC24F;..\Include;..\Include\MDD File System;..\..\Microchip\Include;..\..\Microchip\Include\MDD File System;..\..\Microchip\Include\MDD File System;..\..\MDD File System-SD Card;..\..\MDD File System-SD Card\PIC24F||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|..\Microchip\MDD File System\SD-SPI.c|..\Microchip\MDD File System\FSIO.c|PIC32\Demonstration1.c|PIC32\buttons.c|PIC32\sendspi.c|PIC32\bitbang.c|PIC32\battle-p.c|PIC32\eor-p.c|PIC32\game.c|PIC32\global.c|PIC32\input-p.c|PIC32\win-p.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=-g
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1
+[File002]
+Location=C:\Users\jbai\Desktop\code_git\aaa\MicroPsFinalProject-master\PIC\MDD File System-SD Card\Object - MDD File System-SD Card\Demonstration1.o
+Folder=Intermediary
+DeviceName=PIC32MX675F512H
+LanguageToolSuiteID={14495C23-81F8-43F3-8A44-859C583D7760}
+LanguageToolID={430F471F-7ECB-4852-A80D-DEF9A5C8E751}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\mplabc32\v2.01\bin\pic32-gcc.exe
+PPAD=$(BINDIR)||$(TMPDIR)|..\..\MDD File System-SD Card\Object - MDD File System-SD Card||$(AINDIR)||$(INCDIR)|.\PIC24F;..\Include;..\Include\MDD File System;..\..\Microchip\Include;..\..\Microchip\Include\MDD File System;..\..\Microchip\Include\MDD File System;..\..\MDD File System-SD Card;..\..\MDD File System-SD Card\PIC24F||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|..\Microchip\MDD File System\SD-SPI.c|..\Microchip\MDD File System\FSIO.c|PIC32\Demonstration1.c|PIC32\buttons.c|PIC32\sendspi.c|PIC32\bitbang.c|PIC32\battle-p.c|PIC32\eor-p.c|PIC32\game.c|PIC32\global.c|PIC32\input-p.c|PIC32\win-p.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=-g
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1
+[File003]
+Location=C:\Users\jbai\Desktop\code_git\aaa\MicroPsFinalProject-master\PIC\MDD File System-SD Card\Object - MDD File System-SD Card\buttons.o
+Folder=Intermediary
+DeviceName=PIC32MX675F512H
+LanguageToolSuiteID={14495C23-81F8-43F3-8A44-859C583D7760}
+LanguageToolID={430F471F-7ECB-4852-A80D-DEF9A5C8E751}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\mplabc32\v2.01\bin\pic32-gcc.exe
+PPAD=$(BINDIR)||$(TMPDIR)|..\..\MDD File System-SD Card\Object - MDD File System-SD Card||$(AINDIR)||$(INCDIR)|.\PIC24F;..\Include;..\Include\MDD File System;..\..\Microchip\Include;..\..\Microchip\Include\MDD File System;..\..\Microchip\Include\MDD File System;..\..\MDD File System-SD Card;..\..\MDD File System-SD Card\PIC24F||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|..\Microchip\MDD File System\SD-SPI.c|..\Microchip\MDD File System\FSIO.c|PIC32\Demonstration1.c|PIC32\buttons.c|PIC32\sendspi.c|PIC32\bitbang.c|PIC32\battle-p.c|PIC32\eor-p.c|PIC32\game.c|PIC32\global.c|PIC32\input-p.c|PIC32\win-p.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=-g
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1
+[File004]
+Location=C:\Users\jbai\Desktop\code_git\aaa\MicroPsFinalProject-master\PIC\MDD File System-SD Card\Object - MDD File System-SD Card\sendspi.o
+Folder=Intermediary
+DeviceName=PIC32MX675F512H
+LanguageToolSuiteID={14495C23-81F8-43F3-8A44-859C583D7760}
+LanguageToolID={430F471F-7ECB-4852-A80D-DEF9A5C8E751}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\mplabc32\v2.01\bin\pic32-gcc.exe
+PPAD=$(BINDIR)||$(TMPDIR)|..\..\MDD File System-SD Card\Object - MDD File System-SD Card||$(AINDIR)||$(INCDIR)|.\PIC24F;..\Include;..\Include\MDD File System;..\..\Microchip\Include;..\..\Microchip\Include\MDD File System;..\..\Microchip\Include\MDD File System;..\..\MDD File System-SD Card;..\..\MDD File System-SD Card\PIC24F||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|..\Microchip\MDD File System\SD-SPI.c|..\Microchip\MDD File System\FSIO.c|PIC32\Demonstration1.c|PIC32\buttons.c|PIC32\sendspi.c|PIC32\bitbang.c|PIC32\battle-p.c|PIC32\eor-p.c|PIC32\game.c|PIC32\global.c|PIC32\input-p.c|PIC32\win-p.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=-g
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1
+[File005]
+Location=C:\Users\jbai\Desktop\code_git\aaa\MicroPsFinalProject-master\PIC\MDD File System-SD Card\Object - MDD File System-SD Card\bitbang.o
+Folder=Intermediary
+DeviceName=PIC32MX675F512H
+LanguageToolSuiteID={14495C23-81F8-43F3-8A44-859C583D7760}
+LanguageToolID={430F471F-7ECB-4852-A80D-DEF9A5C8E751}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\mplabc32\v2.01\bin\pic32-gcc.exe
+PPAD=$(BINDIR)||$(TMPDIR)|..\..\MDD File System-SD Card\Object - MDD File System-SD Card||$(AINDIR)||$(INCDIR)|.\PIC24F;..\Include;..\Include\MDD File System;..\..\Microchip\Include;..\..\Microchip\Include\MDD File System;..\..\Microchip\Include\MDD File System;..\..\MDD File System-SD Card;..\..\MDD File System-SD Card\PIC24F||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|..\Microchip\MDD File System\SD-SPI.c|..\Microchip\MDD File System\FSIO.c|PIC32\Demonstration1.c|PIC32\buttons.c|PIC32\sendspi.c|PIC32\bitbang.c|PIC32\battle-p.c|PIC32\eor-p.c|PIC32\game.c|PIC32\global.c|PIC32\input-p.c|PIC32\win-p.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=-g
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1
+[File006]
+Location=C:\Users\jbai\Desktop\code_git\aaa\MicroPsFinalProject-master\PIC\MDD File System-SD Card\Object - MDD File System-SD Card\battle-p.o
+Folder=Intermediary
+DeviceName=PIC32MX675F512H
+LanguageToolSuiteID={14495C23-81F8-43F3-8A44-859C583D7760}
+LanguageToolID={430F471F-7ECB-4852-A80D-DEF9A5C8E751}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\mplabc32\v2.01\bin\pic32-gcc.exe
+PPAD=$(BINDIR)||$(TMPDIR)|..\..\MDD File System-SD Card\Object - MDD File System-SD Card||$(AINDIR)||$(INCDIR)|.\PIC24F;..\Include;..\Include\MDD File System;..\..\Microchip\Include;..\..\Microchip\Include\MDD File System;..\..\Microchip\Include\MDD File System;..\..\MDD File System-SD Card;..\..\MDD File System-SD Card\PIC24F||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|..\Microchip\MDD File System\SD-SPI.c|..\Microchip\MDD File System\FSIO.c|PIC32\Demonstration1.c|PIC32\buttons.c|PIC32\sendspi.c|PIC32\bitbang.c|PIC32\battle-p.c|PIC32\eor-p.c|PIC32\game.c|PIC32\global.c|PIC32\input-p.c|PIC32\win-p.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=-g
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1
+[File007]
+Location=C:\Users\jbai\Desktop\code_git\aaa\MicroPsFinalProject-master\PIC\MDD File System-SD Card\Object - MDD File System-SD Card\eor-p.o
+Folder=Intermediary
+DeviceName=PIC32MX675F512H
+LanguageToolSuiteID={14495C23-81F8-43F3-8A44-859C583D7760}
+LanguageToolID={430F471F-7ECB-4852-A80D-DEF9A5C8E751}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\mplabc32\v2.01\bin\pic32-gcc.exe
+PPAD=$(BINDIR)||$(TMPDIR)|..\..\MDD File System-SD Card\Object - MDD File System-SD Card||$(AINDIR)||$(INCDIR)|.\PIC24F;..\Include;..\Include\MDD File System;..\..\Microchip\Include;..\..\Microchip\Include\MDD File System;..\..\Microchip\Include\MDD File System;..\..\MDD File System-SD Card;..\..\MDD File System-SD Card\PIC24F||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|..\Microchip\MDD File System\SD-SPI.c|..\Microchip\MDD File System\FSIO.c|PIC32\Demonstration1.c|PIC32\buttons.c|PIC32\sendspi.c|PIC32\bitbang.c|PIC32\battle-p.c|PIC32\eor-p.c|PIC32\game.c|PIC32\global.c|PIC32\input-p.c|PIC32\win-p.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=-g
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1
+[File008]
+Location=C:\Users\jbai\Desktop\code_git\aaa\MicroPsFinalProject-master\PIC\MDD File System-SD Card\Object - MDD File System-SD Card\game.o
+Folder=Intermediary
+DeviceName=PIC32MX675F512H
+LanguageToolSuiteID={14495C23-81F8-43F3-8A44-859C583D7760}
+LanguageToolID={430F471F-7ECB-4852-A80D-DEF9A5C8E751}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\mplabc32\v2.01\bin\pic32-gcc.exe
+PPAD=$(BINDIR)||$(TMPDIR)|..\..\MDD File System-SD Card\Object - MDD File System-SD Card||$(AINDIR)||$(INCDIR)|.\PIC24F;..\Include;..\Include\MDD File System;..\..\Microchip\Include;..\..\Microchip\Include\MDD File System;..\..\Microchip\Include\MDD File System;..\..\MDD File System-SD Card;..\..\MDD File System-SD Card\PIC24F||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|..\Microchip\MDD File System\SD-SPI.c|..\Microchip\MDD File System\FSIO.c|PIC32\Demonstration1.c|PIC32\buttons.c|PIC32\sendspi.c|PIC32\bitbang.c|PIC32\battle-p.c|PIC32\eor-p.c|PIC32\game.c|PIC32\global.c|PIC32\input-p.c|PIC32\win-p.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=-g
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1
+[File009]
+Location=C:\Users\jbai\Desktop\code_git\aaa\MicroPsFinalProject-master\PIC\MDD File System-SD Card\Object - MDD File System-SD Card\global.o
+Folder=Intermediary
+DeviceName=PIC32MX675F512H
+LanguageToolSuiteID={14495C23-81F8-43F3-8A44-859C583D7760}
+LanguageToolID={430F471F-7ECB-4852-A80D-DEF9A5C8E751}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\mplabc32\v2.01\bin\pic32-gcc.exe
+PPAD=$(BINDIR)||$(TMPDIR)|..\..\MDD File System-SD Card\Object - MDD File System-SD Card||$(AINDIR)||$(INCDIR)|.\PIC24F;..\Include;..\Include\MDD File System;..\..\Microchip\Include;..\..\Microchip\Include\MDD File System;..\..\Microchip\Include\MDD File System;..\..\MDD File System-SD Card;..\..\MDD File System-SD Card\PIC24F||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|..\Microchip\MDD File System\SD-SPI.c|..\Microchip\MDD File System\FSIO.c|PIC32\Demonstration1.c|PIC32\buttons.c|PIC32\sendspi.c|PIC32\bitbang.c|PIC32\battle-p.c|PIC32\eor-p.c|PIC32\game.c|PIC32\global.c|PIC32\input-p.c|PIC32\win-p.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=-g
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1
+[File010]
+Location=C:\Users\jbai\Desktop\code_git\aaa\MicroPsFinalProject-master\PIC\MDD File System-SD Card\Object - MDD File System-SD Card\input-p.o
+Folder=Intermediary
+DeviceName=PIC32MX675F512H
+LanguageToolSuiteID={14495C23-81F8-43F3-8A44-859C583D7760}
+LanguageToolID={430F471F-7ECB-4852-A80D-DEF9A5C8E751}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\mplabc32\v2.01\bin\pic32-gcc.exe
+PPAD=$(BINDIR)||$(TMPDIR)|..\..\MDD File System-SD Card\Object - MDD File System-SD Card||$(AINDIR)||$(INCDIR)|.\PIC24F;..\Include;..\Include\MDD File System;..\..\Microchip\Include;..\..\Microchip\Include\MDD File System;..\..\Microchip\Include\MDD File System;..\..\MDD File System-SD Card;..\..\MDD File System-SD Card\PIC24F||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|..\Microchip\MDD File System\SD-SPI.c|..\Microchip\MDD File System\FSIO.c|PIC32\Demonstration1.c|PIC32\buttons.c|PIC32\sendspi.c|PIC32\bitbang.c|PIC32\battle-p.c|PIC32\eor-p.c|PIC32\game.c|PIC32\global.c|PIC32\input-p.c|PIC32\win-p.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=-g
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1
+[File011]
+Location=C:\Users\jbai\Desktop\code_git\aaa\MicroPsFinalProject-master\PIC\MDD File System-SD Card\Object - MDD File System-SD Card\win-p.o
+Folder=Intermediary
+DeviceName=PIC32MX675F512H
+LanguageToolSuiteID={14495C23-81F8-43F3-8A44-859C583D7760}
+LanguageToolID={430F471F-7ECB-4852-A80D-DEF9A5C8E751}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\mplabc32\v2.01\bin\pic32-gcc.exe
+PPAD=$(BINDIR)||$(TMPDIR)|..\..\MDD File System-SD Card\Object - MDD File System-SD Card||$(AINDIR)||$(INCDIR)|.\PIC24F;..\Include;..\Include\MDD File System;..\..\Microchip\Include;..\..\Microchip\Include\MDD File System;..\..\Microchip\Include\MDD File System;..\..\MDD File System-SD Card;..\..\MDD File System-SD Card\PIC24F||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|..\Microchip\MDD File System\SD-SPI.c|..\Microchip\MDD File System\FSIO.c|PIC32\Demonstration1.c|PIC32\buttons.c|PIC32\sendspi.c|PIC32\bitbang.c|PIC32\battle-p.c|PIC32\eor-p.c|PIC32\game.c|PIC32\global.c|PIC32\input-p.c|PIC32\win-p.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=-g
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1
+[File012]
+Location=C:\Users\jbai\Desktop\code_git\aaa\MicroPsFinalProject-master\PIC\MDD File System-SD Card\Project.elf
+Folder=Output
+DeviceName=PIC32MX675F512H
+LanguageToolSuiteID={14495C23-81F8-43F3-8A44-859C583D7760}
+LanguageToolID={C68E5105-1196-4333-A0BF-3DC57271E614}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\mplabc32\v2.01\bin\pic32-ld.exe
+PPAD=$(BINDIR)||$(TMPDIR)|..\..\MDD File System-SD Card\Object - MDD File System-SD Card||$(AINDIR)||$(INCDIR)|.\PIC24F;..\Include;..\Include\MDD File System;..\..\Microchip\Include;..\..\Microchip\Include\MDD File System;..\..\Microchip\Include\MDD File System;..\..\MDD File System-SD Card;..\..\MDD File System-SD Card\PIC24F||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|..\Microchip\MDD File System\SD-SPI.c|..\Microchip\MDD File System\FSIO.c|PIC32\Demonstration1.c|PIC32\buttons.c|PIC32\sendspi.c|PIC32\bitbang.c|PIC32\battle-p.c|PIC32\eor-p.c|PIC32\game.c|PIC32\global.c|PIC32\input-p.c|PIC32\win-p.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=-o"$(BINDIR_)$(TARGETBASE).$(TARGETSUFFIX)" -Map="$(BINDIR_)$(TARGETBASE).map"
+TraceCmdString=
+DebugOptions=--defsym=__MPLAB_DEBUG=1 --defsym=__MPLAB_DEBUGGER_ICD3=1 --defsym=__ICD2RAM=1
+[File013]
+Location=C:\Users\jbai\Desktop\code_git\aaa\MicroPsFinalProject-master\PIC\MDD File System-SD Card\Project.hex
+Folder=Output
+DeviceName=PIC32MX675F512H
+LanguageToolSuiteID={14495C23-81F8-43F3-8A44-859C583D7760}
+LanguageToolID={C68E5105-1196-4333-A0BF-3DC57271E614}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\mplabc32\v2.01\bin\pic32-ld.exe
+PPAD=$(BINDIR)||$(TMPDIR)|..\..\MDD File System-SD Card\Object - MDD File System-SD Card||$(AINDIR)||$(INCDIR)|.\PIC24F;..\Include;..\Include\MDD File System;..\..\Microchip\Include;..\..\Microchip\Include\MDD File System;..\..\Microchip\Include\MDD File System;..\..\MDD File System-SD Card;..\..\MDD File System-SD Card\PIC24F||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|..\Microchip\MDD File System\SD-SPI.c|..\Microchip\MDD File System\FSIO.c|PIC32\Demonstration1.c|PIC32\buttons.c|PIC32\sendspi.c|PIC32\bitbang.c|PIC32\battle-p.c|PIC32\eor-p.c|PIC32\game.c|PIC32\global.c|PIC32\input-p.c|PIC32\win-p.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=-o"$(BINDIR_)$(TARGETBASE).$(TARGETSUFFIX)" -Map="$(BINDIR_)$(TARGETBASE).map"
+TraceCmdString=
+DebugOptions=--defsym=__MPLAB_DEBUG=1 --defsym=__MPLAB_DEBUGGER_ICD3=1 --defsym=__ICD2RAM=1
+[TOOL_LOC_STAMPS]
+tool_loc{430F471F-7ECB-4852-A80D-DEF9A5C8E751}=C:\Program Files (x86)\Microchip\mplabc32\v2.01\bin\pic32-gcc.exe
+tool_loc{C68E5105-1196-4333-A0BF-3DC57271E614}=C:\Program Files (x86)\Microchip\mplabc32\v2.01\bin\pic32-ld.exe
